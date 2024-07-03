@@ -74,6 +74,7 @@ A Cloud Object Storage (COS) bucket is required to store all inputs and outputs 
 
 ## Prepare the taxonomy
 {: #instructlab_taxonomy}
+{: step}
 
 The taxonomy is stored in the COS bucket you previously created. Follow these steps to prepare, tar, and upload the taxonomy so it can later be used to generate synthetic data. 
 
