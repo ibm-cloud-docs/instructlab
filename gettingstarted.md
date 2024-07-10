@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-07-10"
 
 keywords: instructlab, ai
 
@@ -47,7 +47,7 @@ instructlab@ibm.com
 
 Subject
 ```txt
-Request to allowlist Account: <account_id> to use IBM Cloud InstructLab Service.
+Request to allowlist account: <account_id> to use IBM Cloud InstructLab Service.
 ```
 {: codeblock}
 
@@ -118,7 +118,7 @@ The taxonomy is stored in the COS bucket you previously created. Follow these st
         {: pre}
 
 
-2. TAR the repository. Replace <taxonomy> with the name of the local git folder where the taxonomy is stored. 
+2. TAR the repository. Replace `<taxonomy>` with the name of the local git folder where the taxonomy is stored. 
     ```sh
     tar -czvf taxonomy.tar.gz <taxonomy>
     ```
