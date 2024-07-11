@@ -14,7 +14,7 @@ keywords: instructlab CLI, ilab
 
 
 
-# ilab CLI plug-in reference
+# ilab CLI reference
 {: #ilab-cli-ref}
 
 You can use the `ilab` CLI plug-in to manage taxonomies, generate data, and more.
@@ -29,3 +29,5 @@ To install the CLI, see the following links.
 
 
 {{_include-segments/ilab-cli.md}}
+
+
