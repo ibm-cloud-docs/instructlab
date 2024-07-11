@@ -11,7 +11,7 @@ content-type: tutorial
 
 services: instructlab
 account-plan: paid
-completion-time: 20m
+completion-time: 30m
 
 ---
 
@@ -20,6 +20,9 @@ completion-time: 20m
 
 # Getting started with InstructLab
 {: #getting-started}
+{: toc-content-type="tutorial"}
+{: toc-services="instructlab"}
+{: toc-completion-time="30m"}
 
 Follow these steps to prepare your account for the InstructLab tech preview.
 {: shortdesc}
