@@ -183,7 +183,7 @@ After you receive access to InstructLab, complete the following steps to upload 
     :   For example, `us-east`.
 
 
-1. Run the `ilab taxonomy upload` command to upload a TAR file from your COS bucket to InstructLab.
+1. Run the `ilab taxonomy upload` command to allow InstructLab to access the taxonomy TAR file that you uploaded earlier. Include your COS bucket details and credentials.
 
     ```sh
     ibmcloud ilab taxonomy upload \
