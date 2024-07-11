@@ -8,9 +8,11 @@ keywords: instructlab, ai
 subcollection: instructlab
 
 content-type: tutorial
-services: 
+
+services: instructlab
 account-plan: paid
 completion-time: 20m
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
