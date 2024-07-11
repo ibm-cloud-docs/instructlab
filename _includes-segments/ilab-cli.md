@@ -6,6 +6,7 @@ Operations dealing with synthetic data.
 ```sh
 ibmcloud ilab data --help
 ```
+{: pre}
 
 
 ### `ibmcloud ilab data generate`
@@ -16,6 +17,7 @@ Generate synthetic data based on a specified taxonomy.
 ```sh
 ibmcloud ilab data generate [--name NAME] [--taxonomy-id TAXONOMY-ID]
 ```
+{: pre}
 
 
 #### Command options
@@ -45,6 +47,7 @@ Get details about a collection of synthetic data sets.
 ```sh
 ibmcloud ilab data list
 ```
+{: pre}
 
 
 #### Example
@@ -63,6 +66,7 @@ Get details about a synthetic data resource, including the generation status.
 ```sh
 ibmcloud ilab data status --id ID
 ```
+{: pre}
 
 
 #### Command options
@@ -88,6 +92,7 @@ Delete a synthetic data set. If the data is still being generated, the process w
 ```sh
 ibmcloud ilab data delete --id ID
 ```
+{: pre}
 
 
 #### Command options
@@ -113,6 +118,7 @@ Cancel the ongoing generation of synthetic data. If generation is complete, this
 ```sh
 ibmcloud ilab data cancel --id ID
 ```
+{: pre}
 
 
 #### Command options
@@ -138,6 +144,7 @@ Operations dealing with models.
 ```sh
 ibmcloud ilab model --help
 ```
+{: pre}
 
 
 ### `ibmcloud ilab model train`
@@ -148,6 +155,7 @@ Train a model with a given set of synthetic data.
 ```sh
 ibmcloud ilab model train [--name NAME] [--synthetic-data-id SYNTHETIC-DATA-ID]
 ```
+{: pre}
 
 
 #### Command options
@@ -177,6 +185,7 @@ Get details about a collection of models.
 ```sh
 ibmcloud ilab model list
 ```
+{: pre}
 
 
 #### Example
@@ -195,6 +204,7 @@ Get details about a model, including the training status.
 ```sh
 ibmcloud ilab model status --id ID
 ```
+{: pre}
 
 
 #### Command options
@@ -220,6 +230,7 @@ Delete a model. If the model is still being trained, the process will be cancele
 ```sh
 ibmcloud ilab model delete --id ID
 ```
+{: pre}
 
 
 #### Command options
@@ -245,6 +256,7 @@ Cancel the ongoing training of a model. If training is complete, this will retur
 ```sh
 ibmcloud ilab model cancel --id ID
 ```
+{: pre}
 
 
 #### Command options
@@ -270,6 +282,7 @@ Operations dealing with taxonomies.
 ```sh
 ibmcloud ilab taxonomy --help
 ```
+{: pre}
 
 
 ### `ibmcloud ilab taxonomy upload`
@@ -278,38 +291,61 @@ ibmcloud ilab taxonomy --help
 Upload a TAR file containing the taxonomy to store.
 
 ```sh
-ibmcloud ilab taxonomy upload [--access-key-id ACCESS-KEY-ID] [--secret-access-key SECRET-ACCESS-KEY] [--bucket BUCKET] [--endpoint ENDPOINT] [--region REGION]
+ibmcloud ilab taxonomy upload [--name NAME] [--taxonomy-path TAXONOMY-PATH] [--cos-bucket-information COS-BUCKET-INFORMATION | --cos-bucket-information-access-key-id COS-BUCKET-INFORMATION-ACCESS-KEY-ID --cos-bucket-information-secret-access-key COS-BUCKET-INFORMATION-SECRET-ACCESS-KEY --cos-bucket-information-bucket COS-BUCKET-INFORMATION-BUCKET --cos-bucket-information-endpoint COS-BUCKET-INFORMATION-ENDPOINT --cos-bucket-information-region COS-BUCKET-INFORMATION-REGION]
 ```
+{: pre}
 
 
 #### Command options
 {: #ilab-taxonomy-upload-cli-options}
 
-`--access-key-id` (string)
-:   HMAC credentials to COS bucket.
+`--name` (string)
+:   TODO.
 
-`--secret-access-key` (string)
-:   HMAC credentials to COS bucket.
+`--taxonomy-path` (string)
+:   A path to the storage location within COS.
 
-`--bucket` (string)
-:   Bucket the taxonomy lives in.
+`--cos-bucket-information` ([`COSBucketInformation`](#cli-cos-bucket-information-example-schema))
+:   Information needed to identify a specific COS bucket. This JSON option can instead be provided by setting individual fields with other options. It is mutually exclusive with those options.
 
-`--endpoint` (string)
-:   Endpoint to COS bucket.
+    Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--cos-bucket-information=@path/to/file.json`.
 
-`--region` (string)
-:   Region to COS bucket.
+`--cos-bucket-information-access-key-id` (string)
+:   HMAC credentials to COS bucket. This option provides a value for a sub-field of the JSON option 'cos-bucket-information'. It is mutually exclusive with that option.
 
-#### Example
+`--cos-bucket-information-secret-access-key` (string)
+:   HMAC credentials to COS bucket. This option provides a value for a sub-field of the JSON option 'cos-bucket-information'. It is mutually exclusive with that option.
+
+`--cos-bucket-information-bucket` (string)
+:   Bucket the taxonomy lives in. This option provides a value for a sub-field of the JSON option 'cos-bucket-information'. It is mutually exclusive with that option.
+
+`--cos-bucket-information-endpoint` (string)
+:   Endpoint to COS bucket. This option provides a value for a sub-field of the JSON option 'cos-bucket-information'. It is mutually exclusive with that option.
+
+`--cos-bucket-information-region` (string)
+:   Region to COS bucket. This option provides a value for a sub-field of the JSON option 'cos-bucket-information'. It is mutually exclusive with that option.
+
+#### Examples
 {: #ilab-taxonomy-upload-examples}
 
 ```sh
 ibmcloud ilab taxonomy upload \
-    --access-key-id exampleString \
-    --secret-access-key exampleString \
-    --bucket exampleString \
-    --endpoint exampleString \
-    --region exampleString
+    --name exampleString \
+    --taxonomy-path exampleString \
+    --cos-bucket-information '{"access_key_id": "exampleString", "secret_access_key": "exampleString", "bucket": "exampleString", "endpoint": "exampleString", "region": "exampleString"}'
+```
+{: pre}
+
+Alternatively, granular options are available for the sub-fields of JSON string options:
+```sh
+ibmcloud ilab taxonomy upload \
+    --name exampleString \
+    --taxonomy-path exampleString \
+    --cos-bucket-information-access-key-id exampleString \
+    --cos-bucket-information-secret-access-key exampleString \
+    --cos-bucket-information-bucket exampleString \
+    --cos-bucket-information-endpoint exampleString \
+    --cos-bucket-information-region exampleString
 ```
 {: pre}
 
@@ -321,6 +357,7 @@ Get details about a collection of taxonomies.
 ```sh
 ibmcloud ilab taxonomy list
 ```
+{: pre}
 
 
 #### Example
@@ -339,6 +376,7 @@ Get details about a taxonomy resource.
 ```sh
 ibmcloud ilab taxonomy status --id ID
 ```
+{: pre}
 
 
 #### Command options
@@ -364,6 +402,7 @@ Delete a taxonomy.
 ```sh
 ibmcloud ilab taxonomy delete --id ID
 ```
+{: pre}
 
 
 #### Command options
@@ -381,3 +420,24 @@ ibmcloud ilab taxonomy delete \
 ```
 {: pre}
 
+## Schema examples
+{: #ilab-schema-examples}
+
+The following schema examples represent the data that you need to specify for a command option. These examples model the data structure and include placeholder values for the expected value type. When you run a command, replace these values with the values that apply to your environment as appropriate.
+
+### COSBucketInformation
+{: #cli-cos-bucket-information-example-schema}
+
+The following example shows the format of the COSBucketInformation object.
+
+```json
+
+{
+  "access_key_id" : "exampleString",
+  "secret_access_key" : "exampleString",
+  "bucket" : "exampleString",
+  "endpoint" : "exampleString",
+  "region" : "exampleString"
+}
+```
+{: codeblock}
