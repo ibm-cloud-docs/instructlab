@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2024, 2022
+  years: 2024, 2024
 lastupdated: "2024-07-11"
 
 subcollection: instructlab
@@ -14,7 +14,7 @@ keywords: instructlab CLI, ilab
 
 
 
-# InstructLab CLI plu
+# ilab CLI plug-in reference
 {: #ilab-cli-ref}
 
 You can use the `ilab` CLI plug-in to manage taxonomies, generate data, and more.
