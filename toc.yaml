@@ -15,3 +15,7 @@ toc:
       id: learn
       topics:
       - gettingstarted.md
+  - navgroup:
+      id: reference
+      topics:
+      - ilab-cli-ref.md
