@@ -72,7 +72,7 @@ A {{site.data.keyword.cos_full_notm}} (COS) bucket is required to store all inpu
 1. Create new service credentials. Specify the **Role** as Writer and make sure HMAC credentials are included.
 1. Save the `access-key-id` and `secret-access-key` of your HMAC credentials. These are used later in this tutorial to upload your taxonomy from COS to InstructLab.
 
-## Install the `ilab` CLI plug-in
+## Install the CLI plug-in
 {: #instructlab_cli_install}
 {: step}
 
