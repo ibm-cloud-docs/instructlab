@@ -56,7 +56,7 @@ Complete the following steps to generate synthetic data from your taxonomy.
 
     Example command.
     ```sh
-    ibmcloud ilab data generate --name data-1 --taxonomy-id my-taxonomy-ID
+    ibmcloud ilab data generate --name data-1 --taxonomy-id 669a88c9488ee7b95ce8fe05
     ```
     {: pre}
 
@@ -75,6 +75,12 @@ Complete the following steps to generate synthetic data from your taxonomy.
 1. Check the status of your data generation.
     ```sh
     ibmcloud ilab data status --id ID
+    ```
+    {: pre}
+
+    Example command.
+    ```sh
+    ibmcloud ilab data status --id 669a88ed1d4d7e655bb537f1
     ```
     {: pre}
 
