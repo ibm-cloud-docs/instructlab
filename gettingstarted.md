@@ -164,7 +164,7 @@ After you receive access to InstructLab, complete the following steps to upload 
     :   You can find this on the **Buckets** tab of your COS instance.
 
     The endpoint to access your bucket.
-    :   Use the public, regional endpoint. For example `s3.wdc.us.cloud-object-storage.appdomain.cloud`. You can find these in the **Endpoints** tab of the COS console.
+    :   Use the public, regional endpoint. For example `https://s3.us-east.cloud-object-storage.appdomain.cloud`. You can find these in the **Endpoints** tab of the COS console.
     
     The region your bucket is in.
     :   For example, `us-east`.
