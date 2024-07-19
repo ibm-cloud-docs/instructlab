@@ -176,8 +176,14 @@ After you receive access to InstructLab, complete the following steps to upload 
     --cos-bucket-information-access-key-id <id> \
     --cos-bucket-information-secret-access-key <key> \
     --cos-bucket-information-bucket <bucket_name> \
-    --cos-bucket-information-endpoint s3.wdc.us.cloud-object-storage.appdomain.cloud \
+    --cos-bucket-information-endpoint <endpoint> \
     --cos-bucket-information-region us-east
+    ```
+    {: pre}
+
+    Example command.
+    ```sh
+    ibmcloud ilab taxonomy upload --name test --taxonomy-path taxonomy.tar.gz --cos-bucket-information-access-key-id XXX --cos-bucket-information-secret-access-key XXX --cos-bucket-information-bucket instruct-lab-bucket --cos-bucket-information-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud --cos-bucket-information-region us-east
     ```
     {: pre}
 
