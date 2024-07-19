@@ -131,7 +131,7 @@ In this example, we use the InstructLab [community taxonomy](https://github.com/
     ```txt
     https://github.com/instructlab/taxonomy 
     ```
-    {: pre}
+    {: codeblock}
 
 1. Clone your fork to your local machine.
     ```sh
