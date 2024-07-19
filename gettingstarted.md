@@ -1,4 +1,5 @@
 ---
+
 copyright:
   years: 2024, 2024
 lastupdated: "2024-07-19"
@@ -173,6 +174,8 @@ After you receive access to InstructLab, complete the following steps to upload 
 
     ```sh
     ibmcloud ilab taxonomy upload \
+    --name <name> \
+    --taxonomy-path <path-to-taxonomy> \
     --cos-bucket-information-access-key-id <id> \
     --cos-bucket-information-secret-access-key <key> \
     --cos-bucket-information-bucket <bucket_name> \
@@ -181,7 +184,7 @@ After you receive access to InstructLab, complete the following steps to upload 
     ```
     {: pre}
 
-    Example command.
+    Example command where the `taxonomy.tar.gz` is in the root of the COS bucket.
     ```sh
     ibmcloud ilab taxonomy upload --name test --taxonomy-path taxonomy.tar.gz --cos-bucket-information-access-key-id XXX --cos-bucket-information-secret-access-key XXX --cos-bucket-information-bucket instruct-lab-bucket --cos-bucket-information-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud --cos-bucket-information-region us-east
     ```
