@@ -47,7 +47,12 @@ Complete the following steps to generate synthetic data from your taxonomy.
 
     Example output.
     ```sh
-    output
+    id            669a88ed1d4d7e655bb537f1
+    name          test-data
+    state         queued
+    status
+    created_at    2024-07-19T15:40:29.000Z
+    taxonomy_id   669a88c9488ee7b95ce8fe05
     ```
     {: screen}
 
@@ -60,7 +65,12 @@ Complete the following steps to generate synthetic data from your taxonomy.
 
     Example output.
     ```sh
-    output
+    id            669a88ed1d4d7e655bb537f1
+    name          test-data
+    state         running
+    status        Generating synthetic data for taxonomy path compositional_skills->STEM->math->area: 12% 12/100 (total qna processed 1/147)
+    created_at    2024-07-19T15:40:29.000Z
+    taxonomy_id   669a88c9488ee7b95ce8fe05
     ```
     {: screen}
 
