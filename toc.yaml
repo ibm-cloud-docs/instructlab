@@ -15,6 +15,11 @@ toc:
       id: learn
       topics:
       - gettingstarted.md
+  - navgroup: 
+      id: howto
+      topics:
+      - data-generate.md
+      - model-train.md
   - navgroup:
       id: reference
       topics:
