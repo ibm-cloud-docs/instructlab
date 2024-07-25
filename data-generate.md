@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-07-19"
+lastupdated: "2024-07-25"
 
 keywords: instructlab, ai, data, generate
 
@@ -49,7 +49,7 @@ Complete the following steps to generate synthetic data from your taxonomy.
 
 
 
-1. Run the `ibmcloud ilab data generate` command to generate synthetic data from your taxonomy.
+1. Run the `ibmcloud ilab data generate` command to generate synthetic data from your taxonomy. Note the ID for the data to use in the next step.
     ```sh
     ibmcloud ilab data generate [--name NAME] [--taxonomy-id TAXONOMY-ID]
     ```
@@ -63,7 +63,7 @@ Complete the following steps to generate synthetic data from your taxonomy.
 
     Example output.
     ```sh
-    id            669a88ed1d4d7e655bb537f1
+    id            66a268c170dcb21150050e8e
     name          test-data
     state         queued
     status
@@ -73,21 +73,21 @@ Complete the following steps to generate synthetic data from your taxonomy.
     {: screen}
 
 
-1. Check the status of your data generation.
+1. Check the status of your data generation. Include the ID for the data.
     ```sh
-    ibmcloud ilab data status --id ID
+    ibmcloud ilab data status --id DATA_ID
     ```
     {: pre}
 
     Example command.
     ```sh
-    ibmcloud ilab data status --id 669a88ed1d4d7e655bb537f1
+    ibmcloud ilab data status --id 66a268c170dcb21150050e8e
     ```
     {: pre}
 
     Example output.
     ```txt
-    id            669a88ed1d4d7e655bb537f1
+    id            66a268c170dcb21150050e8e
     name          test-data
     state         running
     status        Generating synthetic data for taxonomy path compositional_skills->STEM->math->area: 12% 12/100 (total qna processed 1/147)
