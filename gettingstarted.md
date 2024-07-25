@@ -39,7 +39,7 @@ Before you begin, make sure you have a paid IBM Cloud account.
 {: #get-familiar}
 If you are new to machine learning, you are in the right place. To use InstructLab, you do not need to have any preexisting knowledge. You do not even need to have an idea for what to create yet. Let's start by just getting familiar with the larger concepts and what kinds of things you can do with the technology.
 
-[Generative AI](#x10298052) starts with a [large language model (LLM)](#x10298052){: term}. With a prompt, these models can take large sets of data and provide a statistically probable output for that prompt. These large sets of data can be synthetic, similar to real data, but automatically generated and used as a means for training the model to get the most probable output possible.
+[Generative AI](#x10298052){: term} starts with a [large language model (LLM)](#x10298052){: term}. With a prompt, these models can take large sets of data and provide a statistically probable output for that prompt. These large sets of data can be synthetic, similar to real data, but automatically generated and used as a means for training the model to get the most probable output possible.
 
 With InstructLab, you can use an existing, pre-trained LLM compiled by a community of contributors, and then generate the synthetic data to further train the model. By incorporating IBM Cloud, you have a place to store the taxonomy, the informational structure, for the model as you modified it and train the model on an ongoing basis.
 
@@ -154,27 +154,26 @@ In this example, we use the InstructLab [community taxonomy](https://github.com/
     a. In your cloned fork, open the `/instructlab-taxonomy/compositional_skills/linguistics/rhyming_words/qna.yaml` file.
 
     b. Add another question related to rhyming words.
-
-        ```txt
-        - answer: 'Here are two rhyming words for "cave":
-
-
-            1\. Brave
-
-            2\. Gave
+    ```txt
+    - answer: 'Here are two rhyming words for "cave":
 
 
-            '
-        question: 'Give me two words that rhyme with cave
+        1\. Brave
 
-            '
+        2\. Gave
 
-        ```
-        {: codeblock}
+
+        '
+    question: 'Give me two words that rhyme with cave
+
+        '
+
+    ```
+    {: codeblock}
 
     c. Save the changes and push them to the fork.
 
-    d. Learn more about how to modify the [taxonomy](https://github.com/instructlab/taxonomy) for the model.
+    d. Optional: Learn more about how to modify the [taxonomy](https://github.com/instructlab/taxonomy) for the model.
 
 
 
@@ -221,6 +220,8 @@ After you receive access to InstructLab, complete the following steps to upload 
 
 
 
+## What's next?
 
+[Generate data from the taxonomy.](/docs/instructlab?topic=instructlab-data-generate)
 
 
