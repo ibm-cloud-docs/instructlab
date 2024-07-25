@@ -25,7 +25,7 @@ completion-time: 30m
 {: toc-services="instructlab"}
 {: toc-completion-time="30m"}
 
-In this tutorial, you begin by requesting access to the InstructLab tech preview. Then, you'll set up a Cloud Object Storage bucket where you'll store your first InstructLab taxonomy. Finally, you'll set up the IBM Cloud CLI and use it to connect InstructLab to your COS bucket where you can begin training your model.
+Get ready to dive into [AI](#x3448902){: term}! InstructLab is an open source project created by IBM and Red Hat to be a cost-effective entry point into the world of [machine learning](#x8397498){: term}.
 {: shortdesc}
 
 
@@ -33,6 +33,15 @@ In this tutorial, you begin by requesting access to the InstructLab tech preview
 {: #instructlab_pre}
 
 Before you begin, make sure you have a paid IBM Cloud account.
+
+
+## Get familiar with the capabilities
+{: #get-familiar}
+If you are new to machine learning, you are in the right place. To use InstructLab, you do not need to have any preexisting knowledge. You do not even need to have an idea for what to create yet. Let's start by just getting familiar with the larger concepts and what kinds of things you can do with the technology.
+
+[Generative AI](#x10298052) starts with a [large language model (LLM)](#x10298052){: term}. With a prompt, these models can take large sets of data and provide a statistically probable output for that prompt. These large sets of data can be synthetic, similar to real data, but automatically generated and used as a means for training the model to get the most probable output possible.
+
+With InstructLab, you can use an existing, pre-trained LLM compiled by a community of contributors, and then generate the synthetic data to further train the model. By incorporating IBM Cloud, you have a place to store the taxonomy, the informational structure, for the model as you modified it and train the model on an ongoing basis.
 
 
 ## Request access
@@ -140,7 +149,32 @@ In this example, we use the InstructLab [community taxonomy](https://github.com/
     ```
     {: pre}
 
-1. Optional: Make updates to the taxonomy locally and push the changes back to your fork.
+1. Optional: Make updates to the taxonomy locally and push the changes back to your fork. Example:
+
+    a. In your cloned fork, open the `/instructlab-taxonomy/compositional_skills/linguistics/rhyming_words/qna.yaml` file.
+
+    b. Add another question related to rhyming words.
+
+        ```txt
+        - answer: 'Here are two rhyming words for "cave":
+
+
+            1\. Brave
+
+            2\. Gave
+
+
+            '
+        question: 'Give me two words that rhyme with cave
+
+            '
+
+        ```
+        {: codeblock}
+
+    c. Save the changes and push them to the fork.
+
+    d. Learn more about how to modify the [taxonomy](https://github.com/instructlab/taxonomy) for the model.
 
 
 

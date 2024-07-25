@@ -15,6 +15,12 @@ toc:
       id: learn
       topics:
       - gettingstarted.md
+      - link:
+            label: What is AI?
+            href: https://www.ibm.com/topics/artificial-intelligence
+      - link:
+            label: What is InstructLab?
+            href: https://www.redhat.com/topics/ai/what-is-instructlab
   - navgroup: 
       id: howto
       topics:
