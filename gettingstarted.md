@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-07-19"
+lastupdated: "2024-07-25"
 
 keywords: instructlab, ai
 
@@ -140,11 +140,8 @@ In this example, we use the InstructLab [community taxonomy](https://github.com/
     ```
     {: pre}
 
-1. TAR the repository contents. In the next section, you upload this TAR to the COS bucket you created earlier.
-    ```sh
-    tar -czvf taxonomy.tar.gz taxonomy
-    ```
-    {: pre}
+1. Optional: Make updates to the taxonomy locally and push the changes back to your fork.
+
 
 
 ## Upload your taxonomy to COS
@@ -152,8 +149,6 @@ In this example, we use the InstructLab [community taxonomy](https://github.com/
 {: step}
 
 After you receive access to InstructLab, complete the following steps to upload your taxonomy.
-
-1. [Upload the TAR to your COS bucket](/docs/cloud-object-storage?topic=cloud-object-storage-upload).
 
 1. Gather the details of your COS instance and bucket.
 
@@ -170,12 +165,12 @@ After you receive access to InstructLab, complete the following steps to upload 
     :   For example, `us-east`.
 
 
-1. Run the `ilab taxonomy upload` command to allow InstructLab to access your taxonomy TAR file in COS. Include your COS bucket details and credentials.
+1. Run the `ilab taxonomy upload` command to allow InstructLab to access your taxonomy in COS. Include your COS bucket details and credentials.
 
     ```sh
     ibmcloud ilab taxonomy upload \
     --name <name> \
-    --taxonomy-path <path-to-taxonomy> \
+    --taxonomy-path-local <local-path-to-taxonomy> \
     --cos-bucket-information-access-key-id <id> \
     --cos-bucket-information-secret-access-key <key> \
     --cos-bucket-information-bucket <bucket_name> \
@@ -184,9 +179,9 @@ After you receive access to InstructLab, complete the following steps to upload 
     ```
     {: pre}
 
-    Example command where the `taxonomy.tar.gz` is in the root of the COS bucket.
+    Example command
     ```sh
-    ibmcloud ilab taxonomy upload --name test --taxonomy-path taxonomy.tar.gz --cos-bucket-information-access-key-id XXX --cos-bucket-information-secret-access-key XXX --cos-bucket-information-bucket instruct-lab-bucket --cos-bucket-information-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud --cos-bucket-information-region us-east
+    ibmcloud ilab taxonomy upload --name test --taxonomy-path-local /Users/USER/instructlab-taxonomy --cos-bucket-information-access-key-id XXX --cos-bucket-information-secret-access-key XXX --cos-bucket-information-bucket instruct-lab-bucket --cos-bucket-information-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud --cos-bucket-information-region us-east
     ```
     {: pre}
 
