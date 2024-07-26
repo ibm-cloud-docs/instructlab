@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-07-25"
+lastupdated: "2024-07-26"
 
 keywords: instructlab, ai
 
@@ -197,13 +197,12 @@ After you receive access to InstructLab, complete the following steps to upload 
     The region your bucket is in.
     :   For example, `us-east`.
 
-
-1. Run the `ilab taxonomy upload` command to allow InstructLab to access your taxonomy in COS. Include your COS bucket details and credentials.
+1. Run the `init` command to set and save COS bucket details and credentials, which can simplify your commands going forward.
 
     ```sh
-    ibmcloud ilab taxonomy upload \
-    --name <name> \
+    ibmcloud ilab config init \
     --taxonomy-path-local <local-path-to-taxonomy> \
+    --taxonomy-path <taxonomy-path-in-cos-bucket> \
     --cos-bucket-information-access-key-id <id> \
     --cos-bucket-information-secret-access-key <key> \
     --cos-bucket-information-bucket <bucket_name> \
@@ -214,7 +213,20 @@ After you receive access to InstructLab, complete the following steps to upload 
 
     Example command
     ```sh
-    ibmcloud ilab taxonomy upload --name test --taxonomy-path-local /Users/USER/instructlab-taxonomy --cos-bucket-information-access-key-id XXX --cos-bucket-information-secret-access-key XXX --cos-bucket-information-bucket instruct-lab-bucket --cos-bucket-information-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud --cos-bucket-information-region us-east
+    ibmcloud ilab config init --taxonomy-path-local /Users/USER/instructlab-taxonomy --taxonomy-path /optional-folder/filename.tar.gz --cos-bucket-information-access-key-id XXX --cos-bucket-information-secret-access-key XXX --cos-bucket-information-bucket instruct-lab-bucket --cos-bucket-information-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud --cos-bucket-information-region us-east
+    ```
+    {: pre}
+
+1. Run the upload command to allow InstructLab to store your taxonomy in COS. 
+
+    ```sh
+    ibmcloud ilab taxonomy upload --name <name>
+    ```
+    {: pre}
+
+    Example command
+    ```sh
+    ibmcloud ilab taxonomy upload --name test
     ```
     {: pre}
 
