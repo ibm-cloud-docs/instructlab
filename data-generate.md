@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-07-25"
+lastupdated: "2024-08-13"
 
 keywords: instructlab, ai, data, generate
 
@@ -17,7 +17,7 @@ subcollection: instructlab
 {: #data-generate}
 
 
-Complete the following steps to generate synthetic data from your taxonomy.
+Complete the following steps to generate data from your taxonomy.
 
 
 ## Prerequisites
@@ -26,11 +26,11 @@ Complete the following steps to generate synthetic data from your taxonomy.
 
 1. [Install the `ilab` CLI plug-in](/docs/instructlab?topic=instructlab-getting-started#instructlab_cli_install).
 1. [Prepare your taxonomy](/docs/instructlab?topic=instructlab-getting-started#instructlab_taxonomy).
-1. [Upload the taxonomy TAR to your COS bucket](/docs/instructlab?topic=instructlab-getting-started#instructlab_upload).
+1. [Add the taxonomy TAR to your COS bucket](/docs/instructlab?topic=instructlab-getting-started#instructlab_add).
 
 
 
-## Generating synthetic data by using the CLI
+## Generating data by using the CLI
 {: #data_generate_cli_steps}
 {: cli}
 
@@ -49,7 +49,7 @@ Complete the following steps to generate synthetic data from your taxonomy.
 
 
 
-1. Run the `ibmcloud ilab data generate` command to generate synthetic data from your taxonomy. Note the ID for the data to use in the next step.
+1. Run the `ibmcloud ilab data generate` command to generate data from your taxonomy. Note the ID for the data to use in the next step.
     ```sh
     ibmcloud ilab data generate [--name NAME] [--taxonomy-id TAXONOMY-ID]
     ```
@@ -73,15 +73,15 @@ Complete the following steps to generate synthetic data from your taxonomy.
     {: screen}
 
 
-1. Check the status of your data generation. Include the ID for the data.
+1. Check the details of your data generation. Include the ID for the data.
     ```sh
-    ibmcloud ilab data status --id DATA_ID
+    ibmcloud ilab data get --id DATA_ID
     ```
     {: pre}
 
     Example command.
     ```sh
-    ibmcloud ilab data status --id 66a268c170dcb21150050e8e
+    ibmcloud ilab data get --id 66a268c170dcb21150050e8e
     ```
     {: pre}
 
@@ -90,7 +90,7 @@ Complete the following steps to generate synthetic data from your taxonomy.
     id            66a268c170dcb21150050e8e
     name          test-data
     state         running
-    status        Generating synthetic data for taxonomy path compositional_skills->STEM->math->area: 12% 12/100 (total qna processed 1/147)
+    status        Generating data for taxonomy path compositional_skills->STEM->math->area: 12% 12/100 (total qna processed 1/147)
     created_at    2024-07-19T15:40:29.000Z
     taxonomy_id   669a88c9488ee7b95ce8fe05
     ```
@@ -101,5 +101,5 @@ Complete the following steps to generate synthetic data from your taxonomy.
 ## Next steps
 {: #data_generate_next}
 
-After you've generated synthetic data from your taxonomy, you can begin [training your model](/docs/instructlab?topic=instructlab-model-train).
+After you've generated data from your taxonomy, you can begin [training your model](/docs/instructlab?topic=instructlab-model-train).
 
