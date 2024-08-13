@@ -1,7 +1,7 @@
 ## Data
 {: #ilab-data-cli}
 
-Operations dealing with synthetic data.
+Operations dealing with data.
 
 ```sh
 ibmcloud ilab data --help
@@ -11,7 +11,7 @@ ibmcloud ilab data --help
 ### `ibmcloud ilab data generate`
 {: #ilab-cli-data-generate-command}
 
-Generate synthetic data based on a specified taxonomy.
+Generate data based on a specified taxonomy.
 
 ```sh
 ibmcloud ilab data generate [--name NAME] [--taxonomy-id TAXONOMY-ID]
@@ -22,10 +22,10 @@ ibmcloud ilab data generate [--name NAME] [--taxonomy-id TAXONOMY-ID]
 {: #ilab-data-generate-cli-options}
 
 `--name` (string)
-:   Name to give the synthetic data run.
+:   Name to give the data run.
 
 `--taxonomy-id` (string)
-:   Taxonomy ID that the synthetic data will be ran against.
+:   Taxonomy ID that the data will be ran against.
 
 #### Example
 {: #ilab-data-generate-examples}
@@ -40,7 +40,7 @@ ibmcloud ilab data generate \
 ### `ibmcloud ilab data list`
 {: #ilab-cli-data-list-command}
 
-Get details about a collection of synthetic data sets.
+Get details about a collection of data sets.
 
 ```sh
 ibmcloud ilab data list
@@ -55,35 +55,35 @@ ibmcloud ilab data list
 ```
 {: pre}
 
-### `ibmcloud ilab data status`
-{: #ilab-cli-data-status-command}
+### `ibmcloud ilab data get`
+{: #ilab-cli-data-get-command}
 
-Get details about a synthetic data resource, including the generation status.
+Get details about a data resource, including the generation details.
 
 ```sh
-ibmcloud ilab data status --id ID
+ibmcloud ilab data get --id ID
 ```
 
 
 #### Command options
-{: #ilab-data-status-cli-options}
+{: #ilab-data-get-cli-options}
 
 `--id` (string)
-:   Unique Identifier to synthetic data run. Required.
+:   Unique Identifier to data run. Required.
 
 #### Example
-{: #ilab-data-status-examples}
+{: #ilab-data-get-examples}
 
 ```sh
-ibmcloud ilab data status \
-    --id 66830e653724e36acaf47d65
+ibmcloud ilab data get \
+    --id 817bc95a-fef0-4039-b936-e0b6fb17b723
 ```
 {: pre}
 
 ### `ibmcloud ilab data delete`
 {: #ilab-cli-data-delete-command}
 
-Delete a synthetic data set. If the data is still being generated, the process will be canceled.
+Delete a data set. If the data is still being generated, the process will be canceled.
 
 ```sh
 ibmcloud ilab data delete --id ID
@@ -94,21 +94,21 @@ ibmcloud ilab data delete --id ID
 {: #ilab-data-delete-cli-options}
 
 `--id` (string)
-:   Unique Identifier to synthetic data run. Required.
+:   Unique Identifier to data run. Required.
 
 #### Example
 {: #ilab-data-delete-examples}
 
 ```sh
 ibmcloud ilab data delete \
-    --id 66830e653724e36acaf47d65
+    --id 817bc95a-fef0-4039-b936-e0b6fb17b723
 ```
 {: pre}
 
 ### `ibmcloud ilab data cancel`
 {: #ilab-cli-data-cancel-command}
 
-Cancel the ongoing generation of synthetic data. If generation is complete, this will return an error.
+Cancel the ongoing generation of data. If generation is complete, this will return an error.
 
 ```sh
 ibmcloud ilab data cancel --id ID
@@ -119,14 +119,14 @@ ibmcloud ilab data cancel --id ID
 {: #ilab-data-cancel-cli-options}
 
 `--id` (string)
-:   Unique Identifier to synthetic data run. Required.
+:   Unique Identifier to data run. Required.
 
 #### Example
 {: #ilab-data-cancel-examples}
 
 ```sh
 ibmcloud ilab data cancel \
-    --id 66830e653724e36acaf47d65
+    --id 817bc95a-fef0-4039-b936-e0b6fb17b723
 ```
 {: pre}
 
@@ -143,10 +143,10 @@ ibmcloud ilab model --help
 ### `ibmcloud ilab model train`
 {: #ilab-cli-model-train-command}
 
-Train a model with a given set of synthetic data.
+Train a model with a given set of data.
 
 ```sh
-ibmcloud ilab model train [--name NAME] [--synthetic-data-id SYNTHETIC-DATA-ID]
+ibmcloud ilab model train [--name NAME] [--data-id DATA-ID]
 ```
 
 
@@ -156,8 +156,8 @@ ibmcloud ilab model train [--name NAME] [--synthetic-data-id SYNTHETIC-DATA-ID]
 `--name` (string)
 :   Name to give the model train run.
 
-`--synthetic-data-id` (string)
-:   Synthetic Data ID that the model train run will be ran against.
+`--data-id` (string)
+:   Data ID that the model train run will be ran against.
 
 #### Example
 {: #ilab-model-train-examples}
@@ -165,7 +165,7 @@ ibmcloud ilab model train [--name NAME] [--synthetic-data-id SYNTHETIC-DATA-ID]
 ```sh
 ibmcloud ilab model train \
     --name exampleString \
-    --synthetic-data-id exampleString
+    --data-id exampleString
 ```
 {: pre}
 
@@ -187,28 +187,28 @@ ibmcloud ilab model list
 ```
 {: pre}
 
-### `ibmcloud ilab model status`
-{: #ilab-cli-model-status-command}
+### `ibmcloud ilab model get`
+{: #ilab-cli-model-get-command}
 
-Get details about a model, including the training status.
+Get details about a model, including the training details.
 
 ```sh
-ibmcloud ilab model status --id ID
+ibmcloud ilab model get --id ID
 ```
 
 
 #### Command options
-{: #ilab-model-status-cli-options}
+{: #ilab-model-get-cli-options}
 
 `--id` (string)
 :   Unique Identifier to a model training run. Required.
 
 #### Example
-{: #ilab-model-status-examples}
+{: #ilab-model-get-examples}
 
 ```sh
-ibmcloud ilab model status \
-    --id 66830e653724e36acaf47d69
+ibmcloud ilab model get \
+    --id 817bc95a-fef0-4039-b936-e0b6fb17b723
 ```
 {: pre}
 
@@ -233,7 +233,7 @@ ibmcloud ilab model delete --id ID
 
 ```sh
 ibmcloud ilab model delete \
-    --id 66830e653724e36acaf47d69
+    --id 817bc95a-fef0-4039-b936-e0b6fb17b723
 ```
 {: pre}
 
@@ -258,7 +258,7 @@ ibmcloud ilab model cancel --id ID
 
 ```sh
 ibmcloud ilab model cancel \
-    --id 66830e653724e36acaf47d69
+    --id 817bc95a-fef0-4039-b936-e0b6fb17b723
 ```
 {: pre}
 
@@ -272,26 +272,26 @@ ibmcloud ilab taxonomy --help
 ```
 
 
-### `ibmcloud ilab taxonomy upload`
-{: #ilab-cli-taxonomy-upload-command}
+### `ibmcloud ilab taxonomy add`
+{: #ilab-cli-taxonomy-add-command}
 
-TARs and uploads a taxonomy to COS.
+TARs and adds a taxonomy to COS.
 
 ```sh
-ibmcloud ilab taxonomy upload [--name NAME] [--taxonomy-path-local TAXONOMY-PATH-LOCAL] [--taxonomy-path TAXONOMY-PATH] [--cos-bucket-information COS-BUCKET-INFORMATION | --cos-bucket-information-access-key-id COS-BUCKET-INFORMATION-ACCESS-KEY-ID --cos-bucket-information-secret-access-key COS-BUCKET-INFORMATION-SECRET-ACCESS-KEY --cos-bucket-information-bucket COS-BUCKET-INFORMATION-BUCKET --cos-bucket-information-endpoint COS-BUCKET-INFORMATION-ENDPOINT --cos-bucket-information-region COS-BUCKET-INFORMATION-REGION]
+ibmcloud ilab taxonomy add [--name NAME] [--taxonomy-path TAXONOMY-PATH] [--taxonomy-path-cos TAXONOMY-PATH-COS] [--cos-bucket-information COS-BUCKET-INFORMATION | --cos-bucket-information-access-key-id COS-BUCKET-INFORMATION-ACCESS-KEY-ID --cos-bucket-information-secret-access-key COS-BUCKET-INFORMATION-SECRET-ACCESS-KEY --cos-bucket-information-bucket COS-BUCKET-INFORMATION-BUCKET --cos-bucket-information-endpoint COS-BUCKET-INFORMATION-ENDPOINT --cos-bucket-information-region COS-BUCKET-INFORMATION-REGION]
 ```
 
 
 #### Command options
-{: #ilab-taxonomy-upload-cli-options}
+{: #ilab-taxonomy-add-cli-options}
 
 `--name` (string)
 :   Name to give the taxonomy resource.
 
-`--taxonomy-path-local` (string)
+`--taxonomy-path` (string)
 :   An absolute or relative path to the taxonomy locally.
 
-`--taxonomy-path` (string)
+`--taxonomy-path-cos` (string)
 :   Taxonomy path to be stored in COS. For example taxonomy.tar.gz. Defaults to taxonomies/taxonomy-$epochtime.tar.gz.
 
 `--cos-bucket-information` ([`COSBucketInformation`](#cli-cos-bucket-information-example-schema))
@@ -315,23 +315,23 @@ ibmcloud ilab taxonomy upload [--name NAME] [--taxonomy-path-local TAXONOMY-PATH
 :   Region to COS bucket. This option provides a value for a sub-field of the JSON option 'cos-bucket-information'. It is mutually exclusive with that option.
 
 #### Examples
-{: #ilab-taxonomy-upload-examples}
+{: #ilab-taxonomy-add-examples}
 
 ```sh
-ibmcloud ilab taxonomy upload \
+ibmcloud ilab taxonomy add \
     --name exampleString \
-    --taxonomy-path-local exampleString \
     --taxonomy-path exampleString \
+    --taxonomy-path-cos exampleString \
     --cos-bucket-information '{"access_key_id": "exampleString", "secret_access_key": "exampleString", "bucket": "exampleString", "endpoint": "exampleString", "region": "exampleString"}'
 ```
 {: pre}
 
 Alternatively, granular options are available for the sub-fields of JSON string options:
 ```sh
-ibmcloud ilab taxonomy upload \
+ibmcloud ilab taxonomy add \
     --name exampleString \
-    --taxonomy-path-local exampleString \
     --taxonomy-path exampleString \
+    --taxonomy-path-cos exampleString \
     --cos-bucket-information-access-key-id exampleString \
     --cos-bucket-information-secret-access-key exampleString \
     --cos-bucket-information-bucket exampleString \
@@ -379,7 +379,7 @@ ibmcloud ilab taxonomy get --id ID
 
 ```sh
 ibmcloud ilab taxonomy get \
-    --id 66830e653724e36acaf47d69
+    --id 817bc95a-fef0-4039-b936-e0b6fb17b723
 ```
 {: pre}
 
@@ -404,7 +404,7 @@ ibmcloud ilab taxonomy delete --id ID
 
 ```sh
 ibmcloud ilab taxonomy delete \
-    --id 66830e653724e36acaf47d69
+    --id 817bc95a-fef0-4039-b936-e0b6fb17b723
 ```
 {: pre}
 
