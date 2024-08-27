@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-08-13"
+lastupdated: "2024-08-27"
 
 keywords: instructlab, ai
 
@@ -19,7 +19,7 @@ completion-time: 30m
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Getting started with InstructLab
+# Getting started with Red Hat AI InstructLab
 {: #getting-started}
 {: toc-content-type="tutorial"}
 {: toc-services="instructlab"}
@@ -48,7 +48,7 @@ With InstructLab, you can use an existing, pre-trained LLM compiled by a communi
 {: #instructlab_access}
 {: step}
 
-InstructLab is available on an allowlist basis. To request that your account be added to the allowlist, send an email to `instructlab@ibm.com` with the following information. You can find your account ID on the [Account settings](https://cloud.ibm.com/account/settings){: external} page. Allow 1-2 business days for the request to be processed. After you are allowlisted, you can access the InstructLab UI and CLI. 
+The Red Hat AI InstructLab service is under development and is not yet generally available. The project is currently at capacity with a small number of critical test projects involved. As the service develops, capacity is expected to added. For your project to be considered, send an email to `instructlab@ibm.com` with the following information. You can find your account ID on the [Account settings](https://cloud.ibm.com/account/settings){: external} page. Allow 1-2 business days for the request to be processed. After you are allowlisted, you can access the InstructLab UI and CLI. 
 
 
 To
@@ -235,5 +235,3 @@ After you receive access to InstructLab, complete the following steps to add you
 ## What's next?
 
 [Generate data from the taxonomy.](/docs/instructlab?topic=instructlab-data-generate)
-
-
