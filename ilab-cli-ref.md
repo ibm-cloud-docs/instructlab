@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-07-11"
+lastupdated: "2024-09-10"
 
 subcollection: instructlab
 
@@ -23,11 +23,9 @@ You can use the `ilab` CLI plug-in to manage taxonomies, generate data, and more
 To install the CLI, see the following links.
 
 * Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
-* Install the `ilab` [CLI plug-in](/docs/instructlab?topic=instructlab-getting-started#instructlab_cli_install)
+* Install the `ilab` [CLI plug-in](/docs/instructlab?topic=instructlab-getting-started#instructlab_cli_install).
 
 
 
 
 {{_include-segments/ilab-cli.md}}
-
-

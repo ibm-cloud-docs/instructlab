@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-08-13"
+lastupdated: "2024-09-10"
 
 keywords: instructlab, ai, data, generate
 
@@ -49,7 +49,7 @@ Complete the following steps to generate data from your taxonomy.
 
 
 
-1. Run the `ibmcloud ilab data generate` command to generate data from your taxonomy. Note the ID for the data to use in the next step.
+1. Run the `ibmcloud ilab data generate` command to generate data from your taxonomy. Note the ID for the data to use in the next step. Use alphanumeric characters in the name.
     ```sh
     ibmcloud ilab data generate [--name NAME] [--taxonomy-id TAXONOMY-ID]
     ```
@@ -73,7 +73,7 @@ Complete the following steps to generate data from your taxonomy.
     {: screen}
 
 
-1. Check the details of your data generation. Include the ID for the data.
+1. Check the details of your data generation. Include the ID for the data. The state is `queued`, then `running`. Wait for the state to be `completed`.
     ```sh
     ibmcloud ilab data get --id DATA_ID
     ```
@@ -96,10 +96,10 @@ Complete the following steps to generate data from your taxonomy.
     ```
     {: screen}
 
+    When the state is `completed`, in the COS bucket, a `synthetic_data` directory is created with logs for troubleshooting.
 
 
 ## Next steps
 {: #data_generate_next}
 
 After you've generated data from your taxonomy, you can begin [training your model](/docs/instructlab?topic=instructlab-model-train).
-

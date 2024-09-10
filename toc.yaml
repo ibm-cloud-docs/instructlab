@@ -30,3 +30,10 @@ toc:
       id: reference
       topics:
       - ilab-cli-ref.md
+  - navgroup:
+      id: help
+      topics:
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - ts-debugging.md
