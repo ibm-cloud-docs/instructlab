@@ -36,4 +36,4 @@ toc:
       - topicgroup:
           label: Troubleshooting
           topics:
-          - ts-debugging.md
+          - ts-debug.md
