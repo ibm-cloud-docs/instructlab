@@ -15,6 +15,7 @@ toc:
       id: learn
       topics:
       - gettingstarted.md
+      - release-notes.md
       - link:
             label: What is AI?
             href: https://www.ibm.com/topics/artificial-intelligence

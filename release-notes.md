@@ -15,7 +15,7 @@ content-type: release-note
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Release notes
+# Pre-release notes
 {: #release-notes}
 
 Use the release notes to learn about the latest changes to the documentation that are grouped by month.
@@ -26,14 +26,16 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 
 
 
-## September 2024
-{: #instructlab-sep24}
+
+## August 2024
+{: #aug24}
 
 
 
-### 10 September 2024
-{: #instructlab-sep1024}
+### 02 August 2024
+{: #02aug24}
 {: release-note}
 
-CLI version `1.0.657` is available.
-:   For more information, see [Updating the CLI](/docs/instructlab?topic=instructlab-cli-update) and the [CLI change log](/docs/instructlab?topic=instructlab-cs_cli_changelog).
+CLI changes.
+:   `status` commands changed to `get` commands.
+:   `upload` command changed to `add` command.
