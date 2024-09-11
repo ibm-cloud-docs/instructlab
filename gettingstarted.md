@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-11"
 
 keywords: instructlab, ai
 
@@ -149,11 +149,11 @@ In this example, we use the InstructLab [community taxonomy](https://github.com/
     ```
     {: pre}
 
-1. Optional: Make updates to the taxonomy locally and push the changes back to your fork. Example:
+1. Optional: Make updates to the taxonomy locally and push the changes back to your fork. This example adds rhyming questions to the [linguistics](https://github.com/instructlab/taxonomy/blob/main/compositional_skills/grounded/linguistics) directory.
 
-    a. In your cloned fork, open the `/instructlab-taxonomy/compositional_skills/linguistics/rhyming_words/qna.yaml` file.
+    a. In your cloned fork, create a `/instructlab-taxonomy/compositional_skills/grounded/linguistics/rhyming_words/qna.yaml` file.
 
-    b. Add another question related to rhyming words.
+    b. In the `qna.yml` file, add a question related to rhyming words.
     ```txt
     - answer: 'Here are two rhyming words for "cave":
 
@@ -173,9 +173,24 @@ In this example, we use the InstructLab [community taxonomy](https://github.com/
 
     c. Save the changes and push them to the fork.
 
-    d. Optional: Learn more about how to modify the [taxonomy](https://github.com/instructlab/taxonomy) for the model.
+    d. If your additions include reference documents in Github, such as [this example](https://github.com/instructlab/taxonomy/blob/main/knowledge/science/animals/birds/black_capped_chickadee/qna.yaml#L185), you can use public `github.com` repositories and IBM internal `github.ibm.com` repositories. 
 
-    e. Optional: [Validate the updated taxonomy](/docs/instructlab?topic=instructlab-ts-debug#version).
+    ```txt
+    document:
+    repo: https://github.ibm.com/<organization>/<repository>
+    commit: <commit_sha>
+    patterns:
+        - <filename>.md
+
+    ```
+    {: codeblock}
+
+    If you are using an IBM internal `github.ibm.com` repository, you must give the `instructlab-ibm` user read access to the repository. Click **Settings** > **Collaborators** and in the **Manage Access** section, click **Add people**. Invite `instructlab-ibm`. The invitation is labeled as `pending` for 1-2 business days until the invitation is accepted. Until the invitation is accepted, you can continue to work with the taxonomy and generate data, but wait to complete the training steps.
+    {: important}
+
+    e. Optional: Learn more about how to modify the [taxonomy](https://github.com/instructlab/taxonomy) for the model.
+
+    f. Optional: [Validate the updated taxonomy](/docs/instructlab?topic=instructlab-ts-debug#version).
 
 
 
@@ -235,5 +250,6 @@ After you receive access to InstructLab, complete the following steps to add you
 
 
 ## What's next?
+{: #instructlab_next}
 
 [Generate data from the taxonomy.](/docs/instructlab?topic=instructlab-data-generate)
