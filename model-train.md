@@ -6,7 +6,7 @@ lastupdated: "2024-09-11"
 
 keywords: instructlab, ai
 
-subcollection: instructlab
+subcollection: {{site.data.keyword.subcollection}}
 
 ---
 
