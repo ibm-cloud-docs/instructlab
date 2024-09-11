@@ -13,7 +13,7 @@ subcollection: instructlab
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Training a model
+# Training models
 {: #model-train}
 
 
