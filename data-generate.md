@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-11"
 
 keywords: instructlab, ai, data, generate
 
@@ -18,6 +18,9 @@ subcollection: instructlab
 
 
 Complete the following steps to generate data from your taxonomy.
+
+Data cannot augmented, curated, or manually uploaded to train the model. Use this task to generate the data.
+{: restriction}
 
 
 ## Prerequisites
