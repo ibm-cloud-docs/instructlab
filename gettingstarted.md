@@ -38,9 +38,9 @@ Before you begin, make sure you have a paid {{site.data.keyword.cloud}} account.
 ## Get familiar with the capabilities
 {: #get-familiar}
 
-If you are new to machine learning, you are in the right place. To use InstructLab, you do not need to have any preexisting knowledge. You do not even need to have an idea for what to create yet. Let's start by just getting familiar with the larger concepts and what kinds of things you can do with the technology.
+If you are new to machine learning, you are in the correct place. To use InstructLab, you do not need to have any preexisting knowledge. You do not even need to have an idea for what to create yet. Let's start by just getting familiar with the concepts and what kinds of things you can do with the technology.
 
-[Generative AI](#x10298036){: term} starts with a [large language model (LLM)](#x10298052){: term}. With a prompt, these models can take large sets of data and provide a statistically probable output for that prompt. You can automatically generate a large data set that is similar to real data, and then use it to train the model to get the most probable output possible.
+[Generative AI](#x10298036){: term} starts with a [large language model (LLM)](#x10298052){: term}. With a prompt, these models can take sets of data and provide a statistically probable output for that prompt. You can automatically generate a data set that is similar to real data, and then use it to train the model to get the most probable output possible.
 
 With InstructLab, you can use an existing, pre-trained LLM compiled by a community of contributors, and then generate the data to further train the model. By incorporating {{site.data.keyword.cloud_notm}}, you have a place to store the taxonomy, the informational structure, for the model as you modified it and train the model on an ongoing basis.
 
@@ -49,7 +49,7 @@ With InstructLab, you can use an existing, pre-trained LLM compiled by a communi
 {: #instructlab_access}
 {: step}
 
-The {{site.data.keyword.product_name}} service is under development and is not yet generally available. The project is currently at capacity with a small number of critical test projects involved. As the service develops, capacity is expected to added. For your project to be considered, send an email to `instructlab@ibm.com` with the following information. You can find your account ID on the [Account settings](https://cloud.ibm.com/account/settings){: external} page. Allow 1-2 business days for the request to be processed. After you are allowlisted, you can access the InstructLab UI and CLI. 
+The {{site.data.keyword.product_name}} service is under development and is not yet generally available. The project is currently at capacity with a limited number of critical test projects involved. As the service develops, capacity is expected to added. For your project to be considered, send an email to `instructlab@ibm.com` with the following information. You can find your account ID on the [Account settings](https://cloud.ibm.com/account/settings){: external} page. Allow 1-2 business days for the request to be processed. After you are allowlisted, you can access the InstructLab UI and CLI. 
 
 
 To
