@@ -1,2 +1,2 @@
 # instructlab
-Documentation repository for instructlab
+Documentation repository for InstructLab.
