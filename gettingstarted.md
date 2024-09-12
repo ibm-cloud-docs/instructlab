@@ -157,7 +157,7 @@ In this example, we use the InstructLab [community taxonomy](https://github.com/
     ```
     {: pre}
 
-1. Optional: Make updates to the taxonomy locally and push the changes back to your fork. This example adds rhyming questions to the [linguistics](https://github.com/instructlab/taxonomy/blob/main/compositional_skills/grounded/linguistics) directory.
+1. Optional: Make updates to the taxonomy locally and push the changes back to your fork. This example adds rhyming questions to the [linguistics](https://github.com/instructlab/taxonomy/tree/main/compositional_skills/grounded/linguistics) directory.
 
     a. In your cloned fork, create a `/instructlab-taxonomy/compositional_skills/grounded/linguistics/rhyming_words/qna.yaml` file.
 
