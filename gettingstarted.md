@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-17"
 
 keywords: instructlab, ai
 
@@ -193,7 +193,7 @@ In this example, we use the InstructLab [community taxonomy](https://github.com/
     ```
     {: codeblock}
 
-    If you are using an IBM internal `github.ibm.com` repository, you must give the `instructlab-ibm` user read access to the repository. Click **Settings** > **Collaborators** and in the **Manage Access** section, click **Add people**. Invite `instructlab-ibm`. The invitation is labeled as `pending` for 1-2 business days until the invitation is accepted. Until the invitation is accepted, you can continue to work with the taxonomy and generate data, but wait to complete the training steps.
+    If you are using a private repository, you must give the `instructlab-ibm` user read access to the repository. Click **Settings** > **Collaborators** and in the **Manage Access** section, click **Add people**. Invite `instructlab-ibm`. The invitation is labeled as `pending` for 1-2 business days until the invitation is accepted. Until the invitation is accepted, you can continue to work with the taxonomy and generate data, but wait to complete the training steps.
     {: important}
 
     e. Optional: Learn more about how to modify the [taxonomy](https://github.com/instructlab/taxonomy) for the model.
