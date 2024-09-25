@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-09-17"
+lastupdated: "2024-09-25"
 
 keywords: instructlab, ai
 
@@ -19,13 +19,13 @@ completion-time: 30m
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Getting started with {{site.data.keyword.product_name}}
+# Getting started with {{site.data.keyword.instructlab_full_notm}}
 {: #getting-started}
 {: toc-content-type="tutorial"}
 {: toc-services="instructlab"}
 {: toc-completion-time="30m"}
 
-Get ready to dive into [AI](#x3448902){: term}! InstructLab is an open source project created by IBM and Red Hat to be a cost-effective entry point into the world of [machine learning](#x8397498){: term}.
+Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instructlab_full}}! InstructLab is an open source project created by IBM and Red Hat to be a cost-effective entry point into the world of [machine learning](#x8397498){: term}.
 {: shortdesc}
 
 
@@ -49,7 +49,7 @@ With InstructLab, you can use an existing, pre-trained LLM compiled by a communi
 {: #instructlab_access}
 {: step}
 
-The {{site.data.keyword.product_name}} service is under development and is not yet generally available. The project is currently at capacity with a limited number of critical test projects involved. As the service develops, capacity is expected to added. For your project to be considered, send an email to `instructlab@ibm.com` with the following information. You can find your account ID on the [Account settings](https://cloud.ibm.com/account/settings){: external} page. Allow 1-2 business days for the request to be processed. After you are allowlisted, you can access the InstructLab UI and CLI. 
+The {{site.data.keyword.instructlab_short}} service is under development and is not yet generally available. The project is currently at capacity with a limited number of critical test projects involved. As the service develops, capacity is expected to added. For your project to be considered, send an email to `instructlab@ibm.com` with the following information. You can find your account ID on the [Account settings](https://cloud.ibm.com/account/settings){: external} page. Allow 1-2 business days for the request to be processed. After you are allowlisted, you can access the InstructLab UI and CLI. 
 
 
 To
