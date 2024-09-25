@@ -1,6 +1,7 @@
 toc:
   properties:
     subcollection: instructlab
+    service-name: instructlab
     category: ai
     audience: service
     href: /docs/instructlab
