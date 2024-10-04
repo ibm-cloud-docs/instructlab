@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-10-02"
+lastupdated: "2024-10-04"
 
 keywords: instructlab, ai
 
@@ -43,7 +43,7 @@ Complete the following steps to train your model on generated data, then test th
 1. Run the command to start training the model with the generated data. Note the ID.
 
     ```sh
-    ibmcloud ilab model train --name test-model --id <data_id>
+    ibmcloud ilab model train --name test-model --data-id <data_id>
     ```
     {: pre}
 
