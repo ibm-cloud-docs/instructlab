@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2024, 2024
-lastupdated: "2024-09-11"
+lastupdated: "2024-10-04"
 
 keywords: release notes
 
@@ -25,12 +25,18 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: tip}
 
 
+## October 2024
+{: #oct24}
+
+### 03 October 2024
+{: #03oct24}
+{: release-note}
+
+COS setup revisions.
 
 
 ## August 2024
 {: #aug24}
-
-
 
 ### 02 August 2024
 {: #02aug24}
