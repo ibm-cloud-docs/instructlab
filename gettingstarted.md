@@ -274,7 +274,7 @@ After you receive access to InstructLab, store your taxonomy in COS.
 
 1. Optional: Run the `init` command to set and save COS bucket details and credentials, which can simplify your commands going forward.  If you don't want to save these details and want to include them in the `add` command instead, you can continue to the next step.
 
-    If the service instance or bucket is to be created automatically, those details are automatically saved for you.
+    If you want the COS service instance or bucket to be created automatically later, you do not need to add those options here. The details are saved for you.
     {: tip}
 
     ```sh
