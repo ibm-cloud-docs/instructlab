@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-10-04"
+lastupdated: "2024-10-08"
 
 keywords: instructlab, ai
 
@@ -292,7 +292,7 @@ After you receive access to InstructLab, store your taxonomy in COS.
     | -------------- | -------------- |
     | `--taxonomy-path <local_directory_path` | Required. The local directory path to the taxonomy file. |
     | `--taxonomy-path-cos <directory_path>` | Optional. The relative directory path within the COS bucket to the taxonomy file. |
-    | `--cos-bucket <bucket_name>` | Optional. If you are adding a taxonomy to an existing bucket, include the name. You can find this name on the **Buckets** tab of your COS instance. If you want the bucket to be created for you, you can enter a name for it. If no name is specified and a bucket does not exist yet, a bucket is created that is named `instruct-lab-bucket`. |
+    | `--cos-bucket <bucket_name>` | Optional. If you are adding a taxonomy to an existing bucket, include the name. You can find this name on the **Buckets** tab of your COS instance. If you want the bucket to be created for you, you can enter a name for it. If no name is specified and a bucket does not exist yet, a bucket is created that is named `instructlab_TIME`, where `TIME` is the current epoch time. |
     | `--cos-endpoint <endpoint>` | Optional. Use the public, regional endpoint. For example `https://s3.us-east.cloud-object-storage.appdomain.cloud`. You can find these in the **Endpoints** tab of the COS console. |
     | `--cos-region <region>` | Optional. The default value is `us-east`. |
     | `--cos-service-instance-id <service_id>` | Optional. If you have a COS service instance to use, include the service ID. In the user interface for the COS service instance, click **Details**. Note the **CRN**, which can be used for the service instance ID. If you want one to be created for you, it is created with the name `InstructLab`.|
@@ -332,7 +332,7 @@ After you receive access to InstructLab, store your taxonomy in COS.
     | `--name <taxonomy_name>` | Required. The name of the taxonomy as it is to be displayed in the COS bucket. Use alphanumeric characters in the taxonomy name.|
     | `--taxonomy-path <local_directory_path>` | Required if not specified with the `init` command. The local directory path to the taxonomy. |
     | `--taxonomy-path-cos <directory_path>` | Optional. The relative directory path within the COS bucket to the taxonomy file. |
-    | `--cos-bucket <bucket_name>` | Optional. If you are adding a taxonomy to an existing bucket, include the name. You can find this name on the **Buckets** tab of your COS instance. If you want the bucket to be created for you, you can enter a name for it. If no name is specified and a bucket does not exist yet, a bucket is created that is named `instruct-lab-bucket`. |
+    | `--cos-bucket <bucket_name>` | Optional. If you are adding a taxonomy to an existing bucket, include the name. You can find this name on the **Buckets** tab of your COS instance. If you want the bucket to be created for you, you can enter a name for it. If no name is specified and a bucket does not exist yet, a bucket is created that is named `instructlab_TIME`. |
     | `--cos-endpoint <endpoint>` | Optional. Use the public, regional endpoint. For example `https://s3.us-east.cloud-object-storage.appdomain.cloud`. You can find these in the **Endpoints** tab of the COS console. |
     | `--cos-region <region>` | Optional. The default value is `us-east`. |
     | `--cos-service-instance-id <service_id>` | Optional. If you have a COS service instance to use, include the service ID. In the user interface for the COS service instance, click **Details**. Note the **CRN**, which can be used for the service instance ID. If you want one to be created for you, it is created with the name `InstructLab`.|
