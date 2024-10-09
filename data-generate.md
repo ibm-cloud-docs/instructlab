@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-09-11"
+lastupdated: "2024-10-09"
 
 keywords: instructlab, ai, data, generate
 
@@ -27,9 +27,9 @@ Data cannot augmented, curated, or manually uploaded to train the model. Use thi
 {: #data_generate_cli_pre}
 {: cli}
 
-1. [Install the `ilab` CLI plug-in](/docs/instructlab?topic=instructlab-getting-started#instructlab_cli_install).
-1. [Prepare your taxonomy](/docs/instructlab?topic=instructlab-getting-started#instructlab_taxonomy).
-1. [Add the taxonomy TAR to your COS bucket](/docs/instructlab?topic=instructlab-getting-started#instructlab_add).
+1. [Install the `ilab` CLI plug-in](/docs/instructlab?topic=instructlab-getting-started#cli_install).
+1. [Prepare your taxonomy](/docs/instructlab?topic=instructlab-getting-started#taxonomy).
+1. [Add the taxonomy TAR to your COS bucket](/docs/instructlab?topic=instructlab-getting-started#taxonomy_add).
 
 
 
