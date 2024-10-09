@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-10-08"
+lastupdated: "2024-10-09"
 
 keywords: instructlab, ai
 
@@ -296,7 +296,7 @@ After you receive access to InstructLab, store your taxonomy in COS.
     | `--cos-endpoint <endpoint>` | Optional. Use the public, regional endpoint. For example `https://s3.us-east.cloud-object-storage.appdomain.cloud`. You can find these in the **Endpoints** tab of the COS console. |
     | `--cos-region <region>` | Optional. The default value is `us-east`. |
     | `--cos-service-instance-id <service_id>` | Optional. If you have a COS service instance to use, include the service ID. In the user interface for the COS service instance, click **Details**. Note the **CRN**, which can be used for the service instance ID. If you want one to be created for you, it is created with the name `InstructLab`.|
-    {: caption="Table 1. Understanding this command's components" caption-side="bottom"}
+    {: caption="Understanding this command's components" caption-side="bottom"}
 
     Example command to save the taxonomy path, but have the COS service instance and bucket created for you later.
     ```sh
@@ -336,7 +336,7 @@ After you receive access to InstructLab, store your taxonomy in COS.
     | `--cos-endpoint <endpoint>` | Optional. Use the public, regional endpoint. For example `https://s3.us-east.cloud-object-storage.appdomain.cloud`. You can find these in the **Endpoints** tab of the COS console. |
     | `--cos-region <region>` | Optional. The default value is `us-east`. |
     | `--cos-service-instance-id <service_id>` | Optional. If you have a COS service instance to use, include the service ID. In the user interface for the COS service instance, click **Details**. Note the **CRN**, which can be used for the service instance ID. If you want one to be created for you, it is created with the name `InstructLab`.|
-    {: caption="Table 2. Understanding this command's components" caption-side="bottom"}
+    {: caption="Understanding this command's components" caption-side="bottom"}
 
     Example command to use the details that were saved with the `init` command.
     ```sh
