@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-11"
 
 keywords: instructlab, ai
 
@@ -20,16 +20,27 @@ subcollection: instructlab
 Complete the following steps to train your model on generated data, then test the model to verify the results.
 
 ## Prerequisites
-{: #model_train_cli_pre}
+{: #model-train-pre}
 {: cli}
 
 1. [Prepare your taxonomy](/docs/instructlab?topic=instructlab-getting-started#taxonomy)
-1. [Add the taxonomy TAR to your COS bucket](/docs/instructlab?topic=instructlab-getting-started#taxonomy_add).
-1. [Generate data from your taxonomy](/docs/instructlab?topic=instructlab-data-generate&interface=cli).
+1. [Add the taxonomy TAR to your COS bucket](/docs/instructlab?topic=instructlab-getting-started#taxonomy-add-ui).
+1. [Generate data from your taxonomy](/docs/instructlab?topic=instructlab-data-generate).
 
 
-## Training a model by using the CLI
-{: #model_train_cli_steps}
+## Training models by using the console
+{: #model-train-ui}
+{: ui}
+
+1. In the console, open the [InstructLab service](https://cloud.ibm.com/instructlab/overview).
+
+1. Click **Custom models** > **Train**.
+
+1. Provide an alphanumeric name for the model, select the training data to use, and click **Train**. The state is `queued`, then `running`. Wait for the state to be `completed`. This process could take minutes or hours. When the training is complete, in the COS bucket, a `trained_models` directory is created with logs for troubleshooting.
+
+
+## Training models by using the CLI
+{: #model-train-cli}
 {: cli}
 
 
@@ -43,7 +54,7 @@ Complete the following steps to train your model on generated data, then test th
 1. Run the command to start training the model with the generated data. Note the ID.
 
     ```sh
-    ibmcloud ilab model train --name test-model --data-id <data_id>
+    ibmcloud ilab model train --name testmodel --data-id <data_id>
     ```
     {: pre}
 
@@ -57,7 +68,7 @@ Complete the following steps to train your model on generated data, then test th
     When the state is `completed`, in the COS bucket, a `trained_models` directory is created with logs for troubleshooting.
 
 ## What's next?
-{: #model_next}
+{: #next}
 
 Optional: You can deploy the model to RHEL-AI on {{site.data.keyword.cloud_notm}}.
 

@@ -30,7 +30,7 @@ Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instruct
 
 
 ## Prerequisites
-{: #instructlab_pre}
+{: #instructlab-pre}
 
 Before you begin, you must have a paid {{site.data.keyword.cloud}} account.
 
@@ -67,7 +67,6 @@ Request to allowlist account: <account_id> to use IBM Cloud InstructLab Service.
 Body
 ```txt
 Add account <account_id> to the allowlist for the IBM Cloud InstructLab service.
-
 Team: <team>
 Approval given by: <approver|dan.waugh@ibm.com>
 Purpose: <short summary of type of usage for the service>
@@ -78,16 +77,17 @@ While you wait for you account to be added to the allowlist, you can complete mo
 
 
 
-## Install the CLI plug-in
-{: #cli_install}
+## Install the CLIs
+{: #cli-install}
 {: step}
 
-You must use `ilab` plugin version 0.0.6 or later. If you already have the plugin installed, run `ibmcloud ilab --version` to verify and [update](/docs/cli?topic=cli-plug-ins#cli-update-plugin), if necessary.
+You must use `ilab` plugin version 0.0.6 or later. If you already have the plugin installed, run `ibmcloud ilab --version` to verify and, with the IBM VPN connected, run the `ibmcloud plugin update -r stage` command, if necessary.
 {: important}
+{: cli}
 
 1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 
-1. Add the `ilab` plug-in repo.
+1. Add the `ilab` plug-in repo.{: cli}
 
     ```sh
     ibmcloud plugin repo-add stage https://plugins.test.cloud.ibm.com
@@ -101,7 +101,7 @@ You must use `ilab` plugin version 0.0.6 or later. If you already have the plugi
     ```
     {: screen}
 
-1. Install the plug-in. You must be connected to the IBM VPN.
+1. Install the plug-in. You must be connected to the IBM VPN.{: cli}
 
     ```sh
     ibmcloud plugin install ilab -r stage
@@ -121,17 +121,19 @@ You must use `ilab` plugin version 0.0.6 or later. If you already have the plugi
     ```
     {: screen}
 
-1. Log in to your {{site.data.keyword.cloud_notm}} account from the CLI.
+1. Log in to your {{site.data.keyword.cloud_notm}} account from the CLI.{: cli}
     ```sh
     ibmcloud login -a https://cloud.ibm.com --sso -r us-east
     ```
     {: pre}
 
-1. If you plan to allow InstructLab to create a Cloud Object Storage Instance resources for you, target a resource group. Learn more about storage in the next section, [Choose a storage setup](#storage).
+1. If you plan to allow InstructLab to create Cloud Object Storage Instance resources for you, target a resource group. Learn more about storage in the next section, [Choose a storage setup](#storage).{: cli}
     ```sh
     ibmcloud target -g <resource_group>
     ```
     {: pre}
+
+1. Optional: Install the [Git CLI](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git) to store and manage your taxonomies.
 
 
 ## Choose a storage setup
@@ -145,7 +147,7 @@ Start by updating the InstructLab permissions. Then, if you do not have a COS se
 If the service instance or bucket are created for you, the details for those resources are saved for you. When you run CLI commands, you do not have to include the options to define them.
 
 ### Give InstuctLab permission to create and update COS artifacts
-{: #storage_auth}
+{: #storage-auth}
 
 Provide InstructLab with `Writer` access to create COS service instances and buckets and to write to buckets. The logged-in user must also have the same permission.
 
@@ -181,7 +183,14 @@ Provide InstructLab with `Writer` access to create COS service instances and buc
     ```
     {: screen}
 
-1. If necessary, give the `Writer` permission to the logged-in user.
+1. If necessary, give the `Writer` permission to the logged-in user. Include the Cloud Object Storage service instance ID from the previous step. {: cli}
+
+    ```sh
+    ibmcloud iam user-policy-create <user> --roles Writer --service-instance <cloud-object-storage-instance-id>
+    ```
+    {: pre}
+
+1. If necessary, give the `Writer` permission to the logged-in user.{: ui}
 
     a. In the user interface, click **Manage** > **Access (IAM)** > **Users**.
     
@@ -191,19 +200,38 @@ Provide InstructLab with `Writer` access to create COS service instances and buc
     
     d. In the **Roles and Actions** section, for **Service access**, select **Writer**.
 
-
 ### Optional: Create your own COS instance or bucket
-{: #storage_manual}
+{: #storage-manual}
 
 Instead of allowing a COS service instance and bucket to be created for you later, you can create them yourself.
+
+Before you begin, [install the COS CLI plugin](/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli).{: cli}
 
 1. If you do not have a service instance yet, [provision a COS instance](https://cloud.ibm.com/objectstorage/create){: external} in your account.
 
 1. Decide if you want to allow the bucket to be created automatically later or create the bucket yourself.
 
-    - If you want the bucket created automatically later, in the user interface for the COS service instance, click **Details** and copy the **CRN**, which can be used as the service instance ID later.
+    - If you want the bucket created automatically later, in the user interface for the COS service instance, click **Details** and copy the **CRN**, which can be used as the service instance ID later.{: ui}
 
-    - To create the bucket yourself, in the COS instance, create a custom bucket. Note this name for later.
+    - To create the bucket yourself now, in the COS instance, create a custom bucket. Note the bucket name for later.{: ui}
+
+    - If you want the bucket created automatically later, run the following command to get the COS service instance GUID.{: cli}
+
+        ```sh
+        ibmcloud resource service-instance <service_name>
+        ```
+        {: pre}
+
+        Output
+        ```sh
+        Name:                   Cloud Object Storage-qt-kkb-instructlab-071524
+        ID:                     crn:v1:bluemix:public:cloud-object-storage:global:a/xxxxxxxxxxxx:xxx-xxx-xxx-xxx-xxx::
+        GUID:                   xxx-xxx-xxx-xxx-xxx
+        ...
+        ```
+        {: screen}
+
+    - To create the bucket yourself now, see [Create a new bucket](/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#create-a-new-bucket) in the COS documentation. Note the bucket name for later.{: cli}
 
 
 
@@ -211,13 +239,9 @@ Instead of allowing a COS service instance and bucket to be created for you late
 {: #taxonomy}
 {: step}
 
-In this example, we use the InstructLab [community taxonomy](https://github.com/instructlab/taxonomy){: external}. 
+In this example, use the Git CLI to clone and update the InstructLab [community taxonomy](https://github.com/instructlab/taxonomy){: external}.
 
-1. Fork the community taxonomy repo.
-    ```txt
-    https://github.com/instructlab/taxonomy 
-    ```
-    {: codeblock}
+1. Fork the [community taxonomy repo](https://github.com/instructlab/taxonomy) by clicking **Fork** and completing the steps.
 
 1. Clone your fork to your local machine.
     ```sh
@@ -225,7 +249,7 @@ In this example, we use the InstructLab [community taxonomy](https://github.com/
     ```
     {: pre}
 
-1. Optional: Make updates to the taxonomy locally and push the changes back to your fork. This example adds rhyming questions to the [linguistics](https://github.com/instructlab/taxonomy/tree/main/compositional_skills/grounded/linguistics) directory.
+1. Optional: Make updates to the taxonomy in your fork. This example adds rhyming questions to the [linguistics](https://github.com/instructlab/taxonomy/tree/main/compositional_skills/grounded/linguistics) directory.
 
     a. In your cloned fork, create a `/instructlab-taxonomy/compositional_skills/grounded/linguistics/rhyming_words/qna.yaml` file.
 
@@ -247,9 +271,7 @@ In this example, we use the InstructLab [community taxonomy](https://github.com/
     ```
     {: codeblock}
 
-    c. Save the changes and push them to the fork.
-
-    d. If your additions include reference documents in Github, such as [this example](https://github.com/instructlab/taxonomy/blob/main/knowledge/science/animals/birds/black_capped_chickadee/qna.yaml#L185), you can use public `github.com` repositories and IBM internal `github.ibm.com` repositories. 
+    c. If your additions include reference documents in Github, such as [this example](https://github.com/instructlab/taxonomy/blob/main/knowledge/science/animals/birds/black_capped_chickadee/qna.yaml#L185), you can use public `github.com` repositories and IBM internal `github.ibm.com` repositories. 
 
     ```txt
     document:
@@ -257,22 +279,44 @@ In this example, we use the InstructLab [community taxonomy](https://github.com/
     commit: <commit_sha>
     patterns:
         - <filename>.md
-
     ```
     {: codeblock}
 
     If you are using a private repository, you must give the `instructlab-ibm` user read access to the repository. Click **Settings** > **Collaborators** and in the **Manage Access** section, click **Add people**. Invite `instructlab-ibm`. The invitation is labeled as `pending` for 1-2 business days until the invitation is accepted. Until the invitation is accepted, you can continue to work with the taxonomy and generate data, but wait to complete the training steps.
     {: important}
 
-    e. Optional: Learn more about how to modify the [taxonomy](https://github.com/instructlab/taxonomy) for the model.
+    d. Save the changes and push the changes to the fork.
 
-    f. Optional: [Validate the updated taxonomy](/docs/instructlab?topic=instructlab-ts-debug#version).
+    f. Optional: Learn more about how to modify the [taxonomy](https://github.com/instructlab/taxonomy) for the model.
+
+    g. Optional: [Validate the updated taxonomy](/docs/instructlab?topic=instructlab-ts-debug#version).
 
 
-
-## Add your taxonomy to COS
-{: #taxonomy_add}
+## Add your taxonomy to COS by using the console
+{: #taxonomy-add-ui}
 {: step}
+{: ui}
+
+After you receive access to InstructLab, store your taxonomy in COS.
+
+1. From a command-line terminal, TAR the local taxonomy repository directory. Use alphanumeric characters in the taxonomy name.
+
+    ```sh
+    tar -czvf <taxonomy_name>.tar.gz <taxonomy_repo_dir>
+    ```
+    {: pre}
+
+1. In the console, open the [InstructLab service](https://cloud.ibm.com/instructlab/overview).
+
+1. Click **Taxonomies**.
+
+1. Select the `.tar.gz` file, give the taxonomy alphanumeric name, enter the COS service and bucket details to use, and click **Upload**.
+
+
+## Add your taxonomy to COS by using the CLI
+{: #taxonomy-add-cli}
+{: step}
+{: cli}
 
 After you receive access to InstructLab, store your taxonomy in COS.
 

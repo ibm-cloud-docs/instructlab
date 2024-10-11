@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-11"
 
 keywords: instructlab, ai, data, generate
 
@@ -24,17 +24,26 @@ Data cannot augmented, curated, or manually uploaded to train the model. Use thi
 
 
 ## Prerequisites
-{: #data_generate_cli_pre}
-{: cli}
+{: #data-generate-pre}
 
-1. [Install the `ilab` CLI plug-in](/docs/instructlab?topic=instructlab-getting-started#cli_install).
+1. [Install the `ilab` CLI plug-in](/docs/instructlab?topic=instructlab-getting-started#cli_install).{: cli}
 1. [Prepare your taxonomy](/docs/instructlab?topic=instructlab-getting-started#taxonomy).
-1. [Add the taxonomy TAR to your COS bucket](/docs/instructlab?topic=instructlab-getting-started#taxonomy_add).
+1. [Add the taxonomy TAR to your COS bucket](/docs/instructlab?topic=instructlab-getting-started#taxonomy_add_ui).
 
+
+## Generating data by using the console
+{: #data-generate-ui}
+{: ui}
+
+1. In the console, open the [InstructLab service](https://cloud.ibm.com/instructlab/overview).
+
+1. Click **Training data** > **Generate**.
+
+1. Provide an alphanumeric name for the training data, select the taxonomy to use, and click **Generate**. The state is `queued`, then `running`. Wait for the state to be `completed`. When the data is generated, in the COS bucket, a `synthetic_data` directory is created with logs for troubleshooting.
 
 
 ## Generating data by using the CLI
-{: #data_generate_cli_steps}
+{: #data-generate-cli}
 {: cli}
 
 1. List your taxonomies and make a note of the taxonomy you want to use.
@@ -50,8 +59,6 @@ Data cannot augmented, curated, or manually uploaded to train the model. Use thi
     ```
     {: screen}
 
-
-
 1. Run the `ibmcloud ilab data generate` command to generate data from your taxonomy. Note the ID for the data to use in the next step. Use alphanumeric characters in the name.
     ```sh
     ibmcloud ilab data generate [--name NAME] [--taxonomy-id TAXONOMY-ID]
@@ -60,7 +67,7 @@ Data cannot augmented, curated, or manually uploaded to train the model. Use thi
 
     Example command.
     ```sh
-    ibmcloud ilab data generate --name test-data --taxonomy-id 669a88c9488ee7b95ce8fe05
+    ibmcloud ilab data generate --name testdata --taxonomy-id 669a88c9488ee7b95ce8fe05
     ```
     {: pre}
 
@@ -74,7 +81,6 @@ Data cannot augmented, curated, or manually uploaded to train the model. Use thi
     taxonomy_id   669a88c9488ee7b95ce8fe05
     ```
     {: screen}
-
 
 1. Check the details of your data generation. Include the ID for the data. The state is `queued`, then `running`. Wait for the state to be `completed`.
     ```sh
@@ -103,6 +109,6 @@ Data cannot augmented, curated, or manually uploaded to train the model. Use thi
 
 
 ## Next steps
-{: #data_generate_next}
+{: #next}
 
 After you've generated data from your taxonomy, you can begin [training your model](/docs/instructlab?topic=instructlab-model-train).
