@@ -183,7 +183,7 @@ Provide InstructLab with `Writer` access to create COS service instances and buc
     ```
     {: screen}
 
-1. If necessary, give the `Writer` permission to the logged-in user. Include the Cloud Object Storage service instance ID from the previous step. {: cli}
+1. If necessary, give the `Writer` permission to the logged-in user. Include the Cloud Object Storage service instance ID from the previous step.
 
     ```sh
     ibmcloud iam user-policy-create <user> --roles Writer --service-instance <cloud-object-storage-instance-id>
