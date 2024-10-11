@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-11"
 
 keywords: instructlab, ai
 
@@ -67,6 +67,10 @@ Request to allowlist account: <account_id> to use IBM Cloud InstructLab Service.
 Body
 ```txt
 Add account <account_id> to the allowlist for the IBM Cloud InstructLab service.
+
+Team: <team>
+Approval given by: <approver|dan.waugh@ibm.com>
+Purpose: <short summary of type of usage for the service>
 ```
 {: codeblock}
 
