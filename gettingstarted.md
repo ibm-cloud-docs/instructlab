@@ -169,7 +169,7 @@ Provide InstructLab with `Writer` access to create COS service instances and buc
     ```
     {: pre}
 
-    Result when authorization is not scoped to only COS resources:
+    Result when authorization is not scoped to a specific COS bucket:
     ```txt
     Getting authorization policies under account abc1234 as user...
     OK
@@ -183,7 +183,7 @@ Provide InstructLab with `Writer` access to create COS service instances and buc
     ```
     {: screen}
 
-    Result when authorization is scoped to only COS resources:
+    Result when authorization is scoped to a specific COS bucket:
     ```txt
     Getting authorization policies under account abc1234 as user...
     OK
