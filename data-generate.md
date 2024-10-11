@@ -26,7 +26,7 @@ Data cannot augmented, curated, or manually uploaded to train the model. Use thi
 ## Prerequisites
 {: #data-generate-pre}
 
-1. [Install the `ilab` CLI plug-in](/docs/instructlab?topic=instructlab-getting-started#cli_install).{: cli}
+1. [Install the `ilab` CLI plug-in](/docs/instructlab?topic=instructlab-getting-started&interface=cli#cli-install).{: cli}
 1. [Prepare your taxonomy](/docs/instructlab?topic=instructlab-getting-started#taxonomy).
 1. [Add the taxonomy TAR to your COS bucket](/docs/instructlab?topic=instructlab-getting-started#taxonomy_add_ui).
 
@@ -59,7 +59,7 @@ Data cannot augmented, curated, or manually uploaded to train the model. Use thi
     ```
     {: screen}
 
-1. Run the `ibmcloud ilab data generate` command to generate data from your taxonomy. Note the ID for the data to use in the next step. Use alphanumeric characters in the name.
+1. Generate data from your taxonomy. Note the ID for the data to use in the next step. Use alphanumeric characters in the name.
     ```sh
     ibmcloud ilab data generate [--name NAME] [--taxonomy-id TAXONOMY-ID]
     ```

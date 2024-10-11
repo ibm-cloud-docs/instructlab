@@ -190,16 +190,6 @@ Provide InstructLab with `Writer` access to create COS service instances and buc
     ```
     {: pre}
 
-1. If necessary, give the `Writer` permission to the logged-in user.{: ui}
-
-    a. In the user interface, click **Manage** > **Access (IAM)** > **Users**.
-    
-    b. Click the user name > **Access** and in the **Assign policies** section, click **Assign access**.
-    
-    c. Select the **Cloud Object Storage** service and complete the prompts.
-    
-    d. In the **Roles and Actions** section, for **Service access**, select **Writer**.
-
 ### Optional: Create your own COS instance or bucket
 {: #storage-manual}
 
