@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-10-11"
+lastupdated: "2024-10-21"
 
 keywords: instructlab, ai
 
@@ -86,8 +86,6 @@ Optional: You can deploy the model to RHEL-AI on {{site.data.keyword.cloud_notm}
     #!/usr/bin/env bash
     # Replace variable with the bearer token
     BEARER_TOKEN="XXX"
-    # Replace variable with the service id
-    SERVICE_INSTANCE_ID="XXX"
     # Replace variable with the COS bucket name
     CUSTOMER_BUCKET="XXX"
     # Replace variable with the COS endpoint
@@ -96,7 +94,7 @@ Optional: You can deploy the model to RHEL-AI on {{site.data.keyword.cloud_notm}
     MODEL_PREFIX="trained_models/XXX/model/"
     # Replace variable with the model directory path
     MODEL_DIR=/root/model/modeltest
-    curl -v -G "$COS_ENDPOINT/$CUSTOMER_BUCKET" --data-urlencode "list-type=2" --data-urlencode "prefix=$MODEL_PREFIX" -H "Authorization: Bearer $BEARER_TOKEN" -H "ibm-service-instance-id: $SERVICE_INSTANCE_ID" >/tmp/rawxml.txt
+    curl -v -G "$COS_ENDPOINT/$CUSTOMER_BUCKET" --data-urlencode "list-type=2" --data-urlencode "prefix=$MODEL_PREFIX" -H "Authorization: Bearer $BEARER_TOKEN" >/tmp/rawxml.txt
     cat /tmp/rawxml.txt | awk '{split($0,a,"<Key>"); for (i=1; i<=length(a); i++)  print a[i]}' >/tmp/keysonnewline.txt
     mkdir -p "$MODEL_DIR"
     while read -r line; do
@@ -105,7 +103,19 @@ Optional: You can deploy the model to RHEL-AI on {{site.data.keyword.cloud_notm}
         fi
         KEY_TO_DOWNLOAD=$(echo "$line" | awk -F '<' '{print $1}')
         FILE_NAME=$(basename "$KEY_TO_DOWNLOAD")
-        curl -X "GET" "$COS_ENDPOINT/$CUSTOMER_BUCKET/$KEY_TO_DOWNLOAD" -H "Authorization: Bearer $BEARER_TOKEN" -H "ibm-service-instance-id: $SERVICE_INSTANCE_ID" >"${MODEL_DIR}/$FILE_NAME"
+        curl -X "GET" "$COS_ENDPOINT/$CUSTOMER_BUCKET/$KEY_TO_DOWNLOAD" -H "Authorization: Bearer $BEARER_TOKEN" >"${MODEL_DIR}/$FILE_NAME"
     done </tmp/keysonnewline.txt
+    ```
+    {: pre}
+    
+1. Then use the `ilab` commands to serve and chat.
+
+    ```sh
+    ilab model serve --model-path $MODEL_DIR -- --tensor-parallel-size 1 --host 0.0.0.0 --port 8080
+    ```
+    {: pre}
+   
+    ```sh
+    ilab model chat --endpoint-url http://localhost:8080/v1 -m $MODEL_DIR
     ```
     {: pre}
