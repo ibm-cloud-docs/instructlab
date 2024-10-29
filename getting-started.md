@@ -44,6 +44,8 @@ If you are new to machine learning, you are in the correct place. To use Instruc
 
 With InstructLab, you can use an existing, pre-trained LLM compiled by a community of contributors, and then generate the data to further train the model. By incorporating {{site.data.keyword.cloud_notm}}, you have a place to store the taxonomy, the informational structure, for the model as you modified it and train the model on an ongoing basis.
 
+![Task flow diagram for generating a model with the service.](images/task-flow.svg "Task flow diagram for generating a model with the service."){: caption="Task flow diagram." caption-side="bottom"}{: external download="task-flow.svg"}
+
 
 ## Request access
 {: #access}
@@ -438,4 +440,3 @@ After you receive access to InstructLab, store your taxonomy in COS.
 {: #next}
 
 [Generate data from the taxonomy.](/docs/instructlab?topic=instructlab-data-generate)
-
