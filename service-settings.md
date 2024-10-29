@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-10-25"
+lastupdated: "2024-10-29"
 
 keywords: instructlab, ai, data, generate, default, settings
 
@@ -20,7 +20,7 @@ Review the default settings for InstructLab. These settings cannot be modified.
 {: shortdesc}
 
 ## Training settings
-{: #training_defaults}
+{: #training-defaults}
 
 Training strategy
 : Specifies the training strategy that is used. 
@@ -47,7 +47,7 @@ Padding-free transformer
 :   - `--is-padding-free=true`; config: `train.is_padding_free`
 
 ## Synthetic data generation (SDG) settings
-{: #sdg_defaults} 
+{: #sdg-defaults} 
 
 Teacher Model
 :   Specifies the model used during synthetic data generation. 
@@ -62,5 +62,3 @@ Data generation pipeline
 :   Specifies the data generation pipeline to use.
 :   Pipeline: `agentic`
 :   Parameter (includes directory path): `--pipeline=/instructlab/sdg/pipelines/agentic`; config: `generate.teacher.model_path`
-
-

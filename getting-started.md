@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-10-21"
+lastupdated: "2024-10-29"
 
 keywords: instructlab, ai
 
@@ -438,3 +438,4 @@ After you receive access to InstructLab, store your taxonomy in COS.
 {: #next}
 
 [Generate data from the taxonomy.](/docs/instructlab?topic=instructlab-data-generate)
+
