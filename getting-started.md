@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-10-29"
+lastupdated: "2024-10-31"
 
 keywords: instructlab, ai
 
@@ -75,7 +75,7 @@ Purpose: <short summary of type of usage for the service>
 ```
 {: codeblock}
 
-While you wait for you account to be added to the allowlist, you can complete most of these steps. 
+While you wait for your account to be added to the allowlist, you can complete most of these steps. 
 
 
 
