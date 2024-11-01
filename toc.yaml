@@ -32,7 +32,6 @@ toc:
   - navgroup:
       id: reference
       topics:
-      - ilab-cli-ref.md
       - service-settings.md
   - navgroup:
       id: help

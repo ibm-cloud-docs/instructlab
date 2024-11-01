@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-10-21"
+lastupdated: "2024-11-01"
 
 keywords: instructlab, ai
 
@@ -39,33 +39,6 @@ Complete the following steps to train your model on generated data, then test th
 1. Provide an alphanumeric name for the model, select the training data to use, and click **Train**. The state is `queued`, then `running`. Wait for the state to be `completed`. This process could take minutes or hours. When the training is complete, in the COS bucket, a `trained_models` directory is created with logs for troubleshooting.
 
 
-## Training models by using the CLI
-{: #model-train-cli}
-{: cli}
-
-
-1. Get the ID for the data to use.
-
-    ```sh
-    ibmcloud ilab data list
-    ```
-    {: pre}
-
-1. Run the command to start training the model with the generated data. Note the ID.
-
-    ```sh
-    ibmcloud ilab model train --name testmodel --data-id <data_id>
-    ```
-    {: pre}
-
-1. Check the details of your data generation. Include the ID for the model. The state is `queued`, then `running`. Wait for the state to be `completed`. This process could take minutes or hours.
-
-    ```sh
-    ibmcloud ilab model get --id <model_id>
-    ```
-    {: pre}
-
-    When the state is `completed`, in the COS bucket, a `trained_models` directory is created with logs for troubleshooting.
 
 ## What's next?
 {: #next}
