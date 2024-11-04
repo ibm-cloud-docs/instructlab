@@ -35,6 +35,13 @@ Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instruct
 
 Before you begin, you must have a paid {{site.data.keyword.cloud}} account.
 
+The following account types are supported:
+
+- Pay-As-You-Go
+- Subscription
+
+Trial accounts are not supported. For more information or to upgrade your account, see [Account types](/docs/account?topic=account-accounts#compare).
+
 
 ## Get familiar with the capabilities
 {: #get-familiar}
