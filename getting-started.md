@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-11-01"
+lastupdated: "2024-11-04"
 
 keywords: instructlab, ai
 
@@ -54,31 +54,36 @@ With InstructLab, you can use an existing, pre-trained LLM compiled by a communi
 {: step}
 
 
-The {{site.data.keyword.instructlab_short}} service is under development and is not yet generally available. The project is currently at capacity with a limited number of critical test projects involved. As the service develops, capacity is expected to added. For your project to be considered, send an email to `instructlab@ibm.com` with the following information. You can find your account ID on the [Account settings](https://cloud.ibm.com/account/settings){: external} page. Allow 1-2 business days for the request to be processed. After you are allowlisted, you can access the InstructLab UI and CLI. 
+The {{site.data.keyword.instructlab_short}} service is under development and is not yet generally available. The project is currently at capacity with a limited number of critical test projects involved. As the service develops, capacity is expected to added.
 
+For your project to be considered, request access.
 
-To
-```txt
-instructlab@ibm.com
-```
-{: codeblock}
+1. Retrieve your account ID from the [Account settings](https://cloud.ibm.com/account/settings){: external} page. 
+1. Send an email to `instructlab@ibm.com` with the following information. 
 
-Subject
-```txt
-Request to allowlist account: <account_id> to use IBM Cloud InstructLab Service.
-```
-{: codeblock}
+    To
+    ```txt
+    instructlab@ibm.com
+    ```
+    {: codeblock}
 
-Body
-```txt
-Add account <account_id> to the allowlist for the IBM Cloud InstructLab service.
-Team: <team>
-Approval given by: <approver|dan.waugh@ibm.com>
-Purpose: <short summary of type of usage for the service>
-```
-{: codeblock}
+    Subject
+    ```txt
+    Request to allowlist account: <account_id> to use IBM Cloud InstructLab Service.
+    ```
+    {: codeblock}
 
-While you wait for your account to be added to the allowlist, you can complete most of these steps. 
+    Body
+    ```txt
+    Add account <account_id> to the allowlist for the IBM Cloud InstructLab service.
+    Team: <team>
+    Approval given by: <approver>
+    UI access required: <yes/no>
+    Purpose: <short summary of type of usage for the service>
+    ```
+    {: codeblock}
+
+Allow 1-2 business days for the request to be processed. While you wait for your account to be added to the allowlist, you can complete most of these steps. After you are allowlisted, you can access the InstructLab UI and CLI. 
 
 
 
