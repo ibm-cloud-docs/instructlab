@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-11-04"
+lastupdated: "2024-11-08"
 
 keywords: instructlab, ai
 
@@ -61,7 +61,7 @@ With InstructLab, you can use an existing, pre-trained LLM compiled by a communi
 {: step}
 
 
-The {{site.data.keyword.instructlab_short}} service is under development and is not yet generally available. The project is currently at capacity with a limited number of critical test projects involved. As the service develops, capacity is expected to added.
+The {{site.data.keyword.instructlab_short}} service is under development and is not yet generally available. The project is currently at capacity with many critical test projects involved. As the service develops, capacity is expected to added.
 
 For your project to be considered, request access.
 
