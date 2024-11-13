@@ -32,6 +32,9 @@ toc:
   - navgroup:
       id: reference
       topics:
+      - link:
+          label: API reference - Swagger
+          href: https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/
       - service-settings.md
       - data-portability.md
   - navgroup:

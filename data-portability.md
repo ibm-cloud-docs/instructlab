@@ -36,7 +36,7 @@ To find out more about responsibility ownership for using {{site.data.keyword.cl
 
 {{site.data.keyword.instructlab_short}} provides the mechanisms to export your content that's uploaded, stored, and processed when you use the service.
 
-The data you process in {{site.data.keyword.instructlab_short}} is stored in a {{site.data.keyword.cos_full_notm}} (COS) instance in your IBM Cloud account.
+The data you process in {{site.data.keyword.instructlab_short}} is stored in an {{site.data.keyword.cos_full_notm}} (COS) instance in your IBM Cloud account.
 
 You can export data from COS in the following ways.
 
@@ -59,4 +59,3 @@ When you export your InstructLab data from COS, the data in the same format as w
 {: #data-portability-ownership}
 
 All exported data is classified as customer content. Apply the full customer ownership and licensing rights, as stated in the [IBM Cloud Service Agreement](https://www.ibm.com/terms/?id=Z126-6304_WS){: external}.
-
