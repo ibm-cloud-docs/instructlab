@@ -33,6 +33,7 @@ toc:
       id: reference
       topics:
       - service-settings.md
+      - data-portability.md
   - navgroup:
       id: help
       topics:
