@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-11-08"
+lastupdated: "2024-11-13"
 
 keywords: instructlab, ai
 
@@ -25,7 +25,7 @@ completion-time: 30m
 {: toc-services="instructlab"}
 {: toc-completion-time="30m"}
 
-Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instructlab_full}}! InstructLab is an open source project created by IBM and Red Hat to be a cost-effective entry point into the world of [machine learning](#x8397498){: term}.
+Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instructlab_full}}! {{site.data.keyword.instructlab_short}} is an open source project created by IBM and Red Hat to be a cost-effective entry point into the world of [machine learning](#x8397498){: term}.
 {: shortdesc}
 
 

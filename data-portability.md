@@ -50,9 +50,9 @@ You can export data from COS in the following ways.
 ## Exported data formats
 {: #data-portability-data-formats}
 
-InstructLab resources are created in several file types including `tar.gz` packages, `.jsonl`, `safetensor`, and `.log` files.
+{{site.data.keyword.instructlab_short}} resources are created in several file types including `tar.gz` packages, `.jsonl`, `safetensor`, and `.log` files.
 
-When you export your InstructLab data from COS, the data in the same format as was originally uploaded.
+When you export your {{site.data.keyword.instructlab_short}} data from COS, the data in the same format as was originally uploaded.
 
 
 ## Data ownership
