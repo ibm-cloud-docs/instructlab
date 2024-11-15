@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-11-15"
 
 keywords: instructlab, ai, data, generate
 
@@ -44,6 +44,6 @@ Data cannot augmented, curated, or manually uploaded to train the model. Use thi
 
 
 ## Next steps
-{: #next}
+{: #next-data}
 
 After you've generated data from your taxonomy, you can begin [training your model](/docs/instructlab?topic=instructlab-model-train).

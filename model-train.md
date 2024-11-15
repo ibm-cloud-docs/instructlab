@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-11-14"
+lastupdated: "2024-11-15"
 
 keywords: instructlab, ai
 
@@ -44,7 +44,7 @@ Configuration information or files cannot be passed to the model for fine tuning
 
 
 ## What's next?
-{: #next}
+{: #next-model}
 
 Optional: You can deploy the model to RHEL-AI on {{site.data.keyword.cloud_notm}}.
 
