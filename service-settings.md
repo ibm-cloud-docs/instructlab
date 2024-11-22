@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-10-29"
+lastupdated: "2024-11-22"
 
 keywords: instructlab, ai, data, generate, default, settings
 
@@ -25,6 +25,10 @@ Review the default settings for InstructLab. These settings cannot be modified.
 Training strategy
 : Specifies the training strategy that is used. 
 :  - `--strategy=lab-multiphase`
+
+Base Model to be trained
+: Specifies the base model to be trained
+: - `--model-path=granite-7b-starter`
 
 MT-Bench judge 
 :   Specifies the MT-Bench judge model. This parameter is the absolute path to the local judge model directory. If necessary, you can download the model by running `ilab model download`.
