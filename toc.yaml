@@ -32,6 +32,7 @@ toc:
   - navgroup:
       id: reference
       topics:
+      - ilab-cli-ref.md
       - link:
           label: API reference - Swagger
           href: https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/

@@ -17,6 +17,10 @@
       {
         "title": "Training models",
         "href": "/docs/instructlab?topic=instructlab-model-train"
+      },
+      {
+        "title": "CLI Reference",
+        "href": "/docs/instructlab?topic=instructlab-ilab-cli-ref"
       }
 
     ]
@@ -35,6 +39,9 @@
       "type": "training"
     }
   ],
+  "section_devtools": {
+    "cli": "/docs/instructlab?topic=instructlab-ilab-cli-ref"
+  },
   "section_updates": {
     "view_more": "/docs/instructlab?topic=instructlab-release-notes"
   }
