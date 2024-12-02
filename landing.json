@@ -1,15 +1,11 @@
 {
   "version": 2,
   "title": "Red Hat AI InstructLab for IBM Cloud",
-  "introduction": "Get ready to dive into AI! InstructLab is an open source project created by IBM and Red Hat to be a cost-effective entry point into the world of machine learning.",
+  "introduction": "Product preview: Get ready to dive into AI! InstructLab is an open source project created by IBM and Red Hat to be a cost-effective entry point into the world of machine learning.",
   "product_page": "https://www.ibm.com/cloud/",
   "console_page": "/instructlab/overview",
   "section_topics": {
     "links": [
-      {
-        "title": "Getting started",
-        "href": "/docs/instructlab?topic=instructlab-getting-started"
-      },
       {
         "title": "Generating data",
         "href": "/docs/instructlab?topic=instructlab-data-generate"
