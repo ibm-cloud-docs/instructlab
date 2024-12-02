@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-11-22"
+lastupdated: "2024-12-02"
 
 keywords: instructlab, ai
 
@@ -65,7 +65,7 @@ The {{site.data.keyword.instructlab_short}} service is under development and is 
 
 For your project to be considered, request access.
 
-1. Retrieve your production account ID from the [Account settings](https://cloud.ibm.com/account/settings){: external} page. 
+1. Retrieve your account ID from the [Account settings](https://cloud.ibm.com/account/settings){: external} page. 
 1. Send an email to `instructlab@ibm.com` with the following information. 
 
     To
