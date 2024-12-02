@@ -32,4 +32,4 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: #02dec24}
 {: release-note}
 
-Initial release.
+Product preview release.
