@@ -131,7 +131,6 @@ Allow 1-2 business days for the request to be processed. While you wait for your
 
 ## Give InstuctLab permission to create and update COS artifacts
 {: #storage-auth-cli}
-{: cli}
 {: step}
 
 Give InstructLab the `Writer` access role for the COS service. The logged-in user must also have the same permission.
@@ -190,35 +189,6 @@ Give InstructLab the `Writer` access role for the COS service. The logged-in use
     {: pre}
 
 
-
-## Create an authorization policy for InstuctLab
-{: #storage-auth-ui}
-{: ui}
-{: step}
-
-Give InstructLab the `Writer` access role for the COS service. The logged-in user must also have the same permission.
-
-1. Create an authrorization policy gives InstructLab `Writer` access to the COS service.
-
-    a. In the user interface, click **Manage** > **Access (IAM)** > **Authorizations**.
-
-    b. For the source service, select the **InstructLab** service.
-
-    c. For the target service, select the **Cloud Object Storage** service.
-
-    d. In the **Roles** section, for **Service access**, select **Writer**.
-
-    e. Click **Authorize**.
-
-1. If necessary, give the `Writer` permission to the logged-in user.
-
-    a. In the user interface, click **Manage** > **Access (IAM)** > **Users**.
-    
-    b. Click the user name > **Access** and in the **Assign policies** section, click **Assign access**.
-    
-    c. Select the **Cloud Object Storage** service and complete the prompts.
-    
-    d. In the **Roles and Actions** section, for **Service access**, select **Writer**.
 
 
 ## Optional: Create a COS instance and bucket
