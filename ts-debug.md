@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-11-11"
+lastupdated: "2024-12-02"
 
 keywords: instructlab, debugging
 
@@ -94,6 +94,6 @@ If the issues are with the backend and not your taxonomy or local configuration,
 1. If the versions do not match, update the local CLI plugin.
 
     ```sh
-    ibmcloud plugin update ilab -r stage
+    ibmcloud plugin update ilab
     ```
     {: pre}
