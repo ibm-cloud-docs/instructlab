@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2024, 2024
-lastupdated: "2024-10-04"
+lastupdated: "2024-12-02"
 
 keywords: release notes
 
@@ -15,7 +15,7 @@ content-type: release-note
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Pre-release notes
+# Release notes
 {: #release-notes}
 
 Use the release notes to learn about the latest changes to the documentation that are grouped by month.
@@ -25,23 +25,11 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: tip}
 
 
-## October 2024
-{: #oct24}
+## December 2024
+{: #dec24}
 
-### 03 October 2024
-{: #03oct24}
+### 02 December 2024
+{: #02dec24}
 {: release-note}
 
-COS setup revisions.
-
-
-## August 2024
-{: #aug24}
-
-### 02 August 2024
-{: #02aug24}
-{: release-note}
-
-CLI changes.
-:   `status` commands changed to `get` commands.
-:   `upload` command changed to `add` command.
+Initial release.
