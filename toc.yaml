@@ -1,0 +1,47 @@
+toc:
+  properties:
+    subcollection: instructlab
+    service-name: instructlab
+    category: ai
+    audience: service
+    href: /docs/instructlab
+    path: instructlab
+    label: InstructLab
+    release-level: preview
+    version: 2
+    console-page: /instructlab/overview
+    product-page: https://www.ibm.com/cloud/
+  entries: 
+  - navgroup: 
+      id: learn
+      topics:
+      - getting-started.md
+      - about.md
+      - release-notes.md
+      - link:
+            label: What is AI?
+            href: https://www.ibm.com/topics/artificial-intelligence
+      - link:
+            label: What is InstructLab?
+            href: https://www.redhat.com/en/topics/ai/what-is-instructlab
+  - navgroup: 
+      id: howto
+      topics:
+      - data-generate.md
+      - model-train.md
+  - navgroup:
+      id: reference
+      topics:
+      - ilab-cli-ref.md
+      - link:
+          label: API reference - Swagger
+          href: https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/
+      - service-settings.md
+      - data-portability.md
+  - navgroup:
+      id: help
+      topics:
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - ts-debug.md
