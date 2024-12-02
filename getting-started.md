@@ -97,7 +97,6 @@ Allow 1-2 business days for the request to be processed. While you wait for your
 ## Install the CLIs
 {: #cli-install}
 {: step}
-{: cli}
 
 1. Optional: Install the [Git CLI](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git) to store and manage your taxonomies.
 
