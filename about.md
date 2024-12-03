@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-12-03"
 
 keywords: instructlab, ai, about
 
@@ -16,7 +16,9 @@ subcollection: instructlab
 # About {{site.data.keyword.instructlab_full_notm}}
 {: #about}
 
-{{site.data.keyword.instructlab_full}} is a business-ready, private, and secure generative AI solution powered by Red Hat Enterprise Linux AI.
+{{site.data.keyword.instructlab_full}} is a business-ready, private, and secure generative AI solution powered by Red Hat Enterprise Linux AI. In this product preview, selected accounts can work with their IBM account teams to optimize their Generative AI use cases for accuracy and cost efficiency. Reach out to your IBM account team for more information.
+
+
 
 
 ## Why {{site.data.keyword.instructlab_short}}?
