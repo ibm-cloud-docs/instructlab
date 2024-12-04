@@ -33,9 +33,6 @@ toc:
       topics:
       - ilab-cli-ref.md
       - link:
-          label: API reference - IBM Cloud
-          href: https://cloud.ibm.com/apidocs/instructlab
-      - link:
           label: API reference - Swagger
           href: https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/
       - service-settings.md
