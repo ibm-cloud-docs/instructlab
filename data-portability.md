@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-12-10"
 
 keywords: data portability, compliance, dora
 
@@ -58,4 +58,4 @@ When you export your {{site.data.keyword.instructlab_short}} data from COS, the 
 ## Data ownership
 {: #data-portability-ownership}
 
-All exported data is classified as customer content. Apply the full customer ownership and licensing rights, as stated in the [IBM Cloud Service Agreement](https://www.ibm.com/terms/?id=Z126-6304_WS){: external}.
+All exported data is classified as customer content. Apply the full customer ownership and licensing rights, as stated in the [IBM Cloud Service Agreement](https://www.ibm.com/support/customer/csol/terms/?id=Z126-6304_WS){: external}.
