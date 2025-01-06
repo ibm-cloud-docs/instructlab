@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024, 2024
-lastupdated: "2024-12-02"
+  years: 2024, 2025
+lastupdated: "2025-01-06"
 
 keywords: instructlab, ai, data, generate
 
@@ -19,7 +19,7 @@ subcollection: instructlab
 
 Complete the following steps to generate data from your taxonomy.
 
-Data cannot augmented, curated, or manually uploaded to train the model. Use this task to generate the data.
+Data cannot be augmented, curated, or manually uploaded to train the model. Use this task to generate the data.
 {: restriction}
 
 
@@ -128,6 +128,103 @@ Data cannot augmented, curated, or manually uploaded to train the model. Use thi
 
 
 When the state is `completed`, in the COS bucket, a [`synthetic_data` directory](#data-bucket) is created with logs for troubleshooting.
+
+## Generating data by using the API
+{: #data-generate-api}
+{: api}
+
+1. List your taxonomies and make a note of the taxonomy you want to use.
+
+    Example command.
+    ```sh
+    curl -X 'GET' \
+    'https://us-east.instructlab.ibm.com/v1/taxonomies' \
+    -H 'accept: application/json
+    ```
+    {: pre}
+
+    Example output.
+    ```txt
+    {
+      "taxonomies": [
+        {
+          "id": "202a03c4-dcf1-432a-82b7-abecb2e019f7",
+          "name": "example-taxonomy-name-1",
+          "taxonomy_path_cos": "taxonomies/taxonomy.tar.gz",
+          "created_at": "2024-10-23T02:58:50.000Z"
+        }
+      ]
+    }
+    ```
+    {: screen}
+
+1. Generate data from your taxonomy. Note the ID for the data to use in the next step. Use alphanumeric characters in the name.
+
+    Example command.
+    ```sh
+    curl -X 'POST' \
+      'https://us-east.instructlab.ibm.com/v1/data' \
+      -H 'accept: application/json' \
+      -H 'Content-Type: application/json' \
+      -d '{
+      "name": "example-data-1",
+      "taxonomy_id": "202a03c4-dcf1-432a-82b7-abecb2e019f7"
+    }'
+    ```
+    {: pre}
+
+    Example output.
+    ```sh
+    {
+      "id": "add785e6-a8c3-4f5f-ab89-c506a3f115da",
+      "name": "example-data-1",
+      "state": "",
+      "status": "queued",
+      "created_at": "2024-10-23T02:58:50.000Z",
+      "taxonomy_id": "202a03c4-dcf1-432a-82b7-abecb2e019f7",
+      "data_metrics": {
+        "samples": {
+          "additionalProp1": 1,
+          "additionalProp2": 2,
+          "additionalProp3": 3
+        }
+      }
+    }
+    ```
+    {: screen}
+
+1. Check the details of your data generation. Include the ID for the data. The state is `queued`, then `running`. Wait for the state to be `completed`.
+
+    Example command.
+    ```sh
+    curl -X 'GET' \
+      'https://us-east.instructlab.ibm.com/v1/data/add785e6-a8c3-4f5f-ab89-c506a3f115da' \
+      -H 'accept: application/json'
+    ```
+    {: pre}
+
+    Example output.
+    ```txt
+    {
+      "id": "add785e6-a8c3-4f5f-ab89-c506a3f115da",
+      "name": "example-data-1",
+      "state": "",
+      "status": "queued",
+      "created_at": "2024-10-23T02:58:50.000Z",
+      "taxonomy_id": "202a03c4-dcf1-432a-82b7-abecb2e019f7",
+      "data_metrics": {
+        "samples": {
+          "additionalProp1": 1,
+          "additionalProp2": 2,
+          "additionalProp3": 3
+        }
+      }
+    }
+    ```
+    {: screen}
+
+When the state is `completed`, in the COS bucket, a [`synthetic_data` directory](#data-bucket) is created with logs for troubleshooting.
+   
 
 ## What's in my COS bucket after generating data?
 {: #data-bucket}
