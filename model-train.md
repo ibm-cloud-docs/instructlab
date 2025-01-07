@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024, 2024
-lastupdated: "2024-12-02"
+  years: 2024, 2025
+lastupdated: "2025-01-06"
 
 keywords: instructlab, ai
 
@@ -17,7 +17,7 @@ subcollection: instructlab
 {: #model-train}
 
 
-Complete the following steps to train your model on generated data, then test the model to verify the results.
+Complete the following steps to train your model on generated data. Then test the model to verify the results.
 
 Configuration information or files cannot be passed to the model for fine tuning.
 {: note}
@@ -116,6 +116,205 @@ Configuration information or files cannot be passed to the model for fine tuning
     ```
     {: screen}
 
+
+When the state is `completed`, in the COS bucket, a `trained_models` directory is created with logs for troubleshooting.
+
+
+## Training models by using the API
+{: #model-train-api}
+{: api}
+
+1. Get the ID for the data to use.
+
+    Example command.
+    ```sh
+    curl -X 'GET' \
+      'https://us-east.instructlab.ibm.com/v1/data' \
+      -H 'accept: application/json'
+    ```
+    {: pre}
+
+    Example output.
+    ```txt
+    {
+      "data": [
+        {
+          "id": "add785e6-a8c3-4f5f-ab89-c506a3f115da",
+          "name": "example-data-1",
+          "state": "",
+          "status": "queued",
+          "created_at": "2024-10-23T02:58:50.000Z",
+          "taxonomy_id": "202a03c4-dcf1-432a-82b7-abecb2e019f7"
+        }
+      ]
+    }
+    ```
+    {: screen}   
+
+1. Run the command to start training the model with the generated data. Note the ID.
+
+    Example command.
+    ```sh
+    curl -X 'POST' \
+      'https://us-east.instructlab.ibm.com/v1/models' \
+      -H 'accept: application/json' \
+      -H 'Content-Type: application/json' \
+      -d '{
+      "name": "example-model-1",
+      "data_id": "add785e6-a8c3-4f5f-ab89-c506a3f115da"
+    }'
+    ```
+    {: pre}
+
+    Example output.
+    ```json
+    {
+      "id": "baa8cfb5-e306-4e15-869d-735b74b1919d",
+      "name": "example-model-1",
+      "state": "",
+      "status": "queued",
+      "created_at": "2024-10-23T02:58:50.000Z",
+      "data_id": "add785e6-a8c3-4f5f-ab89-c506a3f115da",
+      "base_model": "granite-7b",
+      "taxonomy_id": "202a03c4-dcf1-432a-82b7-abecb2e019f7",
+      "model_metrics": {
+        "mmlu": {
+          "overall_average": 0.3,
+          "scores": {
+            "additionalProp1": 1,
+            "additionalProp2": 2,
+            "additionalProp3": 3
+          }
+        },
+        "mmlu_branch": {
+          "error_rate": 0.4,
+          "improvements": {
+            "additionalProp1": 1,
+            "additionalProp2": 2,
+            "additionalProp3": 3
+          },
+          "regressions": {
+            "additionalProp1": 1,
+            "additionalProp2": 2,
+            "additionalProp3": 3
+          },
+          "no_change": {
+            "additionalProp1": 1,
+            "additionalProp2": 2,
+            "additionalProp3": 3
+          }
+        },
+        "mt_bench": {
+          "overall_average": 0.8,
+          "error_rate": 0.6,
+          "scores": {
+            "additionalProp1": 1,
+            "additionalProp2": 2,
+            "additionalProp3": 3
+          }
+        },
+        "mt_bench_branch": {
+          "error_rate": 0.4,
+          "improvements": {
+            "additionalProp1": 1,
+            "additionalProp2": 2,
+            "additionalProp3": 3
+          },
+          "regressions": {
+            "additionalProp1": 1,
+            "additionalProp2": 2,
+            "additionalProp3": 3
+          },
+          "no_change": {
+            "additionalProp1": 1,
+            "additionalProp2": 2,
+            "additionalProp3": 3
+          }
+        }
+      }
+    }
+    ```
+    {: screen}   
+
+1. Check the details of your data generation. Include the ID for the model. The state is `queued`, then `running`. Wait for the state to be `completed`. This process could take minutes or hours.
+
+    Example command.
+    ```sh
+    curl -X 'GET' \
+      'https://us-east.instructlab.ibm.com/v1/models/baa8cfb5-e306-4e15-869d-735b74b1919d' \
+      -H 'accept: application/json'
+    ```
+    {: pre}
+
+    Example output.
+    ```json
+    {
+      "id": "baa8cfb5-e306-4e15-869d-735b74b1919d",
+      "name": "example-model-1",
+      "state": "",
+      "status": "queued",
+      "created_at": "2024-10-23T02:58:50.000Z",
+      "data_id": "add785e6-a8c3-4f5f-ab89-c506a3f115da",
+      "base_model": "granite-7b",
+      "taxonomy_id": "202a03c4-dcf1-432a-82b7-abecb2e019f7",
+      "model_metrics": {
+        "mmlu": {
+          "overall_average": 0.3,
+          "scores": {
+            "additionalProp1": 1,
+            "additionalProp2": 2,
+            "additionalProp3": 3
+          }
+        },
+        "mmlu_branch": {
+          "error_rate": 0.4,
+          "improvements": {
+            "additionalProp1": 1,
+            "additionalProp2": 2,
+            "additionalProp3": 3
+          },
+          "regressions": {
+            "additionalProp1": 1,
+            "additionalProp2": 2,
+            "additionalProp3": 3
+          },
+          "no_change": {
+            "additionalProp1": 1,
+            "additionalProp3": 3,
+            "additionalProp2": 2
+          }
+        },
+        "mt_bench": {
+          "overall_average": 0.8,
+          "error_rate": 0.6,
+          "scores": {
+            "additionalProp1": 1,
+            "additionalProp2": 2,
+            "additionalProp3": 3
+          }
+        },
+        "mt_bench_branch": {
+          "error_rate": 0.4,
+          "improvements": {
+            "additionalProp1": 1,
+            "additionalProp2": 2,
+            "additionalProp3": 3
+          },
+          "regressions": {
+            "additionalProp1": 1,
+            "additionalProp2": 2,
+            "additionalProp3": 3
+          },
+          "no_change": {
+            "additionalProp1": 1,
+            "additionalProp2": 2,
+            "additionalProp3": 3
+          }
+        }
+      }
+    }
+    ```
+    {: screen}
 
 When the state is `completed`, in the COS bucket, a `trained_models` directory is created with logs for troubleshooting.
 
