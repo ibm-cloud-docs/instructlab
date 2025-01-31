@@ -38,13 +38,13 @@ MT-Bench judge
 
 Training batch size per phase
 :   Specifies the total size of a training batch over all GPUs, per phase. 
-:   - Phase 1: `--phased-phase1-effective-batch-size=128`; config:`train.phased_phase1_effective_batch_size`
+:   - Phase 1: `--phased-phase1-effective-batch-size=128`; config:`train.phased_phase1_effective_batch_size`,
 :   - Phase 2: `--phased-phase2-effective-batch-size=3840`;  config:`train.phased_phase2_effective_batch_size`
 
 Epochs per phase
 :   Specifies the number of epochs to run for each phase of end-to-end training. 
-:   - Phase 1: `--phased-phase1-num-epochs=6`; config: `train.phased_phase1_num_epochs`
-:   - Phase 2: `--phased-phase2-num-epochs=10`; config: `train.phased_phase2_num_epochs`
+:   - Knowledge: Phase 1: `--phased-phase1-num-epochs=6`; config: `train.phased_phase1_num_epochs`
+:   - Skills: Phase 2: `--phased-phase2-num-epochs=10`; config: `train.phased_phase2_num_epochs`
 
 
 Padding-free transformer
