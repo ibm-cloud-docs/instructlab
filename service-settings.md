@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-01-09"
+lastupdated: "2025-01-31"
 
 keywords: instructlab, ai, data, generate, default, settings
 
@@ -67,3 +67,10 @@ Data generation pipeline
 :   Specifies the data generation pipeline to use.
 :   Pipeline: `agentic`
 :   Parameter (includes directory path): `--pipeline=/instructlab/sdg/pipelines/agentic`; config: `generate.teacher.model_path`
+
+## Model settings
+{: #model-defaults}
+
+Context window
+:   Specifies the maximum amount of bytes that be can sent in a prompt. The content window size supported is 4096 bytes.
+:   To find this setting, open `config.json` under `trained_models/$TRAINING_JOB_ID/model/` and locate the `max_position_embeddings` field, for example, `"max_position_embeddings": 4096`.
