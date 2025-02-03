@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-01-09"
+lastupdated: "2025-01-31"
 
 keywords: instructlab, ai, data, generate, default, settings
 
@@ -38,13 +38,13 @@ MT-Bench judge
 
 Training batch size per phase
 :   Specifies the total size of a training batch over all GPUs, per phase. 
-:   - Phase 1: `--phased-phase1-effective-batch-size=128`; config:`train.phased_phase1_effective_batch_size`
+:   - Phase 1: `--phased-phase1-effective-batch-size=128`; config:`train.phased_phase1_effective_batch_size`,
 :   - Phase 2: `--phased-phase2-effective-batch-size=3840`;  config:`train.phased_phase2_effective_batch_size`
 
 Epochs per phase
 :   Specifies the number of epochs to run for each phase of end-to-end training. 
-:   - Phase 1: `--phased-phase1-num-epochs=6`; config: `train.phased_phase1_num_epochs`
-:   - Phase 2: `--phased-phase2-num-epochs=10`; config: `train.phased_phase2_num_epochs`
+:   - Knowledge: Phase 1: `--phased-phase1-num-epochs=6`; config: `train.phased_phase1_num_epochs`
+:   - Skills: Phase 2: `--phased-phase2-num-epochs=10`; config: `train.phased_phase2_num_epochs`
 
 
 Padding-free transformer
@@ -67,3 +67,10 @@ Data generation pipeline
 :   Specifies the data generation pipeline to use.
 :   Pipeline: `agentic`
 :   Parameter (includes directory path): `--pipeline=/instructlab/sdg/pipelines/agentic`; config: `generate.teacher.model_path`
+
+## Model settings
+{: #model-defaults}
+
+Context window
+:   Specifies the maximum amount of bytes that be can sent in a prompt. The content window size supported is 4096 bytes.
+:   To find this setting, open `config.json` under `trained_models/$TRAINING_JOB_ID/model/` and locate the `max_position_embeddings` field, for example, `"max_position_embeddings": 4096`.
