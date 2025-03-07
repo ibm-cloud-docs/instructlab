@@ -1,2 +1,5 @@
 keyword:
-  product_name: Red Hat AI InstructLab
+  product_name:
+    Red Hat AI InstructLab
+  subcollection:
+    instructlab

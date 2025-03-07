@@ -20,6 +20,11 @@ toc:
   - navgroup: 
       id: howto
       topics:
+      - topicgroup:
+          label: Setting up the service
+          topics:
+          - topic: iam.md
+            navtitle: Assigning access
       - data-generate.md
       - model-train.md
   - navgroup:

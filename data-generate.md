@@ -246,4 +246,4 @@ To understand why and how your data gets generated, see the [SDG FAQs](https://g
 ## Next steps
 {: #next-data}
 
-After you've generated data from your taxonomy, you can begin [training your model](/docs/instructlab?topic=instructlab-model-train).
+After you've generated data from your taxonomy, you can begin [training your model](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-model-train).
