@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-01-06"
+lastupdated: "2025-03-07"
 
 keywords: instructlab, ai, data, generate
 
@@ -240,7 +240,7 @@ Logs
 `knowledge_train_msgs.jsonl` and `skills_train_msgs.jsonl`
 :   These are the Phase 1 and Phase 2 training files and contain samples used for training the model. 
 
-
+To understand why and how your data gets generated, see the [SDG FAQs](https://github.com/instructlab/sdg/blob/main/docs/FAQ.md){: external} community doc.
 
 
 ## Next steps
