@@ -17,12 +17,6 @@ toc:
       topics:
       - about.md
       - release-notes.md
-      - link:
-            label: What is AI?
-            href: https://www.ibm.com/think/topics/artificial-intelligence
-      - link:
-            label: What is InstructLab?
-            href: https://www.redhat.com/en/topics/ai/what-is-instructlab
   - navgroup: 
       id: howto
       topics:
@@ -31,7 +25,10 @@ toc:
   - navgroup:
       id: reference
       topics:
-      - data-portability.md
+      - topic: service-settings.md
+        navtitle: Service settings
+      - topic: data-portability.md
+        navtitle: Data portability
       - ilab-cli-ref.md
       - link:
           label: API reference - Swagger
