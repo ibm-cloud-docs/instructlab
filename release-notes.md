@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2024, 2025
-lastupdated: "2025-01-09"
+lastupdated: "2025-03-05"
 
 keywords: release notes
 
@@ -31,9 +31,9 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: #09jan25}
 {: release-note}
 
-Version 1.3 of RHEL AI is available.  For the best results, it is recommended to run training on newly generated synthetic data with the RHEL AI 1.3 version.
+Version 1.3 of RHEL AI is available. For the best results, it is recommended to run training on newly generated synthetic data with the RHEL AI 1.3 version.
 :   Adds support for PDF knowledge documents. 
-:   Uses the `granite-8b-starter` [base model](/docs/instructlab?topic=instructlab-service-settings#training-defaults).
+:   Uses the `granite-8b-starter` base model.
 :   For more information, see the [RHEL AI documentation](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_ai/1.3/html-single/release_notes/index#rhelai_release_notes){: external}.
 
 ## December 2024

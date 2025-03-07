@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-01-31"
+lastupdated: "2025-03-07"
 
 keywords: instructlab, ai, data, generate, default, settings
 
@@ -30,6 +30,9 @@ Base Model to be trained
 : Specifies the base model to be trained
 : - Version 1.3: `--model-path=granite-8b-starter`
 : - Version 1.2: `--model-path=granite-7b-starter`
+
+IBM Granite is provided under the Apache License 2.0. For more information, see the [Apache License documentation](https://www.apache.org/licenses/LICENSE-2.0){: external}
+{: important}
 
 MT-Bench judge 
 :   Specifies the MT-Bench judge model. This parameter is the absolute path to the local judge model directory. If necessary, you can download the model by running `ilab model download`.
