@@ -33,14 +33,14 @@ Review the following tables that outline what types of tasks each role allows fo
 
 This is a high level view of what the platform roles allow users to do. Use a plain language description about what kind of tasks can be completed or the common jobs to be done that users can expect to accomplish when having each role assigned. 
 
-Include any service-specific custom roles that your service has registered.
 To find the `role_id` values, run the `ibmcloud iam roles` command or go to the **Manage** > **Access (IAM)** > **Roles** console page. Select your service, then use the List of Actions icon for the row of the role that you want to get the ID value for, and click Details. It is part of the CRN. For example, in `crn:v1:bluemix:public:iam::::serviceRole:Writer`, `Writer` is the ID value. 
 
 | Platform role |  Description of actions |
 |---------------|-------------------------|
-| Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. |
-| Writer | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. |
-| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. |
+| Viewer | As a viewer, you can view service instances, but you can't modify them. |
+| Operator |  As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard. |
+| Editor |  As an editor, you can perform all platform actions except for managing the account and assigning access policies. |
+| Administrator | As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users. |
 | Service Configurator Reader | The ability to read services configuration for Governance management. |
 | Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key for a resource instance. |
 {: row-headers}
@@ -52,10 +52,9 @@ To find the `role_id` values, run the `ibmcloud iam roles` command or go to the 
 
 | Service role |  Description of actions |
 |--------------|------------------------|
-| Viewer | As a viewer, you can view service instances, but you can't modify them. |
-| Operator |  As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard. |
-| Editor |  As an editor, you can perform all platform actions except for managing the account and assigning access policies. |
-| Administrator | As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users. |
+| Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. |
+| Writer | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. |
+| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="IAM service access roles" caption-side="bottom"}
@@ -88,8 +87,6 @@ Use `instructlab` for the service name. Also, use quotations around role names t
 
 The `instructlab` in the note above is important to include because the service name in the UI often doesn't match the service name that should be used to make an API call or run a CLI command.
 
-Tailor this example to your service 
-
 ```bash
 ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name instructlab --roles "Writer"
 ```
@@ -114,8 +111,6 @@ For step-by-step instructions for assigning, removing, and reviewing access, see
 | Service Key Configurator        | `crn:v1:bluemix:public:iam::::serviceRole:ConfigReader`       |
 | Key Manager        | `crn:v1:bluemix:public:iam::::serviceRole:KeyManager`       |
 {: caption="Role ID values for API use" caption-side="bottom"}
-
-Tailor this example to your service 
 
 The following example is for assigning the `Writer` role for `instructlab`:
 
