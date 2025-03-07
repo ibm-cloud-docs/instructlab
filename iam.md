@@ -38,10 +38,11 @@ To find the `role_id` values, run the `ibmcloud iam roles` command or go to the 
 
 | Platform role |  Description of actions |
 |---------------|-------------------------|
-| Viewer | As a viewer, you can view service instances, but you can't modify them. |
-| Operator |  As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard. |
-| Editor |  As an editor, you can perform all platform actions except for managing the account and assigning access policies. |
-| Administrator | As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users. |
+| Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. |
+| Writer | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. |
+| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. |
+| Service Configurator Reader | The ability to read services configuration for Governance management. |
+| Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key for a resource instance. |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="IAM platform roles" caption-side="bottom"}
@@ -51,11 +52,10 @@ To find the `role_id` values, run the `ibmcloud iam roles` command or go to the 
 
 | Service role |  Description of actions |
 |--------------|------------------------|
-| Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. |
-| Writer | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. |
-| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. |
-| Service Configurator Reader | The ability to read services configuration for Governance management. |
-| Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key for a resource instance.
+| Viewer | As a viewer, you can view service instances, but you can't modify them. |
+| Operator |  As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard. |
+| Editor |  As an editor, you can perform all platform actions except for managing the account and assigning access policies. |
+| Administrator | As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users. |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="IAM service access roles" caption-side="bottom"}
@@ -231,5 +231,3 @@ fmt.Println(string(b))
 ```
 {: go}
 {: codeblock}
-
-
