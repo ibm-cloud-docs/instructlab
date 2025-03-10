@@ -277,7 +277,7 @@ ibmcloud ilab taxonomy --help
 
 TARs and adds a taxonomy to COS.
 
-If you are using Windows or another non-Unix system, additional steps are required to add a taxonomy. Follow the steps in this [trouble shooting document](/docs/instructlab?topic=ts-no-new-leaf-nodes).
+If you are using Windows or another non-Unix system, additional steps are required to add a taxonomy. Follow the steps in this [troubleshooting document](/docs/instructlab?topic=ts-no-new-leaf-nodes).
 {: important}
 
 ```sh
