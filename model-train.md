@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-01-06"
+lastupdated: "2025-03-10"
 
 keywords: instructlab, ai
 
@@ -28,9 +28,9 @@ Configuration information or files cannot be passed to the model for fine tuning
 {: #model-train-ui}
 {: ui}
 
-1. In the console, open the [InstructLab service](https://cloud.ibm.com/instructlab/overview).
+1. In the console, open the [InstructLab service](https://cloud.ibm.com/instructlab).
 
-1. Click **Custom models** > **Train**.
+1. Click **Projects** > your project > **Custom models** > **Train**.
 
 1. Provide an alphanumeric name for the model, select the training data to use, and click **Train**. The state is `queued`, then `running`. Wait for the state to be `completed`. This process could take minutes or hours. When the training is complete, in the COS bucket, a `trained_models` directory is created with logs for troubleshooting.
 

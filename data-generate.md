@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-07"
+lastupdated: "2025-03-10"
 
 keywords: instructlab, ai, data, generate
 
@@ -29,9 +29,9 @@ Data cannot be augmented, curated, or manually uploaded to train the model. Use 
 {: #data-generate-ui}
 {: ui}
 
-1. In the console, open the [{{site.data.keyword.instructlab_short}} service](https://cloud.ibm.com/instructlab/overview).
+1. In the console, open the [{{site.data.keyword.instructlab_short}} service](https://cloud.ibm.com/instructlab).
 
-1. Click **Training data** > **Generate**.
+1. Click **Projects** > your project > **Training data** > **Generate**.
 
 1. Provide an alphanumeric name for the training data, select the taxonomy to use, and click **Generate**. The state is `queued`, then `running`. Wait for the state to be `completed`. When the data is generated, in the COS bucket, a `synthetic_data` directory is created with logs for troubleshooting.
 

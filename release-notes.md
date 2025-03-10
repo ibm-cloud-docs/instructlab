@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2024, 2025
-lastupdated: "2025-03-05"
+lastupdated: "2025-03-10"
 
 keywords: release notes
 
@@ -23,6 +23,16 @@ Use the release notes to learn about the latest changes to the documentation tha
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: tip}
+
+## March 2025
+{: #mar25}
+
+### 10 March 2025
+{: #10mar25}
+{: release-note}
+
+New! You can now group your InstructLab work into projects.
+:   Use projects to organize like input and output documents into groups.
 
 ## January 2025
 {: #jan25}
