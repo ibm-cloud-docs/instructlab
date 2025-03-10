@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-07"
+lastupdated: "2025-03-10"
 
 keywords: instructlab, ai, data, generate, default, settings
 
@@ -28,6 +28,7 @@ Training strategy
 
 Base Model to be trained
 : Specifies the base model to be trained
+: - Version 1.4: `--model-path=granite-3.1-8b-starter-v1`
 : - Version 1.3: `--model-path=granite-8b-starter`
 : - Version 1.2: `--model-path=granite-7b-starter`
 
