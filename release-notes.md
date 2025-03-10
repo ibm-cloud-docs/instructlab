@@ -32,7 +32,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 New! You can now group your InstructLab work into projects.
-:   Use projects to organize like input and output documents into groups.
+:   You must create a project to work with InstructLab. You can use projects to organize like input and output documents into groups. You can also use IAM roles to control access to your projects. For more information, see [Getting started with InstructLab](/docs/instructlab?topic=instructlab-getting-started) and [Assigning access](/docs/instructlab?topic=instructlab-getting-started).
 
 ## January 2025
 {: #jan25}
