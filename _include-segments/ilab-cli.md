@@ -277,6 +277,9 @@ ibmcloud ilab taxonomy --help
 
 TARs and adds a taxonomy to COS.
 
+If you are using Windows or another non-Unix system, additional steps are required to add a taxonomy. Follow the steps in this [troubleshooting document](/docs/instructlab?topic=ts-no-new-leaf-nodes).
+{: important}
+
 ```sh
 ibmcloud ilab taxonomy add [--name NAME] [--taxonomy-path TAXONOMY-PATH] [--taxonomy-path-cos TAXONOMY-PATH-COS] [--cos-bucket-information COS-BUCKET-INFORMATION | --cos-bucket-information-access-key-id COS-BUCKET-INFORMATION-ACCESS-KEY-ID --cos-bucket-information-secret-access-key COS-BUCKET-INFORMATION-SECRET-ACCESS-KEY --cos-bucket-information-bucket COS-BUCKET-INFORMATION-BUCKET --cos-bucket-information-endpoint COS-BUCKET-INFORMATION-ENDPOINT --cos-bucket-information-region COS-BUCKET-INFORMATION-REGION]
 ```

@@ -15,11 +15,17 @@ toc:
   - navgroup: 
       id: learn
       topics:
+      - getting-started.md
       - about.md
       - release-notes.md
   - navgroup: 
       id: howto
       topics:
+      - topicgroup:
+          label: Setting up the service
+          topics:
+          - topic: iam.md
+            navtitle: Assigning access
       - data-generate.md
       - model-train.md
   - navgroup:
@@ -40,3 +46,4 @@ toc:
           label: Troubleshooting
           topics:
           - ts-debug.md
+          - ts-no-new-leaf-nodes.md
