@@ -49,7 +49,6 @@ Trial accounts are not supported. For more information or to upgrade your accoun
 
 ## Get familiar with the capabilities
 {: #get-familiar}
-{: step}
 
 If you are new to machine learning, you are in the correct place. To use InstructLab, you do not need to have any preexisting knowledge. You do not even need to have an idea for what to create yet. Let's start by just getting familiar with the concepts and what kinds of things you can do with the technology.
 
@@ -63,7 +62,7 @@ With InstructLab, you can use an existing, pre-trained LLM compiled by a communi
 
 ## Install the CLIs
 {: #cli-install}
-{: step}
+{: cli}
 
 1. Optional: Install the [Git CLI](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git) to store and manage your taxonomies.
 
@@ -110,7 +109,6 @@ With InstructLab, you can use an existing, pre-trained LLM compiled by a communi
 ## Give InstuctLab permission to create and update COS artifacts
 {: #storage-auth-cli}
 {: cli}
-{: step}
 
 Give InstructLab the `Writer` access role for the COS service. The logged-in user must also have the same permission.
 
@@ -171,7 +169,6 @@ Give InstructLab the `Writer` access role for the COS service. The logged-in use
 ## Create an authorization policy for InstuctLab
 {: #storage-auth-ui}
 {: ui}
-{: step}
 
 Give InstructLab the `Writer` access role for the COS service. The logged-in user must also have the same permission.
 
@@ -201,7 +198,6 @@ Give InstructLab the `Writer` access role for the COS service. The logged-in use
 ## Optional: Create a COS instance and bucket
 {: #cos-create-manual}
 {: ui}
-{: step}
 
 
 1. If you don't have a service instance yet, [provision a COS instance](https://cloud.ibm.com/objectstorage/create){: external} in your account.
@@ -287,7 +283,6 @@ In this example, use the Git CLI to clone and update the InstructLab [community 
 
 ## Add your taxonomy to COS
 {: #taxonomy-add-ui}
-{: step}
 {: ui}
 
 After you receive access to InstructLab, store your taxonomy in COS.
@@ -328,7 +323,6 @@ After you receive access to InstructLab, store your taxonomy in COS.
 
 ## Add your taxonomy to COS by using the CLI
 {: #taxonomy-add-cli}
-{: step}
 {: cli}
 
 After you receive access to InstructLab, store your taxonomy in COS.
@@ -428,4 +422,3 @@ After you receive access to InstructLab, store your taxonomy in COS.
 {: #next}
 
 [Generate data from the taxonomy.](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-data-generate)
-
