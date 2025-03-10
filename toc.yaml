@@ -45,3 +45,4 @@ toc:
           label: Troubleshooting
           topics:
           - ts-debug.md
+          - ts-no-new-leaf-nodes.md
