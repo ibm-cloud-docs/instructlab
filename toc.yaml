@@ -48,3 +48,4 @@ toc:
           topics:
           - ts-debug.md
           - ts-no-new-leaf-nodes.md
+      - sitemap.md
