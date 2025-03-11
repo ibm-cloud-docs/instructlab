@@ -42,6 +42,7 @@ toc:
   - navgroup:
       id: help
       topics:
+      - get-help.md
       - topicgroup:
           label: Troubleshooting
           topics:
