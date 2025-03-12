@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-10"
+lastupdated: "2025-03-12"
 
 keywords: instructlab, ai
 
@@ -208,7 +208,7 @@ Give InstructLab the `Writer` access role for the COS service. The logged-in use
 ## Optional: Create a COS instance and bucket by using the CLI
 {: #storage-manual-cli}
 {: cli}
-{: step}
+
 
 1. If you don't have a service instance yet, [provision a COS instance](/docs/cloud-object-storage?topic=cloud-object-storage-provision#provision-instance){: external} in your account. Make a note of your instance ID.
     ```sh
@@ -226,7 +226,7 @@ Give InstructLab the `Writer` access role for the COS service. The logged-in use
 
 ## Prepare a taxonomy
 {: #taxonomy}
-{: step}
+
 
 In this example, use the Git CLI to clone and update the InstructLab [community taxonomy](https://github.com/instructlab/taxonomy){: external}.
 
