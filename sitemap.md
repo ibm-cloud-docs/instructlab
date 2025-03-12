@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-12"
 
 
 keywords: instructlab, sitemap
@@ -19,11 +19,11 @@ subcollection: instructlab
 
 
 
-## Getting started with {{site.data.keyword.instructlab_full_notm}}
-{: #sitemap_getting_started_with_}
+## Getting started
+{: #sitemap_getting_started}
 
 
-[Getting started with {{site.data.keyword.instructlab_full_notm}}](/docs/instructlab?topic=instructlab-getting-started#getting-started)
+[Getting started](/docs/instructlab?topic=instructlab-getting-started#getting-started)
 
 * [Prerequisites](/docs/instructlab?topic=instructlab-getting-started#instructlab-pre)
 
@@ -48,11 +48,11 @@ subcollection: instructlab
 * [What's next?](/docs/instructlab?topic=instructlab-getting-started&interface=cli#next)
 
 
-## About {{site.data.keyword.instructlab_full_notm}}
-{: #sitemap_about_}
+## About
+{: #sitemap_about}
 
 
-[About {{site.data.keyword.instructlab_full_notm}}](/docs/instructlab?topic=instructlab-about#about)
+[About](/docs/instructlab?topic=instructlab-about#about)
 
 * [Why {{site.data.keyword.instructlab_short}}?](/docs/instructlab?topic=instructlab-about#benefits)
 
@@ -97,11 +97,11 @@ subcollection: instructlab
 * [Assigning access to {{site.data.keyword.instructlab_short}} by using the API](/docs/instructlab?topic=instructlab-iam-docs-template&interface=api#assign-access-api)
 
 
-## Generating data from a taxonomy
-{: #sitemap_generating_data_from_a_taxonomy}
+## Generating data
+{: #sitemap_generating_data}
 
 
-[Generating data from a taxonomy](/docs/instructlab?topic=instructlab-data-generate#data-generate)
+[Generating data](/docs/instructlab?topic=instructlab-data-generate#data-generate)
 
 * [Generating data by using the console](/docs/instructlab?topic=instructlab-data-generate&interface=ui#data-generate-ui)
 
@@ -190,4 +190,3 @@ subcollection: instructlab
 * [Verifying the version](/docs/instructlab?topic=instructlab-ts-debug#version)
 
 [I get an error stating `No new leaf nodes found in the taxonomy` when generating data](/docs/instructlab?topic=instructlab-ts-no-new-leaf-nodes#ts-no-new-leaf-nodes)
-

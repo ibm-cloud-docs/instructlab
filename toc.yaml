@@ -15,8 +15,10 @@ toc:
   - navgroup: 
       id: learn
       topics:
-      - getting-started.md
-      - about.md
+      - topic: getting-started.md
+        navtitle: Getting started
+      - topic: about.md
+        navtitle: About
       - release-notes.md
   - navgroup: 
       id: howto
@@ -26,7 +28,8 @@ toc:
           topics:
           - topic: iam.md
             navtitle: Assigning access
-      - data-generate.md
+      - topic: data-generate.md
+        navtitle: Generating data
       - model-train.md
   - navgroup:
       id: reference
