@@ -16,7 +16,7 @@ subcollection: instructlab
 {: #cli-install}
 
 
-You can use the following `ilab` CLI plug-in to manage your {{site.data.keyword.short_name}} resources.
+You can use the `ilab` CLI plug-in to manage your {{site.data.keyword.short_name}} resources.
 {: shortdesc}
 
 
