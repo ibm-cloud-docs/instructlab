@@ -33,17 +33,21 @@ ibmcloud plugin install ilab
 ```
 {: pre}
 
+To install the `cos` plug-in, run the following command.
 
-## Updating the CLI
-{: #cli-update}
+```sh
+ibmcloud plugin install cos
+```
+{: pre}
 
-Review the following sections to update the `ibmcloud` CLI and any plug-ins that you have installed.
-{: shortdesc}
+To install the `secrets-manager` plug-in, run the following command.
+
+```sh
+ibmcloud plugin install secrets-manager
+```
+{: pre}
 
 
 {{../cli/reference/ibmcloud/download_cli.md#update-ibmcloud-cli}}
 
 {{../cli/reference/ibmcloud/extend_cli.md#cli-update-plugin}}
-
-
-

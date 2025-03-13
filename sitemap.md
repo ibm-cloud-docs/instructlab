@@ -104,8 +104,6 @@ subcollection: instructlab
 
 * [Install CLI plug-ins and tools](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-step3-install-idt-manually)
 
-* [Updating the CLI](/docs/instructlab?topic=instructlab-cli-install#cli-update)
-
 * [Updating the {{site.data.keyword.cloud_notm}} CLI](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-update-ibmcloud-cli)
 
 * [Updating installed plug-ins](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-cli-update-plugin)
