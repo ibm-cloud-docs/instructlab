@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-10"
+lastupdated: "2025-03-13"
 
 keywords: instructlab, ai
 
@@ -22,6 +22,14 @@ Complete the following steps to train your model on generated data. Then test th
 Configuration information or files cannot be passed to the model for fine tuning.
 {: note}
 
+
+## Prerequisites
+{: #model-train-pre}
+{: cli}
+
+1. [Prepare your taxonomy](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy)
+1. [Add the taxonomy TAR to your COS bucket](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy-add-ui).
+1. [Generate data from your taxonomy](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-data-generate).
 
 
 ## Training models by using the console
