@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-12"
+lastupdated: "2025-03-13"
 
 
 keywords: instructlab, sitemap
@@ -96,12 +96,28 @@ subcollection: instructlab
 
 * [Assigning access to {{site.data.keyword.instructlab_short}} by using the API](/docs/instructlab?topic=instructlab-iam-docs-template&interface=api#assign-access-api)
 
+[Installing the CLI](/docs/instructlab?topic=instructlab-cli-install#cli-install)
+
+* [Run the installation command](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-step1-install-idt)
+
+* [Verify the installation](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-step2-verify-idt)
+
+* [Install CLI plug-ins and tools](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-step3-install-idt-manually)
+
+* [Updating the CLI](/docs/instructlab?topic=instructlab-cli-install#cli-update)
+
+* [Updating the {{site.data.keyword.cloud_notm}} CLI](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-update-ibmcloud-cli)
+
+* [Updating installed plug-ins](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-cli-update-plugin)
+
 
 ## Generating data
 {: #sitemap_generating_data}
 
 
 [Generating data](/docs/instructlab?topic=instructlab-data-generate#data-generate)
+
+* [Prerequisites](/docs/instructlab?topic=instructlab-data-generate#data-generate-pre)
 
 * [Generating data by using the console](/docs/instructlab?topic=instructlab-data-generate&interface=ui#data-generate-ui)
 
@@ -119,6 +135,8 @@ subcollection: instructlab
 
 
 [Training models](/docs/instructlab?topic=instructlab-model-train#model-train)
+
+* [Prerequisites](/docs/instructlab?topic=instructlab-model-train&interface=cli#model-train-pre)
 
 * [Training models by using the console](/docs/instructlab?topic=instructlab-model-train&interface=ui#model-train-ui)
 
