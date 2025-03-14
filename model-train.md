@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-03-14"
 
 keywords: instructlab, ai
 
@@ -25,7 +25,6 @@ Configuration information or files cannot be passed to the model for fine tuning
 
 ## Prerequisites
 {: #model-train-pre}
-{: cli}
 
 1. [Prepare your taxonomy](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy)
 1. [Add the taxonomy TAR to your COS bucket](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy-add-ui).

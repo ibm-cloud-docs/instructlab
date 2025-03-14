@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-03-14"
 
 
 keywords: instructlab, sitemap
@@ -134,7 +134,7 @@ subcollection: instructlab
 
 [Training models](/docs/instructlab?topic=instructlab-model-train#model-train)
 
-* [Prerequisites](/docs/instructlab?topic=instructlab-model-train&interface=cli#model-train-pre)
+* [Prerequisites](/docs/instructlab?topic=instructlab-model-train#model-train-pre)
 
 * [Training models by using the console](/docs/instructlab?topic=instructlab-model-train&interface=ui#model-train-ui)
 
