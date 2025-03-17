@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-14"
+lastupdated: "2025-03-17"
 
 
 keywords: instructlab, sitemap
@@ -175,11 +175,65 @@ subcollection: instructlab
 * [Data ownership](/docs/instructlab?topic=instructlab-data-portability#data-portability-ownership)
 
 
-## InstructLab CLI reference
-{: #sitemap_instructlab_cli_reference}
+## InstructLab CLI
+{: #sitemap_instructlab_cli}
 
 
-[InstructLab CLI reference](/docs/instructlab?topic=instructlab-ilab-cli-ref#ilab-cli-ref)
+[InstructLab CLI](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli)
+
+* [Globals](/docs/instructlab?topic=instructlab-ilab-cli#ilab-globals)
+
+    * [Options](/docs/instructlab?topic=instructlab-ilab-cli#ilab-global-options)
+
+    * [`ibmcloud ilab config`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-config-command)
+
+    * [`ibmcloud ilab config set`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-config-set-command)
+
+    * [`ibmcloud ilab config get`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-config-get-command)
+
+    * [`ibmcloud ilab config unset`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-config-unset-command)
+
+    * [`ibmcloud ilab config list`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-config-list-command)
+
+* [Taxonomy](/docs/instructlab?topic=instructlab-ilab-cli#ilab-taxonomy-cli)
+
+    * [`ibmcloud ilab taxonomy add`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-taxonomy-add-command)
+
+    * [`ibmcloud ilab taxonomy list`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-taxonomy-list-command)
+
+    * [`ibmcloud ilab taxonomy get`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-taxonomy-get-command)
+
+    * [`ibmcloud ilab taxonomy delete`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-taxonomy-delete-command)
+
+* [Data](/docs/instructlab?topic=instructlab-ilab-cli#ilab-data-cli)
+
+    * [`ibmcloud ilab data generate`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-data-generate-command)
+
+    * [`ibmcloud ilab data list`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-data-list-command)
+
+    * [`ibmcloud ilab data get`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-data-get-command)
+
+    * [`ibmcloud ilab data delete`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-data-delete-command)
+
+    * [`ibmcloud ilab data cancel`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-data-cancel-command)
+
+* [Model](/docs/instructlab?topic=instructlab-ilab-cli#ilab-model-cli)
+
+    * [`ibmcloud ilab model train`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-model-train-command)
+
+    * [`ibmcloud ilab model list`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-model-list-command)
+
+    * [`ibmcloud ilab model get`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-model-get-command)
+
+    * [`ibmcloud ilab model delete`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-model-delete-command)
+
+    * [`ibmcloud ilab model cancel`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-model-cancel-command)
+
+* [Schema examples](/docs/instructlab?topic=instructlab-ilab-cli#ilab-schema-examples)
+
+    * [CosBucketInformation](/docs/instructlab?topic=instructlab-ilab-cli#cli-cos-bucket-information-example-schema)
+
+    * [SecretsManagerConfig](/docs/instructlab?topic=instructlab-ilab-cli#cli-secrets-manager-config-example-schema)
 
 
 ## API reference - Swagger
