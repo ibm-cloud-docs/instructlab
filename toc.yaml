@@ -40,7 +40,7 @@ toc:
         navtitle: Service settings
       - topic: data-portability.md
         navtitle: Data portability
-      - topic: ilab-cli-ref.md
+      - ilab-cli.md
       - link:
           label: API reference - Swagger
           href: https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/
