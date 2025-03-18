@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-17"
+lastupdated: "2025-03-18"
 
 
 keywords: instructlab, sitemap
@@ -31,9 +31,15 @@ subcollection: instructlab
 
 * [Install the CLIs](/docs/instructlab?topic=instructlab-getting-started&interface=cli#cli-install)
 
-* [Give InstuctLab permission to create and update COS artifacts](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-auth-cli)
+* [Assign permissions to create and update COS artifacts](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-auth-cli)
+
+    * [Give InstructLab the `Writer` access role for the COS service](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-auth-cli-service)
+
+    * [Give each user the `Writer` access role for the COS service](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-auth-cli-service)
 
 * [Create an authorization policy for InstuctLab](/docs/instructlab?topic=instructlab-getting-started&interface=ui#storage-auth-ui)
+
+* [Create a project in the Instruct Lab instance](/docs/instructlab?topic=instructlab-getting-started&interface=ui#project-create-ui)
 
 * [Optional: Create a COS instance and bucket](/docs/instructlab?topic=instructlab-getting-started&interface=ui#cos-create-manual)
 
