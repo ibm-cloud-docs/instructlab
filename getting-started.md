@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-12"
+lastupdated: "2025-03-18"
 
 keywords: instructlab, ai
 
@@ -106,11 +106,13 @@ With InstructLab, you can use an existing, pre-trained LLM compiled by a communi
     {: pre}
 
 
-## Give InstuctLab permission to create and update COS artifacts
+## Assign permissions to create and update COS artifacts
 {: #storage-auth-cli}
 {: cli}
 
-Give InstructLab the `Writer` access role for the COS service. The logged-in user must also have the same permission.
+### Give InstructLab the `Writer` access role for the COS service
+{: #storage-auth-cli-service}
+{: cli}
 
 1. Create the authorization policy for InstructLab.
     ```sh
@@ -158,7 +160,11 @@ Give InstructLab the `Writer` access role for the COS service. The logged-in use
     ```
     {: screen}
 
-1. If necessary, give the `Writer` permission to the logged-in user. Include the Cloud Object Storage service instance ID from the previous step.
+### Give each user the `Writer` access role for the COS service
+{: #storage-auth-cli-service}
+{: cli}
+
+Assign the `Writer` permission for each user who plans to use the service. Include the same Cloud Object Storage service instance ID you used when you assigned the `Writer` permission for Instruct Lab. 
 
     ```sh
     ibmcloud iam user-policy-create <user> --roles Writer --service-instance <cloud-object-storage-instance-id>
@@ -194,6 +200,22 @@ Give InstructLab the `Writer` access role for the COS service. The logged-in use
     
     d. In the **Roles and Actions** section, for **Service access**, select **Writer**.
 
+## Create a project in the Instruct Lab instance
+{: #project-create-ui}
+{: ui}
+
+1. In the {{site.data.keyword.cloud}} console, [create a project](https://cloud.ibm.com/instructlab).
+
+    a. Click **Projects** > **Create**.
+
+    b. In the **Service name** field, enter a name for the project. 
+
+    c. Accept the license agreement and click **Create**.
+
+    d. Click the **Manage** tab to return to the **Projects** page.
+
+    e. Click the project that you created.
+
 
 ## Optional: Create a COS instance and bucket
 {: #cos-create-manual}
@@ -221,7 +243,6 @@ Give InstructLab the `Writer` access role for the COS service. The logged-in use
     ibmcloud cos bucket-create --bucket <bucket-name> [--class <class-name>] [--ibm-service-instance-id <instance-id>] [--region REGION] [--output FORMAT]
     ```
     {: pre}
-
 
 
 ## Prepare a taxonomy
@@ -299,18 +320,6 @@ After you receive access to InstructLab, store your taxonomy in COS.
 
     e. To download the packaged TAR file that was automatically generated, in the release that was created, click **Source code (tar.gz)**.
 
-1. In the {{site.data.keyword.cloud}} console, [create a project](https://cloud.ibm.com/instructlab).
-
-    a. Click **Projects** > **Create**.
-
-    b. In the **Service name** field, enter a name for the project. 
-
-    c. Accept the license agreement and click **Create**.
-
-    d. Click the **Manage** tab to return to the **Projects** page.
-
-    e. Click the project that you created.
-
 1. Upload the taxonomy to the project.
 
     a. Click **Taxonomies**.
@@ -318,7 +327,6 @@ After you receive access to InstructLab, store your taxonomy in COS.
     b. Click **Upload**.
 
     c. Select the `.tar.gz` file, give the taxonomy an alphanumeric name, select the COS instance and bucket to use (or create a new one), then click **Upload**.
-
 
 
 ## Add your taxonomy to COS by using the CLI

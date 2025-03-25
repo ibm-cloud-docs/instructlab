@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-14"
+lastupdated: "2025-03-18"
 
 keywords: instructlab, ai
 
@@ -27,7 +27,7 @@ Configuration information or files cannot be passed to the model for fine tuning
 {: #model-train-pre}
 
 1. [Prepare your taxonomy](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy)
-1. [Add the taxonomy TAR to your COS bucket](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy-add-ui).
+1. Add the taxonomy TAR to your COS bucket. You can use the [CLI](https://cloud.ibm.com/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started&interface=cli#taxonomy-add-cli) or the [UI](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy-add-ui).
 1. [Generate data from your taxonomy](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-data-generate).
 
 
