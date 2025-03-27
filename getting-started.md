@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-03-27"
 
 keywords: instructlab, ai
 
@@ -106,13 +106,11 @@ With InstructLab, you can use an existing, pre-trained LLM compiled by a communi
     {: pre}
 
 
-## Assign permissions to create and update COS artifacts
+## Give InstuctLab permission to create and update COS artifacts
 {: #storage-auth-cli}
 {: cli}
 
-### Give InstructLab the `Writer` access role for the COS service
-{: #storage-auth-cli-service}
-{: cli}
+Give InstructLab the `Writer` access role for the COS service. The logged-in user must also have the same permission.
 
 1. Create the authorization policy for InstructLab.
     ```sh
@@ -160,11 +158,7 @@ With InstructLab, you can use an existing, pre-trained LLM compiled by a communi
     ```
     {: screen}
 
-### Give each user the `Writer` access role for the COS service
-{: #storage-auth-cli-service}
-{: cli}
-
-Assign the `Writer` permission for each user who plans to use the service. Include the same Cloud Object Storage service instance ID you used when you assigned the `Writer` permission for Instruct Lab. 
+1. If necessary, give the `Writer` permission to the logged-in user. Include the Cloud Object Storage service instance ID from the previous step.
 
     ```sh
     ibmcloud iam user-policy-create <user> --roles Writer --service-instance <cloud-object-storage-instance-id>
@@ -204,17 +198,15 @@ Give InstructLab the `Writer` access role for the COS service. The logged-in use
 {: #project-create-ui}
 {: ui}
 
-1. In the {{site.data.keyword.cloud}} console, [create a project](https://cloud.ibm.com/instructlab).
+1. From, the [console](https://cloud.ibm.com/instructlab), Click **Projects** > **Create**.
 
-    a. Click **Projects** > **Create**.
+1. In the **Service name** field, enter a name for the project.
 
-    b. In the **Service name** field, enter a name for the project. 
+1. Accept the license agreement and click **Create**.
 
-    c. Accept the license agreement and click **Create**.
+1. Click the **Manage** tab to return to the **Projects** page.
 
-    d. Click the **Manage** tab to return to the **Projects** page.
-
-    e. Click the project that you created.
+1. Click the project that you created.
 
 
 ## Optional: Create a COS instance and bucket
@@ -243,6 +235,7 @@ Give InstructLab the `Writer` access role for the COS service. The logged-in use
     ibmcloud cos bucket-create --bucket <bucket-name> [--class <class-name>] [--ibm-service-instance-id <instance-id>] [--region REGION] [--output FORMAT]
     ```
     {: pre}
+
 
 
 ## Prepare a taxonomy
@@ -320,7 +313,7 @@ After you receive access to InstructLab, store your taxonomy in COS.
 
     e. To download the packaged TAR file that was automatically generated, in the release that was created, click **Source code (tar.gz)**.
 
-1. Upload the taxonomy to the project.
+1. Upload the taxonomy to your project.
 
     a. Click **Taxonomies**.
     
@@ -329,60 +322,52 @@ After you receive access to InstructLab, store your taxonomy in COS.
     c. Select the `.tar.gz` file, give the taxonomy an alphanumeric name, select the COS instance and bucket to use (or create a new one), then click **Upload**.
 
 
+
 ## Add your taxonomy to COS by using the CLI
 {: #taxonomy-add-cli}
 {: cli}
 
 After you receive access to InstructLab, store your taxonomy in COS.
 
-1. Optional: Run the `init` command to set and save COS bucket details and credentials, which can simplify your commands going forward. If you don't want to save these details and want to include them in the `add` command instead, you can continue to the next step.
+1. Optional: Run the `set` command to set and save COS bucket details and credentials, which can simplify your commands going forward. You must set each value individually.
 
-    If you want the COS service instance or bucket to be created automatically later, you do not need to add those options here. The details are saved for you.
-    {: tip}
-
-    ```sh
-    ibmcloud ilab config init \
-    --taxonomy-path <local-path-to-taxonomy> \
-    --taxonomy-path-cos <taxonomy-path-in-cos-bucket> \
-    --cos-bucket <bucket_name> \
-    --cos-endpoint <endpoint> \
-    --cos-region <region> \
-    --cos-id <service_id>
+    ```txt
+    ibmcloud ilab config set \
+        cos-bucket \
+        cos-endpoint \
+        cos-id \
+        project-id \
+        secrets-manager-git-id \
+        secrets-manager-url \
+        taxonomy-path \ # The local directory path to the taxonomy file. 
+        taxonomy-path-cos \
     ```
     {: pre}
 
-    | Parameter | Description |
-    | -------------- | -------------- |
-    | `--taxonomy-path <local_directory_path` | Required. The local directory path to the taxonomy file. |
-    | `--taxonomy-path-cos <directory_path>` | Optional. The relative directory path within the COS bucket to the taxonomy file. |
-    | `--cos-bucket <bucket_name>` | Optional. If you are adding a taxonomy to an existing bucket, include the name. You can find this name on the **Buckets** tab of your COS instance. If you want the bucket to be created for you, you can enter a name for it. If no name is specified and a bucket does not exist yet, a bucket is created that is named `instructlab_TIME`, where `TIME` is the current epoch time. |
-    | `--cos-endpoint <endpoint>` | Optional. Use the public, regional endpoint. For example `https://s3.us-east.cloud-object-storage.appdomain.cloud`. You can find these in the **Endpoints** tab of the COS console. |
-    | `--cos-region <region>` | Optional. The default value is `us-east`. |
-    | `--cos-id <service_id>` | Optional. If you have a COS service instance to use, include the service ID. In the user interface for the COS service instance, click **Details**. Note the **CRN**, which can be used for the service instance ID. If you want one to be created for you, it is created with the name `InstructLab`.|
+    | Component | Description |
+    | --- | --- |
+    | `cos-bucket <bucket_name>` | If you are adding a taxonomy to an existing bucket, include the name. You can find this name on the **Buckets** tab of your COS instance. If you want the bucket to be created for you, you can enter a name for it. If no name is specified and a bucket does not exist yet, a bucket is created that is named `instructlab_TIME`, where `TIME` is the current epoch time. |
+    | `cos-endpoint <endpoint>` | Use the public, regional endpoint. For example `https://s3.us-east.cloud-object-storage.appdomain.cloud`. You can find these in the **Endpoints** tab of the COS console. |
+    | `cos-id <service_id>` | If you have a COS service instance to use, include the service ID. In the user interface for the COS service instance, click **Details**. Note the **CRN**, which can be used for the service instance ID. If you want one to be created for you, it is created with the name `InstructLab`.|
+    | `project-id` | Your InstructLab project ID. |
+    | `secrets-manager-git-id` | The git ID for your Secrets Manager instance. |
+    | `secrets-manager-url` | The URL to your Secrets Manager instance. |
+    | `taxonomy-path-cos <directory_path>` | The relative directory path within the COS bucket to the taxonomy file. |
     {: caption="Understanding this command's components" caption-side="bottom"}
+
 
     Example command to save the taxonomy path, but have the COS service instance and bucket created for you later.
     ```sh
-    ibmcloud ilab config init \
-    --taxonomy-path /Users/USER/instructlab-taxonomy \
+    ibmcloud ilab config set cos-bucket test-1
     ```
     {: pre}
 
     Example command to save the taxonomy path and the details for an existing COS service, but have the COS bucket created for you later.
     ```sh
-    ibmcloud ilab config init \
-    --taxonomy-path /Users/USER/instructlab-taxonomy \
-    --cos-id existing_service_instance_id
+    ibmcloud ilab config set taxonomy-path /Users/USER/instructlab-taxonomy
     ```
     {: pre}
 
-    Example command to save the taxonomy path and the details for an existing bucket.
-    ```sh
-    ibmcloud ilab config init \
-    --taxonomy-path /Users/USER/instructlab-taxonomy \
-    --cos-bucket existing-instruct-lab-bucket 
-    ```
-    {: pre}
 
 1. Add the taxonomy to a COS bucket.
     ```sh

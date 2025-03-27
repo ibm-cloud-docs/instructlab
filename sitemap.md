@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-03-27"
 
 
 keywords: instructlab, sitemap
@@ -31,11 +31,7 @@ subcollection: instructlab
 
 * [Install the CLIs](/docs/instructlab?topic=instructlab-getting-started&interface=cli#cli-install)
 
-* [Assign permissions to create and update COS artifacts](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-auth-cli)
-
-    * [Give InstructLab the `Writer` access role for the COS service](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-auth-cli-service)
-
-    * [Give each user the `Writer` access role for the COS service](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-auth-cli-service)
+* [Give InstuctLab permission to create and update COS artifacts](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-auth-cli)
 
 * [Create an authorization policy for InstuctLab](/docs/instructlab?topic=instructlab-getting-started&interface=ui#storage-auth-ui)
 
@@ -94,13 +90,19 @@ subcollection: instructlab
 {: #sitemap_setting_up_the_service}
 
 
-[Assigning access](/docs/instructlab?topic=instructlab-iam-docs-template#iam-docs-template)
+[Assigning access](/docs/instructlab?topic=instructlab-iam#iam)
 
-* [Assigning access to {{site.data.keyword.instructlab_short}} in the console](/docs/instructlab?topic=instructlab-iam-docs-template&interface=ui#assign-access-console)
+* [Assigning access to {{site.data.keyword.instructlab_short}} in the console](/docs/instructlab?topic=instructlab-iam&interface=ui#assign-access-console)
 
-* [Assigning access to {{site.data.keyword.instructlab_short}} in the CLI](/docs/instructlab?topic=instructlab-iam-docs-template&interface=cli#assign-access-cli)
+    * [Assigning access to resources in the console](/docs/instructlab?topic=instructlab-iam&interface=ui#iam-include-access-resources-console)
 
-* [Assigning access to {{site.data.keyword.instructlab_short}} by using the API](/docs/instructlab?topic=instructlab-iam-docs-template&interface=api#assign-access-api)
+    * [Assigning access within a resource group in the console](/docs/instructlab?topic=instructlab-iam&interface=ui#iam-include-access-to-resources-console)
+
+    * [Assigning access to manage a resource group](/docs/instructlab?topic=instructlab-iam&interface=ui#iam-include-access-to-resource-group)
+
+* [Assigning access to {{site.data.keyword.instructlab_short}} in the CLI](/docs/instructlab?topic=instructlab-iam&interface=cli#assign-access-cli)
+
+    * [Assigning access within a resource group by using the API](/docs/instructlab?topic=instructlab-iam&interface=api#iam-include-access-resourcegroups-api)
 
 [Installing the CLI](/docs/instructlab?topic=instructlab-cli-install#cli-install)
 
