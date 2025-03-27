@@ -71,7 +71,7 @@ Make sure you have the Viewer role for resource groups in your account so you ca
 {: tab-title="Service roles"}
 {: tab-group="IAM"}
 
-## Assigning access to {{site.data.keyword.instructlab_short}} in the console
+## Assigning access to {{site.data.keyword.short_name}} in the console
 {: #assign-access-console}
 {: ui}
 
@@ -90,7 +90,7 @@ Access groups.
 {{../account/iam-mng-access.md#access-to-resource-group}}
 
 
-## Assigning access to {{site.data.keyword.instructlab_short}} in the CLI
+## Assigning access to {{site.data.keyword.short_name}} in the CLI
 {: #assign-access-cli}
 {: cli}
 
@@ -101,45 +101,46 @@ Use `instructlab` for the service name. Also, use quotations around role names t
 
 Example command to give a user the Viewer role for a specific InstructLab project in the account.
 
-```txt
+```sh
 ibmcloud iam user-policy-create name@example.com --roles Viewer --service-name instructlab --attributes "projectId=1b111111-1ef1-11f1-1111-111bae11111a"
 {: pre}
 
 Example command to give a user the Writer role for all InstructLab projects in the account.
 
-```txt
+```sh
 ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name instructlab --roles Writer
 ```
 {: pre}
 
 Example command to assign the Administrator role for all instances of InstrucLab service in the account.
 
-```txt
+```sh
 ibmcloud iam user-policy-create name@example.com --roles Administrator --service-name instructlab
 ```
 {: pre}
 
 Example command to assign the Viewer role to all resource groups in the account.
 
-```txt
+```sh
 ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-type resource-group
 ```
 {: pre}
 
 Example command to assign the Viewer role to all users in a specific resource group.
 
-```txt
+```sh
 ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-type resource-group
 ```
 {: pre}
 
 Example command to get a resource group the Administrator role.
-```txt
+
+```sh
 ibmcloud iam service-policy-create test --roles Administrator --resource-group-name sample-resource-group
 ```
 {: pre}
 
-## Assigning access to {{site.data.keyword.instructlab_short}} by using the API
+## Assigning access to {{site.data.keyword.short_name}} by using the API
 {: #assign-access-api}
 {: api}
 

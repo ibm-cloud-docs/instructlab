@@ -92,7 +92,7 @@ subcollection: instructlab
 
 [Assigning access](/docs/instructlab?topic=instructlab-iam#iam)
 
-* [Assigning access to {{site.data.keyword.instructlab_short}} in the console](/docs/instructlab?topic=instructlab-iam&interface=ui#assign-access-console)
+* [Assigning access to {{site.data.keyword.short_name}} in the console](/docs/instructlab?topic=instructlab-iam&interface=ui#assign-access-console)
 
     * [Assigning access to resources in the console](/docs/instructlab?topic=instructlab-iam&interface=ui#iam-include-access-resources-console)
 
@@ -100,7 +100,7 @@ subcollection: instructlab
 
     * [Assigning access to manage a resource group](/docs/instructlab?topic=instructlab-iam&interface=ui#iam-include-access-to-resource-group)
 
-* [Assigning access to {{site.data.keyword.instructlab_short}} in the CLI](/docs/instructlab?topic=instructlab-iam&interface=cli#assign-access-cli)
+* [Assigning access to {{site.data.keyword.short_name}} in the CLI](/docs/instructlab?topic=instructlab-iam&interface=cli#assign-access-cli)
 
     * [Assigning access within a resource group by using the API](/docs/instructlab?topic=instructlab-iam&interface=api#iam-include-access-resourcegroups-api)
 
@@ -168,6 +168,21 @@ subcollection: instructlab
 * [Model settings](/docs/instructlab?topic=instructlab-service-settings#model-defaults)
 
 
+## Lifecycle policy
+{: #sitemap_lifecycle_policy}
+
+
+[Lifecycle policy](/docs/instructlab?topic=instructlab-lifecycle-policy#lifecycle-policy)
+
+* [Version numbering](/docs/instructlab?topic=instructlab-lifecycle-policy#version-numbering)
+
+* [{{site.data.keyword.instructlab_short}} recommended and supported versions](/docs/instructlab?topic=instructlab-lifecycle-policy#ilab-service-version)
+
+* [Customer communications for {{site.data.keyword.instructlab_short}}](/docs/instructlab?topic=instructlab-lifecycle-policy#customer-communications)
+
+* [Other considerations](/docs/instructlab?topic=instructlab-lifecycle-policy#other-considerations-lifecycle)
+
+
 ## Data portability
 {: #sitemap_data_portability}
 
@@ -183,11 +198,11 @@ subcollection: instructlab
 * [Data ownership](/docs/instructlab?topic=instructlab-data-portability#data-portability-ownership)
 
 
-## InstructLab CLI
-{: #sitemap_instructlab_cli}
+## CLI reference
+{: #sitemap_cli_reference}
 
 
-[InstructLab CLI](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli)
+[CLI reference](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli)
 
 * [Globals](/docs/instructlab?topic=instructlab-ilab-cli#ilab-globals)
 
@@ -248,6 +263,19 @@ subcollection: instructlab
 {: #sitemap_api-reference---swagger}
 
 [API reference - Swagger](https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/){: external}
+
+
+## FAQ
+{: #sitemap_faq}
+
+
+[FAQ](/docs/instructlab?topic=instructlab-faq#faq)
+
+* [What is {{site.data.keyword.short_name}}?](/docs/instructlab?topic=instructlab-faq#faq-ilab-1)
+
+* [Why should I use {{site.data.keyword.short_name}} for my generative AI solution?](/docs/instructlab?topic=instructlab-faq#faq-ilab-2)
+
+* [What are the benefits of {{site.data.keyword.short_name}} on IBM Cloud?](/docs/instructlab?topic=instructlab-faq#faq-ilab-3)
 
 
 ## Getting help and support

@@ -38,12 +38,17 @@ toc:
       topics:
       - topic: service-settings.md
         navtitle: Service settings
+      - topic: lifecycle.md
+        navtitle: Lifecycle policy
       - topic: data-portability.md
         navtitle: Data portability
-      - ilab-cli.md
+      - topic: ilab-cli.md
+        navtitle: CLI reference
       - link:
           label: API reference - Swagger
           href: https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/
+      - topic: faq.md
+        navtitle: FAQ
   - navgroup:
       id: help
       topics:
