@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-07"
+lastupdated: "2025-03-27"
 
 keywords: iam, access, add users, instructlab
 
@@ -13,36 +13,45 @@ subcollection: instructlab
 {{site.data.keyword.attribute-definition-list}}
 
 # Managing IAM access for {{site.data.keyword.instructlab_full_notm}}
-{: #iam-docs-template}
+{: #iam}
 
-Access to {{site.data.keyword.instructlab_short}} service instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the {{site.data.keyword.instructlab_short}} service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to {{site.data.keyword.instructlab_short}}.
+Access to {{site.data.keyword.instructlab_short}} projects for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the {{site.data.keyword.instructlab_short}} service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to {{site.data.keyword.instructlab_short}}.
 {: shortdesc}
 
-The access policy that you assign users in your account determines what actions a user can perform within the context of the service or specific instance that you select. The allowable actions are customized and defined by the {{site.data.keyword.instructlab_short}} as operations that are allowed to be performed on the service. Each action is mapped to an IAM platform or service role that you can assign to a user.
+The access policy that you assign users in your account determines what actions a user can perform within the context of the service or specific project that you select. The allowable actions are customized and defined by the {{site.data.keyword.instructlab_short}} as operations that are allowed to be performed on the service. Each action is mapped to an IAM platform or service role that you can assign to a user.
 
 If a specific role and its actions don't fit the use case that you're looking to address, you can [create a custom role](/docs/account?topic=account-custom-roles#custom-access-roles) and pick the actions to include.
 {: tip}
 
-IAM access policies enable access to be granted at different levels. Some options include the following:
-
-* Access across all instances of the service in your account
-* Access to an individual service instance in your account if this applies 
+IAM access policies enable access at different levels. Some options include the following:
 
 
-Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.instructlab_short}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete instances, and bind instances to applications. Service access roles enable users access to {{site.data.keyword.instructlab_short}} and the ability to call the {{site.data.keyword.instructlab_short}}'s API.
+- Giving Reader or Writer access to a specific project.
+- Giving Reader or Writer access to a specific resource group where there could be many projects.
+- Giving Reader or Writer access to the entire account where there could be many resource groups with many projects.
+- Giving Viewer access to the InstructLab project(s) within a resource group and the account level.
+- Giving creation access to create InstructLab project(s) within a resource group and the account level.
 
-This is a high level view of what the platform roles allow users to do. Use a plain language description about what kind of tasks can be completed or the common jobs to be done that users can expect to accomplish when having each role assigned. 
 
-To find the `role_id` values, run the `ibmcloud iam roles` command or go to the **Manage** > **Access (IAM)** > **Roles** console page. Select your service, then use the List of Actions icon for the row of the role that you want to get the ID value for, and click Details. It is part of the CRN. For example, in `crn:v1:bluemix:public:iam::::serviceRole:Writer`, `Writer` is the ID value. 
+
+Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.instructlab_short}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete projects, and bind projects to applications. Service access roles enable users access to {{site.data.keyword.instructlab_short}} and the ability to call the {{site.data.keyword.instructlab_short}}'s API.
+
+This is a high level view of what the platform roles allow users to do. Use a plain language description about what kind of tasks can be completed or the common jobs that users can expect to do when having each role assigned. 
+
+To find the `role_id` values, run the `ibmcloud iam roles` command or go to the **Manage** > **Access (IAM)** > **Roles** console page. Select your service, then use the List of Actions icon for the row of the role that you want to get the ID value for, and click Details. It is part of the CRN. For example, in `crn:v1:bluemix:public:iam::::serviceRole:Writer`, `Writer` is the ID value.
+
+Make sure you have the Viewer role for resource groups in your account so you can see all resource groups.
+{: tip}
+
 
 | Platform role |  Description of actions |
 |---------------|-------------------------|
-| Viewer | As a viewer, you can view service instances, but you can't modify them. |
-| Operator |  As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard. |
+| Viewer | As a viewer, you can view projects, but you can't modify them. |
+| Operator |  As an operator, you can perform platform actions required to configure and operate projects, such as viewing a service's dashboard. |
 | Editor |  As an editor, you can perform all platform actions except for managing the account and assigning access policies. |
 | Administrator | As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users. |
 | Service Configurator Reader | The ability to read services configuration for Governance management. |
-| Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key for a resource instance. |
+| Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key. |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="IAM platform roles" caption-side="bottom"}
@@ -74,6 +83,12 @@ Access policies per user.
 Access groups.
 :   Access groups are used to streamline access management by assigning access to a group once, then you can add or remove users as needed from the group to control their access. You manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/account?topic=account-groups&interface=ui#access_ag).
 
+{{../account/iam-mng-access.md#access-resources-console}}
+
+{{../account/iam-mng-access.md#access-to-resources-console}}
+
+{{../account/iam-mng-access.md#access-to-resource-group}}
+
 
 ## Assigning access to {{site.data.keyword.instructlab_short}} in the CLI
 {: #assign-access-cli}
@@ -84,11 +99,43 @@ For step-by-step instructions for assigning, removing, and reviewing access, see
 Use `instructlab` for the service name. Also, use quotations around role names that are more than one word like the example here.
 {: tip}
 
+Example command to give a user the Viewer role for a specific InstructLab project in the account.
 
-The `instructlab` in the note above is important to include because the service name in the UI often doesn't match the service name that should be used to make an API call or run a CLI command.
+```txt
+ibmcloud iam user-policy-create name@example.com --roles Viewer --service-name instructlab --attributes "projectId=1b111111-1ef1-11f1-1111-111bae11111a"
+{: pre}
 
-```bash
-ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name instructlab --roles "Writer"
+Example command to give a user the Writer role for all InstructLab projects in the account.
+
+```txt
+ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name instructlab --roles Writer
+```
+{: pre}
+
+Example command to assign the Administrator role for all instances of InstrucLab service in the account.
+
+```txt
+ibmcloud iam user-policy-create name@example.com --roles Administrator --service-name instructlab
+```
+{: pre}
+
+Example command to assign the Viewer role to all resource groups in the account.
+
+```txt
+ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-type resource-group
+```
+{: pre}
+
+Example command to assign the Viewer role to all users in a specific resource group.
+
+```txt
+ibmcloud iam user-policy-create name@example.com --roles Viewer --resource-type resource-group
+```
+{: pre}
+
+Example command to get a resource group the Administrator role.
+```txt
+ibmcloud iam service-policy-create test --roles Administrator --resource-group-name sample-resource-group
 ```
 {: pre}
 
@@ -226,3 +273,8 @@ fmt.Println(string(b))
 ```
 {: go}
 {: codeblock}
+
+
+{{../account/iam-mng-access.md#access-resources-api}}
+
+{{../account/iam-mng-access.md#access-resourcegroups-api}}
