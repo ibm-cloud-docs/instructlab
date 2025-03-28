@@ -30,6 +30,10 @@ toc:
             navtitle: Installing the CLI
           - topic: iam.md
             navtitle: Assigning access
+          - topic: logging.md
+            navtitle: Setting up logging
+          - topic: event-notifications.md
+            navtitle: Enabling notifications
       - topic: data-generate.md
         navtitle: Generating data
       - model-train.md

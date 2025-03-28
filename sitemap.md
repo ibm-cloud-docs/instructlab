@@ -120,6 +120,24 @@ subcollection: instructlab
 
     * [Assigning access within a resource group by using the API](/docs/instructlab?topic=instructlab-iam&interface=api#iam-include-access-resourcegroups-api)
 
+[Setting up logging](/docs/instructlab?topic=instructlab-logging#logging)
+
+* [Platform logs that are generated](/docs/instructlab?topic=instructlab-logging#log-platform)
+
+* [Enabling logging](/docs/instructlab?topic=instructlab-logging#log-enable)
+
+* [Viewing logs](/docs/instructlab?topic=instructlab-logging#log-viewing)
+
+[Enabling notifications](/docs/instructlab?topic=instructlab-event-notifications-events#event-notifications-events)
+
+* [Enabling resource lifecycle events](/docs/instructlab?topic=instructlab-event-notifications-events#event-notifications-events-include-en-enabling-resource-lifecycle-events)
+
+* [Delivering notifications to select destinations](/docs/instructlab?topic=instructlab-event-notifications-events#event-notifications-destinations)
+
+    * [Email notifications](/docs/instructlab?topic=instructlab-event-notifications-events#event-notifications-email)
+
+    * [Webhooks](/docs/instructlab?topic=instructlab-event-notifications-events#event-notifications-webhook)
+
 
 ## Generating data
 {: #sitemap_generating_data}
