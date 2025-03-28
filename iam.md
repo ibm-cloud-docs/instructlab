@@ -59,11 +59,11 @@ Make sure you have the Viewer role for resource groups in your account so you ca
 {: tab-title="Platform roles"}
 {: tab-group="IAM"}
 
-| Service role |  Description of actions | Role CRN | 
+| Service role | Role CRN | Description of actions
 | --- | --- | --- |
-| Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. | `crn:v1:bluemix:public:iam::::serviceRole:Reader` |
-| Writer | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. | `crn:v1:bluemix:public:iam::::serviceRole:Writer` |
-| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. | `crn:v1:bluemix:public:iam::::serviceRole:Manager` |
+| Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. |
+| Writer | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. |
+| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="IAM service access roles" caption-side="bottom"}
@@ -148,10 +148,22 @@ ibmcloud iam service-policy-create test --roles Administrator --resource-group-n
 
 For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the API](/docs/account?topic=account-assign-access-resources&interface=api) or the [Create a policy API docs](/apidocs/iam-policy-management#create-policy). Role cloud resource names (CRN) in the following table are used to assign access with the API.
 
-The following example is for assigning the `Writer` role for `instructlab`:
-
-Use `instructlab` for the service name, and refer to the Role ID values table to ensure that you're using the correct value for the CRN.
+Use `instructlab` for the service name, and refer to the Role ID values table to ensure that you're using the correct value for the CRN. Review the following list of role CRNs.
 {: tip}
+
+| Reader | `crn:v1:bluemix:public:iam::::serviceRole:Reader` |
+| Writer | `crn:v1:bluemix:public:iam::::serviceRole:Writer` |
+| Manager | `crn:v1:bluemix:public:iam::::serviceRole:Manager` |
+| Viewer | `crn:v1:bluemix:public:iam::::serviceRole:Viewer` |
+| Operator | `crn:v1:bluemix:public:iam::::serviceRole:Operator` |
+| Editor | `crn:v1:bluemix:public:iam::::serviceRole:Editor` |
+| Administrator | `crn:v1:bluemix:public:iam::::serviceRole:Administrator` |
+| Service Configurator Reader | `crn:v1:bluemix:public:iam::::serviceRole:ConfigReader` |
+| Key Manager | `crn:v1:bluemix:public:iam::::serviceRole:KeyManager` |
+{: caption="IAM role CRNs" caption-side="bottom"}
+
+
+The following example assigns the `Writer` role for `instructlab`.
 
 ```curl
 curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $TOKEN' -H 'Content-Type: application/json' -d '{
