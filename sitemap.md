@@ -124,6 +124,8 @@ subcollection: instructlab
 
 * [Enabling logging](/docs/instructlab?topic=instructlab-logging#log-enable)
 
+* [Setting up {{site.data.keyword.atracker_short}}](/docs/instructlab?topic=instructlab-logging#at-event-routing)
+
 * [Viewing logs](/docs/instructlab?topic=instructlab-logging#log-viewing)
 
 [Enabling notifications](/docs/instructlab?topic=instructlab-event-notifications-events#event-notifications-events)
