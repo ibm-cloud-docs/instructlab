@@ -51,8 +51,6 @@ toc:
       - link:
           label: API reference - Swagger
           href: https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/
-      - topic: faq.md
-        navtitle: FAQ
   - navgroup:
       id: help
       topics:
@@ -62,4 +60,6 @@ toc:
           topics:
           - ts-debug.md
           - ts-no-new-leaf-nodes.md
+      - topic: faq.md
+        navtitle: FAQ
       - sitemap.md
