@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024, 2024
-lastupdated: "2024-12-02"
+  years: 2024, 2025
+lastupdated: "2025-03-28"
 
 keywords: instructlab, debugging
 
@@ -58,7 +58,7 @@ Try one of the following options to resolve the issue.
     ```
     {: pre}
 
-4. Run the `diff` command where the `--taxonomy-base` is the branch to compare the local files with. If you are using the InstructLab community taxonomy, this branch is `main`.
+4. Run the `diff` command where the `--taxonomy-base` is the branch to compare the local files with. If you are using the {{site.data.keyword.short_name}} community taxonomy, this branch is `main`.
 
     ```sh
     ilab taxonomy diff --taxonomy-path <local-path-to-taxonomy>  --taxonomy-base empty

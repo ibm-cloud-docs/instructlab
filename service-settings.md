@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-10"
+lastupdated: "2025-03-28"
 
 keywords: instructlab, ai, data, generate, default, settings
 
@@ -13,10 +13,10 @@ subcollection: instructlab
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Default service settings for InstructLab
+# Default service settings for {{site.data.keyword.short_name}}
 {: #service-settings}
 
-Review the default settings for InstructLab. These settings cannot be modified. 
+Review the default settings for {{site.data.keyword.short_name}}. These settings cannot be modified. 
 {: shortdesc}
 
 ## Training settings

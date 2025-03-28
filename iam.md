@@ -29,20 +29,18 @@ IAM access policies enable access at different levels. Some options include the 
 - Giving Reader or Writer access to a specific project.
 - Giving Reader or Writer access to a specific resource group where there could be many projects.
 - Giving Reader or Writer access to the entire account where there could be many resource groups with many projects.
-- Giving Viewer access to the InstructLab project(s) within a resource group and the account level.
-- Giving creation access to create InstructLab project(s) within a resource group and the account level.
+- Giving Viewer access to the {{site.data.keyword.short_name}} project(s) within a resource group and the account level.
+- Giving creation access to create {{site.data.keyword.short_name}} project(s) within a resource group and the account level.
 
 If a specific role and its actions don't fit the use case that you're looking to address, you can [create a custom role](/docs/account?topic=account-custom-roles#custom-access-roles) and pick the actions to include.
 {: tip}
 
 Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.instructlab_short}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete projects, and bind projects to applications. Service access roles enable users access to {{site.data.keyword.instructlab_short}} and the ability to call the {{site.data.keyword.instructlab_short}}'s API.
 
-This is a high level view of what the platform roles allow users to do. Use a plain language description about what kind of tasks can be completed or the common jobs that users can expect to do when having each role assigned. 
-
-To find the `role_id` values, run the `ibmcloud iam roles` command or go to the **Manage** > **Access (IAM)** > **Roles** console page. Select your service, then use the List of Actions icon for the row of the role that you want to get the ID value for, and click Details. It is part of the CRN. For example, in `crn:v1:bluemix:public:iam::::serviceRole:Writer`, `Writer` is the ID value.
+This is a high level view of what the platform roles allow users to do. Use a plain language description about what kind of tasks can be completed or the common jobs that users can expect to do when having each role assigned.
 
 
-| Platform role | Description |
+| Platform role | Role ID | Description |
 | --- | --- |
 | Viewer | As a viewer, you can view projects, but you can't modify them. |
 | Operator |  As an operator, you can perform platform actions required to configure and operate projects, such as viewing a service's dashboard. |
@@ -94,24 +92,30 @@ Access groups.
 
 For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/account?topic=account-assign-access-resources&interface=cli#access-resources-cli). The following example shows a command for assigning the `Writer` role for `instructlab`:
 
-Use `instructlab` for the service name. Also, use quotations around role names that are more than one word like the example here.
+Use `instructlab` for the service name. To find the role IDs, run the `ibmcloud iam roles` command. Also, use quotations around role names that are more than one word. For example `"Service Configuration Reader"`.
 {: tip}
 
-Example command to give a user the Viewer role for a specific InstructLab project in the account.
+Example command to give a user the Viewer role for a specific {{site.data.keyword.short_name}} project in the account.
 
 ```sh
 ibmcloud iam user-policy-create name@example.com --roles Viewer --service-name instructlab --attributes "projectId=1b111111-1ef1-11f1-1111-111bae11111a"
 ```
 {: pre}
 
-Example command to give a user the Writer role for all InstructLab projects in the account.
+Example command to give a user the Key Manager role for a specific Instructlab project in the account.
+
+```sh
+ibmcloud iam user-policy-create name@email.com --roles "Key Manager" --service-name instructlab
+```
+
+Example command to give a user the Writer role for all {{site.data.keyword.short_name}} projects in the account.
 
 ```sh
 ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name instructlab --roles Writer
 ```
 {: pre}
 
-Example command to assign the Administrator role for all instances of InstrucLab service in the account.
+Example command to assign the Administrator role for all instances of {{site.data.keyword.short_name}} service in the account.
 
 ```sh
 ibmcloud iam user-policy-create name@example.com --roles Administrator --service-name instructlab

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-07"
+lastupdated: "2025-03-28"
 
 keywords: instructlab, ai, about
 
@@ -21,7 +21,7 @@ subcollection: instructlab
 For more information, review the following links.
 
 - [What is AI?](https://www.ibm.com/think/topics/artificial-intelligence){: external}
-- [What is InstructLab?](https://www.redhat.com/en/topics/ai/what-is-instructlab){: external}
+- [What is {{site.data.keyword.short_name}}?](https://www.redhat.com/en/topics/ai/what-is-instructlab){: external}
 
 
 ## Why {{site.data.keyword.instructlab_short}}?

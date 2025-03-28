@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-27"
+lastupdated: "2025-03-28"
 
 keywords: instructlab, ai
 
@@ -29,7 +29,7 @@ Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instruct
 {: shortdesc}
 
 
-InstructLab is available to allowlisted accounts only.
+{{site.data.keyword.short_name}} is available to allowlisted accounts only.
 {: preview}
 
 
@@ -50,11 +50,11 @@ Trial accounts are not supported. For more information or to upgrade your accoun
 ## Get familiar with the capabilities
 {: #get-familiar}
 
-If you are new to machine learning, you are in the correct place. To use InstructLab, you do not need to have any preexisting knowledge. You do not even need to have an idea for what to create yet. Let's start by just getting familiar with the concepts and what kinds of things you can do with the technology.
+If you are new to machine learning, you are in the correct place. To use {{site.data.keyword.short_name}}, you do not need to have any preexisting knowledge. You do not even need to have an idea for what to create yet. Let's start by just getting familiar with the concepts and what kinds of things you can do with the technology.
 
 [Generative AI](#x10298036){: term} starts with a [large language model (LLM)](#x10298052){: term}. With a prompt, these models can take sets of data and provide a statistically probable output for that prompt. You can automatically generate a data set that is similar to real data, and then use it to train the model to get the most probable output possible.
 
-With InstructLab, you can use an existing, pre-trained LLM compiled by a community of contributors, and then generate the data to further train the model. By incorporating {{site.data.keyword.cloud_notm}}, you have a place to store the taxonomy, the informational structure, for the model as you modified it and train the model on an ongoing basis.
+With {{site.data.keyword.short_name}}, you can use an existing, pre-trained LLM compiled by a community of contributors, and then generate the data to further train the model. By incorporating {{site.data.keyword.cloud_notm}}, you have a place to store the taxonomy, the informational structure, for the model as you modified it and train the model on an ongoing basis.
 
 ![Task flow diagram for generating a model with the service.](images/task-flow.svg "Task flow diagram for generating a model with the service."){: caption="Task flow diagram." caption-side="bottom"}{: external download="task-flow.svg"}
 
@@ -87,7 +87,7 @@ With InstructLab, you can use an existing, pre-trained LLM compiled by a communi
     ```
     {: pre}
 
-1. If you plan to allow InstructLab to create {{site.data.keyword.cos_full}} Instance resources for you, target a resource group.
+1. If you plan to allow {{site.data.keyword.short_name}} to create {{site.data.keyword.cos_full}} Instance resources for you, target a resource group.
     ```sh
     ibmcloud target -g <resource_group>
     ```
@@ -99,7 +99,7 @@ With InstructLab, you can use an existing, pre-trained LLM compiled by a communi
     ```
     {: pre}
 
-1. Create a project in the InstructLab instance.
+1. Create a project in the {{site.data.keyword.short_name}} instance.
     ```sh
     ibmcloud resource service-instance-create <project_name> instructlab instructlab-pricing-plan us-east
     ```
@@ -110,9 +110,9 @@ With InstructLab, you can use an existing, pre-trained LLM compiled by a communi
 {: #storage-auth-cli}
 {: cli}
 
-Give InstructLab the `Writer` access role for the COS service. The logged-in user must also have the same permission.
+Give {{site.data.keyword.short_name}} the `Writer` access role for the COS service. The logged-in user must also have the same permission.
 
-1. Create the authorization policy for InstructLab.
+1. Create the authorization policy for {{site.data.keyword.short_name}}.
     ```sh
     ibmcloud iam authorization-policy-create Writer --source-service-name instructlab --target-service-name cloud-object-storage
     ```
@@ -166,17 +166,17 @@ Give InstructLab the `Writer` access role for the COS service. The logged-in use
     {: pre}
 
 
-## Create an authorization policy for InstuctLab
+## Create an authorization policy for {{site.data.keyword.short_name}}
 {: #storage-auth-ui}
 {: ui}
 
-Give InstructLab the `Writer` access role for the COS service. The logged-in user must also have the same permission.
+Give {{site.data.keyword.short_name}} the `Writer` access role for the COS service. The logged-in user must also have the same permission.
 
-1. Create an authorization policy gives InstructLab `Writer` access to the COS service.
+1. Create an authorization policy gives {{site.data.keyword.short_name}} `Writer` access to the COS service.
 
     a. In the user interface, click **Manage** > **Access (IAM)** > **Authorizations**.
 
-    b. For the source service, select the **InstructLab** service.
+    b. For the source service, select the **{{site.data.keyword.short_name}}** service.
 
     c. For the target service, select the **Cloud Object Storage** service.
 
@@ -242,7 +242,7 @@ Give InstructLab the `Writer` access role for the COS service. The logged-in use
 {: #taxonomy}
 
 
-In this example, use the Git CLI to clone and update the InstructLab [community taxonomy](https://github.com/instructlab/taxonomy){: external}.
+In this example, use the Git CLI to clone and update the {{site.data.keyword.short_name}} [community taxonomy](https://github.com/instructlab/taxonomy){: external}.
 
 1. Fork the [community taxonomy repo](https://github.com/instructlab/taxonomy) by clicking **Fork** and completing the steps.
 
@@ -299,7 +299,7 @@ In this example, use the Git CLI to clone and update the InstructLab [community 
 {: #taxonomy-add-ui}
 {: ui}
 
-After you receive access to InstructLab, store your taxonomy in COS.
+After you receive access to {{site.data.keyword.short_name}}, store your taxonomy in COS.
 
 1. Create a packaged TAR file of the contents of the Github taxonomy repository by creating a release.
 
@@ -327,7 +327,7 @@ After you receive access to InstructLab, store your taxonomy in COS.
 {: #taxonomy-add-cli}
 {: cli}
 
-After you receive access to InstructLab, store your taxonomy in COS.
+After you receive access to {{site.data.keyword.short_name}}, store your taxonomy in COS.
 
 1. Optional: Run the `set` command to set and save COS bucket details and credentials, which can simplify your commands going forward. You must set each value individually.
 
@@ -348,8 +348,8 @@ After you receive access to InstructLab, store your taxonomy in COS.
     | --- | --- |
     | `cos-bucket <bucket_name>` | If you are adding a taxonomy to an existing bucket, include the name. You can find this name on the **Buckets** tab of your COS instance. If you want the bucket to be created for you, you can enter a name for it. If no name is specified and a bucket does not exist yet, a bucket is created that is named `instructlab_TIME`, where `TIME` is the current epoch time. |
     | `cos-endpoint <endpoint>` | Use the public, regional endpoint. For example `https://s3.us-east.cloud-object-storage.appdomain.cloud`. You can find these in the **Endpoints** tab of the COS console. |
-    | `cos-id <service_id>` | If you have a COS service instance to use, include the service ID. In the user interface for the COS service instance, click **Details**. Note the **CRN**, which can be used for the service instance ID. If you want one to be created for you, it is created with the name `InstructLab`.|
-    | `project-id` | Your InstructLab project ID. |
+    | `cos-id <service_id>` | If you have a COS service instance to use, include the service ID. In the user interface for the COS service instance, click **Details**. Note the **CRN**, which can be used for the service instance ID. If you want one to be created for you, it is created with the name `{{site.data.keyword.short_name}}`.|
+    | `project-id` | Your {{site.data.keyword.short_name}} project ID. |
     | `secrets-manager-git-id` | The git ID for your Secrets Manager instance. |
     | `secrets-manager-url` | The URL to your Secrets Manager instance. |
     | `taxonomy-path-cos <directory_path>` | The relative directory path within the COS bucket to the taxonomy file. |
@@ -383,7 +383,7 @@ After you receive access to InstructLab, store your taxonomy in COS.
     | `--cos-bucket <bucket_name>` | Optional. If you are adding a taxonomy to an existing bucket, include the name. You can find this name on the **Buckets** tab of your COS instance. If you want the bucket to be created for you, you can enter a name for it. If no name is specified and a bucket does not exist yet, a bucket is created that is named `instructlab_TIME`. |
     | `--cos-endpoint <endpoint>` | Optional. Use the public, regional endpoint. For example `https://s3.us-east.cloud-object-storage.appdomain.cloud`. You can find these in the **Endpoints** tab of the COS console. |
     | `--cos-region <region>` | Optional. The default value is `us-east`. |
-    | `--cos-id <service_id>` | Optional. If you have a COS service instance to use, include the service ID. In the user interface for the COS service instance, click **Details**. Note the **CRN**, which can be used for the service instance ID. If you want one to be created for you, it is created with the name `InstructLab`.|
+    | `--cos-id <service_id>` | Optional. If you have a COS service instance to use, include the service ID. In the user interface for the COS service instance, click **Details**. Note the **CRN**, which can be used for the service instance ID. If you want one to be created for you, it is created with the name `{{site.data.keyword.short_name}}`.|
     {: caption="Understanding this command's components" caption-side="bottom"}
 
     Example command to use the details that were saved with the `init` command.

@@ -33,7 +33,7 @@ subcollection: instructlab
 
 * [Give InstuctLab permission to create and update COS artifacts](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-auth-cli)
 
-* [Create an authorization policy for InstuctLab](/docs/instructlab?topic=instructlab-getting-started&interface=ui#storage-auth-ui)
+* [Create an authorization policy for {{site.data.keyword.short_name}}](/docs/instructlab?topic=instructlab-getting-started&interface=ui#storage-auth-ui)
 
 * [Create a project in the Instruct Lab instance](/docs/instructlab?topic=instructlab-getting-started&interface=ui#project-create-ui)
 
@@ -69,7 +69,7 @@ subcollection: instructlab
 
     * [10 March 2025](/docs/instructlab?topic=instructlab-release-notes#10mar25)
 
-        * New! You can now group your InstructLab work into projects.
+        * New! You can now group your {{site.data.keyword.short_name}} work into projects.
 
         * Version 1.4 of {{site.data.keyword.product_name}} is available. For the best results, it is recommended to run training on newly generated synthetic data with the RHEL AI 1.4 version.
 
