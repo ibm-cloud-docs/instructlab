@@ -87,7 +87,7 @@ With InstructLab, you can use an existing, pre-trained LLM compiled by a communi
     ```
     {: pre}
 
-1. If you plan to allow InstructLab to create Cloud Object Storage Instance resources for you, target a resource group.
+1. If you plan to allow InstructLab to create {{site.data.keyword.cos_full}} Instance resources for you, target a resource group.
     ```sh
     ibmcloud target -g <resource_group>
     ```
@@ -158,7 +158,7 @@ Give InstructLab the `Writer` access role for the COS service. The logged-in use
     ```
     {: screen}
 
-1. If necessary, give the `Writer` permission to the logged-in user. Include the Cloud Object Storage service instance ID from the previous step.
+1. If necessary, give the `Writer` permission to the logged-in user. Include the {{site.data.keyword.cos_short}} service instance ID from the previous step.
 
     ```sh
     ibmcloud iam user-policy-create <user> --roles Writer --service-instance <cloud-object-storage-instance-id>

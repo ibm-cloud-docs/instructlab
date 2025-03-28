@@ -26,10 +26,14 @@ toc:
       - topicgroup:
           label: Setting up the service
           topics:
-          - topic: iam.md
-            navtitle: Assigning access
           - topic: cli-install.md
             navtitle: Installing the CLI
+          - topic: iam.md
+            navtitle: Assigning access
+          - topic: logging.md
+            navtitle: Setting up logging
+          - topic: event-notifications.md
+            navtitle: Enabling notifications
       - topic: data-generate.md
         navtitle: Generating data
       - model-train.md
@@ -38,12 +42,17 @@ toc:
       topics:
       - topic: service-settings.md
         navtitle: Service settings
+      - topic: lifecycle.md
+        navtitle: Lifecycle policy
       - topic: data-portability.md
         navtitle: Data portability
-      - ilab-cli.md
+      - topic: ilab-cli.md
+        navtitle: CLI reference
       - link:
           label: API reference - Swagger
           href: https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/
+      - topic: faq.md
+        navtitle: FAQ
   - navgroup:
       id: help
       topics:
