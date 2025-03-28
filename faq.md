@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-27"
+lastupdated: "2025-03-28"
 
 keywords: instructlab, rhel ai, faq
 
@@ -52,22 +52,19 @@ Leveraging unique business data
 :   Users can unlock efficiencies and drive innovation by creating AI-powered solutions using their unique business data.
 
 Minimizing the risk of catastrophic forgetting
-:   InstructLab uses Granite models as a foundation for learning new skills and knowledge, minimizing the risk of losing previously learned information when learning new information.
+:   {{site.data.keyword.short_name}} uses Granite models as a foundation for learning new skills and knowledge, minimizing the risk of losing previously learned information when learning new information.
 
 Secure, up-to-date, and available
-:   InstructLab is available as a service on IBM Cloud, allowing users to reduce unnecessary costs and optimize IT expenditures.
+:   {{site.data.keyword.short_name}} is available as a service on IBM Cloud, allowing users to reduce unnecessary costs and optimize IT expenditures.
 
 Data portability
 :   Users can export their content and configuration to other infrastructures.
 
 Enterprise-grade cloud infrastructure
-:   InstructLab uses IBM Cloud's robust and secure infrastructure, designed to meet the stringent requirements of business critical workloads.
+:   {{site.data.keyword.short_name}} uses IBM Cloud's robust and secure infrastructure, designed to meet the stringent requirements of business critical workloads.
 
 Flexibility
-:   InstructLab offers access to a wide variety of hardware profiles, VMware compute accelerators, and the capability for new capacity expansion within the hour.
+:   {{site.data.keyword.short_name}} offers access to a wide variety of hardware profiles, VMware compute accelerators, and the capability for new capacity expansion within the hour.
 
 Advanced Cloud Services
 :   IBM Cloud provides access to the latest GPUs and IBM watsonx services gen AI, inferencing, and machine learning to fast-track innovation into business processes.
-
-
-
