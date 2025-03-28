@@ -11,6 +11,10 @@
         "href": "/docs/instructlab?topic=instructlab-getting-started"
       },
       {
+        "title": "Installing the CLI",
+        "href": "/docs/instructlab?topic=instructlab-cli-install"
+      },
+      {
         "title": "Generating data",
         "href": "/docs/instructlab?topic=instructlab-data-generate"
       },
@@ -19,8 +23,16 @@
         "href": "/docs/instructlab?topic=instructlab-model-train"
       },
       {
-        "title": "CLI Reference",
-        "href": "/docs/instructlab?topic=instructlab-ilab-cli"
+        "title": "Service settings",
+        "href": "/docs/instructlab?topic=instructlab-service-settings"
+      },
+      {
+        "title": "Lifecycle policy",
+        "href": "/docs/instructlab?topic=instructlab-lifecycle-policy"
+      },
+      {
+        "title": "FAQ",
+        "href": "/docs/instructlab?topic=instructlab-faq"
       }
 
     ]

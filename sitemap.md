@@ -50,13 +50,15 @@ subcollection: instructlab
 * [What's next?](/docs/instructlab?topic=instructlab-getting-started&interface=cli#next)
 
 
-## About
-{: #sitemap_about}
+## How it works
+{: #sitemap_how_it_works}
 
 
 [About](/docs/instructlab?topic=instructlab-about#about)
 
 * [Why {{site.data.keyword.instructlab_short}}?](/docs/instructlab?topic=instructlab-about#benefits)
+
+[Costs](/docs/instructlab?topic=instructlab-costs#costs)
 
 
 ## Release notes
