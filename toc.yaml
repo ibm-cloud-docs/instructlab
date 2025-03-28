@@ -26,10 +26,10 @@ toc:
       - topicgroup:
           label: Setting up the service
           topics:
-          - topic: iam.md
-            navtitle: Assigning access
           - topic: cli-install.md
             navtitle: Installing the CLI
+          - topic: iam.md
+            navtitle: Assigning access
       - topic: data-generate.md
         navtitle: Generating data
       - model-train.md

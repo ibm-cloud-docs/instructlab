@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-27"
+lastupdated: "2025-03-28"
 
 
 keywords: instructlab, sitemap
@@ -90,6 +90,18 @@ subcollection: instructlab
 {: #sitemap_setting_up_the_service}
 
 
+[Installing the CLI](/docs/instructlab?topic=instructlab-cli-install#cli-install)
+
+* [Run the installation command](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-step1-install-idt)
+
+* [Verify the installation](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-step2-verify-idt)
+
+* [Install CLI plug-ins and tools](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-step3-install-idt-manually)
+
+* [Updating the {{site.data.keyword.cloud_notm}} CLI](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-update-ibmcloud-cli)
+
+* [Updating installed plug-ins](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-cli-update-plugin)
+
 [Assigning access](/docs/instructlab?topic=instructlab-iam#iam)
 
 * [Assigning access to {{site.data.keyword.short_name}} in the console](/docs/instructlab?topic=instructlab-iam&interface=ui#assign-access-console)
@@ -102,19 +114,11 @@ subcollection: instructlab
 
 * [Assigning access to {{site.data.keyword.short_name}} in the CLI](/docs/instructlab?topic=instructlab-iam&interface=cli#assign-access-cli)
 
+* [Assigning access to {{site.data.keyword.short_name}} by using the API](/docs/instructlab?topic=instructlab-iam&interface=api#assign-access-api)
+
+    * [Assigning access to resources by using the API](/docs/instructlab?topic=instructlab-iam&interface=api#iam-include-access-resources-api)
+
     * [Assigning access within a resource group by using the API](/docs/instructlab?topic=instructlab-iam&interface=api#iam-include-access-resourcegroups-api)
-
-[Installing the CLI](/docs/instructlab?topic=instructlab-cli-install#cli-install)
-
-* [Run the installation command](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-step1-install-idt)
-
-* [Verify the installation](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-step2-verify-idt)
-
-* [Install CLI plug-ins and tools](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-step3-install-idt-manually)
-
-* [Updating the {{site.data.keyword.cloud_notm}} CLI](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-update-ibmcloud-cli)
-
-* [Updating installed plug-ins](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-cli-update-plugin)
 
 
 ## Generating data

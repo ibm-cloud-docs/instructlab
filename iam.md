@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-27"
+lastupdated: "2025-03-28"
 
 keywords: iam, access, add users, instructlab
 
@@ -44,14 +44,14 @@ Make sure you have the Viewer role for resource groups in your account so you ca
 {: tip}
 
 
-| Platform role |  Description of actions |
-|---------------|-------------------------|
-| Viewer | As a viewer, you can view projects, but you can't modify them. |
-| Operator |  As an operator, you can perform platform actions required to configure and operate projects, such as viewing a service's dashboard. |
-| Editor |  As an editor, you can perform all platform actions except for managing the account and assigning access policies. |
-| Administrator | As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users. |
-| Service Configurator Reader | The ability to read services configuration for Governance management. |
-| Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key. |
+| Platform role |  Description of actions | Role CRN |
+| --- | --- | --- |
+| Viewer | As a viewer, you can view projects, but you can't modify them. | `crn:v1:bluemix:public:iam::::serviceRole:Viewer` |
+| Operator |  As an operator, you can perform platform actions required to configure and operate projects, such as viewing a service's dashboard. | `crn:v1:bluemix:public:iam::::serviceRole:Operator` |
+| Editor |  As an editor, you can perform all platform actions except for managing the account and assigning access policies. | `crn:v1:bluemix:public:iam::::serviceRole:Editor` |
+| Administrator | As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users. | `crn:v1:bluemix:public:iam::::serviceRole:Administrator` |
+| Service Configurator Reader | The ability to read services configuration for Governance management. | `crn:v1:bluemix:public:iam::::serviceRole:ConfigReader` |
+| Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key. | `crn:v1:bluemix:public:iam::::serviceRole:KeyManager` |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="IAM platform roles" caption-side="bottom"}
@@ -59,11 +59,11 @@ Make sure you have the Viewer role for resource groups in your account so you ca
 {: tab-title="Platform roles"}
 {: tab-group="IAM"}
 
-| Service role |  Description of actions |
+| Service role |  Description of actions | Role CRN | 
 |--------------|------------------------|
-| Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. |
-| Writer | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. |
-| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. |
+| Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. | `crn:v1:bluemix:public:iam::::serviceRole:Reader` |
+| Writer | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. | `crn:v1:bluemix:public:iam::::serviceRole:Writer` |
+| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. | `crn:v1:bluemix:public:iam::::serviceRole:Manager` |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="IAM service access roles" caption-side="bottom"}
@@ -103,6 +103,7 @@ Example command to give a user the Viewer role for a specific InstructLab projec
 
 ```sh
 ibmcloud iam user-policy-create name@example.com --roles Viewer --service-name instructlab --attributes "projectId=1b111111-1ef1-11f1-1111-111bae11111a"
+```
 {: pre}
 
 Example command to give a user the Writer role for all InstructLab projects in the account.
@@ -140,33 +141,17 @@ ibmcloud iam service-policy-create test --roles Administrator --resource-group-n
 ```
 {: pre}
 
+
 ## Assigning access to {{site.data.keyword.short_name}} by using the API
 {: #assign-access-api}
 {: api}
 
 For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the API](/docs/account?topic=account-assign-access-resources&interface=api) or the [Create a policy API docs](/apidocs/iam-policy-management#create-policy). Role cloud resource names (CRN) in the following table are used to assign access with the API.
 
-
-| Role name | Role CRN |
-|---------------|-----------------|
-| Viewer                 | `crn:v1:bluemix:public:iam::::serviceRole:Viewer`        |
-| Operator               | `crn:v1:bluemix:public:iam::::serviceRole:Operator`      |
-| Editor                 | `crn:v1:bluemix:public:iam::::serviceRole:Editor`        |
-| Administrator          | `crn:v1:bluemix:public:iam::::serviceRole:Administrator` |
-| Reader         | `crn:v1:bluemix:public:iam::::serviceRole:Reader`        |
-| Writer         | `crn:v1:bluemix:public:iam::::serviceRole:Writer`        |
-| Manager        | `crn:v1:bluemix:public:iam::::serviceRole:Manager`       |
-| Service Key Configurator        | `crn:v1:bluemix:public:iam::::serviceRole:ConfigReader`       |
-| Key Manager        | `crn:v1:bluemix:public:iam::::serviceRole:KeyManager`       |
-{: caption="Role ID values for API use" caption-side="bottom"}
-
 The following example is for assigning the `Writer` role for `instructlab`:
 
 Use `instructlab` for the service name, and refer to the Role ID values table to ensure that you're using the correct value for the CRN.
 {: tip}
-
-
-The `instructlab` in the note above is important to include because the service name in the UI often doesn't match the service name that should be used to make an API call.
 
 ```curl
 curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $TOKEN' -H 'Content-Type: application/json' -d '{
@@ -207,73 +192,6 @@ curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $
 {: codeblock}
 
 
-```python
-policy_subjects = PolicySubject(
-  attributes=[SubjectAttribute(name='iam_id', value='IBMid-123453user')])
-policy_roles = PolicyRole(
-  role_id='crn:v1:bluemix:public:iam::::serviceRole:Writer')
-account_id_resource_attribute = ResourceAttribute(
-  name='accountId', value='ACCOUNT_ID')
-service_name_resource_attribute = ResourceAttribute(
-  name='serviceName', value='instructlab')
-policy_resources = PolicyResource(
-  attributes=[account_id_resource_attribute,
-        service_name_resource_attribute])
-
-policy = iam_policy_management_service.create_policy(
-  type='access',
-  subjects=[policy_subjects],
-  roles=[policy_roles],
-  resources=[policy_resources]
-).get_result()
-
-print(json.dumps(policy, indent=2))
-```
-{: python}
-{: codeblock}
-
-```go
-subjectAttribute := &iampolicymanagementv1.SubjectAttribute{
-  Name:  core.StringPtr("iam_id"),
-  Value: core.StringPtr("IBMid-123453user"),
-}
-policySubjects := &iampolicymanagementv1.PolicySubject{
-  Attributes: []iampolicymanagementv1.SubjectAttribute{*subjectAttribute},
-}
-policyRoles := &iampolicymanagementv1.PolicyRole{
-  RoleID: core.StringPtr("crn:v1:bluemix:public:iam::::serviceRole:Writer"),
-}
-accountIDResourceAttribute := &iampolicymanagementv1.ResourceAttribute{
-  Name:     core.StringPtr("accountId"),
-  Value:    core.StringPtr("ACCOUNT_ID"),
-  Operator: core.StringPtr("stringEquals"),
-}
-serviceNameResourceAttribute := &iampolicymanagementv1.ResourceAttribute{
-  Name:     core.StringPtr("serviceName"),
-  Value:    core.StringPtr("instructlab"),
-  Operator: core.StringPtr("stringEquals"),
-}
-policyResources := &iampolicymanagementv1.PolicyResource{
-  Attributes: []iampolicymanagementv1.ResourceAttribute{
-    *accountIDResourceAttribute, *serviceNameResourceAttribute}
-}
-
-options := iamPolicyManagementService.NewCreatePolicyOptions(
-  "access",
-  []iampolicymanagementv1.PolicySubject{*policySubjects},
-  []iampolicymanagementv1.PolicyRole{*policyRoles},
-  []iampolicymanagementv1.PolicyResource{*policyResources},
-)
-
-policy, response, err := iamPolicyManagementService.CreatePolicy(options)
-if err != nil {
-  panic(err)
-}
-b, _ := json.MarshalIndent(policy, "", "  ")
-fmt.Println(string(b))
-```
-{: go}
-{: codeblock}
 
 
 {{../account/iam-mng-access.md#access-resources-api}}
