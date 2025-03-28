@@ -20,7 +20,7 @@ Access to {{site.data.keyword.instructlab_short}} projects for users in your acc
 
 The access policy that you assign users in your account determines what actions a user can perform within the context of the service or specific project that you select. The allowable actions are customized and defined by the {{site.data.keyword.instructlab_short}} as operations that are allowed to be performed on the service. Each action is mapped to an IAM platform or service role that you can assign to a user.
 
-If a specific role and its actions don't fit the use case that you're looking to address, you can [create a custom role](/docs/account?topic=account-custom-roles#custom-access-roles) and pick the actions to include.
+Make sure you also have the Viewer role for the resource groups you want to use.
 {: tip}
 
 IAM access policies enable access at different levels. Some options include the following:
@@ -32,16 +32,14 @@ IAM access policies enable access at different levels. Some options include the 
 - Giving Viewer access to the InstructLab project(s) within a resource group and the account level.
 - Giving creation access to create InstructLab project(s) within a resource group and the account level.
 
-
+If a specific role and its actions don't fit the use case that you're looking to address, you can [create a custom role](/docs/account?topic=account-custom-roles#custom-access-roles) and pick the actions to include.
+{: tip}
 
 Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.instructlab_short}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete projects, and bind projects to applications. Service access roles enable users access to {{site.data.keyword.instructlab_short}} and the ability to call the {{site.data.keyword.instructlab_short}}'s API.
 
 This is a high level view of what the platform roles allow users to do. Use a plain language description about what kind of tasks can be completed or the common jobs that users can expect to do when having each role assigned. 
 
 To find the `role_id` values, run the `ibmcloud iam roles` command or go to the **Manage** > **Access (IAM)** > **Roles** console page. Select your service, then use the List of Actions icon for the row of the role that you want to get the ID value for, and click Details. It is part of the CRN. For example, in `crn:v1:bluemix:public:iam::::serviceRole:Writer`, `Writer` is the ID value.
-
-Make sure you have the Viewer role for resource groups in your account so you can see all resource groups.
-{: tip}
 
 
 | Platform role | Description |
