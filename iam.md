@@ -148,7 +148,7 @@ ibmcloud iam service-policy-create test --roles Administrator --resource-group-n
 
 For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the API](/docs/account?topic=account-assign-access-resources&interface=api) or the [Create a policy API docs](/apidocs/iam-policy-management#create-policy). Role cloud resource names (CRN) in the following table are used to assign access with the API.
 
-Use `instructlab` for the service name, and refer to the Role ID values table to ensure that you're using the correct value for the CRN. Review the following list of role CRNs.
+Use `instructlab` for the service name, and refer to the Role CRN values table to ensure that you're using the correct value for the role. Review the following list of role CRNs.
 {: tip}
 
 | Role | CRN |
