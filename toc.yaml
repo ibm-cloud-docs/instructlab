@@ -17,8 +17,13 @@ toc:
       topics:
       - topic: getting-started.md
         navtitle: Getting started
-      - topic: about.md
-        navtitle: About
+      - topicgroup:
+          label: How it works
+          topics:
+          - topic: about.md
+            navtitle: About
+          - topic: costs.md
+            navtitle: Costs
       - release-notes.md
   - navgroup: 
       id: howto
