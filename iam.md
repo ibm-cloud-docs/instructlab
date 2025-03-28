@@ -158,14 +158,13 @@ Use `instructlab` for the service name, and refer to the Role CRN values table t
 | Reader | `crn:v1:bluemix:public:iam::::serviceRole:Reader` |
 | Writer | `crn:v1:bluemix:public:iam::::serviceRole:Writer` |
 | Manager | `crn:v1:bluemix:public:iam::::serviceRole:Manager` |
-| Viewer | `crn:v1:bluemix:public:iam::::serviceRole:Viewer` |
-| Operator | `crn:v1:bluemix:public:iam::::serviceRole:Operator` |
-| Editor | `crn:v1:bluemix:public:iam::::serviceRole:Editor` |
-| Administrator | `crn:v1:bluemix:public:iam::::serviceRole:Administrator` |
-| Service Configurator Reader | `crn:v1:bluemix:public:iam::::serviceRole:ConfigReader` |
-| Key Manager | `crn:v1:bluemix:public:iam::::serviceRole:KeyManager` |
+| Viewer | `crn:v1:bluemix:public:iam::::role:Viewer` |
+| Operator | `crn:v1:bluemix:public:iam::::role:Operator` |
+| Editor | `crn:v1:bluemix:public:iam::::role:Editor` |
+| Administrator | `crn:v1:bluemix:public:iam::::role:Administrator` |
+| Service Configurator Reader | `crn:v1:bluemix:public:iam::::role:ConfigReader` |
+| Key Manager | `crn:v1:bluemix:public:resource-controller::::role:KeyManager` |
 {: caption="IAM role CRNs" caption-side="bottom"}
-
 
 The following example assigns the `Writer` role for `instructlab`.
 

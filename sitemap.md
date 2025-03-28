@@ -124,6 +124,8 @@ subcollection: instructlab
 
 * [Enabling logging](/docs/instructlab?topic=instructlab-logging#log-enable)
 
+* [Setting up {{site.data.keyword.atracker_short}}](/docs/instructlab?topic=instructlab-logging#at-event-routing)
+
 * [Viewing logs](/docs/instructlab?topic=instructlab-logging#log-viewing)
 
 [Enabling notifications](/docs/instructlab?topic=instructlab-event-notifications-events#event-notifications-events)
@@ -285,19 +287,6 @@ subcollection: instructlab
 [API reference - Swagger](https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/){: external}
 
 
-## FAQ
-{: #sitemap_faq}
-
-
-[FAQ](/docs/instructlab?topic=instructlab-faq#faq)
-
-* [What is {{site.data.keyword.short_name}}?](/docs/instructlab?topic=instructlab-faq#faq-ilab-1)
-
-* [Why should I use {{site.data.keyword.short_name}} for my generative AI solution?](/docs/instructlab?topic=instructlab-faq#faq-ilab-2)
-
-* [What are the benefits of {{site.data.keyword.short_name}} on IBM Cloud?](/docs/instructlab?topic=instructlab-faq#faq-ilab-3)
-
-
 ## Getting help and support
 {: #sitemap_getting_help_and_support}
 
@@ -316,3 +305,16 @@ subcollection: instructlab
 * [Verifying the version](/docs/instructlab?topic=instructlab-ts-debug#version)
 
 [I get an error stating `No new leaf nodes found in the taxonomy` when generating data](/docs/instructlab?topic=instructlab-ts-no-new-leaf-nodes#ts-no-new-leaf-nodes)
+
+
+## FAQ
+{: #sitemap_faq}
+
+
+[FAQ](/docs/instructlab?topic=instructlab-faq#faq)
+
+* [What is {{site.data.keyword.short_name}}?](/docs/instructlab?topic=instructlab-faq#faq-ilab-1)
+
+* [Why should I use {{site.data.keyword.short_name}} for my generative AI solution?](/docs/instructlab?topic=instructlab-faq#faq-ilab-2)
+
+* [What are the benefits of {{site.data.keyword.short_name}} on IBM Cloud?](/docs/instructlab?topic=instructlab-faq#faq-ilab-3)

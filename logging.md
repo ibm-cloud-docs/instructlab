@@ -24,6 +24,11 @@ subcollection: instructlab
 
 To enable logging, create an instance of {{site.data.keyword.logs_full_notm}}. For more information, see [Getting started with IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-getting-started).
 
+## Setting up {{site.data.keyword.atracker_short}}
+{: #at-event-routing}
+
+After you have an instance of {{site.data.keyword.logs_full_notm}}, you can route user activity to that instance by setting it as a target in {{site.data.keyword.atracker_short}}. For more information, see [Configuring an {{site.data.keyword.logs_full_notm}} instance as a target](/docs/atracker?topic=atracker-getting-started-target-cloud-logs&interface=ui).
+
 
 
 ## Viewing logs
