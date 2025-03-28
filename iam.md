@@ -40,7 +40,7 @@ Review the following tables that outline what types of tasks each role allows fo
 This is a high level view of what the platform roles allow users to do. Use a plain language description about what kind of tasks can be completed or the common jobs that users can expect to do when having each role assigned.
 
 
-| Platform role | Role ID | Description |
+| Platform role | Description |
 | --- | --- |
 | Viewer | As a viewer, you can view projects, but you can't modify them. |
 | Operator |  As an operator, you can perform platform actions required to configure and operate projects, such as viewing a service's dashboard. |
@@ -102,7 +102,7 @@ ibmcloud iam user-policy-create name@example.com --roles Viewer --service-name i
 ```
 {: pre}
 
-Example command to give a user the Key Manager role for a specific Instructlab project in the account.
+Example command to give a user the Key Manager role for a specific {{site.data.keyword.short_name}} project in the account.
 
 ```sh
 ibmcloud iam user-policy-create name@email.com --roles "Key Manager" --service-name instructlab
