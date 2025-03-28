@@ -122,8 +122,6 @@ subcollection: instructlab
 
 [Setting up logging](/docs/instructlab?topic=instructlab-logging#logging)
 
-* [Platform logs that are generated](/docs/instructlab?topic=instructlab-logging#log-platform)
-
 * [Enabling logging](/docs/instructlab?topic=instructlab-logging#log-enable)
 
 * [Viewing logs](/docs/instructlab?topic=instructlab-logging#log-viewing)

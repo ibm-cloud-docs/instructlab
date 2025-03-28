@@ -16,43 +16,15 @@ subcollection: instructlab
 # Logging for {{site.data.keyword.instructlab_short}}
 {: #logging}
 
-{{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.instructlab_short}}, generate platform logs that you can use to investigate abnormal activity and critical actions in your account, and troubleshoot problems. Logs are generated in each region where {{site.data.keyword.shortname}} is available.
+{{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.instructlab_short}}, generate platform logs that you can use to investigate abnormal activity and critical actions in your account, and troubleshoot problems. Logs are generated in each region where {{site.data.keyword.short_name}} is available.
 {: shortdesc}
-
-
-## Platform logs that are generated
-{: #log-platform}
-
-```txt
-instructlab.model.read
-instructlab.model.list
-instructlab.model.create
-instructlab.model.delete
-instructlab.model.stop
-
-instructlab.sdgdata.read
-instructlab.sdgdata.list
-instructlab.sdgdata.create
-instructlab.sdgdata.delete
-instructlab.sdgdata.stop
-
-instructlab.taxonomy.read
-instructlab.taxonomy.list
-instructlab.taxonomy.read
-instructlab.taxonomy.delete
-
-cloud-object-storage.bucket.list
-cloud-object-storage.object.put
-cloud-object-storage.object.read
-cloud-object-storage.object-metadata.read
-```
-{: codeblock}
-
 
 ## Enabling logging
 {: #log-enable}
 
 To enable logging, create an instance of {{site.data.keyword.logs_full_notm}}. For more information, see [Getting started with IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-getting-started).
+
+
 
 ## Viewing logs
 {: #log-viewing}
@@ -78,5 +50,3 @@ message:"instructlab\:" AND initiator.name:"name@email.com"
 {: codeblock}
 
 For more information, see [About platform logs](/docs/logs-router?topic=logs-router-about-platform-logs).
-
-
