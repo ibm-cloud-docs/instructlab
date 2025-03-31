@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-28"
+lastupdated: "2025-03-31"
 
 
 keywords: instructlab, sitemap
@@ -29,7 +29,7 @@ subcollection: instructlab
 
 * [Get familiar with the capabilities](/docs/instructlab?topic=instructlab-getting-started#get-familiar)
 
-* [Install the CLIs](/docs/instructlab?topic=instructlab-getting-started&interface=cli#cli-install)
+* [Install the CLIs](/docs/instructlab?topic=instructlab-getting-started&interface=cli#cli-install-gs)
 
 * [Give InstuctLab permission to create and update COS artifacts](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-auth-cli)
 

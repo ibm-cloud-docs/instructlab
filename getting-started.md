@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-28"
+lastupdated: "2025-03-31"
 
 keywords: instructlab, ai
 
@@ -61,10 +61,10 @@ With {{site.data.keyword.short_name}}, you can use an existing, pre-trained LLM 
 
 
 ## Install the CLIs
-{: #cli-install}
+{: #cli-install-gs}
 {: cli}
 
-1. Optional: Install the [Git CLI](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git) to store and manage your taxonomies.
+1. Optional: Install the [Git CLI](https://docs.github.com/en/get-started/git-basics/set-up-git) to store and manage your taxonomies.
 
 1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 
