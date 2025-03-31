@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-27"
+lastupdated: "2025-03-31"
 
 keywords: instructlab
 
@@ -52,7 +52,7 @@ Provide the recommended version, supported version, and version policy for your 
 {{site.data.keyword.cloud_notm}} recommends that you stay up to date with the latest news and announcements for {{site.data.keyword.instructlab_short}}, as well as for {{site.data.keyword.cloud_notm}} in general, by using the following resources:
 
 - [IBM Cloud Announcements](https://cloud.ibm.com/status/announcement){: external}
-- [IBM Announcements](https://www.ibm.com/cloud/blog/announcements){: external}
+- [IBM Announcements](https://www.ibm.com/blog/announcements/){: external}
 - [End of support notices](https://cloud.ibm.com/status/announcement?query=End+of+Support+Notices){: external}
 - [Red Hat Product Life Cycles](https://access.redhat.com/product-life-cycles/){: external}
 
