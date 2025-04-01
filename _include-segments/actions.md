@@ -51,4 +51,4 @@
 {: caption="IAM actions" caption-side="bottom"}
 {: #iamactions}
 {: tab-title="Actions"}
-{: tab-group="Actions"}
+{: tab-group="IAM"}
