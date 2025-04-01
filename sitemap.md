@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-31"
+lastupdated: "2025-04-01"
 
 
 keywords: instructlab, sitemap
@@ -94,11 +94,11 @@ subcollection: instructlab
 
 [Installing the CLI](/docs/instructlab?topic=instructlab-cli-install#cli-install)
 
-* [Run the installation command](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-step1-install-idt)
+* [Running the installation command](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-step1-install-idt)
 
-* [Verify the installation](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-step2-verify-idt)
+* [Verifying the installation](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-step2-verify-idt)
 
-* [Install CLI plug-ins and tools](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-step3-install-idt-manually)
+* [Installing CLI plug-ins and tools](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-step3-install-idt-manually)
 
 * [Updating the {{site.data.keyword.cloud_notm}} CLI](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-update-ibmcloud-cli)
 
