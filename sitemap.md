@@ -283,10 +283,13 @@ subcollection: instructlab
     * [SecretsManagerConfig](/docs/instructlab?topic=instructlab-ilab-cli#cli-secrets-manager-config-example-schema)
 
 
-## API reference - Swagger
-{: #sitemap_api-reference---swagger}
+## API reference
+{: #sitemap_api_reference}
 
-[API reference - Swagger](https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/){: external}
+
+[IBM Cloud API docs](https://cloud.ibm.com/apidocs/instructlab){: external}
+
+[Swagger](https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/){: external}
 
 
 ## Getting help and support
