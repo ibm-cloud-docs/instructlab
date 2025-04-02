@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-14"
+lastupdated: "2025-04-02"
 
 keywords: instructlab, ai, data, generate
 
@@ -37,7 +37,7 @@ Data cannot be augmented, curated, or manually uploaded to train the model. Use 
 {: #data-generate-ui}
 {: ui}
 
-1. In the console, open the [{{site.data.keyword.instructlab_short}} service](https://cloud.ibm.com/instructlab).
+1. In the console, open the [{{site.data.keyword.instructlab_short}} service](https://cloud.ibm.com/instructlab/overview).
 
 1. Click **Projects** > your project > **Training data** > **Generate**.
 

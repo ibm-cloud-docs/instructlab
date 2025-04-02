@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-31"
+lastupdated: "2025-04-02"
 
 keywords: instructlab, ai
 
@@ -198,7 +198,7 @@ Give {{site.data.keyword.short_name}} the `Writer` access role for the COS servi
 {: #project-create-ui}
 {: ui}
 
-1. From, the [console](https://cloud.ibm.com/instructlab), Click **Projects** > **Create**.
+1. From, the [console](https://cloud.ibm.com/instructlab/overview), Click **Projects** > **Create**.
 
 1. In the **Service name** field, enter a name for the project.
 

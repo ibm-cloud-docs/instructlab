@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-28"
+lastupdated: "2025-04-02"
 
 keywords: instructlab, ai
 
@@ -35,7 +35,7 @@ Configuration information or files cannot be passed to the model for fine tuning
 {: #model-train-ui}
 {: ui}
 
-1. In the console, open the [{{site.data.keyword.short_name}} service](https://cloud.ibm.com/instructlab).
+1. In the console, open the [{{site.data.keyword.short_name}} service](https://cloud.ibm.com/instructlab/overview).
 
 1. Click **Projects** > your project > **Custom models** > **Train**.
 
