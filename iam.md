@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-01"
+lastupdated: "2025-04-02"
 
 keywords: iam, access, add users, instructlab
 
@@ -32,7 +32,7 @@ IAM access policies enable access at different levels. Some options include the 
 - Giving Viewer access to the {{site.data.keyword.short_name}} project(s) within a resource group and the account level.
 - Giving creation access to create {{site.data.keyword.short_name}} project(s) within a resource group and the account level.
 
-If a specific role and its actions don't fit the use case that you're looking to address, you can [create a custom role](/docs/account?topic=account-custom-roles#custom-access-roles&interface=ui) and pick the actions to include.
+If a specific role and its actions don't fit the use case that you're looking to address, you can [create a custom role](/docs/account?topic=account-custom-roles&interface=ui#custom-access-roles) and pick the actions to include.
 {: tip}
 
 Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.instructlab_short}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete projects, and bind projects to applications. Service access roles enable users access to {{site.data.keyword.instructlab_short}} and the ability to call the {{site.data.keyword.instructlab_short}}'s API.
