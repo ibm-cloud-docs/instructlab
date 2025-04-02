@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-03-18"
 
 keywords: instructlab, cli, plugin
 
@@ -126,9 +126,6 @@ ibmcloud ilab taxonomy --help
 {: #ilab-cli-taxonomy-add-command}
 
 Adds a taxonomy resource to a Cloud Object Storage bucket.
-
-If you are using Windows or another non-Unix system, additional steps are required to add a taxonomy. Follow the steps in this [troubleshooting document](/docs/instructlab?topic=ts-no-new-leaf-nodes).
-{: important}
 
 ```sh
 ibmcloud ilab taxonomy add --name NAME --taxonomy-path-cos TAXONOMY-PATH-COS [--taxonomy-path TAXONOMY-PATH] [--cos-bucket-information COS-BUCKET-INFORMATION | --cos-id COS-ID --cos-bucket COS-BUCKET --cos-endpoint COS-ENDPOINT] [--secrets-manager-config SECRETS-MANAGER-CONFIG | --secrets-manager-git-url SECRETS-MANAGER-GIT-URL --secrets-manager-git-id SECRETS-MANAGER-GIT-ID]
