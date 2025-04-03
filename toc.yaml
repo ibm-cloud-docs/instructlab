@@ -39,6 +39,11 @@ toc:
             navtitle: Setting up logging
           - topic: event-notifications.md
             navtitle: Enabling notifications
+      - topicgroup:
+          label: Preparing the taxonomy
+          topics:
+          - topic: taxonomy-overview.md
+          - topic: taxonomy-prep.md
       - topic: data-generate.md
         navtitle: Generating data
       - model-train.md

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-01"
+lastupdated: "2025-04-03"
 
 
 keywords: instructlab, sitemap
@@ -139,6 +139,35 @@ subcollection: instructlab
     * [Email notifications](/docs/instructlab?topic=instructlab-event-notifications-events#event-notifications-email)
 
     * [Webhooks](/docs/instructlab?topic=instructlab-event-notifications-events#event-notifications-webhook)
+
+
+## Preparing the taxonomy
+{: #sitemap_preparing_the_taxonomy}
+
+
+[How taxonomies are structured](/docs/instructlab?topic=instructlab-taxonomy-overview#taxonomy-overview)
+
+* [Taxonomy data](/docs/instructlab?topic=instructlab-taxonomy-overview#taxonomy-data)
+
+* [Taxonomy files](/docs/instructlab?topic=instructlab-taxonomy-overview#taxonomy-files)
+
+* [Knowledge documents](/docs/instructlab?topic=instructlab-taxonomy-overview#knowledge-docs)
+
+* [Knowledge `qna.yaml` files](/docs/instructlab?topic=instructlab-taxonomy-overview#knowledge-qna)
+
+* [Skills `qna.yaml` files](/docs/instructlab?topic=instructlab-taxonomy-overview#skills-qna)
+
+[Preparing taxonomies](/docs/instructlab?topic=instructlab-taxonomy-prep#taxonomy-prep)
+
+* [Create or clone your taxonomy](/docs/instructlab?topic=instructlab-taxonomy-prep#taxonomy-create)
+
+* [Gather your knowledge documents](/docs/instructlab?topic=instructlab-taxonomy-prep#taxonomy-gather)
+
+* [Create `qna.yaml` files for knowledge and skills](/docs/instructlab?topic=instructlab-taxonomy-prep#taxonomy-qna)
+
+* [Upload your taxonomy to your COS bucket](/docs/instructlab?topic=instructlab-taxonomy-prep#taxonomy-upload)
+
+* [What's next?](/docs/instructlab?topic=instructlab-taxonomy-prep#taxonomy-next)
 
 
 ## Generating data
