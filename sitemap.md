@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-03"
+lastupdated: "2025-04-04"
 
 
 keywords: instructlab, sitemap
@@ -261,7 +261,7 @@ subcollection: instructlab
 
     * [Options](/docs/instructlab?topic=instructlab-ilab-cli#ilab-global-options)
 
-    * [`ibmcloud ilab config`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-config-command)
+* [Config](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-config-command)
 
     * [`ibmcloud ilab config set`](/docs/instructlab?topic=instructlab-ilab-cli#ilab-cli-config-set-command)
 
