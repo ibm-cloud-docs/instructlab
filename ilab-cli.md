@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-04-03"
 
 keywords: instructlab, cli, plugin
 
@@ -48,7 +48,7 @@ ibmcloud ilab
 
 Note: This example only demonstrates the global options available to all sub-commands and is not a valid command itself.
 
-### `ibmcloud ilab config`
+## Config
 {: #ilab-cli-config-command}
 
 Global parameters can also be stored in persistent configuration so that they do not need to be manually specified each time the plug-in is invoked. Each parameter can be configured with the `config` command and its subcommands.
@@ -224,11 +224,7 @@ You can see the condition for each default JMESPath query in the following table
 | -------- | ------ | ----- |
 | Success | Default | - |
 |  | Table | `taxonomies[*]` |
-| Error | Default | - |
-|  | Table | - |
-| All pages | Default | - |
-|  | Table | - |
-{: caption="Table 1. Default JMESPath" caption-side="bottom"}
+{: caption="Default JMESPath" caption-side="bottom"}
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
@@ -349,11 +345,7 @@ You can see the condition for each default JMESPath query in the following table
 | -------- | ------ | ----- |
 | Success | Default | - |
 |  | Table | `data[*]` |
-| Error | Default | - |
-|  | Table | - |
-| All pages | Default | - |
-|  | Table | - |
-{: caption="Table 1. Default JMESPath" caption-side="bottom"}
+{: caption="Default JMESPath" caption-side="bottom"}
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
@@ -392,11 +384,7 @@ You can see the condition for each default JMESPath query in the following table
 | -------- | ------ | ----- |
 | Success | Default | - |
 |  | Table | `{id:id,name:name,state:state,status:status,created_at:created_at,completed_at:completed_at,taxonomy_id:taxonomy_id}` |
-| Error | Default | - |
-|  | Table | - |
-| All pages | Default | - |
-|  | Table | - |
-{: caption="Table 1. Default JMESPath" caption-side="bottom"}
+{: caption="Default JMESPath" caption-side="bottom"}
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
@@ -517,11 +505,7 @@ You can see the condition for each default JMESPath query in the following table
 | -------- | ------ | ----- |
 | Success | Default | - |
 |  | Table | `models[*]` |
-| Error | Default | - |
-|  | Table | - |
-| All pages | Default | - |
-|  | Table | - |
-{: caption="Table 1. Default JMESPath" caption-side="bottom"}
+{: caption="Default JMESPath" caption-side="bottom"}
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
@@ -560,11 +544,7 @@ You can see the condition for each default JMESPath query in the following table
 | -------- | ------ | ----- |
 | Success | Default | - |
 |  | Table | `{base_model:base_model,created_at:created_at,completed_at:completed_at,data_id:data_id,id:id,name:name,state:state,status:status,taxonomy_id:taxonomy_id}` |
-| Error | Default | - |
-|  | Table | - |
-| All pages | Default | - |
-|  | Table | - |
-{: caption="Table 1. Default JMESPath" caption-side="bottom"}
+{: caption="Default JMESPath" caption-side="bottom"}
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
