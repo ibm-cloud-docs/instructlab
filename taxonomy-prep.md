@@ -60,9 +60,9 @@ In addition to creating a new `qna.yaml` file, you can also add question and ans
 {: #taxonomy-upload}
 {: step}
 
-Use the [UI](/docs-draft/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui) or the [CLI](https://test.cloud.ibm.com/docs-draft/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-ui) to upload and store your taxonomy to your COS bucket. 
+Use the [UI](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui) or the [CLI](https://test.cloud.ibm.com/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-ui) to upload and store your taxonomy to your COS bucket. 
 
 ## What's next?
 {: #taxonomy-next}
 
-Learn how to [generate data from your taxonomy](/docs-draft/instructlab?topic=instructlab-data-generate&interface=ui). 
+Learn how to [generate data from your taxonomy](/docs/instructlab?topic=instructlab-data-generate&interface=ui). 
