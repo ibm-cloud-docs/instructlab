@@ -1,15 +1,16 @@
-
 ---
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-03"
+lastupdated: "2025-04-04"
 
 keywords: instructlab, taxonomy, prepare, create taxonomy, qna, knowledge document, documents
 
 subcollection: instructlab
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Preparing taxonomies
 {: #taxonomy-prep}
@@ -39,16 +40,16 @@ Knowledge documents are only required when adding knowledge to your taxonomy, no
 
 2. If you are creating a `qna.yaml` file for a knowledge addition, you must reference the relevant knowledge document, the commit hash for the document, and the directory where it is stored in the `document` section of the file. 
 
-  Example knowledge document and directory reference.
+    Example knowledge document and directory reference.
 
-  ```yaml
-  document:
-      repo: https://github.com/user/my_knowledge
-      commit: 0a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9u
-      patterns:
-        - knowledge_document.md
-  ```
-  {: screen}
+    ```yaml
+    document:
+        repo: https://github.com/user/my_knowledge
+        commit: 0a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9u
+        patterns:
+          - knowledge_document.md
+    ```
+    {: screen}
 
 3. Add the file to the correct node in your taxonomy. 
 
@@ -59,9 +60,9 @@ In addition to creating a new `qna.yaml` file, you can also add question and ans
 {: #taxonomy-upload}
 {: step}
 
-Use the [UI](/docs-draft/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui) or the [CLI](https://test.cloud.ibm.com/docs-draft/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-ui) to upload and store your taxonomy to your COS bucket. 
+Use the [UI](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui) or the [CLI](https://test.cloud.ibm.com/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-ui) to upload and store your taxonomy to your COS bucket. 
 
 ## What's next?
 {: #taxonomy-next}
 
-Learn how to [generate data from your taxonomy](/docs-draft/instructlab?topic=instructlab-data-generate&interface=ui). 
+Learn how to [generate data from your taxonomy](/docs/instructlab?topic=instructlab-data-generate&interface=ui). 
