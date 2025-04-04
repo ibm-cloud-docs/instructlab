@@ -1,15 +1,16 @@
-
 ---
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-03"
+lastupdated: "2025-04-04"
 
 keywords: instructlab, taxonomy, knowledge, skills, leaf node, branch, qna, files, documents
 
 subcollection: instructlab
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # How taxonomies are structured
 {: #taxonomy-overview}
