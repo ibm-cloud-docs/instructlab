@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-04"
+lastupdated: "2025-04-08"
 
 
 keywords: instructlab, sitemap
@@ -58,7 +58,7 @@ subcollection: instructlab
 
 * [Why {{site.data.keyword.instructlab_short}}?](/docs/instructlab?topic=instructlab-about#benefits)
 
-[Costs](/docs/instructlab?topic=instructlab-costs#costs)
+* [How does billing work?](/docs/instructlab?topic=instructlab-about#costs)
 
 
 ## Release notes
@@ -88,8 +88,8 @@ subcollection: instructlab
         * Product preview release.
 
 
-## Setting up the service
-{: #sitemap_setting_up_the_service}
+## Installing the CLI
+{: #sitemap_installing_the_cli}
 
 
 [Installing the CLI](/docs/instructlab?topic=instructlab-cli-install#cli-install)
@@ -103,6 +103,11 @@ subcollection: instructlab
 * [Updating the {{site.data.keyword.cloud_notm}} CLI](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-update-ibmcloud-cli)
 
 * [Updating installed plug-ins](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-cli-update-plugin)
+
+
+## Preparing your account
+{: #sitemap_preparing_your_account}
+
 
 [Assigning access](/docs/instructlab?topic=instructlab-iam#iam)
 
