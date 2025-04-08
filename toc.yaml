@@ -22,17 +22,15 @@ toc:
           topics:
           - topic: about.md
             navtitle: About
-          - topic: costs.md
-            navtitle: Costs
       - release-notes.md
   - navgroup: 
       id: howto
       topics:
+      - topic: cli-install.md
+        navtitle: Installing the CLI
       - topicgroup:
-          label: Setting up the service
+          label: Preparing your account
           topics:
-          - topic: cli-install.md
-            navtitle: Installing the CLI
           - topic: iam.md
             navtitle: Assigning access
           - topic: logging.md
