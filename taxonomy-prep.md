@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-04"
+lastupdated: "2025-04-09"
 
 keywords: instructlab, taxonomy, prepare, create taxonomy, qna, knowledge document, documents
 
@@ -15,7 +15,7 @@ subcollection: instructlab
 # Preparing taxonomies
 {: #taxonomy-prep}
 
-Follow these steps to create your own taxonomy. For more information on taxonomies and the data they include, see [How taxonomies are structured](/docs/instructlab?topic=instructlab-taxonomy-about).
+Follow these steps to create your own taxonomy. For more information on taxonomies and the data they include, see [How taxonomies are structured](/docs/instructlab?topic=instructlab-taxonomy-overview).
 {: shortdesc}
 
 ## Create or clone your taxonomy
@@ -30,7 +30,7 @@ You can [fork and clone the existing InstructLab community taxonomy](https://git
 
 Format your knowledge documents as a Markdown `.md` file and store them in a directory that is separate from the taxonomy. For an example of a knowledge document, see the [InstructLab documentation](https://docs.instructlab.ai/taxonomy/knowledge/file_structure/#example-of-a-knowledge-document-file){: external}. 
 
-Knowledge documents are only required when adding knowledge to your taxonomy, not skills. For more information on the difference between knowledge and skills see [Taxonomy data](/docs/instructlab?topic=instructlab-taxonomies-about#taxonomy-data).
+Knowledge documents are only required when adding knowledge to your taxonomy, not skills. For more information on the difference between knowledge and skills see [Taxonomy data](/docs/instructlab?topic=instructlab-taxonomy-overview#taxonomy-data).
 {: note}
 
 ## Create `qna.yaml` files for knowledge and skills
@@ -60,7 +60,7 @@ In addition to creating a new `qna.yaml` file, you can also add question and ans
 {: #taxonomy-upload}
 {: step}
 
-Use the [UI](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui) or the [CLI](https://test.cloud.ibm.com/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-ui) to upload and store your taxonomy to your COS bucket. 
+Use the [UI](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui) or the [CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-ui) to upload and store your taxonomy to your COS bucket. 
 
 ## What's next?
 {: #taxonomy-next}
