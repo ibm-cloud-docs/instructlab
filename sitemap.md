@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-04-14"
 
 
 keywords: instructlab, sitemap
@@ -31,21 +31,21 @@ subcollection: instructlab
 
 * [Install the CLIs](/docs/instructlab?topic=instructlab-getting-started&interface=cli#cli-install-gs)
 
-* [Give InstuctLab permission to create and update COS artifacts](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-auth-cli)
-
-* [Create an authorization policy for {{site.data.keyword.short_name}}](/docs/instructlab?topic=instructlab-getting-started&interface=ui#storage-auth-ui)
+* [Give InstuctLab permission to create and update {{site.data.keyword.cos_short}} artifacts](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-auth-cli)
 
 * [Create a project in the Instruct Lab instance](/docs/instructlab?topic=instructlab-getting-started&interface=ui#project-create-ui)
 
-* [Optional: Create a COS instance and bucket](/docs/instructlab?topic=instructlab-getting-started&interface=ui#cos-create-manual)
+* [Optional: Create an {{site.data.keyword.cos_short}} instance and bucket](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-manual-cli)
 
-* [Optional: Create a COS instance and bucket by using the CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-manual-cli)
+* [Assign access to your resources](/docs/instructlab?topic=instructlab-getting-started&interface=cli#assign-access-ui)
 
-* [Prepare a taxonomy](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy)
+    * [Assigning access to resources in the console](/docs/instructlab?topic=instructlab-getting-started&interface=ui#getting-started-include-access-resources-console)
+
+* [Optional: Clone the community taxonomy](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy)
 
 * [Add your taxonomy to COS](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui)
 
-* [Add your taxonomy to COS by using the CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli)
+* [Add your taxonomy to COS](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli)
 
 * [What's next?](/docs/instructlab?topic=instructlab-getting-started&interface=cli#next)
 
@@ -59,6 +59,26 @@ subcollection: instructlab
 * [Why {{site.data.keyword.instructlab_short}}?](/docs/instructlab?topic=instructlab-about#benefits)
 
 * [How does billing work?](/docs/instructlab?topic=instructlab-about#costs)
+
+[Architecture](/docs/instructlab?topic=instructlab-compute-isolation#compute-isolation)
+
+* [{{site.data.keyword.instructlab_short}} architecture](/docs/instructlab?topic=instructlab-compute-isolation#architecture)
+
+    * [Storage](/docs/instructlab?topic=instructlab-compute-isolation#arch-data)
+
+    * [Backend components](/docs/instructlab?topic=instructlab-compute-isolation#arch-backend)
+
+    * [Security and access control](/docs/instructlab?topic=instructlab-compute-isolation#arch-access)
+
+    * [Data Flow](/docs/instructlab?topic=instructlab-compute-isolation#arch-dataflow)
+
+* [{{site.data.keyword.instructlab_short}} workload isolation](/docs/instructlab?topic=instructlab-compute-isolation#workload-isolation)
+
+[Your responsibilities](/docs/instructlab?topic=instructlab-responsibilities#responsibilities)
+
+* [Incident and operations management](/docs/instructlab?topic=instructlab-responsibilities#incident-and-ops)
+
+* [Identity and access management](/docs/instructlab?topic=instructlab-responsibilities#iam-responsibilities)
 
 
 ## Release notes
@@ -170,7 +190,7 @@ subcollection: instructlab
 
 * [Create `qna.yaml` files for knowledge and skills](/docs/instructlab?topic=instructlab-taxonomy-prep#taxonomy-qna)
 
-* [Upload your taxonomy to your COS bucket](/docs/instructlab?topic=instructlab-taxonomy-prep#taxonomy-upload)
+* [Upload your taxonomy to your {{site.data.keyword.cos_short}} bucket](/docs/instructlab?topic=instructlab-taxonomy-prep#taxonomy-upload)
 
 * [What's next?](/docs/instructlab?topic=instructlab-taxonomy-prep#taxonomy-next)
 
@@ -189,7 +209,7 @@ subcollection: instructlab
 
 * [Generating data by using the API](/docs/instructlab?topic=instructlab-data-generate&interface=api#data-generate-api)
 
-* [What's in my COS bucket after generating data?](/docs/instructlab?topic=instructlab-data-generate&interface=api#data-bucket)
+* [What's in my {{site.data.keyword.cos_short}} bucket after generating data?](/docs/instructlab?topic=instructlab-data-generate&interface=api#data-bucket)
 
 * [Next steps](/docs/instructlab?topic=instructlab-data-generate&interface=api#next-data)
 
@@ -202,13 +222,13 @@ subcollection: instructlab
 
 * [Prerequisites](/docs/instructlab?topic=instructlab-model-train#model-train-pre)
 
-* [Training models by using the console](/docs/instructlab?topic=instructlab-model-train&interface=ui#model-train-ui)
+* [Aligning models by using the console](/docs/instructlab?topic=instructlab-model-train&interface=ui#model-train-ui)
 
 * [Training models by using the CLI](/docs/instructlab?topic=instructlab-model-train&interface=cli#model-train-cli)
 
 * [Training models by using the API](/docs/instructlab?topic=instructlab-model-train&interface=api#model-train-api)
 
-* [What's in my COS bucket after training?](/docs/instructlab?topic=instructlab-model-train&interface=api#model-bucket)
+* [What's in my {{site.data.keyword.cos_short}} bucket after training?](/docs/instructlab?topic=instructlab-model-train&interface=api#model-bucket)
 
 * [What's next?](/docs/instructlab?topic=instructlab-model-train&interface=api#next-model)
 

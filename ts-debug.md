@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-28"
+lastupdated: "2025-04-14"
 
 keywords: instructlab, debugging
 
@@ -79,7 +79,7 @@ If the issues are with the backend and not your taxonomy or local configuration,
 
 1. Get the back end `instructlab` version.
 
-    a. In the COS bucket, click **`synthetic_data`** > ***ID*** > **logs** > **ilab_system_info.log**.
+    a. In the {{site.data.keyword.cos_short}} bucket, click **`synthetic_data`** > ***ID*** > **logs** > **ilab_system_info.log**.
 
     b. Click **Download object** to download the log file.
 

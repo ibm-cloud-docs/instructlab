@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-09"
+lastupdated: "2025-04-14"
 
 keywords: instructlab, taxonomy, prepare, create taxonomy, qna, knowledge document, documents
 
@@ -56,11 +56,11 @@ Knowledge documents are only required when adding knowledge to your taxonomy, no
 In addition to creating a new `qna.yaml` file, you can also add question and answer pairs to existing files. 
 {: tip}
 
-## Upload your taxonomy to your COS bucket
+## Upload your taxonomy to your {{site.data.keyword.cos_short}} bucket
 {: #taxonomy-upload}
 {: step}
 
-Use the [UI](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui) or the [CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-ui) to upload and store your taxonomy to your COS bucket. 
+Use the [UI](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui) or the [CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-ui) to upload and store your taxonomy to your {{site.data.keyword.cos_short}} bucket. 
 
 ## What's next?
 {: #taxonomy-next}

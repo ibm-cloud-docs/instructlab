@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-02"
+lastupdated: "2025-04-14"
 
 keywords: instructlab, ai
 
@@ -27,19 +27,17 @@ Configuration information or files cannot be passed to the model for fine tuning
 {: #model-train-pre}
 
 1. [Prepare your taxonomy](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy)
-1. Add the taxonomy TAR to your COS bucket. You can use the [CLI](https://cloud.ibm.com/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started&interface=cli#taxonomy-add-cli) or the [UI](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy-add-ui).
+1. Add the taxonomy TAR to your {{site.data.keyword.cos_short}} bucket. You can use the [CLI](https://cloud.ibm.com/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started&interface=cli#taxonomy-add-cli) or the [UI](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy-add-ui).
 1. [Generate data from your taxonomy](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-data-generate).
 
 
-## Training models by using the console
+## Aligning models by using the console
 {: #model-train-ui}
 {: ui}
 
-1. In the console, open the [{{site.data.keyword.short_name}} service](https://cloud.ibm.com/instructlab/overview).
+1. From the **InstructLab Projects** [page](https://cloud.ibm.com/instructlab/projects){: external}, Click your project > **Aligned models** > **Align**.
 
-1. Click **Projects** > your project > **Custom models** > **Train**.
-
-1. Provide an alphanumeric name for the model, select the training data to use, and click **Train**. The state is `queued`, then `running`. Wait for the state to be `completed`. This process could take minutes or hours. When the training is complete, in the COS bucket, a `trained_models` directory is created with logs for troubleshooting.
+1. Enter an alphanumeric name for the model, select the training data to use, and click **Alignx**. The state is `queued`, then `running`. Wait for the state to be `completed`. This process could take minutes or hours. When the alignment is complete, in the Object Storage bucket, a `trained_models` directory is created with logs for troubleshooting.
 
 
 
@@ -124,7 +122,7 @@ Configuration information or files cannot be passed to the model for fine tuning
     {: screen}
 
 
-When the state is `completed`, in the COS bucket, a `trained_models` directory is created with logs for troubleshooting.
+When the state is `completed`, in the {{site.data.keyword.cos_short}} bucket, a `trained_models` directory is created with logs for troubleshooting.
 
 
 ## Training models by using the API
@@ -323,13 +321,13 @@ When the state is `completed`, in the COS bucket, a `trained_models` directory i
     ```
     {: screen}
 
-When the state is `completed`, in the COS bucket, a `trained_models` directory is created with logs for troubleshooting.
+When the state is `completed`, in the {{site.data.keyword.cos_short}} bucket, a `trained_models` directory is created with logs for troubleshooting.
 
 
-## What's in my COS bucket after training?
+## What's in my {{site.data.keyword.cos_short}} bucket after training?
 {: #model-bucket}
 
-After training the model, your COS bucket contains a `trained models` directory with the following files. 
+After training the model, your {{site.data.keyword.cos_short}} bucket contains a `trained models` directory with the following files. 
 
 Artifacts
 :   These files contain the Phase 1 and Phase 2 checkpoint data and the model for each epoch. 
@@ -364,9 +362,9 @@ Optional: You can deploy the model to RHEL-AI on {{site.data.keyword.cloud_notm}
     #!/usr/bin/env bash
     # Replace variable with the bearer token
     BEARER_TOKEN="XXX"
-    # Replace variable with the COS bucket name
+    # Replace variable with the {{site.data.keyword.cos_short}} bucket name
     CUSTOMER_BUCKET="XXX"
-    # Replace variable with the COS endpoint
+    # Replace variable with the {{site.data.keyword.cos_short}} endpoint
     COS_ENDPOINT=https://s3.direct.us-east.cloud-object-storage.appdomain.cloud
     # Replace variable with the model ID
     MODEL_PREFIX="trained_models/XXX/model/"

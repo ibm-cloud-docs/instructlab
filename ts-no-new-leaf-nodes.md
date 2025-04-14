@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-28"
+lastupdated: "2025-04-14"
 
 keywords: leaf node, taxonomy, trouble shooting
 
@@ -33,6 +33,6 @@ Use GitHub to generate a new `tar.gz` file (https://docs.github.com/en/repositor
 
 2. Navigate to the [{{site.data.keyword.short_name}} UI](https://cloud.ibm.com/instructlab/overview){: external} and click `Add taxonomy`.
 
-3. In the `Upload taxonomy` menu, upload the new `tar.gz` file into your COS bucket. 
+3. In the `Upload taxonomy` menu, upload the new `tar.gz` file into your {{site.data.keyword.cos_short}} bucket. 
 
 4. Try to [generate data](/docs/instructlab?topic=instructlab-data-generate&interface=ui). 
