@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-03"
+lastupdated: "2025-04-14"
 
 keywords: instructlab, ai
 
@@ -37,14 +37,17 @@ Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instruct
 {: #instructlab-pre}
 
 
-Before you begin, you must have a paid {{site.data.keyword.cloud}} account.
 
-The following account types are supported:
+Before you begin, you must the following
 
-- Pay-As-You-Go
-- Subscription
+* A paid {{site.data.keyword.cloud}} account. The following account types are supported:
+    - Pay-As-You-Go
+    - Subscription
 
 Trial accounts are not supported. For more information or to upgrade your account, see [Account types](/docs/account?topic=account-accounts#compare).
+{: note}
+
+* An {{site.data.keyword.cos_short}} intsance in your account.
 
 
 ## Get familiar with the capabilities
@@ -68,7 +71,7 @@ With {{site.data.keyword.short_name}}, you can use an existing, pre-trained LLM 
 
 1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 
-1. [Install the COS CLI plugin](/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli).
+1. [Install the {{site.data.keyword.cos_short}} CLI plugin](/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli).
     ```sh
     ibmcloud plugin install cos
     ```
@@ -106,11 +109,11 @@ With {{site.data.keyword.short_name}}, you can use an existing, pre-trained LLM 
     {: pre}
 
 
-## Give InstuctLab permission to create and update COS artifacts
+## Give InstuctLab permission to create and update {{site.data.keyword.cos_short}} artifacts
 {: #storage-auth-cli}
 {: cli}
 
-Give {{site.data.keyword.short_name}} the `Writer` access role for the COS service. The logged-in user must also have the same permission.
+Give {{site.data.keyword.short_name}} the `Writer` access role for the {{site.data.keyword.cos_short}} service. The logged-in user must also have the same permission.
 
 1. Create the authorization policy for {{site.data.keyword.short_name}}.
     ```sh
@@ -118,7 +121,7 @@ Give {{site.data.keyword.short_name}} the `Writer` access role for the COS servi
     ```
     {: pre}
 
-    If you already have COS resources to use, you can scope the authorization to only those resources.
+    If you already have {{site.data.keyword.cos_short}} resources to use, you can scope the authorization to only those resources.
     ```sh
     ibmcloud iam authorization-policy-create Writer --source-service-name instructlab --target-service-name cloud-object-storage --target-service-instance-id <cloud-object-storage-instance-id> --target-resource <cloud-object-storage-bucket> --target-resource-type bucket
     ```
@@ -130,7 +133,7 @@ Give {{site.data.keyword.short_name}} the `Writer` access role for the COS servi
     ```
     {: pre}
 
-    Result when authorization is not scoped to a specific COS bucket:
+    Result when authorization is not scoped to a specific {{site.data.keyword.cos_short}} bucket:
     ```txt
     Getting authorization policies under account abc1234 as user...
     OK
@@ -144,7 +147,7 @@ Give {{site.data.keyword.short_name}} the `Writer` access role for the COS servi
     ```
     {: screen}
 
-    Result when authorization is scoped to a specific COS bucket:
+    Result when authorization is scoped to a specific {{site.data.keyword.cos_short}} bucket:
     ```txt
     Getting authorization policies under account abc1234 as user...
     OK
@@ -166,34 +169,6 @@ Give {{site.data.keyword.short_name}} the `Writer` access role for the COS servi
     {: pre}
 
 
-## Create an authorization policy for {{site.data.keyword.short_name}}
-{: #storage-auth-ui}
-{: ui}
-
-Give {{site.data.keyword.short_name}} the `Writer` access role for the COS service. The logged-in user must also have the same permission.
-
-1. Create an authorization policy gives {{site.data.keyword.short_name}} `Writer` access to the COS service.
-
-    a. In the user interface, click **Manage** > **Access (IAM)** > **Authorizations**.
-
-    b. For the source service, select the **{{site.data.keyword.short_name}}** service.
-
-    c. For the target service, select the **Cloud Object Storage** service.
-
-    d. In the **Roles** section, for **Service access**, select **Writer**.
-
-    e. Click **Authorize**.
-
-1. If necessary, give the `Writer` permission to the logged-in user.
-
-    a. In the user interface, click **Manage** > **Access (IAM)** > **Users**.
-    
-    b. Click the user name > **Access** and in the **Assign policies** section, click **Assign access**.
-    
-    c. Select the **Cloud Object Storage** service and complete the prompts.
-    
-    d. In the **Roles and Actions** section, for **Service access**, select **Writer**.
-
 ## Create a project in the Instruct Lab instance
 {: #project-create-ui}
 {: ui}
@@ -209,22 +184,12 @@ Give {{site.data.keyword.short_name}} the `Writer` access role for the COS servi
 1. Click the project that you created.
 
 
-## Optional: Create a COS instance and bucket
-{: #cos-create-manual}
-{: ui}
-
-
-1. If you don't have a service instance yet, [provision a COS instance](https://cloud.ibm.com/objectstorage/create){: external} in your account.
-
-1. [Create a new bucket](https://cloud.ibm.com/objectstorage) and make a note of the bucket name for later.
-
-
-## Optional: Create a COS instance and bucket by using the CLI
+## Optional: Create an {{site.data.keyword.cos_short}} instance and bucket 
 {: #storage-manual-cli}
 {: cli}
 
 
-1. If you don't have a service instance yet, [provision a COS instance](/docs/cloud-object-storage?topic=cloud-object-storage-provision#provision-instance){: external} in your account. Make a note of your instance ID.
+1. If you don't have a service instance yet, [provision an instance](/docs/cloud-object-storage?topic=cloud-object-storage-provision#provision-instance){: external} in your account. Make a note of your instance ID.
     ```sh
     ibmcloud resource service-instance-create <instance-name> cloud-object-storage <plan> global
     ```
@@ -236,13 +201,26 @@ Give {{site.data.keyword.short_name}} the `Writer` access role for the COS servi
     ```
     {: pre}
 
+## Assign access to your resources
+{: #assign-access-ui}
+
+You can control which users (or groups of users) in your account access your InstructLab resources. Follow these steps to assign access in the console.
+
+For more details on how you can assign access, such steps to use the CLI or different ways you can scope access to InstructLab or your {{site.data.keyword.cos_short}} bucket, see [Managing IAM access for Red Hat AI InstructLab on IBM Cloud](https://test.cloud.ibm.com/docs-draft/instructlab?topic=instructlab-iam&interface=ui#iam-include-access-resources-console){: external}.
+{: note}
+
+{{../account/iam-mng-access.md#access-resources-console}}
 
 
-## Prepare a taxonomy
+## Optional: Clone the community taxonomy
 {: #taxonomy}
 
+If you don't already have a taxonomy, you can use the {{site.data.keyword.short_name}} community taxonomy to start.
 
-In this example, use the Git CLI to clone and update the {{site.data.keyword.short_name}} [community taxonomy](https://github.com/instructlab/taxonomy){: external}.
+In this example, use the Git CLI to clone and update the InstructLab [community taxonomy](https://github.com/instructlab/taxonomy){: external}.
+
+Cloning the community taxonomy is a great way to quicky get started with {{site.data.keyword.instructlab_short}}. If you later want to create your own taxonomy, see [Preparing taxonomies](https://test.cloud.ibm.com/docs-draft/instructlab?topic=instructlab-taxonomy-prep&interface=ui) for more information. 
+{: tip}
 
 1. Fork the [community taxonomy repo](https://github.com/instructlab/taxonomy) by clicking **Fork** and completing the steps.
 
@@ -257,20 +235,12 @@ In this example, use the Git CLI to clone and update the {{site.data.keyword.sho
     a. In your cloned fork, create a `/instructlab-taxonomy/compositional_skills/grounded/linguistics/rhyming_words/qna.yaml` file.
 
     b. In the `qna.yml` file, add a question related to rhyming words.
-    ```txt
+    ```yaml
     - answer: 'Here are two rhyming words for "cave":
-
-
         1\. Brave
 
-        2\. Gave
-
-
-        '
-    question: 'Give me two words that rhyme with cave
-
-        '
-
+        2\. Gave'
+      question: 'Give me two words that rhyme with cave'
     ```
     {: codeblock}
 
@@ -301,6 +271,9 @@ In this example, use the Git CLI to clone and update the {{site.data.keyword.sho
 
 After you receive access to {{site.data.keyword.short_name}}, store your taxonomy in COS.
 
+You can add specify a Secrets Manager ID when you [add your taxonomy to {{site.data.keyword.cos_short}} with the CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli). 
+{: tip}
+
 1. Create a packaged TAR file of the contents of the Github taxonomy repository by creating a release.
 
     a. In a browser, open the **Releases** page for your Github repository. Example: `https://github.com/<my-org>/taxonomy/releases`
@@ -319,17 +292,17 @@ After you receive access to {{site.data.keyword.short_name}}, store your taxonom
     
     b. Click **Upload**.
 
-    c. Select the `.tar.gz` file, give the taxonomy an alphanumeric name, select the COS instance and bucket to use (or create a new one), then click **Upload**.
+    c. Select the `.tar.gz` file, give the taxonomy an alphanumeric name, select the {{site.data.keyword.cos_short}} instance and bucket to use (or create a new one), then click **Upload**.
 
 
 
-## Add your taxonomy to COS by using the CLI
+## Add your taxonomy to COS
 {: #taxonomy-add-cli}
 {: cli}
 
 After you receive access to {{site.data.keyword.short_name}}, store your taxonomy in COS.
 
-1. Optional: Run the `set` command to set and save COS bucket details and credentials, which can simplify your commands going forward. You must set each value individually.
+1. Optional: Run the `set` command to set and save {{site.data.keyword.cos_short}} bucket details and credentials, which can simplify your commands going forward. You must set each value individually.
 
     ```txt
     ibmcloud ilab config set \
@@ -346,30 +319,30 @@ After you receive access to {{site.data.keyword.short_name}}, store your taxonom
 
     | Component | Description |
     | --- | --- |
-    | `cos-bucket <bucket_name>` | If you are adding a taxonomy to an existing bucket, include the name. You can find this name on the **Buckets** tab of your COS instance. If you want the bucket to be created for you, you can enter a name for it. If no name is specified and a bucket does not exist yet, a bucket is created that is named `instructlab_TIME`, where `TIME` is the current epoch time. |
-    | `cos-endpoint <endpoint>` | Use the public, regional endpoint. For example `https://s3.us-east.cloud-object-storage.appdomain.cloud`. You can find these in the **Endpoints** tab of the COS console. |
-    | `cos-id <service_id>` | If you have a COS service instance to use, include the service ID. In the user interface for the COS service instance, click **Details**. Note the **CRN**, which can be used for the service instance ID. If you want one to be created for you, it is created with the name `{{site.data.keyword.short_name}}`.|
+    | `cos-bucket <bucket_name>` | If you are adding a taxonomy to an existing bucket, include the name. You can find this name on the **Buckets** tab of your {{site.data.keyword.cos_short}} instance. If you want the bucket to be created for you, you can enter a name for it. If no name is specified and a bucket does not exist yet, a bucket is created that is named `instructlab_TIME`, where `TIME` is the current epoch time. |
+    | `cos-endpoint <endpoint>` | Use the public, regional endpoint. For example `https://s3.us-east.cloud-object-storage.appdomain.cloud`. You can find these in the **Endpoints** tab of the {{site.data.keyword.cos_short}} console. |
+    | `cos-id <service_id>` | If you have an {{site.data.keyword.cos_short}} service instance to use, include the service ID. In the user interface for the {{site.data.keyword.cos_short}} service instance, click **Details**. Note the **CRN**, which can be used for the service instance ID. If you want one to be created for you, it is created with the name `{{site.data.keyword.short_name}}`.|
     | `project-id` | Your {{site.data.keyword.short_name}} project ID. |
     | `secrets-manager-git-id` | The git ID for your Secrets Manager instance. |
     | `secrets-manager-url` | The URL to your Secrets Manager instance. |
-    | `taxonomy-path-cos <directory_path>` | The relative directory path within the COS bucket to the taxonomy file. |
+    | `taxonomy-path-cos <directory_path>` | The relative directory path within the {{site.data.keyword.cos_short}} bucket to the taxonomy file. |
     {: caption="Understanding this command's components" caption-side="bottom"}
 
 
-    Example command to save the taxonomy path, but have the COS service instance and bucket created for you later.
+    Example command to save the taxonomy path, but have the {{site.data.keyword.cos_short}} service instance and bucket created for you later.
     ```sh
     ibmcloud ilab config set cos-bucket test-1
     ```
     {: pre}
 
-    Example command to save the taxonomy path and the details for an existing COS service, but have the COS bucket created for you later.
+    Example command to save the taxonomy path and the details for an existing {{site.data.keyword.cos_short}} service, but have the {{site.data.keyword.cos_short}} bucket created for you later.
     ```sh
     ibmcloud ilab config set taxonomy-path /Users/USER/instructlab-taxonomy
     ```
     {: pre}
 
 
-1. Add the taxonomy to a COS bucket.
+1. Add the taxonomy to an {{site.data.keyword.cos_short}} bucket.
     ```sh
     ibmcloud ilab taxonomy add --name <name>
     ```
@@ -377,13 +350,13 @@ After you receive access to {{site.data.keyword.short_name}}, store your taxonom
 
     | Parameter | Description |
     | -------------- | -------------- |
-    | `--name <taxonomy_name>` | Required. The name of the taxonomy as it is to be displayed in the COS bucket. Use alphanumeric characters in the taxonomy name.|
+    | `--name <taxonomy_name>` | Required. The name of the taxonomy as it is to be displayed in the {{site.data.keyword.cos_short}} bucket. Use alphanumeric characters in the taxonomy name.|
     | `--taxonomy-path <local_directory_path>` | Required if not specified with the `init` command. The local directory path to the taxonomy. |
-    | `--taxonomy-path-cos <directory_path>` | Optional. The relative directory path within the COS bucket to the taxonomy file. |
-    | `--cos-bucket <bucket_name>` | Optional. If you are adding a taxonomy to an existing bucket, include the name. You can find this name on the **Buckets** tab of your COS instance. If you want the bucket to be created for you, you can enter a name for it. If no name is specified and a bucket does not exist yet, a bucket is created that is named `instructlab_TIME`. |
-    | `--cos-endpoint <endpoint>` | Optional. Use the public, regional endpoint. For example `https://s3.us-east.cloud-object-storage.appdomain.cloud`. You can find these in the **Endpoints** tab of the COS console. |
+    | `--taxonomy-path-cos <directory_path>` | Optional. The relative directory path within the {{site.data.keyword.cos_short}} bucket to the taxonomy file. |
+    | `--cos-bucket <bucket_name>` | Optional. If you are adding a taxonomy to an existing bucket, include the name. You can find this name on the **Buckets** tab of your {{site.data.keyword.cos_short}} instance. If you want the bucket to be created for you, you can enter a name for it. If no name is specified and a bucket does not exist yet, a bucket is created that is named `instructlab_TIME`. |
+    | `--cos-endpoint <endpoint>` | Optional. Use the public, regional endpoint. For example `https://s3.us-east.cloud-object-storage.appdomain.cloud`. You can find these in the **Endpoints** tab of the {{site.data.keyword.cos_short}} console. |
     | `--cos-region <region>` | Optional. The default value is `us-east`. |
-    | `--cos-id <service_id>` | Optional. If you have a COS service instance to use, include the service ID. In the user interface for the COS service instance, click **Details**. Note the **CRN**, which can be used for the service instance ID. If you want one to be created for you, it is created with the name `{{site.data.keyword.short_name}}`.|
+    | `--cos-id <service_id>` | Optional. If you have an {{site.data.keyword.cos_short}} service instance to use, include the service ID. In the user interface for the {{site.data.keyword.cos_short}} service instance, click **Details**. Note the **CRN**, which can be used for the service instance ID. If you want one to be created for you, it is created with the name `{{site.data.keyword.short_name}}`.|
     {: caption="Understanding this command's components" caption-side="bottom"}
 
     Example command to use the details that were saved with the `init` command.
@@ -392,7 +365,7 @@ After you receive access to {{site.data.keyword.short_name}}, store your taxonom
     ```
     {: pre}
 
-    Example command to have the COS bucket created for you in an existing service instance.
+    Example command to have the {{site.data.keyword.cos_short}} bucket created for you in an existing service instance.
     ```sh
     ibmcloud ilab taxonomy add \
     --name test \

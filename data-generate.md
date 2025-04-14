@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-02"
+lastupdated: "2025-04-14"
 
 keywords: instructlab, ai, data, generate
 
@@ -30,7 +30,7 @@ Data cannot be augmented, curated, or manually uploaded to train the model. Use 
 
 1. [Install the `ilab` CLI plug-in](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-cli-install).{: cli}
 1. [Prepare your taxonomy](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy).
-1. [Add the taxonomy TAR to your COS bucket](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy-add-ui).
+1. [Add the taxonomy TAR to your{{site.data.keyword.cos_short}} bucket](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy-add-ui).
 
 
 ## Generating data by using the console
@@ -39,9 +39,9 @@ Data cannot be augmented, curated, or manually uploaded to train the model. Use 
 
 1. In the console, open the [{{site.data.keyword.instructlab_short}} service](https://cloud.ibm.com/instructlab/overview).
 
-1. Click **Projects** > your project > **Training data** > **Generate**.
+1. Click **{{site.data.keyword.short_name}} Projects** > your project > **Training data** > **Generate**.
 
-1. Provide an alphanumeric name for the training data, select the taxonomy to use, and click **Generate**. The state is `queued`, then `running`. Wait for the state to be `completed`. When the data is generated, in the COS bucket, a `synthetic_data` directory is created with logs for troubleshooting.
+1. Enter an alphanumeric name for the training data, select the taxonomy to use, and click **Generate**. The state is `queued`, then `running`. Wait for the state to be `completed`. When the data is generated, in the {{site.data.keyword.cos_short}} bucket, a `synthetic_data` directory is created with logs for troubleshooting.
 
 
 
@@ -135,7 +135,7 @@ Data cannot be augmented, curated, or manually uploaded to train the model. Use 
     {: screen}
 
 
-When the state is `completed`, in the COS bucket, a [`synthetic_data` directory](#data-bucket) is created with logs for troubleshooting.
+When the state is `completed`, in the {{site.data.keyword.cos_short}} bucket, a [`synthetic_data` directory](#data-bucket) is created with logs for troubleshooting.
 
 ## Generating data by using the API
 {: #data-generate-api}
@@ -231,13 +231,13 @@ When the state is `completed`, in the COS bucket, a [`synthetic_data` directory]
     ```
     {: screen}
 
-When the state is `completed`, in the COS bucket, a [`synthetic_data` directory](#data-bucket) is created with logs for troubleshooting.
+When the state is `completed`, in the {{site.data.keyword.cos_short}} bucket, a [`synthetic_data` directory](#data-bucket) is created with logs for troubleshooting.
    
 
-## What's in my COS bucket after generating data?
+## What's in my {{site.data.keyword.cos_short}} bucket after generating data?
 {: #data-bucket}
 
-After you generate data, your COS bucket contains a `synthetic_data` directory with the following files. 
+After you generate data, your {{site.data.keyword.cos_short}} bucket contains a `synthetic_data` directory with the following files. 
 
 Artifacts
 :   These files contain the samples on each leaf node. These are not used for training the model, but are provided for readability and can be used to see if a QNA is generating the expected number of samples. 

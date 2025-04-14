@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024, 2024
-lastupdated: "2024-12-10"
+  years: 2024, 2025
+lastupdated: "2025-04-14"
 
 keywords: data portability, compliance, dora
 
@@ -38,7 +38,7 @@ To find out more about responsibility ownership for using {{site.data.keyword.cl
 
 The data you process in {{site.data.keyword.instructlab_short}} is stored in an {{site.data.keyword.cos_full_notm}} (COS) instance in your IBM Cloud account.
 
-You can export data from COS in the following ways.
+You can export data from {{site.data.keyword.cos_short}} in the following ways.
 
 - Download objects from your bucket by using the [console](https://cloud.ibm.com/objectstorage){: external}.
 - Access the objects in your bucket by using the [COS CLI](/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli).
