@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-14"
+lastupdated: "2025-04-15"
 
 keywords: instructlab, ai
 
@@ -36,8 +36,6 @@ Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instruct
 ## Prerequisites
 {: #instructlab-pre}
 
-
-
 Before you begin, you must the following
 
 * A paid {{site.data.keyword.cloud}} account. The following account types are supported:
@@ -63,21 +61,126 @@ With {{site.data.keyword.short_name}}, you can use an existing, pre-trained LLM 
 
 
 
+## Optional: Prepare a taxonomy
+{: #taxonomy}
+
+If you don't already have a taxonomy, you can use the {{site.data.keyword.short_name}} community taxonomy. Forking the community taxonomy is a great way to get started with {{site.data.keyword.instructlab_short}}. 
+
+In this example, use the Git CLI to clone and update the InstructLab [community taxonomy](https://github.com/instructlab/taxonomy){: external}.
+
+If you later want to create your own taxonomy, see [Preparing taxonomies](https://cloud.ibm.com/docs-draft/instructlab?topic=instructlab-taxonomy-prep&interface=ui) for more information. 
+{: tip}
+
+1. Install the [Git CLI](https://docs.github.com/en/get-started/git-basics/set-up-git) to store and manage your taxonomies.
+
+1. Fork the [community taxonomy repo](https://github.com/instructlab/taxonomy) by clicking **Fork** and completing the steps.
+
+1. Clone your fork to your local machine.
+    ```sh
+    git clone https://github.com/<my-org>/taxonomy
+    ```
+    {: pre}
+
+1. Optional: Make updates to the taxonomy in your fork. This example adds rhyming questions to the [linguistics](https://github.com/instructlab/taxonomy/tree/main/compositional_skills/grounded/linguistics) directory.
+
+    a. In your cloned fork, create a `/instructlab-taxonomy/compositional_skills/grounded/linguistics/rhyming_words/qna.yaml` file.
+
+    b. In the `qna.yml` file, add a question related to rhyming words.
+    ```yaml
+    - answer: 'Here are two rhyming words for "cave":
+        1\. Brave
+
+        2\. Gave'
+      question: 'Give me two words that rhyme with cave'
+    ```
+    {: codeblock}
+
+    c. If your additions include reference documents in Github, such as [this example](https://github.com/instructlab/taxonomy/blob/main/knowledge/science/animals/birds/black_capped_chickadee/qna.yaml#L185), you can use public `github.com` repositories and IBM internal `github.ibm.com` repositories. 
+
+    ```txt
+    document:
+    repo: https://github.ibm.com/<organization>/<repository>
+    commit: <commit_sha>
+    patterns:
+        - <filename>.md
+    ```
+    {: codeblock}
+
+    If you are using a private repository, you must give the `instructlab-ibm` user read access to the repository. Click **Settings** > **Collaborators** and in the **Manage Access** section, click **Add people**. Invite `instructlab-ibm`. The invitation is labeled as `pending` for 1-2 business days until the invitation is accepted. Until the invitation is accepted, you can continue to work with the taxonomy and generate data, but wait to complete the training steps.
+    {: important}
+
+    d. Save the changes and push the changes to the fork.
+
+    f. Optional: Learn more about how to modify the [taxonomy](https://github.com/instructlab/taxonomy) for the model.
+
+    g. Optional: [Validate the updated taxonomy](/docs/instructlab?topic=instructlab-ts-debug#version).
+
+
+
+## Create an {{site.data.keyword.short_name}} project
+{: #project-create-ui}
+{: ui}
+
+1. Navigate to [{{site.data.keyword.short_name}} in the console](https://cloud.ibm.com/catalog/services/instructlab).
+
+1. Review the pricing plan.
+
+1. In the **Configure resource** section, enter the following details.
+
+    Service name
+    :   Give your InstructLab project a name.
+
+    Select a resource group
+    :   Select the resource group where you want to create your project.
+
+    Tags and Access management tags
+    :   Enter any tags or access management tags that you want to use. Tags can help you organize your resources.
+
+1. Accept the license agreement and click **Create**.
+
+After your project is created, the project details page is shown.
+
+
+## Upload your taxonomy to {{site.data.keyword.cos_short}}
+{: #taxonomy-add-ui}
+{: ui}
+
+1. Create a packaged TAR file of the contents of the Github taxonomy repository by creating a release.
+
+    a. In a browser, open the **Releases** page for your Github repository. Example: `https://github.com/<my-org>/taxonomy/releases`
+    
+    b. Click **Create a release**.
+
+    c. Create a tag, select a target branch, and enter a name for the release.
+
+    d. Click **Publish a release**.
+
+    e. To download the packaged TAR file that was automatically generated, in the release that was created, click **Source code (tar.gz)**.
+
+1. Upload the taxonomy to your project.
+
+    a. Click **Taxonomies**.
+    
+    b. Click **Upload**.
+
+    c. Select the `.tar.gz` file, give the taxonomy an alphanumeric name, select the {{site.data.keyword.cos_short}} instance and bucket to use (or create a new one), then click **Upload**.
+
+
+
+
 ## Install the CLIs
 {: #cli-install-gs}
 {: cli}
 
-1. Optional: Install the [Git CLI](https://docs.github.com/en/get-started/git-basics/set-up-git) to store and manage your taxonomies.
-
 1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 
-1. [Install the {{site.data.keyword.cos_short}} CLI plugin](/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli).
+1. Install the {{site.data.keyword.cos_short}} CLI plugin.
     ```sh
     ibmcloud plugin install cos
     ```
     {: pre}
 
-1. Install the plug-in.
+1. Install the {{site.data.keyword.short_name}} plug-in.
 
     ```sh
     ibmcloud plugin install ilab
@@ -168,139 +271,11 @@ Give {{site.data.keyword.short_name}} the `Writer` access role for the {{site.da
     ```
     {: pre}
 
-
-## Create a project in the Instruct Lab instance
-{: #project-create-ui}
-{: ui}
-
-1. From, the [console](https://cloud.ibm.com/instructlab/overview), Click **Projects** > **Create**.
-
-1. In the **Service name** field, enter a name for the project.
-
-1. Accept the license agreement and click **Create**.
-
-1. Click the **Manage** tab to return to the **Projects** page.
-
-1. Click the project that you created.
-
-
-## Optional: Create an {{site.data.keyword.cos_short}} instance and bucket 
-{: #storage-manual-cli}
-{: cli}
-
-
-1. If you don't have a service instance yet, [provision an instance](/docs/cloud-object-storage?topic=cloud-object-storage-provision#provision-instance){: external} in your account. Make a note of your instance ID.
-    ```sh
-    ibmcloud resource service-instance-create <instance-name> cloud-object-storage <plan> global
-    ```
-    {: pre}
-
-1. [Create a new bucket](/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#create-a-new-bucket) and make a note of the bucket name for later.
-    ```sh
-    ibmcloud cos bucket-create --bucket <bucket-name> [--class <class-name>] [--ibm-service-instance-id <instance-id>] [--region REGION] [--output FORMAT]
-    ```
-    {: pre}
-
-## Assign access to your resources
-{: #assign-access-ui}
-
-You can control which users (or groups of users) in your account access your InstructLab resources. Follow these steps to assign access in the console.
-
-For more details on how you can assign access, such steps to use the CLI or different ways you can scope access to InstructLab or your {{site.data.keyword.cos_short}} bucket, see [Managing IAM access for Red Hat AI InstructLab on IBM Cloud](https://test.cloud.ibm.com/docs-draft/instructlab?topic=instructlab-iam&interface=ui#iam-include-access-resources-console){: external}.
-{: note}
-
-{{../account/iam-mng-access.md#access-resources-console}}
-
-
-## Optional: Clone the community taxonomy
-{: #taxonomy}
-
-If you don't already have a taxonomy, you can use the {{site.data.keyword.short_name}} community taxonomy to start.
-
-In this example, use the Git CLI to clone and update the InstructLab [community taxonomy](https://github.com/instructlab/taxonomy){: external}.
-
-Cloning the community taxonomy is a great way to quicky get started with {{site.data.keyword.instructlab_short}}. If you later want to create your own taxonomy, see [Preparing taxonomies](https://test.cloud.ibm.com/docs-draft/instructlab?topic=instructlab-taxonomy-prep&interface=ui) for more information. 
-{: tip}
-
-1. Fork the [community taxonomy repo](https://github.com/instructlab/taxonomy) by clicking **Fork** and completing the steps.
-
-1. Clone your fork to your local machine.
-    ```sh
-    git clone https://github.com/<my-org>/taxonomy
-    ```
-    {: pre}
-
-1. Optional: Make updates to the taxonomy in your fork. This example adds rhyming questions to the [linguistics](https://github.com/instructlab/taxonomy/tree/main/compositional_skills/grounded/linguistics) directory.
-
-    a. In your cloned fork, create a `/instructlab-taxonomy/compositional_skills/grounded/linguistics/rhyming_words/qna.yaml` file.
-
-    b. In the `qna.yml` file, add a question related to rhyming words.
-    ```yaml
-    - answer: 'Here are two rhyming words for "cave":
-        1\. Brave
-
-        2\. Gave'
-      question: 'Give me two words that rhyme with cave'
-    ```
-    {: codeblock}
-
-    c. If your additions include reference documents in Github, such as [this example](https://github.com/instructlab/taxonomy/blob/main/knowledge/science/animals/birds/black_capped_chickadee/qna.yaml#L185), you can use public `github.com` repositories and IBM internal `github.ibm.com` repositories. 
-
-    ```txt
-    document:
-    repo: https://github.ibm.com/<organization>/<repository>
-    commit: <commit_sha>
-    patterns:
-        - <filename>.md
-    ```
-    {: codeblock}
-
-    If you are using a private repository, you must give the `instructlab-ibm` user read access to the repository. Click **Settings** > **Collaborators** and in the **Manage Access** section, click **Add people**. Invite `instructlab-ibm`. The invitation is labeled as `pending` for 1-2 business days until the invitation is accepted. Until the invitation is accepted, you can continue to work with the taxonomy and generate data, but wait to complete the training steps.
-    {: important}
-
-    d. Save the changes and push the changes to the fork.
-
-    f. Optional: Learn more about how to modify the [taxonomy](https://github.com/instructlab/taxonomy) for the model.
-
-    g. Optional: [Validate the updated taxonomy](/docs/instructlab?topic=instructlab-ts-debug#version).
-
-
-## Add your taxonomy to COS
-{: #taxonomy-add-ui}
-{: ui}
-
-After you receive access to {{site.data.keyword.short_name}}, store your taxonomy in COS.
-
-You can add specify a Secrets Manager ID when you [add your taxonomy to {{site.data.keyword.cos_short}} with the CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli). 
-{: tip}
-
-1. Create a packaged TAR file of the contents of the Github taxonomy repository by creating a release.
-
-    a. In a browser, open the **Releases** page for your Github repository. Example: `https://github.com/<my-org>/taxonomy/releases`
-    
-    b. Click **Create a release**.
-
-    c. Create a tag, select a target branch, and enter a name for the release.
-
-    d. Click **Publish a release**.
-
-    e. To download the packaged TAR file that was automatically generated, in the release that was created, click **Source code (tar.gz)**.
-
-1. Upload the taxonomy to your project.
-
-    a. Click **Taxonomies**.
-    
-    b. Click **Upload**.
-
-    c. Select the `.tar.gz` file, give the taxonomy an alphanumeric name, select the {{site.data.keyword.cos_short}} instance and bucket to use (or create a new one), then click **Upload**.
-
-
-
-## Add your taxonomy to COS
+## Add your taxonomy to {{site.data.keyword.cos_short}}
 {: #taxonomy-add-cli}
 {: cli}
 
-After you receive access to {{site.data.keyword.short_name}}, store your taxonomy in COS.
+Complete the following steps to add your taxonomy in {{site.data.keyword.cos_short}}.
 
 1. Optional: Run the `set` command to set and save {{site.data.keyword.cos_short}} bucket details and credentials, which can simplify your commands going forward. You must set each value individually.
 
