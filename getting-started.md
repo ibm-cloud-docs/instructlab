@@ -25,8 +25,10 @@ completion-time: 30m
 {: toc-services="{{site.data.keyword.subcollection}}"}
 {: toc-completion-time="30m"}
 
-Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instructlab_full}}! {{site.data.keyword.instructlab_short}} is an open source project created by IBM and Red Hat to be a cost-effective entry point into the world of [machine learning](#x8397498){: term}.
+Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instructlab_full}}!
 {: shortdesc}
+
+{{site.data.keyword.short_name}} is an open source project created by IBM and Red Hat to be a cost-effective entry point into the world of [machine learning](#x8397498){: term}.
 
 
 {{site.data.keyword.short_name}} is available to allowlisted accounts only.
