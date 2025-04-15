@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-14"
+lastupdated: "2025-04-15"
 
 
 keywords: instructlab, sitemap
@@ -231,6 +231,27 @@ subcollection: instructlab
 * [What's in my {{site.data.keyword.cos_short}} bucket after training?](/docs/instructlab?topic=instructlab-model-train&interface=api#model-bucket)
 
 * [What's next?](/docs/instructlab?topic=instructlab-model-train&interface=api#next-model)
+
+
+## Enhancing security
+{: #sitemap_enhancing_security}
+
+
+[Securing your data](/docs/instructlab?topic=instructlab-mng-data#mng-data)
+
+* [How your data is stored and encrypted in {{site.data.keyword.instructlab_short}}](/docs/instructlab?topic=instructlab-mng-data#data-storage)
+
+    * [Enabling Cloud {{site.data.keyword.cos_short}} for {{site.data.keyword.instructlab_short}}](/docs/instructlab?topic=instructlab-mng-data#using-byok)
+
+* [Deleting your data in {{site.data.keyword.instructlab_short}}](/docs/instructlab?topic=instructlab-mng-data#data-delete)
+
+* [Deleting or canceling jobs in {{site.data.keyword.instructlab_short}}](/docs/instructlab?topic=instructlab-mng-data#data-jobs)
+
+    * [Deleting {{site.data.keyword.instructlab_short}} instances](/docs/instructlab?topic=instructlab-mng-data#service-delete)
+
+    * [Restoring deleted data for {{site.data.keyword.instructlab_short}}](/docs/instructlab?topic=instructlab-mng-data#data-restore)
+
+* [Removing access to {{site.data.keyword.instructlab_short}}](/docs/instructlab?topic=instructlab-mng-data#data-access-remove)
 
 
 ## Service settings
