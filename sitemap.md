@@ -29,23 +29,17 @@ subcollection: instructlab
 
 * [Get familiar with the capabilities](/docs/instructlab?topic=instructlab-getting-started#get-familiar)
 
+* [Optional: Prepare a taxonomy](/docs/instructlab?topic=instructlab-getting-started#taxonomy)
+
+* [Create an {{site.data.keyword.short_name}} project](/docs/instructlab?topic=instructlab-getting-started&interface=ui#project-create-ui)
+
+* [Upload your taxonomy to {{site.data.keyword.cos_short}}](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui)
+
 * [Install the CLIs](/docs/instructlab?topic=instructlab-getting-started&interface=cli#cli-install-gs)
 
 * [Give InstuctLab permission to create and update {{site.data.keyword.cos_short}} artifacts](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-auth-cli)
 
-* [Create a project in the Instruct Lab instance](/docs/instructlab?topic=instructlab-getting-started&interface=ui#project-create-ui)
-
-* [Optional: Create an {{site.data.keyword.cos_short}} instance and bucket](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-manual-cli)
-
-* [Assign access to your resources](/docs/instructlab?topic=instructlab-getting-started&interface=cli#assign-access-ui)
-
-    * [Assigning access to resources in the console](/docs/instructlab?topic=instructlab-getting-started&interface=ui#getting-started-include-access-resources-console)
-
-* [Optional: Clone the community taxonomy](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy)
-
-* [Add your taxonomy to COS](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui)
-
-* [Add your taxonomy to COS](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli)
+* [Add your taxonomy to {{site.data.keyword.cos_short}}](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli)
 
 * [What's next?](/docs/instructlab?topic=instructlab-getting-started&interface=cli#next)
 
