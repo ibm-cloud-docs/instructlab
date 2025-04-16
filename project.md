@@ -13,13 +13,13 @@ subcollection: instructlab
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Creating a project for {{site.data.keyword.short_name}}
+# Creating projects for {{site.data.keyword.short_name}}
 {: #project}
 
 Complete the following steps to create an {{site.data.keyword.short_name}} project.
 {: shortdesc}
 
-## Creating a project in the console
+## Creating projects in the console
 {: #project-create-ui}
 {: ui}
 
@@ -44,13 +44,16 @@ After your project is created, the project details page is shown.
 
 
 
-## Creating a project from the CLI
+## Creating projects from the CLI
 {: #project-create-cli}
 {: cli}
 
+To log in:
 {{_include-segments/login.md}}
-1. Create a project in the {{site.data.keyword.short_name}} instance.
-    ```sh
-    ibmcloud resource service-instance-create <project_name> instructlab instructlab-pricing-plan us-east
-    ```
-    {: pre}
+
+To create a project in the {{site.data.keyword.short_name}} instance, run the following command.
+
+```sh
+ibmcloud resource service-instance-create <project_name> instructlab instructlab-pricing-plan us-east
+```
+{: pre}

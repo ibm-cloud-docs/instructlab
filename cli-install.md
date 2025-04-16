@@ -26,28 +26,28 @@ You can use the `ilab` CLI plug-in to manage your {{site.data.keyword.short_name
 
 {{../cli/index.md#step3-install-idt-manually}}
 
-To install the `ilab` plug-in, run the following command.
+- To install the `ilab` plug-in, run the following command.
 
-```sh
-ibmcloud plugin install ilab
-```
-{: pre}
+    ```sh
+    ibmcloud plugin install ilab
+    ```
+    {: pre}
 
-To install the `cos` plug-in, run the following command.
+- To install the `cos` plug-in, run the following command.
 
-```sh
-ibmcloud plugin install cos
-```
-{: pre}
+    ```sh
+    ibmcloud plugin install cos
+    ```
+    {: pre}
 
-To install the `secrets-manager` plug-in, run the following command.
+- To install the `secrets-manager` plug-in, run the following command.
 
-```sh
-ibmcloud plugin install secrets-manager
-```
-{: pre}
+    ```sh
+    ibmcloud plugin install secrets-manager
+    ```
+    {: pre}
 
-Optional: Install the [Git CLI](https://docs.github.com/en/get-started/git-basics/set-up-git) to store and manage your taxonomies.
+- Optional: Install the [Git CLI](https://docs.github.com/en/get-started/git-basics/set-up-git) to store and manage your taxonomies.
 
 
 

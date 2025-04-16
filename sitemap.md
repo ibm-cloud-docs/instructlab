@@ -161,9 +161,9 @@ subcollection: instructlab
 
 [Creating projects](/docs/instructlab?topic=instructlab-project#project)
 
-* [Creating a project in the console](/docs/instructlab?topic=instructlab-project&interface=ui#project-create-ui)
+* [Creating projects in the console](/docs/instructlab?topic=instructlab-project&interface=ui#project-create-ui)
 
-* [Creating a project from the CLI](/docs/instructlab?topic=instructlab-project&interface=cli#project-create-cli)
+* [Creating projects from the CLI](/docs/instructlab?topic=instructlab-project&interface=cli#project-create-cli)
 
 [Creating storage locations](/docs/instructlab?topic=instructlab-storage#storage)
 
@@ -235,6 +235,15 @@ subcollection: instructlab
 * [What's in my {{site.data.keyword.cos_short}} bucket after training?](/docs/instructlab?topic=instructlab-model-train&interface=api#model-bucket)
 
 * [What's next?](/docs/instructlab?topic=instructlab-model-train&interface=api#next-model)
+
+
+## Deploying models
+{: #sitemap_deploying_models}
+
+
+[Deploying models](/docs/instructlab?topic=instructlab-deploy#deploy)
+
+* [Deploying the model to RHEL-AI on {{site.data.keyword.cloud_notm}}](/docs/instructlab?topic=instructlab-deploy#deploy-rhel-ai)
 
 
 ## Enhancing security
