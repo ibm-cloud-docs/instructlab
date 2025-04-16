@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-15"
+lastupdated: "2025-04-16"
 
 keywords: instructlab, ai
 
@@ -35,21 +35,6 @@ Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instruct
 {: preview}
 
 
-## Prerequisites
-{: #instructlab-pre}
-
-Before you begin, you must the following
-
-* A paid {{site.data.keyword.cloud}} account. The following account types are supported:
-    - Pay-As-You-Go
-    - Subscription
-
-Trial accounts are not supported. For more information or to upgrade your account, see [Account types](/docs/account?topic=account-accounts#compare).
-{: note}
-
-* An {{site.data.keyword.cos_short}} intsance in your account.
-
-
 ## Get familiar with the capabilities
 {: #get-familiar}
 
@@ -63,21 +48,39 @@ With {{site.data.keyword.short_name}}, you can use an existing, pre-trained LLM 
 
 
 
-## Optional: Prepare a taxonomy
+
+## Prerequisites
+{: #instructlab-pre}
+
+If this is the first time {{site.data.keyword.short_name}} is being used in the account, complete these tasks.
+
+* A paid {{site.data.keyword.cloud}} account. The following account types are supported:
+    - Pay-As-You-Go
+    - Subscription
+
+    Trial accounts are not supported. For more information or to upgrade the account, see [Account types](/docs/account?topic=account-accounts#compare).
+    {: note}
+
+* [A project](/docs/instructlab?topic=instructlab-project).
+
+* [An {{site.data.keyword.cos_short}} instance and bucket in the account](/docs/instructlab?topic=instructlab-storage).
+
+* [Access to the {{site.data.keyword.short_name}} service](/docs/instructlab?topic=instructlab-iam) and the [{{site.data.keyword.cos_short}} bucket](/docs/instructlab?topic=instructlab-iam).
+
+
+
+
+## Modify the community taxonomy
 {: #taxonomy}
 
-If you don't already have a taxonomy, you can use the {{site.data.keyword.short_name}} community taxonomy. Forking the community taxonomy is a great way to get started with {{site.data.keyword.instructlab_short}}. 
+If you don't already have a taxonomy, you can use the {{site.data.keyword.short_name}} [community taxonomy](https://github.com/instructlab/taxonomy){: external} to start.
 
-In this example, use the Git CLI to clone and update the InstructLab [community taxonomy](https://github.com/instructlab/taxonomy){: external}.
-
-If you later want to create your own taxonomy, see [Preparing taxonomies](https://cloud.ibm.com/docs-draft/instructlab?topic=instructlab-taxonomy-prep&interface=ui) for more information. 
+To create your own taxonomy instead, see [Preparing taxonomies](https://test.cloud.ibm.com/docs-draft/instructlab?topic=instructlab-taxonomy-prep&interface=ui) for more information. 
 {: tip}
-
-1. Install the [Git CLI](https://docs.github.com/en/get-started/git-basics/set-up-git) to store and manage your taxonomies.
 
 1. Fork the [community taxonomy repo](https://github.com/instructlab/taxonomy) by clicking **Fork** and completing the steps.
 
-1. Clone your fork to your local machine.
+1. Clone your fork to your local machine. {: cli}
     ```sh
     git clone https://github.com/<my-org>/taxonomy
     ```
@@ -85,7 +88,7 @@ If you later want to create your own taxonomy, see [Preparing taxonomies](https:
 
 1. Optional: Make updates to the taxonomy in your fork. This example adds rhyming questions to the [linguistics](https://github.com/instructlab/taxonomy/tree/main/compositional_skills/grounded/linguistics) directory.
 
-    a. In your cloned fork, create a `/instructlab-taxonomy/compositional_skills/grounded/linguistics/rhyming_words/qna.yaml` file.
+    a. In your fork, create a `/instructlab-taxonomy/compositional_skills/grounded/linguistics/rhyming_words/qna.yaml` file.
 
     b. In the `qna.yml` file, add a question related to rhyming words.
     ```yaml
@@ -111,41 +114,21 @@ If you later want to create your own taxonomy, see [Preparing taxonomies](https:
     If you are using a private repository, you must give the `instructlab-ibm` user read access to the repository. Click **Settings** > **Collaborators** and in the **Manage Access** section, click **Add people**. Invite `instructlab-ibm`. The invitation is labeled as `pending` for 1-2 business days until the invitation is accepted. Until the invitation is accepted, you can continue to work with the taxonomy and generate data, but wait to complete the training steps.
     {: important}
 
-    d. Save the changes and push the changes to the fork.
+    d. Save the changes and push the changes to the fork. {: cli}
 
-    f. Optional: Learn more about how to modify the [taxonomy](https://github.com/instructlab/taxonomy) for the model.
+    e. Optional: Learn more about how to modify the [taxonomy](https://github.com/instructlab/taxonomy) for the model.
 
-    g. Optional: [Validate the updated taxonomy](/docs/instructlab?topic=instructlab-ts-debug#version).
-
-
-
-## Create an {{site.data.keyword.short_name}} project
-{: #project-create-ui}
-{: ui}
-
-1. Navigate to [{{site.data.keyword.short_name}} in the console](https://cloud.ibm.com/catalog/services/instructlab).
-
-1. Review the pricing plan.
-
-1. In the **Configure resource** section, enter the following details.
-
-    Service name
-    :   Give your InstructLab project a name.
-
-    Select a resource group
-    :   Select the resource group where you want to create your project.
-
-    Tags and Access management tags
-    :   Enter any tags or access management tags that you want to use. Tags can help you organize your resources.
-
-1. Accept the license agreement and click **Create**.
-
-After your project is created, the project details page is shown.
+    f. Optional: [Validate the updated taxonomy](/docs/instructlab?topic=instructlab-ts-debug#version).
 
 
-## Upload your taxonomy to {{site.data.keyword.cos_short}}
+## Add the taxonomy to COS by using the console
 {: #taxonomy-add-ui}
 {: ui}
+
+After you receive access to {{site.data.keyword.short_name}}, store your taxonomy in COS.
+
+You can add specify a Secrets Manager ID when you [add your taxonomy to {{site.data.keyword.cos_short}} with the CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli). 
+{: tip}
 
 1. Create a packaged TAR file of the contents of the Github taxonomy repository by creating a release.
 
@@ -169,116 +152,13 @@ After your project is created, the project details page is shown.
 
 
 
-
-## Install the CLIs
-{: #cli-install-gs}
-{: cli}
-
-1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
-
-1. Install the {{site.data.keyword.cos_short}} CLI plugin.
-    ```sh
-    ibmcloud plugin install cos
-    ```
-    {: pre}
-
-1. Install the {{site.data.keyword.short_name}} plug-in.
-
-    ```sh
-    ibmcloud plugin install ilab
-    ```
-    {: pre}
-
-1. Log in to your {{site.data.keyword.cloud_notm}} account from the CLI.
-    ```sh
-    ibmcloud login -a https://cloud.ibm.com --sso -r us-east
-    ```
-    {: pre}
-
-1. If you plan to allow {{site.data.keyword.short_name}} to create {{site.data.keyword.cos_full}} Instance resources for you, target a resource group.
-    ```sh
-    ibmcloud target -g <resource_group>
-    ```
-    {: pre}
-
-    Example:
-    ```sh
-    ibmcloud target -g Default
-    ```
-    {: pre}
-
-1. Create a project in the {{site.data.keyword.short_name}} instance.
-    ```sh
-    ibmcloud resource service-instance-create <project_name> instructlab instructlab-pricing-plan us-east
-    ```
-    {: pre}
-
-
-## Give InstuctLab permission to create and update {{site.data.keyword.cos_short}} artifacts
-{: #storage-auth-cli}
-{: cli}
-
-Give {{site.data.keyword.short_name}} the `Writer` access role for the {{site.data.keyword.cos_short}} service. The logged-in user must also have the same permission.
-
-1. Create the authorization policy for {{site.data.keyword.short_name}}.
-    ```sh
-    ibmcloud iam authorization-policy-create Writer --source-service-name instructlab --target-service-name cloud-object-storage
-    ```
-    {: pre}
-
-    If you already have {{site.data.keyword.cos_short}} resources to use, you can scope the authorization to only those resources.
-    ```sh
-    ibmcloud iam authorization-policy-create Writer --source-service-name instructlab --target-service-name cloud-object-storage --target-service-instance-id <cloud-object-storage-instance-id> --target-resource <cloud-object-storage-bucket> --target-resource-type bucket
-    ```
-    {: pre}
-
-1. Verify that the authorization policy was created.
-    ```sh
-    ibmcloud iam authorization-policies
-    ```
-    {: pre}
-
-    Result when authorization is not scoped to a specific {{site.data.keyword.cos_short}} bucket:
-    ```txt
-    Getting authorization policies under account abc1234 as user...
-    OK
-
-    ID:                        <id>
-    Source service name:       instructlab
-    Source service instance:   All instances
-    Target service name:       cloud-object-storage
-    Target service instance:   All instances
-    Roles:                     Writer
-    ```
-    {: screen}
-
-    Result when authorization is scoped to a specific {{site.data.keyword.cos_short}} bucket:
-    ```txt
-    Getting authorization policies under account abc1234 as user...
-    OK
-
-    ID:                        <id>
-    Source service name:       instructlab
-    Source service instance:   All instances
-    Target service name:       cloud-object-storage
-    Target service instance:   bucket
-    Roles:                     Writer
-    ```
-    {: screen}
-
-1. If necessary, give the `Writer` permission to the logged-in user. Include the {{site.data.keyword.cos_short}} service instance ID from the previous step.
-
-    ```sh
-    ibmcloud iam user-policy-create <user> --roles Writer --service-instance <cloud-object-storage-instance-id>
-    ```
-    {: pre}
-
-## Add your taxonomy to {{site.data.keyword.cos_short}}
+## Add the taxonomy to COS by using the CLI
 {: #taxonomy-add-cli}
 {: cli}
 
-Complete the following steps to add your taxonomy in {{site.data.keyword.cos_short}}.
+After you receive access to {{site.data.keyword.short_name}}, store your taxonomy in COS.
 
+{{_include-segments/login.md}}
 1. Optional: Run the `set` command to set and save {{site.data.keyword.cos_short}} bucket details and credentials, which can simplify your commands going forward. You must set each value individually.
 
     ```txt
@@ -305,20 +185,6 @@ Complete the following steps to add your taxonomy in {{site.data.keyword.cos_sho
     | `taxonomy-path-cos <directory_path>` | The relative directory path within the {{site.data.keyword.cos_short}} bucket to the taxonomy file. |
     {: caption="Understanding this command's components" caption-side="bottom"}
 
-
-    Example command to save the taxonomy path, but have the {{site.data.keyword.cos_short}} service instance and bucket created for you later.
-    ```sh
-    ibmcloud ilab config set cos-bucket test-1
-    ```
-    {: pre}
-
-    Example command to save the taxonomy path and the details for an existing {{site.data.keyword.cos_short}} service, but have the {{site.data.keyword.cos_short}} bucket created for you later.
-    ```sh
-    ibmcloud ilab config set taxonomy-path /Users/USER/instructlab-taxonomy
-    ```
-    {: pre}
-
-
 1. Add the taxonomy to an {{site.data.keyword.cos_short}} bucket.
     ```sh
     ibmcloud ilab taxonomy add --name <name>
@@ -339,15 +205,6 @@ Complete the following steps to add your taxonomy in {{site.data.keyword.cos_sho
     Example command to use the details that were saved with the `init` command.
     ```sh
     ibmcloud ilab taxonomy add --name test
-    ```
-    {: pre}
-
-    Example command to have the {{site.data.keyword.cos_short}} bucket created for you in an existing service instance.
-    ```sh
-    ibmcloud ilab taxonomy add \
-    --name test \
-    --taxonomy-path /Users/USER/instructlab-taxonomy \
-    --cos-id existing_service_instance_id
     ```
     {: pre}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-15"
+lastupdated: "2025-04-16"
 
 
 keywords: instructlab, sitemap
@@ -25,21 +25,15 @@ subcollection: instructlab
 
 [Getting started](/docs/instructlab?topic=instructlab-getting-started#getting-started)
 
-* [Prerequisites](/docs/instructlab?topic=instructlab-getting-started#instructlab-pre)
-
 * [Get familiar with the capabilities](/docs/instructlab?topic=instructlab-getting-started#get-familiar)
 
-* [Optional: Prepare a taxonomy](/docs/instructlab?topic=instructlab-getting-started#taxonomy)
+* [Prerequisites](/docs/instructlab?topic=instructlab-getting-started#instructlab-pre)
 
-* [Create an {{site.data.keyword.short_name}} project](/docs/instructlab?topic=instructlab-getting-started&interface=ui#project-create-ui)
+* [Modify the community taxonomy](/docs/instructlab?topic=instructlab-getting-started#taxonomy)
 
-* [Upload your taxonomy to {{site.data.keyword.cos_short}}](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui)
+* [Add the taxonomy to COS by using the console](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui)
 
-* [Install the CLIs](/docs/instructlab?topic=instructlab-getting-started&interface=cli#cli-install-gs)
-
-* [Give InstuctLab permission to create and update {{site.data.keyword.cos_short}} artifacts](/docs/instructlab?topic=instructlab-getting-started&interface=cli#storage-auth-cli)
-
-* [Add your taxonomy to {{site.data.keyword.cos_short}}](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli)
+* [Add the taxonomy to COS by using the CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli)
 
 * [What's next?](/docs/instructlab?topic=instructlab-getting-started&interface=cli#next)
 
@@ -118,6 +112,8 @@ subcollection: instructlab
 
 * [Updating installed plug-ins](/docs/instructlab?topic=instructlab-cli-install#cli-install-include-cli-update-plugin)
 
+* [Logging in to the CLI](/docs/instructlab?topic=instructlab-cli-install#cli-login)
+
 
 ## Preparing your account
 {: #sitemap_preparing_your_account}
@@ -125,7 +121,11 @@ subcollection: instructlab
 
 [Assigning access](/docs/instructlab?topic=instructlab-iam#iam)
 
-* [Assigning access to {{site.data.keyword.short_name}} in the console](/docs/instructlab?topic=instructlab-iam&interface=ui#assign-access-console)
+* [Give InstuctLab permission to create and update {{site.data.keyword.cos_short}} artifacts](/docs/instructlab?topic=instructlab-iam&interface=cli#iam-ilab)
+
+* [Assign user access to your resources](/docs/instructlab?topic=instructlab-iam&interface=cli#assign-access)
+
+    * [Assigning user access to {{site.data.keyword.short_name}} by using the console](/docs/instructlab?topic=instructlab-iam&interface=ui#assign-access-console)
 
     * [Assigning access to resources in the console](/docs/instructlab?topic=instructlab-iam&interface=ui#iam-include-access-resources-console)
 
@@ -133,9 +133,9 @@ subcollection: instructlab
 
     * [Assigning access to manage a resource group](/docs/instructlab?topic=instructlab-iam&interface=ui#iam-include-access-to-resource-group)
 
-* [Assigning access to {{site.data.keyword.short_name}} in the CLI](/docs/instructlab?topic=instructlab-iam&interface=cli#assign-access-cli)
+    * [Assigning access to {{site.data.keyword.short_name}} by using the CLI](/docs/instructlab?topic=instructlab-iam&interface=cli#assign-access-cli)
 
-* [Assigning access to {{site.data.keyword.short_name}} by using the API](/docs/instructlab?topic=instructlab-iam&interface=api#assign-access-api)
+    * [Assigning user access to {{site.data.keyword.short_name}} by using the API](/docs/instructlab?topic=instructlab-iam&interface=api#assign-access-api)
 
     * [Assigning access to resources by using the API](/docs/instructlab?topic=instructlab-iam&interface=api#iam-include-access-resources-api)
 
@@ -158,6 +158,16 @@ subcollection: instructlab
     * [Email notifications](/docs/instructlab?topic=instructlab-event-notifications-events#event-notifications-email)
 
     * [Webhooks](/docs/instructlab?topic=instructlab-event-notifications-events#event-notifications-webhook)
+
+[Creating projects](/docs/instructlab?topic=instructlab-project#project)
+
+* [Creating a project in the console](/docs/instructlab?topic=instructlab-project&interface=ui#project-create-ui)
+
+* [Creating a project from the CLI](/docs/instructlab?topic=instructlab-project&interface=cli#project-create-cli)
+
+[Creating storage locations](/docs/instructlab?topic=instructlab-storage#storage)
+
+* [Creating an {{site.data.keyword.cos_short}} instance and bucket by using the CLI](/docs/instructlab?topic=instructlab-storage&interface=cli#storage-cli)
 
 
 ## Preparing the taxonomy
