@@ -122,7 +122,7 @@ To create your own taxonomy instead, see [Preparing taxonomies](https://test.clo
 
 ## Add the taxonomy to COS by using the console
 {: #taxonomy-add-ui}
-{: step}
+{: ui}
 
 After you receive access to {{site.data.keyword.short_name}}, store your taxonomy in COS.
 
