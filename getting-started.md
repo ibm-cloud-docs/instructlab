@@ -54,16 +54,12 @@ With {{site.data.keyword.short_name}}, you can use an existing, pre-trained LLM 
 
 If this is the first time {{site.data.keyword.short_name}} is being used in the account, complete these tasks.
 
-* A paid {{site.data.keyword.cloud}} account. The following account types are supported:
-    - Pay-As-You-Go
-    - Subscription
+* A **Pay-As-You-Go** or **Subscription** {{site.data.keyword.cloud}} account. Trial accounts are not supported. For more information or to upgrade the account, see [Account types](/docs/account?topic=account-accounts#compare).
 
-    Trial accounts are not supported. For more information or to upgrade the account, see [Account types](/docs/account?topic=account-accounts#compare).
-    {: note}
 
-* [A project](/docs/instructlab?topic=instructlab-project).
+* [An {{site.data.keyword.short_name}} project](/docs/instructlab?topic=instructlab-project).
 
-* [An {{site.data.keyword.cos_short}} instance and bucket in the account](/docs/instructlab?topic=instructlab-storage).
+* [An {{site.data.keyword.cos_short}} instance](/docs/instructlab?topic=instructlab-storage).
 
 * [Access to the {{site.data.keyword.short_name}} service](/docs/instructlab?topic=instructlab-iam) and the [{{site.data.keyword.cos_short}} bucket](/docs/instructlab?topic=instructlab-iam).
 
@@ -72,8 +68,9 @@ If this is the first time {{site.data.keyword.short_name}} is being used in the 
 
 
 
-## Modify the community taxonomy
+## Optional: Modify the community taxonomy
 {: #taxonomy}
+{: ui}
 
 If you don't already have a taxonomy, you can use the {{site.data.keyword.short_name}} [community taxonomy](https://github.com/instructlab/taxonomy){: external} to start.
 
@@ -125,7 +122,7 @@ To create your own taxonomy instead, see [Preparing taxonomies](https://test.clo
 
 ## Add the taxonomy to COS by using the console
 {: #taxonomy-add-ui}
-{: ui}
+{: step}
 
 After you receive access to {{site.data.keyword.short_name}}, store your taxonomy in COS.
 
@@ -154,7 +151,7 @@ You can add specify a Secrets Manager ID when you [add your taxonomy to {{site.d
 
 
 
-## Add the taxonomy to COS by using the CLI
+## Add the taxonomy to Object Storage by using the CLI
 {: #taxonomy-add-cli}
 {: cli}
 

@@ -29,11 +29,11 @@ subcollection: instructlab
 
 * [Prerequisites](/docs/instructlab?topic=instructlab-getting-started#instructlab-pre)
 
-* [Modify the community taxonomy](/docs/instructlab?topic=instructlab-getting-started#taxonomy)
+* [Optional: Modify the community taxonomy](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy)
 
 * [Add the taxonomy to COS by using the console](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui)
 
-* [Add the taxonomy to COS by using the CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli)
+* [Add the taxonomy to Object Storage by using the CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli)
 
 * [What's next?](/docs/instructlab?topic=instructlab-getting-started&interface=cli#next)
 
