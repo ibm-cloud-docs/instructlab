@@ -53,6 +53,7 @@ toc:
       - topic: data-generate.md
         navtitle: Generating data
       - model-train.md
+      - deploy.md
       - topicgroup:
           label: Enhancing security
           topics:

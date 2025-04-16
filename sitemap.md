@@ -237,6 +237,15 @@ subcollection: instructlab
 * [What's next?](/docs/instructlab?topic=instructlab-model-train&interface=api#next-model)
 
 
+## Deploying models
+{: #sitemap_deploying_models}
+
+
+[Deploying models](/docs/instructlab?topic=instructlab-deploy#deploy)
+
+* [Deploying the model to RHEL-AI on {{site.data.keyword.cloud_notm}}](/docs/instructlab?topic=instructlab-deploy#deploy-rhel-ai)
+
+
 ## Enhancing security
 {: #sitemap_enhancing_security}
 
