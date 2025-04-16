@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-02"
+lastupdated: "2025-04-16"
 
 keywords: iam, access, add users, instructlab
 
@@ -41,7 +41,77 @@ This is a high level view of what the platform roles allow users to do. Use a pl
 
 {{_include-segments/actions.md}}
 
-## Assigning access to {{site.data.keyword.short_name}} in the console
+
+## Give InstuctLab permission to create and update {{site.data.keyword.cos_short}} artifacts
+{: #iam-ilab}
+{: cli}
+
+Give {{site.data.keyword.short_name}} the `Writer` access role for the {{site.data.keyword.cos_short}} service. The logged-in user must also have the same permission.
+
+1. Create the authorization policy for {{site.data.keyword.short_name}}.
+    ```sh
+    ibmcloud iam authorization-policy-create Writer --source-service-name instructlab --target-service-name cloud-object-storage
+    ```
+    {: pre}
+
+    If you already have {{site.data.keyword.cos_short}} resources to use, you can scope the authorization to only those resources.
+    ```sh
+    ibmcloud iam authorization-policy-create Writer --source-service-name instructlab --target-service-name cloud-object-storage --target-service-instance-id <cloud-object-storage-instance-id> --target-resource <cloud-object-storage-bucket> --target-resource-type bucket
+    ```
+    {: pre}
+
+1. Verify that the authorization policy was created.
+    ```sh
+    ibmcloud iam authorization-policies
+    ```
+    {: pre}
+
+    Result when authorization is not scoped to a specific {{site.data.keyword.cos_short}} bucket:
+    ```txt
+    Getting authorization policies under account abc1234 as user...
+    OK
+
+    ID:                        <id>
+    Source service name:       instructlab
+    Source service instance:   All instances
+    Target service name:       cloud-object-storage
+    Target service instance:   All instances
+    Roles:                     Writer
+    ```
+    {: screen}
+
+    Result when authorization is scoped to a specific {{site.data.keyword.cos_short}} bucket:
+    ```txt
+    Getting authorization policies under account abc1234 as user...
+    OK
+
+    ID:                        <id>
+    Source service name:       instructlab
+    Source service instance:   All instances
+    Target service name:       cloud-object-storage
+    Target service instance:   bucket
+    Roles:                     Writer
+    ```
+    {: screen}
+
+1. If necessary, give the `Writer` permission to the logged-in user. Include the {{site.data.keyword.cos_short}} service instance ID from the previous step.
+
+    ```sh
+    ibmcloud iam user-policy-create <user> --roles Writer --service-instance <cloud-object-storage-instance-id>
+    ```
+    {: pre}
+
+
+## Assign user access to your resources
+{: #assign-access}
+
+You can control which users (or groups of users) in your account access your InstructLab resources. Follow these steps to assign access in the console.
+
+For more details on how you can assign access, such steps to use the CLI or different ways you can scope access to InstructLab or your {{site.data.keyword.cos_short}} bucket, see [Managing IAM access for Red Hat AI InstructLab on IBM Cloud](https://test.cloud.ibm.com/docs-draft/instructlab?topic=instructlab-iam&interface=ui#iam-include-access-resources-console){: external}.
+{: note}
+
+
+### Assigning user access to {{site.data.keyword.short_name}} by using the console
 {: #assign-access-console}
 {: ui}
 
@@ -60,7 +130,7 @@ Access groups.
 {{../account/iam-mng-access.md#access-to-resource-group}}
 
 
-## Assigning access to {{site.data.keyword.short_name}} in the CLI
+### Assigning access to {{site.data.keyword.short_name}} by using the CLI
 {: #assign-access-cli}
 {: cli}
 
@@ -118,7 +188,7 @@ ibmcloud iam service-policy-create test --roles Administrator --resource-group-n
 {: pre}
 
 
-## Assigning access to {{site.data.keyword.short_name}} by using the API
+### Assigning user access to {{site.data.keyword.short_name}} by using the API
 {: #assign-access-api}
 {: api}
 

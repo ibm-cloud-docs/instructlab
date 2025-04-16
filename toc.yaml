@@ -41,6 +41,10 @@ toc:
             navtitle: Setting up logging
           - topic: event-notifications.md
             navtitle: Enabling notifications
+          - topic: project.md
+            navtitle: Creating projects
+          - topic: storage.md
+            navtitle: Creating storage locations
       - topicgroup:
           label: Preparing the taxonomy
           topics:

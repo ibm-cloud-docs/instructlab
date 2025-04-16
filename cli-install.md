@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-04-16"
 
 keywords: instructlab, ai, about, cli, ilab
 
@@ -47,7 +47,16 @@ ibmcloud plugin install secrets-manager
 ```
 {: pre}
 
+Optional: Install the [Git CLI](https://docs.github.com/en/get-started/git-basics/set-up-git) to store and manage your taxonomies.
+
+
 
 {{../cli/reference/ibmcloud/download_cli.md#update-ibmcloud-cli}}
 
 {{../cli/reference/ibmcloud/extend_cli.md#cli-update-plugin}}
+
+
+## Logging in to the CLI
+{: #cli-login}
+
+{{_include-segments/login.md}}
