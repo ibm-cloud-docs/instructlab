@@ -26,7 +26,10 @@ Complete the following steps to create one or more {{site.data.keyword.cos_short
 {: #storage-cli}
 {: cli}
 
+To log in:
 {{_include-segments/login.md}}
+
+To create {{site.data.keyword.cos_short}} resources:
 1. [Create a new bucket](/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#create-a-new-bucket) and make a note of the bucket name for later.
     ```sh
     ibmcloud cos bucket-create --bucket <bucket-name> [--class <class-name>] [--ibm-service-instance-id <instance-id>] [--region REGION] [--output FORMAT]

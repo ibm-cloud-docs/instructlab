@@ -161,9 +161,9 @@ subcollection: instructlab
 
 [Creating projects](/docs/instructlab?topic=instructlab-project#project)
 
-* [Creating a project in the console](/docs/instructlab?topic=instructlab-project&interface=ui#project-create-ui)
+* [Creating projects in the console](/docs/instructlab?topic=instructlab-project&interface=ui#project-create-ui)
 
-* [Creating a project from the CLI](/docs/instructlab?topic=instructlab-project&interface=cli#project-create-cli)
+* [Creating projects from the CLI](/docs/instructlab?topic=instructlab-project&interface=cli#project-create-cli)
 
 [Creating storage locations](/docs/instructlab?topic=instructlab-storage#storage)
 

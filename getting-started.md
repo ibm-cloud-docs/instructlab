@@ -67,6 +67,8 @@ If this is the first time {{site.data.keyword.short_name}} is being used in the 
 
 * [Access to the {{site.data.keyword.short_name}} service](/docs/instructlab?topic=instructlab-iam) and the [{{site.data.keyword.cos_short}} bucket](/docs/instructlab?topic=instructlab-iam).
 
+* [Install the CLI](/docs/instructlab?topic=instructlab-cli-install).{: cli}
+
 
 
 
@@ -158,7 +160,11 @@ You can add specify a Secrets Manager ID when you [add your taxonomy to {{site.d
 
 After you receive access to {{site.data.keyword.short_name}}, store your taxonomy in COS.
 
+To log in:
+
 {{_include-segments/login.md}}
+
+To add the taxonomy:
 1. Optional: Run the `set` command to set and save {{site.data.keyword.cos_short}} bucket details and credentials, which can simplify your commands going forward. You must set each value individually.
 
     ```txt
