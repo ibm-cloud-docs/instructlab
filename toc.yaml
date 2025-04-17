@@ -66,6 +66,8 @@ toc:
         navtitle: Service settings
       - topic: lifecycle.md
         navtitle: Lifecycle policy
+      - topic: ha-dr.md
+        navtitle: High availability and disaster recovery
       - topic: data-portability.md
         navtitle: Data portability
       - topic: ilab-cli.md
