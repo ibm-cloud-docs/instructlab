@@ -36,7 +36,7 @@ Knowledge documents are only required when adding knowledge to your taxonomy, no
 ## Create `qna.yaml` files for knowledge and skills
 {: #taxonomy-qna}
 
-1. Create a `qna.yaml` file that includes questions and answers related to the knowledge or skill you want to add. The file must have at least 5 question and answer pairs and must follow standard YAML formatting. For a complete list of fields required for the `qna.yaml` file, see the InstructLab docs for adding [knowledge](https://docs.instructlab.ai/taxonomy/knowledge/file_structure/#the-knowledge-files){: external} or [skills](https://docs.instructlab.ai/taxonomy/skills/file_structure/#the-structure-of-the-qnayaml-file){: external}. 
+1. Create a `qna.yaml` file that includes questions and answers related to the knowledge or skill you want to add. The file must follow standard YAML formatting. The file must also have at least 5 `seed_examples` sections and, within each of those, exactly 3 question and answer pairs. For a complete list of fields required for the `qna.yaml` file, see the InstructLab docs for adding [knowledge](https://docs.instructlab.ai/taxonomy/knowledge/file_structure/#the-knowledge-files){: external} or [skills](https://docs.instructlab.ai/taxonomy/skills/file_structure/#the-structure-of-the-qnayaml-file){: external}. 
 
 2. If you are creating a `qna.yaml` file for a knowledge addition, you must reference the relevant knowledge document, the commit hash for the document, and the directory where it is stored in the `document` section of the file. 
 

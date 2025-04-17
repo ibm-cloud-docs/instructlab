@@ -37,7 +37,7 @@ Review the following sample architecture for {{site.data.keyword.instructlab_ful
 ### Storage
 {: #arch-data}
 
-Your {{site.data.keyword.instructlab_short}} artifacts, logs, and results are stored in your own IBM Cloud Object Storage bucket. For information on IBM Cloud Object Storage, see [What is IBM Cloud Object Storage?](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage).
+Your {{site.data.keyword.instructlab_short}} artifacts, logs, and results are stored in your own IBM Cloud {{site.data.keyword.cos_short}} bucket. For information on IBM Cloud {{site.data.keyword.cos_short}}, see [What is IBM Cloud {{site.data.keyword.cos_short}}?](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage).
 
 
 ### Backend components
@@ -56,7 +56,7 @@ You have full control over the IAM policies that determine what actions can be e
 Review the {{site.data.keyword.instructlab_short}} data flow. 
 
 1. Data generation and fine-tuning operations run on dedicated RHEL AI GPU machines.
-2. Artifacts, logs, and results are uploaded to your IBM Cloud Object Storage bucket.
+2. Artifacts, logs, and results are uploaded to your IBM Cloud {{site.data.keyword.cos_short}} bucket.
 3. Data is subsequently wiped from the machine, providing a clean run for subsequent operations. 
 
 ## {{site.data.keyword.instructlab_short}} workload isolation
