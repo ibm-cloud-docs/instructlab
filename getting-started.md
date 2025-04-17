@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-16"
+lastupdated: "2025-04-17"
 
 keywords: instructlab, ai
 
@@ -151,7 +151,7 @@ You can add specify a Secrets Manager ID when you [add your taxonomy to {{site.d
 
 
 
-## Add the taxonomy to Object Storage by using the CLI
+## Add the taxonomy to {{site.data.keyword.cos_short}} by using the CLI
 {: #taxonomy-add-cli}
 {: cli}
 

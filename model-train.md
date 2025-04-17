@@ -37,7 +37,7 @@ Configuration information or files cannot be passed to the model for fine tuning
 
 1. From the **InstructLab Projects** [page](https://cloud.ibm.com/instructlab/projects){: external}, Click your project > **Aligned models** > **Align**.
 
-1. Enter an alphanumeric name for the model, select the training data to use, and click **Align**. The state is `queued`, then `running`. Wait for the state to be `completed`. This process could take minutes or hours. When the alignment is complete, in the Object Storage bucket, a `trained_models` directory is created with logs for troubleshooting.
+1. Enter an alphanumeric name for the model, select the training data to use, and click **Align**. The state is `queued`, then `running`. Wait for the state to be `completed`. This process could take minutes or hours. When the alignment is complete, in the {{site.data.keyword.cos_short}} bucket, a `trained_models` directory is created with logs for troubleshooting.
 
 
 

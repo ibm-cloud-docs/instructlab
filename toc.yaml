@@ -30,15 +30,15 @@ toc:
           label: Preparing your account
           topics:
           - topic: project.md
-            navtitle: Creating projects
+            navtitle: Creating an InstructLab project
+          - topic: storage.md
+            navtitle: Creating an Object Storage instance
           - topic: iam.md
             navtitle: Assigning access
           - topic: logging.md
             navtitle: Setting up logging
           - topic: event-notifications.md
             navtitle: Enabling notifications
-          - topic: storage.md
-            navtitle: Creating storage locations
       - topicgroup:
           label: Preparing your taxonomy
           topics:

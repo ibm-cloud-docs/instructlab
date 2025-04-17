@@ -58,7 +58,7 @@ Identity and access management includes tasks such as authentication, authorizat
 | Area | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 | User permissions | Align with the IAM controls documented for the IAM operations a client can perform at the service and platform level. | Manage IAM policies with users to give them proper access to use the service based on their needs. |
-| Object Storage permissions | Use service delegation to read, write, and list objects within the Object Storage specified when adding a taxonomy. | Give InstructLab authorization to allow operations on the Object Storage bucket. Revoke the permissions if they're no longer using the service. |
+| {{site.data.keyword.cos_short}} permissions | Use service delegation to read, write, and list objects within the {{site.data.keyword.cos_short}} specified when adding a taxonomy. | Give InstructLab authorization to allow operations on the {{site.data.keyword.cos_short}} bucket. Revoke the permissions if they're no longer using the service. |
 {: row-headers}
 {: caption="Responsibilites for identity and access management" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
@@ -88,7 +88,7 @@ For more information, see [High availability and disaster recovery](/docs/instru
 | Area| {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 | Data generation and model alignment | Ensure data generation and model alignment jobs resume after an incident. | Verify job completion after an incident. Sometimes, restarting a job after an incident might be required. |
-| Object storage back up | N/A | Ensure data in your Object Storage bucket is replicated and backed up. |
+| Object storage back up | N/A | Ensure data in your {{site.data.keyword.cos_short}} bucket is replicated and backed up. |
 | InstructLab project backup | N/A | Create a back up project. |
 {: row-headers}
 {: caption="Responsibilites for disaster recovery" caption-side="bottom"}

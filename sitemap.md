@@ -33,7 +33,7 @@ subcollection: instructlab
 
 * [Add the taxonomy to COS by using the console](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui)
 
-* [Add the taxonomy to Object Storage by using the CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli)
+* [Add the taxonomy to {{site.data.keyword.cos_short}} by using the CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli)
 
 * [What's next?](/docs/instructlab?topic=instructlab-getting-started&interface=cli#next)
 
@@ -99,13 +99,21 @@ subcollection: instructlab
 {: #sitemap_preparing_your_account}
 
 
-[Creating projects](/docs/instructlab?topic=instructlab-project#project)
+[Creating an InstructLab project](/docs/instructlab?topic=instructlab-project#project)
 
 * [Creating projects in the console for {{site.data.keyword.short_name}}](/docs/instructlab?topic=instructlab-project&interface=ui#project-create-ui)
 
 * [Creating projects from the CLI for {{site.data.keyword.short_name}}](/docs/instructlab?topic=instructlab-project&interface=cli#project-create-cli)
 
 * [What's next?](/docs/instructlab?topic=instructlab-project&interface=cli#whats-next-projects)
+
+[Creating an Object Storage instance](/docs/instructlab?topic=instructlab-storage#storage)
+
+* [Creating an {{site.data.keyword.cos_short}} instance in the console for {{site.data.keyword.short_name}}](/docs/instructlab?topic=instructlab-storage&interface=ui#storage-ui)
+
+* [Creating an {{site.data.keyword.cos_short}} instance and bucket by using the CLI for {{site.data.keyword.short_name}}](/docs/instructlab?topic=instructlab-storage&interface=cli#storage-cli)
+
+* [What's next?](/docs/instructlab?topic=instructlab-storage&interface=cli#whats-next-storage)
 
 [Assigning access](/docs/instructlab?topic=instructlab-iam#iam)
 
@@ -144,12 +152,6 @@ subcollection: instructlab
     * [Email notifications](/docs/instructlab?topic=instructlab-event-notifications-events#event-notifications-email)
 
     * [Webhooks](/docs/instructlab?topic=instructlab-event-notifications-events#event-notifications-webhook)
-
-[Creating storage locations](/docs/instructlab?topic=instructlab-storage#storage)
-
-* [Creating an {{site.data.keyword.cos_short}} instance in the console for {{site.data.keyword.short_name}}](/docs/instructlab?topic=instructlab-storage&interface=ui#storage-ui)
-
-* [Creating an {{site.data.keyword.cos_short}} instance and bucket by using the CLI for {{site.data.keyword.short_name}}](/docs/instructlab?topic=instructlab-storage&interface=cli#storage-cli)
 
 
 ## Preparing your taxonomy
