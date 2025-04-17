@@ -64,8 +64,8 @@ ibmcloud resource service-instance-create <project_name> instructlab instructlab
 
 After creating your project, review the following links for next steps.
 
-- [Assign users in your account access to your project]().
-- [Learn how taxonomies are structured]().
-- [Prepare your taxonomy and upload it to Object Storage]().
+- [Assign users in your account access to your project](/docs/instructlab?topic=instructlab-project).
+- [Learn how taxonomies are structured](/docs/instructlab?topic=instructlab-taxonomy-overview).
+- [Prepare your taxonomy and upload it to Object Storage](https://cloud.ibm.com/docs/instructlab?topic=instructlab-taxonomy-prep).
 
  
