@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-02"
+lastupdated: "2025-04-17"
 
 keywords: instructlab
 
@@ -12,7 +12,7 @@ subcollection: instructlab
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding the lifecycle policy for {{site.data.keyword.instructlab_short}}
+# Understanding the lifecycle policy for {{site.data.keyword.short_name}}
 {: #lifecycle-policy}
 
 Review this page for general information about {{site.data.keyword.instructlab_short}} versions.

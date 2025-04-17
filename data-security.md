@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-15"
+lastupdated: "2025-04-17"
 
 keywords: data, secure, encrypt, cos, bucket, storage
 
@@ -12,7 +12,7 @@ subcollection: instructlab
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Securing your data in {{site.data.keyword.instructlab_short}}
+# Securing your data in {{site.data.keyword.short_name}}
 {: #mng-data}
 
 To ensure that you can securely manage your data when you use {{site.data.keyword.instructlab_short}}, it is important to know exactly what data is stored and encrypted and how you can delete any stored data. 

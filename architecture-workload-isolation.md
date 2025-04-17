@@ -12,7 +12,7 @@ subcollection: instructlab
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Learning about {{site.data.keyword.instructlab_full_notm}} architecture and workload isolation
+# Learning about {{site.data.keyword.short_name}} architecture and workload isolation
 {: #compute-isolation}
 
 

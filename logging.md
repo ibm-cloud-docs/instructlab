@@ -13,7 +13,7 @@ subcollection: instructlab
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Logging for {{site.data.keyword.instructlab_short}}
+# Logging for {{site.data.keyword.short_name}}
 {: #logging}
 
 {{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.instructlab_short}}, generate platform logs that you can use to investigate abnormal activity and critical actions in your account, and troubleshoot problems. Logs are generated in each region where {{site.data.keyword.short_name}} is available.

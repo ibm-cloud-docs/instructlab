@@ -12,7 +12,7 @@ subcollection: instructlab
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding high availability and disaster recovery for {{site.data.keyword.instructlab_short}}
+# Understanding high availability and disaster recovery for {{site.data.keyword.short_name}}
 {: #ilab-ha-dr}
 
 [High availability](#x2284708){: term} (HA) is the ability for a service to remain operational and accessible in the presence of unexpected failures. [Disaster recovery](#x2113280){: term} is the process of recovering the service instance to a working state.

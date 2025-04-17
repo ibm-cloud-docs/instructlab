@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-14"
+lastupdated: "2025-04-17"
 
 keywords: data portability, compliance, dora
 
@@ -12,7 +12,7 @@ subcollection: instructlab
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding data portability for {{site.data.keyword.instructlab_full_notm}}
+# Understanding data portability for {{site.data.keyword.short_name}}
 {: #data-portability}
 
 Data portability involves a set of tools and procedures that enable you to export the digital artifacts that are needed to implement similar workload and data processing on different service providers or on-premises software. It includes procedures for copying and storing the service customer content, including the related configuration that is used by the service to store and process the data, in your location.
