@@ -243,6 +243,8 @@ subcollection: instructlab
 
 [Deploying models](/docs/instructlab?topic=instructlab-deploy#deploy)
 
+* [Deploying the model to Watsonx on {{site.data.keyword.cloud_notm}}](/docs/instructlab?topic=instructlab-deploy#deploy-watson)
+
 * [Deploying the model to RHEL-AI on {{site.data.keyword.cloud_notm}}](/docs/instructlab?topic=instructlab-deploy#deploy-rhel-ai)
 
 
