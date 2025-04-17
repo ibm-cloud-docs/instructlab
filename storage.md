@@ -41,6 +41,12 @@ To log in:
 {{_include-segments/login.md}}
 
 To create {{site.data.keyword.cos_short}} resources:
+1. Run the following command to create an instance.
+    ```sh
+    ibmcloud resource service-instance-create <instance-name> cloud-object-storage <plan> global
+    ```
+    {: pre}
+
 1. [Create a new bucket](/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#create-a-new-bucket) and make a note of the bucket name for later.
     ```sh
     ibmcloud cos bucket-create --bucket <bucket-name> [--class <class-name>] [--ibm-service-instance-id <instance-id>] [--region REGION] [--output FORMAT]

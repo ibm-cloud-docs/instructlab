@@ -178,8 +178,8 @@ subcollection: instructlab
 * [Creating an {{site.data.keyword.cos_short}} instance and bucket by using the CLI](/docs/instructlab?topic=instructlab-storage&interface=cli#storage-cli)
 
 
-## Preparing the taxonomy
-{: #sitemap_preparing_the_taxonomy}
+## Preparing your taxonomy
+{: #sitemap_preparing_your_taxonomy}
 
 
 [How taxonomies are structured](/docs/instructlab?topic=instructlab-taxonomy-overview#taxonomy-overview)

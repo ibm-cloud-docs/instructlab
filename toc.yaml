@@ -46,7 +46,7 @@ toc:
           - topic: storage.md
             navtitle: Creating storage locations
       - topicgroup:
-          label: Preparing the taxonomy
+          label: Preparing your taxonomy
           topics:
           - topic: taxonomy-overview.md
           - topic: taxonomy-prep.md
