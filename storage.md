@@ -21,7 +21,7 @@ Complete the following steps to create one or more {{site.data.keyword.cos_short
 
 [Learn more about {{site.data.keyword.cos_short}}](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage).
 
-## Creating an {{site.data.keyword.cos_short}} instance in the console
+## Creating an {{site.data.keyword.cos_short}} instance in the console for {{site.data.keyword.short_name}}
 {: #storage-ui}
 {: ui}
 
@@ -33,7 +33,7 @@ Complete the following steps to create one or more {{site.data.keyword.cos_short
 1. Click **Create**.
 
 
-## Creating an {{site.data.keyword.cos_short}} instance and bucket by using the CLI
+## Creating an {{site.data.keyword.cos_short}} instance and bucket by using the CLI for {{site.data.keyword.short_name}}
 {: #storage-cli}
 {: cli}
 

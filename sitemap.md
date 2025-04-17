@@ -12,7 +12,7 @@ subcollection: instructlab
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Site map
+# Site map for {{site.data.keyword.short_name}}
 {: #sitemap}
 
 
@@ -101,9 +101,9 @@ subcollection: instructlab
 
 [Creating projects](/docs/instructlab?topic=instructlab-project#project)
 
-* [Creating projects in the console](/docs/instructlab?topic=instructlab-project&interface=ui#project-create-ui)
+* [Creating projects in the console for {{site.data.keyword.short_name}}](/docs/instructlab?topic=instructlab-project&interface=ui#project-create-ui)
 
-* [Creating projects from the CLI](/docs/instructlab?topic=instructlab-project&interface=cli#project-create-cli)
+* [Creating projects from the CLI for {{site.data.keyword.short_name}}](/docs/instructlab?topic=instructlab-project&interface=cli#project-create-cli)
 
 * [What's next?](/docs/instructlab?topic=instructlab-project&interface=cli#whats-next-projects)
 
@@ -147,9 +147,9 @@ subcollection: instructlab
 
 [Creating storage locations](/docs/instructlab?topic=instructlab-storage#storage)
 
-* [Creating an {{site.data.keyword.cos_short}} instance in the console](/docs/instructlab?topic=instructlab-storage&interface=ui#storage-ui)
+* [Creating an {{site.data.keyword.cos_short}} instance in the console for {{site.data.keyword.short_name}}](/docs/instructlab?topic=instructlab-storage&interface=ui#storage-ui)
 
-* [Creating an {{site.data.keyword.cos_short}} instance and bucket by using the CLI](/docs/instructlab?topic=instructlab-storage&interface=cli#storage-cli)
+* [Creating an {{site.data.keyword.cos_short}} instance and bucket by using the CLI for {{site.data.keyword.short_name}}](/docs/instructlab?topic=instructlab-storage&interface=cli#storage-cli)
 
 
 ## Preparing your taxonomy
@@ -433,13 +433,13 @@ subcollection: instructlab
 
 [Debugging](/docs/instructlab?topic=instructlab-ts-debug#ts-debug)
 
-* [Debugging issues](/docs/instructlab?topic=instructlab-ts-debug#debug-issues)
+* [Debugging configuration issues](/docs/instructlab?topic=instructlab-ts-debug#debug-issues)
 
     * [Validating the local taxonomy](/docs/instructlab?topic=instructlab-ts-debug#local-taxonomy)
 
     * [Verifying the version](/docs/instructlab?topic=instructlab-ts-debug#version)
 
-[I get an error stating `No new leaf nodes found in the taxonomy` when generating data](/docs/instructlab?topic=instructlab-ts-no-new-leaf-nodes#ts-no-new-leaf-nodes)
+[I get an error stating No new leaf nodes found in the taxonomy when generating data](/docs/instructlab?topic=instructlab-ts-no-new-leaf-nodes#ts-no-new-leaf-nodes)
 
 
 ## FAQ

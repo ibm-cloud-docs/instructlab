@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-14"
+lastupdated: "2025-04-17"
 
 keywords: leaf node, taxonomy, trouble shooting
 
@@ -12,7 +12,7 @@ subcollection: instructlab
 
 {{site.data.keyword.attribute-definition-list}}
 
-# I get an error stating `No new leaf nodes found in the taxonomy` when generating data
+# I get an error stating `No new leaf nodes found in the taxonomy` when generating data for {{site.data.keyword.short_name}}
 {: #ts-no-new-leaf-nodes}
 
 When you try to generate data, you get an error similar to the following.

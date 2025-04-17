@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-01"
+lastupdated: "2025-04-17"
 
 keywords: instructlab, logging, logs routing
 
@@ -28,6 +28,9 @@ To enable logging, create an instance of {{site.data.keyword.logs_full_notm}}. F
 {: #at-event-routing}
 
 After you have an instance of {{site.data.keyword.logs_full_notm}}, you can route user activity to that instance by setting it as a target in {{site.data.keyword.atracker_short}}. For more information, see [Configuring an {{site.data.keyword.logs_full_notm}} instance as a target](/docs/atracker?topic=atracker-getting-started-target-cloud-logs&interface=ui).
+
+IAM actions and {{site.data.keyword.atracker_short}} following the same naming convention.
+{: note}
 
 {{_include-segments/actions.md}}
 

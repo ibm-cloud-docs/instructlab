@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-14"
+lastupdated: "2025-04-17"
 
 keywords: instructlab, taxonomy, prepare, create taxonomy, qna, knowledge document, documents
 
@@ -12,7 +12,7 @@ subcollection: instructlab
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Preparing taxonomies
+# Preparing taxonomies for {{site.data.keyword.short_name}}
 {: #taxonomy-prep}
 
 Follow these steps to create your own taxonomy. For more information on taxonomies and the data they include, see [How taxonomies are structured](/docs/instructlab?topic=instructlab-taxonomy-overview).

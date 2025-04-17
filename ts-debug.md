@@ -15,12 +15,12 @@ subcollection: instructlab
 
 
 
-# Debugging
+# Debugging issues for for {{site.data.keyword.short_name}}
 {: #ts-debug}
 {: support}
 
 
-## Debugging issues
+## Debugging configuration issues
 {: #debug-issues}
 
 Debug an issue when you experience it.
