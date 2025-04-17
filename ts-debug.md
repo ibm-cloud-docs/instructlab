@@ -15,7 +15,7 @@ subcollection: instructlab
 
 
 
-# Debugging issues for for {{site.data.keyword.short_name}}
+# Debugging issues for {{site.data.keyword.short_name}}
 {: #ts-debug}
 {: support}
 
@@ -33,7 +33,7 @@ Try one of the following options to resolve the issue.
 {: tsResolve}
 
 
-### Validating the local taxonomy
+### Step 1: Validate the local taxonomy
 {: #local-taxonomy}
 
 1. [Install the `ilab` CLI](https://github.com/instructlab/instructlab?tab=readme-ov-file#-installing-ilab).
@@ -75,7 +75,7 @@ Try one of the following options to resolve the issue.
     {: screen}
 
 
-### Verifying the version
+### Step 2: Verify the version
 {: #version}
 
 If the issues are with the backend and not your taxonomy or local configuration, verify that the local CLI installation version matches what is being used in the backend.
