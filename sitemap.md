@@ -428,9 +428,11 @@ subcollection: instructlab
 
 [Debugging](/docs/instructlab?topic=instructlab-ts-debug#ts-debug)
 
-* [Validating the local taxonomy](/docs/instructlab?topic=instructlab-ts-debug#local-taxonomy)
+* [Debugging issues](/docs/instructlab?topic=instructlab-ts-debug#debug-issues)
 
-* [Verifying the version](/docs/instructlab?topic=instructlab-ts-debug#version)
+    * [Validating the local taxonomy](/docs/instructlab?topic=instructlab-ts-debug#local-taxonomy)
+
+    * [Verifying the version](/docs/instructlab?topic=instructlab-ts-debug#version)
 
 [I get an error stating `No new leaf nodes found in the taxonomy` when generating data](/docs/instructlab?topic=instructlab-ts-no-new-leaf-nodes#ts-no-new-leaf-nodes)
 
