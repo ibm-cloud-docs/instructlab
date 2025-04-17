@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-16"
+lastupdated: "2025-04-17"
 
 
 keywords: instructlab, sitemap
@@ -293,6 +293,31 @@ subcollection: instructlab
 * [Customer communications for {{site.data.keyword.instructlab_short}}](/docs/instructlab?topic=instructlab-lifecycle-policy#customer-communications)
 
 * [Other considerations](/docs/instructlab?topic=instructlab-lifecycle-policy#other-considerations-lifecycle)
+
+
+## High availability and disaster recovery
+{: #sitemap_high_availability_and_disaster_recovery}
+
+
+[High availability and disaster recovery](/docs/instructlab?topic=instructlab-service-name-ha-dr#service-name-ha-dr)
+
+* [High availability architecture](/docs/instructlab?topic=instructlab-service-name-ha-dr#ha-architecture)
+
+    * [High availability features](/docs/instructlab?topic=instructlab-service-name-ha-dr#ha-features)
+
+* [Disaster recovery features](/docs/instructlab?topic=instructlab-service-name-ha-dr#dr-features)
+
+    * [Planning for DR](/docs/instructlab?topic=instructlab-service-name-ha-dr#features-for-disaster-recovery)
+
+* [Your responsibilities for HA and DR](/docs/instructlab?topic=instructlab-service-name-ha-dr#feature-responsibilities)
+
+* [Recovery time objective (RTO) and recovery point objective (RPO)](/docs/instructlab?topic=instructlab-service-name-ha-dr#rto-rpo-features)
+
+* [Change management](/docs/instructlab?topic=instructlab-service-name-ha-dr#change-management)
+
+* [How {{site.data.keyword.IBM_notm}} recovers from regional failures](/docs/instructlab?topic=instructlab-service-name-ha-dr#ibm-regional-failure)
+
+* [How {{site.data.keyword.IBM_notm}} maintains services](/docs/instructlab?topic=instructlab-service-name-ha-dr#ibm-service-maintenance)
 
 
 ## Data portability
