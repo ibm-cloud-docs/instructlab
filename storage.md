@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-16"
+lastupdated: "2025-04-17"
 
 keywords: instructlab, ai, project
 
@@ -20,6 +20,17 @@ Complete the following steps to create one or more {{site.data.keyword.cos_short
 {: shortdesc}
 
 [Learn more about {{site.data.keyword.cos_short}}](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage).
+
+## Creating an {{site.data.keyword.cos_short}} instance in the console
+{: #storage-ui}
+{: ui}
+
+
+1. Navigate to the [{{site.data.keyword.cos_short}} in the console](https://cloud.ibm.com/objectstorage/overview).
+1. Click **Create an instance**.
+1. Choose a plan.
+1. Give your instance a name, select a resource group, and enter any tags that you want to use.
+1. Click **Create**.
 
 
 ## Creating an {{site.data.keyword.cos_short}} instance and bucket by using the CLI
