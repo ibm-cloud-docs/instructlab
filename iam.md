@@ -12,7 +12,7 @@ subcollection: instructlab
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing IAM access for {{site.data.keyword.instructlab_full_notm}}
+# Managing IAM access for {{site.data.keyword.short_name}}
 {: #iam}
 
 Access to {{site.data.keyword.instructlab_short}} projects for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the {{site.data.keyword.instructlab_short}} service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to {{site.data.keyword.instructlab_short}}.
