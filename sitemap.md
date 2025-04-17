@@ -66,7 +66,13 @@ subcollection: instructlab
 
 * [Incident and operations management](/docs/instructlab?topic=instructlab-responsibilities#incident-and-ops)
 
+* [Change management](/docs/instructlab?topic=instructlab-responsibilities#change-management)
+
 * [Identity and access management](/docs/instructlab?topic=instructlab-responsibilities#iam-responsibilities)
+
+* [Security and regulation compliance](/docs/instructlab?topic=instructlab-responsibilities#security-compliance)
+
+* [Disaster recovery](/docs/instructlab?topic=instructlab-responsibilities#disaster-recovery)
 
 
 ## Release notes
@@ -301,25 +307,25 @@ subcollection: instructlab
 {: #sitemap_high_availability_and_disaster_recovery}
 
 
-[High availability and disaster recovery](/docs/instructlab?topic=instructlab-service-name-ha-dr#service-name-ha-dr)
+[High availability and disaster recovery](/docs/instructlab?topic=instructlab-ilab-ha-dr#ilab-ha-dr)
 
-* [High availability architecture](/docs/instructlab?topic=instructlab-service-name-ha-dr#ha-architecture)
+* [High availability architecture](/docs/instructlab?topic=instructlab-ilab-ha-dr#ha-architecture)
 
-    * [High availability features](/docs/instructlab?topic=instructlab-service-name-ha-dr#ha-features)
+    * [High availability features](/docs/instructlab?topic=instructlab-ilab-ha-dr#ha-features)
 
-* [Disaster recovery features](/docs/instructlab?topic=instructlab-service-name-ha-dr#dr-features)
+* [Disaster recovery features](/docs/instructlab?topic=instructlab-ilab-ha-dr#dr-features)
 
-    * [Planning for DR](/docs/instructlab?topic=instructlab-service-name-ha-dr#features-for-disaster-recovery)
+    * [Planning for DR](/docs/instructlab?topic=instructlab-ilab-ha-dr#features-for-disaster-recovery)
 
-* [Your responsibilities for HA and DR](/docs/instructlab?topic=instructlab-service-name-ha-dr#feature-responsibilities)
+* [Your responsibilities for HA and DR](/docs/instructlab?topic=instructlab-ilab-ha-dr#feature-responsibilities)
 
-* [Recovery time objective (RTO) and recovery point objective (RPO)](/docs/instructlab?topic=instructlab-service-name-ha-dr#rto-rpo-features)
+* [Recovery time objective (RTO) and recovery point objective (RPO)](/docs/instructlab?topic=instructlab-ilab-ha-dr#rto-rpo-features)
 
-* [Change management](/docs/instructlab?topic=instructlab-service-name-ha-dr#change-management)
+* [Change management](/docs/instructlab?topic=instructlab-ilab-ha-dr#change-management)
 
-* [How {{site.data.keyword.IBM_notm}} recovers from regional failures](/docs/instructlab?topic=instructlab-service-name-ha-dr#ibm-regional-failure)
+* [How {{site.data.keyword.IBM_notm}} recovers from regional failures](/docs/instructlab?topic=instructlab-ilab-ha-dr#ibm-regional-failure)
 
-* [How {{site.data.keyword.IBM_notm}} maintains services](/docs/instructlab?topic=instructlab-service-name-ha-dr#ibm-service-maintenance)
+* [How {{site.data.keyword.IBM_notm}} maintains services](/docs/instructlab?topic=instructlab-ilab-ha-dr#ibm-service-maintenance)
 
 
 ## Data portability
