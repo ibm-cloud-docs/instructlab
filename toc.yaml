@@ -17,15 +17,8 @@ toc:
       topics:
       - topic: getting-started.md
         navtitle: Getting started
-      - topicgroup:
-          label: How it works
-          topics:
-          - topic: about.md
-            navtitle: About
-          - topic: architecture-workload-isolation.md
-            navtitle: Architecture
-          - topic: responsibilities.md
-            navtitle: Your responsibilities
+      - topic: about.md
+        navtitle: How it works
       - release-notes.md
   - navgroup: 
       id: howto
@@ -57,11 +50,15 @@ toc:
       - topicgroup:
           label: Enhancing security
           topics:
+          - topic: architecture-workload-isolation.md
+            navtitle: Learning the architecture
           - topic: data-security.md
             navtitle: Securing your data
   - navgroup:
       id: reference
       topics:
+      - topic: responsibilities.md
+        navtitle: Your responsibilities
       - topic: service-settings.md
         navtitle: Service settings
       - topic: lifecycle.md

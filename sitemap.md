@@ -42,37 +42,11 @@ subcollection: instructlab
 {: #sitemap_how_it_works}
 
 
-[About](/docs/instructlab?topic=instructlab-about#about)
+[How it works](/docs/instructlab?topic=instructlab-about#about)
 
 * [Why {{site.data.keyword.instructlab_short}}?](/docs/instructlab?topic=instructlab-about#benefits)
 
 * [How does billing work?](/docs/instructlab?topic=instructlab-about#costs)
-
-[Architecture](/docs/instructlab?topic=instructlab-compute-isolation#compute-isolation)
-
-* [{{site.data.keyword.instructlab_short}} architecture](/docs/instructlab?topic=instructlab-compute-isolation#architecture)
-
-    * [Storage](/docs/instructlab?topic=instructlab-compute-isolation#arch-data)
-
-    * [Backend components](/docs/instructlab?topic=instructlab-compute-isolation#arch-backend)
-
-    * [Security and access control](/docs/instructlab?topic=instructlab-compute-isolation#arch-access)
-
-    * [Data Flow](/docs/instructlab?topic=instructlab-compute-isolation#arch-dataflow)
-
-* [{{site.data.keyword.instructlab_short}} workload isolation](/docs/instructlab?topic=instructlab-compute-isolation#workload-isolation)
-
-[Your responsibilities](/docs/instructlab?topic=instructlab-responsibilities#responsibilities)
-
-* [Incident and operations management](/docs/instructlab?topic=instructlab-responsibilities#incident-and-ops)
-
-* [Change management](/docs/instructlab?topic=instructlab-responsibilities#change-management)
-
-* [Identity and access management](/docs/instructlab?topic=instructlab-responsibilities#iam-responsibilities)
-
-* [Security and regulation compliance](/docs/instructlab?topic=instructlab-responsibilities#security-compliance)
-
-* [Disaster recovery](/docs/instructlab?topic=instructlab-responsibilities#disaster-recovery)
 
 
 ## Release notes
@@ -260,6 +234,20 @@ subcollection: instructlab
 {: #sitemap_enhancing_security}
 
 
+[Learning the architecture](/docs/instructlab?topic=instructlab-compute-isolation#compute-isolation)
+
+* [{{site.data.keyword.instructlab_short}} architecture](/docs/instructlab?topic=instructlab-compute-isolation#architecture)
+
+    * [Storage](/docs/instructlab?topic=instructlab-compute-isolation#arch-data)
+
+    * [Backend components](/docs/instructlab?topic=instructlab-compute-isolation#arch-backend)
+
+    * [Security and access control](/docs/instructlab?topic=instructlab-compute-isolation#arch-access)
+
+    * [Data Flow](/docs/instructlab?topic=instructlab-compute-isolation#arch-dataflow)
+
+* [{{site.data.keyword.instructlab_short}} workload isolation](/docs/instructlab?topic=instructlab-compute-isolation#workload-isolation)
+
 [Securing your data](/docs/instructlab?topic=instructlab-mng-data#mng-data)
 
 * [How your data is stored and encrypted in {{site.data.keyword.instructlab_short}}](/docs/instructlab?topic=instructlab-mng-data#data-storage)
@@ -275,6 +263,23 @@ subcollection: instructlab
     * [Restoring deleted data for {{site.data.keyword.instructlab_short}}](/docs/instructlab?topic=instructlab-mng-data#data-restore)
 
 * [Removing access to {{site.data.keyword.instructlab_short}}](/docs/instructlab?topic=instructlab-mng-data#data-access-remove)
+
+
+## Your responsibilities
+{: #sitemap_your_responsibilities}
+
+
+[Your responsibilities](/docs/instructlab?topic=instructlab-responsibilities#responsibilities)
+
+* [Incident and operations management](/docs/instructlab?topic=instructlab-responsibilities#incident-and-ops)
+
+* [Change management](/docs/instructlab?topic=instructlab-responsibilities#change-management)
+
+* [Identity and access management](/docs/instructlab?topic=instructlab-responsibilities#iam-responsibilities)
+
+* [Security and regulation compliance](/docs/instructlab?topic=instructlab-responsibilities#security-compliance)
+
+* [Disaster recovery](/docs/instructlab?topic=instructlab-responsibilities#disaster-recovery)
 
 
 ## Service settings
