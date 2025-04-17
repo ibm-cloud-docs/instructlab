@@ -43,6 +43,7 @@ Change management includes tasks such as deployment, configuration, upgrades, pa
 | Area | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 | Version updates | Provide version updates and patches.  | Start or restart jobs on new versions as they are available. |
+| Model deployment | N/A | Deploy the model and update deployments with new versions as needed. |
 {: row-headers}
 {: caption="Responsibilites for change management" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}

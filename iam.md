@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-16"
+lastupdated: "2025-04-17"
 
 keywords: iam, access, add users, instructlab
 
@@ -110,12 +110,7 @@ You can control which users (or groups of users) in your account access your Ins
 For more details on how you can assign access, such steps to use the CLI or different ways you can scope access to InstructLab or your {{site.data.keyword.cos_short}} bucket, see [Managing IAM access for Red Hat AI InstructLab on IBM Cloud](https://test.cloud.ibm.com/docs-draft/instructlab?topic=instructlab-iam&interface=ui#iam-include-access-resources-console){: external}.
 {: note}
 
-
-### Assigning user access to {{site.data.keyword.short_name}} by using the console
-{: #assign-access-console}
-{: ui}
-
-There are two common ways to assign access in the console:
+There are two common ways to assign access:
 
 Access policies per user.
 :   You can manage access policies per user from the **Manage** > **Access (IAM)** > **Users** page in the console. For information about the steps to assign IAM access, see [Managing access to resources in the console](/docs/account?topic=account-assign-access-resources&interface=ui#access-resources-console).

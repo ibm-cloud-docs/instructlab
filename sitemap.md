@@ -131,8 +131,6 @@ subcollection: instructlab
 
 * [Assign user access to your resources](/docs/instructlab?topic=instructlab-iam&interface=cli#assign-access)
 
-    * [Assigning user access to {{site.data.keyword.short_name}} by using the console](/docs/instructlab?topic=instructlab-iam&interface=ui#assign-access-console)
-
     * [Assigning access to resources in the console](/docs/instructlab?topic=instructlab-iam&interface=ui#iam-include-access-resources-console)
 
     * [Assigning access within a resource group in the console](/docs/instructlab?topic=instructlab-iam&interface=ui#iam-include-access-to-resources-console)
