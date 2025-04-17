@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-16"
+lastupdated: "2025-04-17"
 
 keywords: instructlab, ai, project
 
@@ -57,3 +57,15 @@ To create a project in the {{site.data.keyword.short_name}} instance, run the fo
 ibmcloud resource service-instance-create <project_name> instructlab instructlab-pricing-plan us-east
 ```
 {: pre}
+
+
+## What's next?
+{: #whats-next-projects}
+
+After creating your project, review the following links for next steps.
+
+- [Assign users in your account access to your project](/docs/instructlab?topic=instructlab-project).
+- [Learn how taxonomies are structured](/docs/instructlab?topic=instructlab-taxonomy-overview).
+- [Prepare your taxonomy and upload it to Object Storage](https://cloud.ibm.com/docs/instructlab?topic=instructlab-taxonomy-prep).
+
+ 

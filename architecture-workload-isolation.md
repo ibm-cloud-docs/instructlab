@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-14"
+lastupdated: "2025-04-17"
 
 keywords: instructlab, workload isolation, architecture, data, tenants
 
@@ -49,8 +49,6 @@ Your {{site.data.keyword.instructlab_short}} artifacts, logs, and results are st
 {: #arch-access}
 
 You have full control over the IAM policies that determine what actions can be executed in your account, and can implement IAM-controlled access to keep data separated within individual projects in your account. You can also implement IBM Cloud Monitoring with Activity Tracker to audit and track API requests. All API requests are authenticated an authorized through IBM Cloud IAM. 
-
-For more information, see [Protecting Red Hat AI InstructLab resources with context-based restrictions](/docs/instructlab?topic=instructlab-cbr&interface=ui).
 
 ### Data Flow
 {: #arch-dataflow}

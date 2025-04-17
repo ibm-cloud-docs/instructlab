@@ -6,7 +6,7 @@ lastupdated: "2025-04-17"
 
 keywords: HA for {{site.data.keyword.short_name}}, DR for {{site.data.keyword.short_name}}, {{site.data.keyword.short_name}} recovery time objective, {{site.data.keyword.short_name}} recovery point objective
 
-subcollection: content-kit
+subcollection: instructlab
 
 ---
 
@@ -122,7 +122,7 @@ Consider creating a manual backup of your taxonomy, generated data, and aligned 
 ## How {{site.data.keyword.IBM_notm}} recovers from regional failures
 {: #ibm-regional-failure}
 
-If {{site.data.keyword.IBM_notm}} can’t restore the service instance, you must restore the service as described in the [Disaster recovery architecture](#disaster-recovery-intro).
+If {{site.data.keyword.IBM_notm}} can’t restore the service instance, you must restore the service as described in the [Planning for disaster recovery](/docs/resiliency?topic=resiliency-PlanningforDR).
 
 ## How {{site.data.keyword.IBM_notm}} maintains services
 {: #ibm-service-maintenance}

@@ -35,18 +35,18 @@ toc:
       - topicgroup:
           label: Preparing your account
           topics:
+          - topic: project.md
+            navtitle: Creating projects
           - topic: iam.md
             navtitle: Assigning access
           - topic: logging.md
             navtitle: Setting up logging
           - topic: event-notifications.md
             navtitle: Enabling notifications
-          - topic: project.md
-            navtitle: Creating projects
           - topic: storage.md
             navtitle: Creating storage locations
       - topicgroup:
-          label: Preparing the taxonomy
+          label: Preparing your taxonomy
           topics:
           - topic: taxonomy-overview.md
           - topic: taxonomy-prep.md

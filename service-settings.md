@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-28"
+lastupdated: "2025-04-17"
 
 keywords: instructlab, ai, data, generate, default, settings
 
@@ -16,7 +16,7 @@ subcollection: instructlab
 # Default service settings for {{site.data.keyword.short_name}}
 {: #service-settings}
 
-Review the default settings for {{site.data.keyword.short_name}}. These settings cannot be modified. 
+{{site.data.keyword.instructlab_full_notm}} includes predefined settings to optimize model training, data generation, and more. By configuring these settings, {{site.data.keyword.instructlab_full_notm}} allows you to focus on improving your model. Review the default settings for {{site.data.keyword.short_name}}. These settings can't be modified.
 {: shortdesc}
 
 ## Training settings
@@ -26,11 +26,9 @@ Training strategy
 : Specifies the training strategy that is used. 
 :  - `--strategy=lab-multiphase`
 
-Base Model to be trained
+Base Model
 : Specifies the base model to be trained
 : - Version 1.4: `--model-path=granite-3.1-8b-starter-v1`
-: - Version 1.3: `--model-path=granite-8b-starter`
-: - Version 1.2: `--model-path=granite-7b-starter`
 
 IBM Granite is provided under the Apache License 2.0. For more information, see the [Apache License documentation](https://www.apache.org/licenses/LICENSE-2.0){: external}
 {: important}

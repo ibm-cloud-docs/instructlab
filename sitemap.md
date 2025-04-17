@@ -125,13 +125,19 @@ subcollection: instructlab
 {: #sitemap_preparing_your_account}
 
 
+[Creating projects](/docs/instructlab?topic=instructlab-project#project)
+
+* [Creating projects in the console](/docs/instructlab?topic=instructlab-project&interface=ui#project-create-ui)
+
+* [Creating projects from the CLI](/docs/instructlab?topic=instructlab-project&interface=cli#project-create-cli)
+
+* [What's next?](/docs/instructlab?topic=instructlab-project&interface=cli#whats-next-projects)
+
 [Assigning access](/docs/instructlab?topic=instructlab-iam#iam)
 
 * [Give InstuctLab permission to create and update {{site.data.keyword.cos_short}} artifacts](/docs/instructlab?topic=instructlab-iam&interface=cli#iam-ilab)
 
 * [Assign user access to your resources](/docs/instructlab?topic=instructlab-iam&interface=cli#assign-access)
-
-    * [Assigning user access to {{site.data.keyword.short_name}} by using the console](/docs/instructlab?topic=instructlab-iam&interface=ui#assign-access-console)
 
     * [Assigning access to resources in the console](/docs/instructlab?topic=instructlab-iam&interface=ui#iam-include-access-resources-console)
 
@@ -165,19 +171,15 @@ subcollection: instructlab
 
     * [Webhooks](/docs/instructlab?topic=instructlab-event-notifications-events#event-notifications-webhook)
 
-[Creating projects](/docs/instructlab?topic=instructlab-project#project)
-
-* [Creating projects in the console](/docs/instructlab?topic=instructlab-project&interface=ui#project-create-ui)
-
-* [Creating projects from the CLI](/docs/instructlab?topic=instructlab-project&interface=cli#project-create-cli)
-
 [Creating storage locations](/docs/instructlab?topic=instructlab-storage#storage)
+
+* [Creating an {{site.data.keyword.cos_short}} instance in the console](/docs/instructlab?topic=instructlab-storage&interface=ui#storage-ui)
 
 * [Creating an {{site.data.keyword.cos_short}} instance and bucket by using the CLI](/docs/instructlab?topic=instructlab-storage&interface=cli#storage-cli)
 
 
-## Preparing the taxonomy
-{: #sitemap_preparing_the_taxonomy}
+## Preparing your taxonomy
+{: #sitemap_preparing_your_taxonomy}
 
 
 [How taxonomies are structured](/docs/instructlab?topic=instructlab-taxonomy-overview#taxonomy-overview)
