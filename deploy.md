@@ -56,9 +56,9 @@ You can choose to deploy the model.
     #!/usr/bin/env bash
     # Replace variable with the bearer token
     BEARER_TOKEN="XXX"
-    # Replace variable with the {{site.data.keyword.cos_short}} bucket name
+    # Replace variable with the Object Storage bucket name
     CUSTOMER_BUCKET="XXX"
-    # Replace variable with the {{site.data.keyword.cos_short}} endpoint
+    # Replace variable with the Object Storage endpoint
     COS_ENDPOINT=https://s3.direct.us-east.cloud-object-storage.appdomain.cloud
     # Replace variable with the model ID
     MODEL_PREFIX="trained_models/XXX/model/"
