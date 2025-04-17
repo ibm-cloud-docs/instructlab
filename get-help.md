@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-04-17"
 
 keywords: get help, instructlab, support
 
@@ -12,7 +12,7 @@ subcollection: instructlab
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Getting help and support
+# Getting help and support for {{site.data.keyword.short_name}}
 {: #get-help}
 
 If you experience an issue or have questions when you're working in {{site.data.keyword.product_name}}, you can use the following resources before you open a support case.

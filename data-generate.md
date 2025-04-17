@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-14"
+lastupdated: "2025-04-17"
 
 keywords: instructlab, ai, data, generate
 
@@ -13,7 +13,7 @@ subcollection: instructlab
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Generating data from a taxonomy
+# Generating data from a taxonomy for {{site.data.keyword.short_name}}
 {: #data-generate}
 
 

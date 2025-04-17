@@ -12,7 +12,7 @@ subcollection: instructlab
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding your responsibilities when using {{site.data.keyword.instructlab_full_notm}}
+# Understanding your responsibilities when using {{site.data.keyword.short_name}}
 {: #responsibilities}
 
 Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.instructlab_full_notm}}. For a high-level view of the service types in {{site.data.keyword.cloud}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).

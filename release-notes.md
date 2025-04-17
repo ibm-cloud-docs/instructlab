@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2024, 2025
-lastupdated: "2025-03-28"
+lastupdated: "2025-04-17"
 
 keywords: release notes
 
@@ -15,7 +15,7 @@ content-type: release-note
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Release notes
+# Release notes for {{site.data.keyword.short_name}}
 {: #release-notes}
 
 Use the release notes to learn about the latest changes to the documentation that are grouped by month.

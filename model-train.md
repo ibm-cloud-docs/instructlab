@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-16"
+lastupdated: "2025-04-17"
 
 keywords: instructlab, ai
 
@@ -13,7 +13,7 @@ subcollection: instructlab
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Training models
+# Training models for {{site.data.keyword.short_name}}
 {: #model-train}
 
 

@@ -28,7 +28,7 @@
 {: tab-title="Service roles"}
 {: tab-group="IAM"}
 
-| Actions | Description | Roles |
+| Actions and events | Description | Roles |
 | --- | --- | --- |
 | `instructlab.dashboard.view` | View InstructLab dashboards. | Operator, Administrator, Editor |
 | `instructlab.taxonomy.read` | Read details of a taxonomy. | Reader, Writer, Manager |

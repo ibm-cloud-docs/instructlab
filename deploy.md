@@ -13,7 +13,7 @@ subcollection: instructlab
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Deploying models
+# Deploying models for {{site.data.keyword.short_name}}
 {: #deploy}
 
 You can choose to deploy the model.

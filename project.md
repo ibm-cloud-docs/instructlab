@@ -19,7 +19,7 @@ subcollection: instructlab
 Complete the following steps to create an {{site.data.keyword.short_name}} project.
 {: shortdesc}
 
-## Creating projects in the console
+## Creating projects in the console for {{site.data.keyword.short_name}}
 {: #project-create-ui}
 {: ui}
 
@@ -44,7 +44,7 @@ After your project is created, the project details page is shown.
 
 
 
-## Creating projects from the CLI
+## Creating projects from the CLI for {{site.data.keyword.short_name}}
 {: #project-create-cli}
 {: cli}
 

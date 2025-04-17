@@ -17,16 +17,10 @@ toc:
       topics:
       - topic: getting-started.md
         navtitle: Getting started
-      - topicgroup:
-          label: How it works
-          topics:
-          - topic: about.md
-            navtitle: About
-          - topic: architecture-workload-isolation.md
-            navtitle: Architecture
-          - topic: responsibilities.md
-            navtitle: Your responsibilities
-      - release-notes.md
+      - topic: about.md
+        navtitle: How it works
+      - topic: release-notes.md
+        navtitle: Release notes
   - navgroup: 
       id: howto
       topics:
@@ -49,19 +43,27 @@ toc:
           label: Preparing your taxonomy
           topics:
           - topic: taxonomy-overview.md
+            navtitle: How taxonomies are structured
           - topic: taxonomy-prep.md
+            navtitle: Preparing taxonomies
       - topic: data-generate.md
         navtitle: Generating data
-      - model-train.md
-      - deploy.md
+      - topic: model-train.md
+        navtitle: Training models
+      - topic: deploy.md
+        navtitle: Deploying models
       - topicgroup:
           label: Enhancing security
           topics:
+          - topic: architecture-workload-isolation.md
+            navtitle: Learning the architecture
           - topic: data-security.md
             navtitle: Securing your data
   - navgroup:
       id: reference
       topics:
+      - topic: responsibilities.md
+        navtitle: Your responsibilities
       - topic: service-settings.md
         navtitle: Service settings
       - topic: lifecycle.md
@@ -84,12 +86,16 @@ toc:
   - navgroup:
       id: help
       topics:
-      - get-help.md
+      - topic: get-help.md
+        navtitle: Getting help and support
       - topicgroup:
           label: Troubleshooting
           topics:
-          - ts-debug.md
-          - ts-no-new-leaf-nodes.md
+          - topic: ts-debug.md
+            navtitle: Debugging
+          - topic: ts-no-new-leaf-nodes.md
+            navtitle: I get an error stating No new leaf nodes found in the taxonomy when generating data
       - topic: faq.md
         navtitle: FAQ
-      - sitemap.md
+      - topic: sitemap.md
+        navtitle: Site map
