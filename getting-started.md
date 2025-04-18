@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-17"
+lastupdated: "2025-04-18"
 
 keywords: instructlab, ai
 
@@ -74,7 +74,7 @@ If this is the first time {{site.data.keyword.short_name}} is being used in the 
 
 If you don't already have a taxonomy, you can use the {{site.data.keyword.short_name}} [community taxonomy](https://github.com/instructlab/taxonomy){: external} to start.
 
-To create your own taxonomy instead, see [Preparing taxonomies](https://test.cloud.ibm.com/docs-draft/instructlab?topic=instructlab-taxonomy-prep&interface=ui) for more information. 
+To create your own taxonomy instead, see [Preparing taxonomies](/docs/instructlab?topic=instructlab-taxonomy-prep&interface=ui) for more information. 
 {: tip}
 
 1. Fork the [community taxonomy repo](https://github.com/instructlab/taxonomy) by clicking **Fork** and completing the steps.
