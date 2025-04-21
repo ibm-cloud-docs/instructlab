@@ -28,8 +28,8 @@ Incident and operations management includes tasks such as monitoring, event mana
 
 | Area | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-| Logging | {{site.data.keyword.IBM_notm}} responsibility description  | Create an instance of {{site.data.keyword.logs_full_notm}} and configure the instance to receive {{site.data.keyword.short_name}} logs. Review logs and take action as needed. |
-| Tracking user activity | Send activity tracking events to   | Create an instance of {{site.data.keyword.logs_full_notm}} and configure the instance to receive {{site.data.keyword.atracker_short}} events from {{site.data.keyword.short_name}} logs. Review user events and take action as needed. |
+| Logging | {{site.data.keyword.IBM_notm}} responsibility description  | Create an instance of {{site.data.keyword.logs_full_notm}} and configure the instance to receive {{site.data.keyword.short_name}} logs. Review logs and make fixes as needed. |
+| Tracking user activity | Send activity tracking events to   | Create an instance of {{site.data.keyword.logs_full_notm}} and configure the instance to receive {{site.data.keyword.atracker_short}} events from {{site.data.keyword.short_name}} logs. Review user events and make fixes as needed. |
 {: row-headers}
 {: caption="Responsibilities for incident and operations" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}

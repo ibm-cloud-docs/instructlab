@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-17"
+lastupdated: "2025-04-21"
 
 keywords: instructlab, ai
 
@@ -329,16 +329,16 @@ When the state is `completed`, in the {{site.data.keyword.cos_short}} bucket, a 
 
 After training the model, your {{site.data.keyword.cos_short}} bucket contains a `trained models` directory with the following files. 
 
-Artifacts
+`Artifacts`
 :   These files contain the Phase 1 and Phase 2 checkpoint data and the model for each epoch. 
 
-Eval
+`Eval`
 :   These files contain the evaluation metrics for the `mmlu`, `mmlu_branch`, `mt_bench` and `mt_bench_branch` benchmarks.
 
-Logs
+`Logs`
 :   These files contain the {{site.data.keyword.instructlab_short}} execution logs and system details.
 
-Model
+`Model`
 :   These files contain the final outputted model in `safetensors` format. The contents of this directory are used by the model. 
 
 
