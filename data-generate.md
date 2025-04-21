@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-17"
+lastupdated: "2025-04-21"
 
 keywords: instructlab, ai, data, generate
 
@@ -30,7 +30,7 @@ Data cannot be augmented, curated, or manually uploaded to train the model. Use 
 
 1. [Install the `ilab` CLI plug-in](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-cli-install).{: cli}
 1. [Prepare your taxonomy](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy).
-1. [Add the taxonomy TAR to your{{site.data.keyword.cos_short}} bucket](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy-add-ui).
+1. [Add the taxonomy TAR to your {{site.data.keyword.cos_short}} bucket](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy-add-ui).
 
 
 ## Generating data by using the console

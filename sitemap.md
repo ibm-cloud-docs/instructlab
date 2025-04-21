@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-17"
+lastupdated: "2025-04-21"
 
 
 keywords: instructlab, sitemap
@@ -330,7 +330,7 @@ subcollection: instructlab
 
 * [Recovery time objective (RTO) and recovery point objective (RPO)](/docs/instructlab?topic=instructlab-ilab-ha-dr#rto-rpo-features)
 
-* [Change management](/docs/instructlab?topic=instructlab-ilab-ha-dr#change-management)
+* [Change management](/docs/instructlab?topic=instructlab-ilab-ha-dr#change-management-hadr)
 
 * [How {{site.data.keyword.IBM_notm}} recovers from regional failures](/docs/instructlab?topic=instructlab-ilab-ha-dr#ibm-regional-failure)
 

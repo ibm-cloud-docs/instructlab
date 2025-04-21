@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-17"
+lastupdated: "2025-04-21"
 
 keywords: HA for {{site.data.keyword.short_name}}, DR for {{site.data.keyword.short_name}}, {{site.data.keyword.short_name}} recovery time objective, {{site.data.keyword.short_name}} recovery point objective
 
@@ -35,7 +35,7 @@ For more information about the available region and data center locations, see [
 
 | Feature | Description | Consideration |
 | --- | --- | --- |
-| Global load balancing | In the event of a node or availability zone failure, the service continues to run with API requests being routed through a global load balancer to the surviving HA instance nodes. Active synthetic data generation jobs and active model alignment jobs executing on nodes within the zone are retried on nodes in a different zone on failure automatically. In certain regions due to capacity constraints, model alignment nodes are deployed within one zone. When the zone is restored active model alignment jobs are automatically retried. | There may be a short period of time (seconds) between the outage and the global load balancer recognizing the failure, during which time, requests may be sent to the failed instance. |
+| Global load balancing | When a node or availability zone fails, the service continues to run with API requests being routed through a global load balancer to the surviving HA instance nodes. Active synthetic data generation jobs and active model alignment jobs executing on nodes within the zone are retried on nodes in a different zone on failure automatically. In certain regions due to capacity constraints, model alignment nodes are deployed within one zone. When the zone is restored active model alignment jobs are automatically retried. | There may be a short period of time (seconds) between the outage and the global load balancer recognizing the failure, during which time, requests may be sent to the failed instance. |
 {: caption="HA features for {{site.data.keyword.instructlab_short}}" caption-side="bottom"}
 
 ## Disaster recovery features
@@ -109,7 +109,7 @@ For more information about responsibility ownership between you and {{site.data.
 {: caption="RTO/RPO features for {{site.data.keyword.instructlab_short}}" caption-side="bottom"}
 
 ## Change management
-{: #change-management}
+{: #change-management-hadr}
 
 
 Change management includes tasks such as upgrades, configuration changes, and deletion.

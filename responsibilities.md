@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-17"
+lastupdated: "2025-04-21"
 
 keywords: responsibilities, rhel ai, instructlab
 
@@ -28,10 +28,10 @@ Incident and operations management includes tasks such as monitoring, event mana
 
 | Area | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-| Logging | {{site.data.keyword.IBM_notm}} responsibility description  | Create an instance of {{site.data.keyword.logs_full_notm}} and configure the instance to receive {{site.data.keyword.short_name}} logs. Review logs and take action as needed. |
-| Tracking user activity | Send activity tracking events to   | Create an instance of {{site.data.keyword.logs_full_notm}} and configure the instance to receive {{site.data.keyword.atracker_short}} events from {{site.data.keyword.short_name}} logs. Review user events and take action as needed. |
+| Logging | {{site.data.keyword.IBM_notm}} responsibility description  | Create an instance of {{site.data.keyword.logs_full_notm}} and configure the instance to receive {{site.data.keyword.short_name}} logs. Review logs and make fixes as needed. |
+| Tracking user activity | Send activity tracking events to   | Create an instance of {{site.data.keyword.logs_full_notm}} and configure the instance to receive {{site.data.keyword.atracker_short}} events from {{site.data.keyword.short_name}} logs. Review user events and make fixes as needed. |
 {: row-headers}
-{: caption="Responsibilites for incident and operations" caption-side="bottom"}
+{: caption="Responsibilities for incident and operations" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 
@@ -45,7 +45,7 @@ Change management includes tasks such as deployment, configuration, upgrades, pa
 | Version updates | Provide version updates and patches.  | Start or restart jobs on new versions as they are available. |
 | Model deployment | N/A | Deploy the model and update deployments with new versions as needed. |
 {: row-headers}
-{: caption="Responsibilites for change management" caption-side="bottom"}
+{: caption="Responsibilities for change management" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 
@@ -60,7 +60,7 @@ Identity and access management includes tasks such as authentication, authorizat
 | User permissions | Align with the IAM controls documented for the IAM operations a client can perform at the service and platform level. | Manage IAM policies with users to give them proper access to use the service based on their needs. |
 | {{site.data.keyword.cos_short}} permissions | Use service delegation to read, write, and list objects within the {{site.data.keyword.cos_short}} specified when adding a taxonomy. | Give InstructLab authorization to allow operations on the {{site.data.keyword.cos_short}} bucket. Revoke the permissions if they're no longer using the service. |
 {: row-headers}
-{: caption="Responsibilites for identity and access management" caption-side="bottom"}
+{: caption="Responsibilities for identity and access management" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 
@@ -75,7 +75,7 @@ User is responsible for IAM controls. Ensure the data is secured and private.
 |----------|-----------------------|--------|
 | Data privacy and access | Ensure data is secured and private. | Use IAM controls to ensure access to data is restricted as needed. |
 {: row-headers}
-{: caption="Responsibilites for security and regulation compliance" caption-side="bottom"}
+{: caption="Responsibilities for security and regulation compliance" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 ## Disaster recovery
@@ -91,5 +91,5 @@ For more information, see [High availability and disaster recovery](/docs/instru
 | Object storage back up | N/A | Ensure data in your {{site.data.keyword.cos_short}} bucket is replicated and backed up. |
 | InstructLab project backup | N/A | Create a back up project. |
 {: row-headers}
-{: caption="Responsibilites for disaster recovery" caption-side="bottom"}
+{: caption="Responsibilities for disaster recovery" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
