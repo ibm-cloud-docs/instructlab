@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-17"
+lastupdated: "2025-04-21"
 
 keywords: HA for {{site.data.keyword.short_name}}, DR for {{site.data.keyword.short_name}}, {{site.data.keyword.short_name}} recovery time objective, {{site.data.keyword.short_name}} recovery point objective
 
@@ -109,7 +109,7 @@ For more information about responsibility ownership between you and {{site.data.
 {: caption="RTO/RPO features for {{site.data.keyword.instructlab_short}}" caption-side="bottom"}
 
 ## Change management
-{: #change-management}
+{: #change-management-hadr}
 
 
 Change management includes tasks such as upgrades, configuration changes, and deletion.
