@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-04-03"
+lastupdated: "2025-04-11"
 
 keywords: instructlab, cli, plugin
 
@@ -125,7 +125,7 @@ ibmcloud ilab taxonomy --help
 ### `ibmcloud ilab taxonomy add`
 {: #ilab-cli-taxonomy-add-command}
 
-Adds a taxonomy resource to a Cloud Object Storage bucket.
+Add a taxonomy to your Cloud Object Storage bucket.
 
 ```sh
 ibmcloud ilab taxonomy add --name NAME --taxonomy-path-cos TAXONOMY-PATH-COS [--taxonomy-path TAXONOMY-PATH] [--cos-bucket-information COS-BUCKET-INFORMATION | --cos-id COS-ID --cos-bucket COS-BUCKET --cos-endpoint COS-ENDPOINT] [--secrets-manager-config SECRETS-MANAGER-CONFIG | --secrets-manager-git-url SECRETS-MANAGER-GIT-URL --secrets-manager-git-id SECRETS-MANAGER-GIT-ID]
@@ -136,38 +136,54 @@ ibmcloud ilab taxonomy add --name NAME --taxonomy-path-cos TAXONOMY-PATH-COS [--
 {: #ilab-taxonomy-add-cli-options}
 
 `--name` (string)
-:   The name to give a taxonomy resource. Required.
+:   The name you want to give your taxonomy. Required.
+
+    The maximum length is `32` characters. The minimum length is `1` character. The value must match regular expression `/^[a-zA-Z0-9]([_-]?[a-zA-Z0-9]+)*$/`.
 
 `--taxonomy-path-cos` (string)
-:   The path to store the taxonomy resource in the Cloud Object Storage bucket. Required.
+:   The path in your Cloud Object Storage bucket where you want to store your taxonomy. By default, taxonomies are stored at 'taxonomies/taxonomy-<current_time>.tar.gz'. Required.
+
+    The maximum length is `100` characters. The minimum length is `20` characters. The value must match regular expression `/^([-_.\/a-zA-Z0-9][a-zA-Z0-9]+)*[^\/]$/`.
 
 `--taxonomy-path` (string)
-:   The absolute or relative path to a local taxonomy resource.
+:   The absolute or relative path to the taxonomy.tar.gz file on your local machine. For example 'Downloads/taxonomy.tar.gz'.
 
-`--cos-bucket-information` ([`CosBucketInformation`](#cli-cos-bucket-information-example-schema))
+    The maximum length is `100` characters. The minimum length is `10` characters. The value must match regular expression `/^(?:[a-zA-Z]:\\\\|\\.{0,2}[\\\/]|\/)?(?:[^\\\/:*?"<>|\\r\\n]+[\\\/])*[^\\\/:*?"<>|\\r\\n]*$/`.
+
+`--cos-bucket-information` ([`CosBucketInformationPrototype`](#cli-cos-bucket-information-prototype-example-schema))
 :   COS bucket information. This JSON option can instead be provided by setting individual fields with other options. It is mutually exclusive with those options.
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--cos-bucket-information=@path/to/file.json`.
 
-`--secrets-manager-config` ([`SecretsManagerConfig`](#cli-secrets-manager-config-example-schema))
-:   Secrets Manager Configuration object. This JSON option can instead be provided by setting individual fields with other options. It is mutually exclusive with those options.
+`--secrets-manager-config` ([`SecretsManagerConfigPrototype`](#cli-secrets-manager-config-prototype-example-schema))
+:   Secrets Manager configuration details. This JSON option can instead be provided by setting individual fields with other options. It is mutually exclusive with those options.
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--secrets-manager-config=@path/to/file.json`.
 
 `--cos-id` (string)
-:   The service instance ID of the Cloud Object Storage instance. Only needed when auto-creating a Cloud Object Storage bucket. This option provides a value for a sub-field of the JSON option 'cos-bucket-information'. It is mutually exclusive with that option.
+:   Your Cloud Object Storage instance ID. This option is only required when you want InstructLab to automatically create a bucket in your Object Storage instance. This option provides a value for a sub-field of the JSON option 'cos-bucket-information'. It is mutually exclusive with that option.
+
+    The maximum length is `100` characters. The minimum length is `20` characters. The value must match regular expression `/^[a-z0-9-]+$/`.
 
 `-b`, `--cos-bucket` (string)
-:   The Cloud Object Storage bucket where the taxonomy resource will be stored. This option provides a value for a sub-field of the JSON option 'cos-bucket-information'. It is mutually exclusive with that option.
+:   The Cloud Object Storage bucket where you want to storage your taxonomy.tar.gz. This option provides a value for a sub-field of the JSON option 'cos-bucket-information'. It is mutually exclusive with that option.
+
+    The maximum length is `63` characters. The minimum length is `3` characters. The value must match regular expression `/^[a-zA-Z0-9]([.-]?[a-zA-Z0-9]+)*$/`.
 
 `-e`, `--cos-endpoint` (string)
 :   The endpoint to the Cloud Object Storage bucket. This option provides a value for a sub-field of the JSON option 'cos-bucket-information'. It is mutually exclusive with that option.
 
+    The maximum length is `300` characters. The minimum length is `13` characters. The value must match regular expression `/^https:\/\/([a-zA-Z0-9-]+\\.)*cloud-object-storage(?:\\.test)?\\.appdomain\\.cloud$/`.
+
 `--secrets-manager-git-url` (string)
-:   The URL to a Secrets Manager instance to retrieve user-defined secrets. This option provides a value for a sub-field of the JSON option 'secrets-manager-config'. It is mutually exclusive with that option.
+:   The URL to a Secrets Manager instance to retrieve your user-defined secrets. This option provides a value for a sub-field of the JSON option 'secrets-manager-config'. It is mutually exclusive with that option.
+
+    The maximum length is `300` characters. The minimum length is `13` characters. The value must match regular expression `/^https:\/\/([a-zA-Z0-9-]+\\.)*secrets-manager(?:\\.test)?\\.appdomain\\.cloud$/`.
 
 `--secrets-manager-git-id` (string)
-:   The Secrets Manager ID that points to a git personal authorization token and git URL in JSON format. This option provides a value for a sub-field of the JSON option 'secrets-manager-config'. It is mutually exclusive with that option.
+:   The Secrets Manager ID that points to your personal authorization token and URL in JSON format. This option provides a value for a sub-field of the JSON option 'secrets-manager-config'. It is mutually exclusive with that option.
+
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[a-z0-9-]+$/`.
 
 #### Examples
 {: #ilab-taxonomy-add-examples}
@@ -244,6 +260,8 @@ ibmcloud ilab taxonomy get --id ID
 `--id` (string)
 :   Unique Identifier to a taxonomy. Required.
 
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[a-z0-9-]+$/`.
+
 #### Example
 {: #ilab-taxonomy-get-examples}
 
@@ -268,6 +286,8 @@ ibmcloud ilab taxonomy delete --id ID
 
 `--id` (string)
 :   Unique Identifier to a taxonomy. Required.
+
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[a-z0-9-]+$/`.
 
 #### Example
 {: #ilab-taxonomy-delete-examples}
@@ -304,8 +324,12 @@ ibmcloud ilab data generate --name NAME --taxonomy-id TAXONOMY-ID
 `--name` (string)
 :   The name to give a data resource. Required.
 
-`-t`, `--taxonomy-id` (string)
-:   The taxonomy ID to generate a data resource against. Required.
+    The maximum length is `32` characters. The minimum length is `1` character. The value must match regular expression `/^[a-zA-Z0-9]([_-]?[a-zA-Z0-9]+)*$/`.
+
+`--taxonomy-id` (string)
+:   The taxonomy ID that was used for synthetic data generation. In model training, this value is used for validating the data ID. This value is available only after the model training job is accepted by an agent. Required.
+
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[a-z0-9-]+$/`.
 
 #### Example
 {: #ilab-data-generate-examples}
@@ -365,6 +389,8 @@ ibmcloud ilab data get --id ID
 `--id` (string)
 :   Unique Identifier to data run. Required.
 
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[a-z0-9-]+$/`.
+
 #### Example
 {: #ilab-data-get-examples}
 
@@ -404,6 +430,8 @@ ibmcloud ilab data delete --id ID
 `--id` (string)
 :   Unique Identifier to data run. Required.
 
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[a-z0-9-]+$/`.
+
 #### Example
 {: #ilab-data-delete-examples}
 
@@ -416,7 +444,7 @@ ibmcloud ilab data delete \
 ### `ibmcloud ilab data cancel`
 {: #ilab-cli-data-cancel-command}
 
-Cancels the generation of a data resource.
+Cancels the generation of synthetic data.
 
 ```sh
 ibmcloud ilab data cancel --id ID
@@ -428,6 +456,8 @@ ibmcloud ilab data cancel --id ID
 
 `--id` (string)
 :   Unique Identifier to data run. Required.
+
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[a-z0-9-]+$/`.
 
 #### Example
 {: #ilab-data-cancel-examples}
@@ -451,7 +481,7 @@ ibmcloud ilab model --help
 ### `ibmcloud ilab model train`
 {: #ilab-cli-model-train-command}
 
-Trains a model resource against a specified data resource.
+Trains a model against the specified synthetic data.
 
 ```sh
 ibmcloud ilab model train --name NAME --data-id DATA-ID
@@ -464,8 +494,12 @@ ibmcloud ilab model train --name NAME --data-id DATA-ID
 `--name` (string)
 :   The name to give a model resource. Required.
 
-`-d`, `--data-id` (string)
-:   The data ID to train a model against. Required.
+    The maximum length is `32` characters. The minimum length is `1` character. The value must match regular expression `/^[a-zA-Z0-9]([_-]?[a-zA-Z0-9]+)*$/`.
+
+`--data-id` (string)
+:   The ID of the synthetic data generation (SDG) run. You can use this ID to monitor the data generation process. After SDG is complete, your can this ID to retrieve the synthetic data. Required.
+
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[a-z0-9-]+$/`.
 
 #### Example
 {: #ilab-model-train-examples}
@@ -480,7 +514,7 @@ ibmcloud ilab model train \
 ### `ibmcloud ilab model list`
 {: #ilab-cli-model-list-command}
 
-Lists the details of a collection of model resources.
+Lists your model resources.
 
 ```sh
 ibmcloud ilab model list
@@ -512,7 +546,7 @@ If a custom JMESPath query is provided, it will replace any of the JMESPath in t
 ### `ibmcloud ilab model get`
 {: #ilab-cli-model-get-command}
 
-Gets the details of a model resource.
+Gets the details of a model.
 
 ```sh
 ibmcloud ilab model get --id ID
@@ -524,6 +558,8 @@ ibmcloud ilab model get --id ID
 
 `--id` (string)
 :   Unique Identifier to a model training run. Required.
+
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[a-z0-9-]+$/`.
 
 #### Example
 {: #ilab-model-get-examples}
@@ -551,7 +587,7 @@ If a custom JMESPath query is provided, it will replace any of the JMESPath in t
 ### `ibmcloud ilab model delete`
 {: #ilab-cli-model-delete-command}
 
-Delete a model resource.
+Delete a model.
 
 ```sh
 ibmcloud ilab model delete --id ID
@@ -563,6 +599,8 @@ ibmcloud ilab model delete --id ID
 
 `--id` (string)
 :   Unique Identifier to a model training run. Required.
+
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[a-z0-9-]+$/`.
 
 #### Example
 {: #ilab-model-delete-examples}
@@ -576,7 +614,7 @@ ibmcloud ilab model delete \
 ### `ibmcloud ilab model cancel`
 {: #ilab-cli-model-cancel-command}
 
-Cancels the training of a model resource.
+Cancels the training of a model.
 
 ```sh
 ibmcloud ilab model cancel --id ID
@@ -588,6 +626,8 @@ ibmcloud ilab model cancel --id ID
 
 `--id` (string)
 :   Unique Identifier to a model training run. Required.
+
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[a-z0-9-]+$/`.
 
 #### Example
 {: #ilab-model-cancel-examples}
@@ -603,10 +643,10 @@ ibmcloud ilab model cancel \
 
 The following schema examples represent the data that you need to specify for a command option. These examples model the data structure and include placeholder values for the expected value type. When you run a command, replace these values with the values that apply to your environment as appropriate.
 
-### CosBucketInformation
-{: #cli-cos-bucket-information-example-schema}
+### CosBucketInformationPrototype
+{: #cli-cos-bucket-information-prototype-example-schema}
 
-The following example shows the format of the CosBucketInformation object.
+The following example shows the format of the CosBucketInformationPrototype object.
 
 ```json
 
@@ -618,10 +658,10 @@ The following example shows the format of the CosBucketInformation object.
 ```
 {: codeblock}
 
-### SecretsManagerConfig
-{: #cli-secrets-manager-config-example-schema}
+### SecretsManagerConfigPrototype
+{: #cli-secrets-manager-config-prototype-example-schema}
 
-The following example shows the format of the SecretsManagerConfig object.
+The following example shows the format of the SecretsManagerConfigPrototype object.
 
 ```json
 
