@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-21"
+lastupdated: "2025-04-23"
 
 
 keywords: instructlab, sitemap
@@ -408,9 +408,9 @@ subcollection: instructlab
 
 * [Schema examples](/docs/instructlab?topic=instructlab-ilab-cli#ilab-schema-examples)
 
-    * [CosBucketInformation](/docs/instructlab?topic=instructlab-ilab-cli#cli-cos-bucket-information-example-schema)
+    * [CosBucketInformationPrototype](/docs/instructlab?topic=instructlab-ilab-cli#cli-cos-bucket-information-prototype-example-schema)
 
-    * [SecretsManagerConfig](/docs/instructlab?topic=instructlab-ilab-cli#cli-secrets-manager-config-example-schema)
+    * [SecretsManagerConfigPrototype](/docs/instructlab?topic=instructlab-ilab-cli#cli-secrets-manager-config-prototype-example-schema)
 
 
 ## API reference
