@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-03-28"
+lastupdated: "2025-04-24"
 
 keywords: instructlab, rhel ai, faq
 
@@ -68,3 +68,6 @@ Flexibility
 
 Advanced Cloud Services
 :   IBM Cloud provides access to the latest GPUs and IBM watsonx services gen AI, inferencing, and machine learning to fast-track innovation into business processes.
+
+
+{{_include-segments/cost-faq.md}}

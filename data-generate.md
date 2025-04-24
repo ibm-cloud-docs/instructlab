@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-21"
+lastupdated: "2025-04-24"
 
 keywords: instructlab, ai, data, generate
 
@@ -239,10 +239,10 @@ When the state is `completed`, in the {{site.data.keyword.cos_short}} bucket, a 
 
 After you generate data, your {{site.data.keyword.cos_short}} bucket contains a `synthetic_data` directory with the following files. 
 
-Artifacts
+`Artifacts`
 :   These files contain the samples on each leaf node. These are not used for training the model, but are provided for readability and can be used to see if a QNA is generating the expected number of samples. 
 
-Logs
+`Logs`
 :   These files contain the {{site.data.keyword.instructlab_short}} execution logs and system details. 
 
 `knowledge_train_msgs.jsonl` and `skills_train_msgs.jsonl`

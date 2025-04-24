@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-17"
+lastupdated: "2025-04-24"
 
 keywords: instructlab, ai, project
 
@@ -62,4 +62,4 @@ After creating your project, review the following links for next steps.
 
 - [Assign users in your account access to your project and {{site.data.keyword.cos_short}}](/docs/instructlab?topic=instructlab-project).
 - [Learn how taxonomies are structured](/docs/instructlab?topic=instructlab-taxonomy-overview).
-- [Prepare your taxonomy and upload it to {{site.data.keyword.cos_short}}](https://cloud.ibm.com/docs/instructlab?topic=instructlab-taxonomy-prep).
+- [Prepare your taxonomy and upload it to {{site.data.keyword.cos_short}}](/docs/instructlab?topic=instructlab-taxonomy-prep).
