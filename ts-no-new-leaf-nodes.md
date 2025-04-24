@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-21"
+lastupdated: "2025-04-24"
 
 keywords: leaf node, taxonomy, trouble shooting
 
@@ -26,7 +26,7 @@ Generating dataset failed with the following error: Error: No new leaf nodes fou
 The error is likely related to an issue with the `tar.gz` file that contains your taxonomy, especially if you are using Windows or any non-UNIX based operating system. The `ibmcloud ilab taxonomy add` command is compatible with UNIX systems. For other operating systems, an additional step might be necessary to upload your taxonomy.
 {: tsCauses}
 
-Use GitHub to generate a new `tar.gz` file (https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases){: external}. Then, use the IBM Cloud UI to upload the `tar.gz` file.
+Use GitHub to generate a new [`tar.gz` file](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases){: external}. Then, use the IBM Cloud UI to upload the `tar.gz` file.
 {: tsResolve}
 
 1. Use GitHub to [create a new release for your taxonomy and generate a `tar.gz` file](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases){: external}. Download the `tar.gz` file. 
