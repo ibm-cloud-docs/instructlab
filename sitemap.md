@@ -403,8 +403,6 @@ subcollection: instructlab
 
 [IBM Cloud API docs](/apidocs/instructlab)
 
-[Swagger](https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/){: external}
-
 
 ## Getting help and support
 {: #sitemap_getting_help_and_support}
