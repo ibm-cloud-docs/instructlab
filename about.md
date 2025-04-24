@@ -18,8 +18,6 @@ subcollection: instructlab
 
 {{site.data.keyword.instructlab_full}} is a business-ready, private, and secure generative AI solution powered by Red Hat Enterprise Linux AI.
 
-In this product preview, selected accounts can work with their IBM account teams to optimize their Generative AI use cases for accuracy and cost efficiency. Reach out to your IBM account team for more information.
-
 For more information, review the following links.
 
 - [What is AI?](https://www.ibm.com/think/topics/artificial-intelligence){: external}

@@ -34,7 +34,7 @@ Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instruct
 ## Get familiar with the capabilities
 {: #get-familiar}
 
-If you are new to machine learning, you are in the correct place. To use {{site.data.keyword.short_name}}, you do not need to have any preexisting knowledge. You do not even need to have an idea for what to create yet. Let's start by just getting familiar with the concepts and what kinds of things you can do with the technology.
+To use {{site.data.keyword.short_name}}, you do not need to have any preexisting knowledge. You do not even need to have an idea for what to create yet. Let's start by just getting familiar with the concepts and what kinds of things you can do with the technology.
 
 [Generative AI](#x10298036){: term} starts with a [large language model (LLM)](#x10298052){: term}. With a prompt, these models can take sets of data and provide a statistically probable output for that prompt. You can automatically generate a data set that is similar to real data, and then use it to train the model to get the most probable output possible.
 

@@ -57,7 +57,7 @@ subcollection: instructlab
 
     * [24 April 2025](/docs/instructlab?topic=instructlab-release-notes#24apr25)
 
-        * Initial release.
+        * Introducing {{site.data.keyword.instructlab_full_notm}}
 
 
 ## Installing the CLI
