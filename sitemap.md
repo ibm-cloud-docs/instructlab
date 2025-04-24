@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-23"
+lastupdated: "2025-04-24"
 
 
 keywords: instructlab, sitemap
@@ -45,8 +45,6 @@ subcollection: instructlab
 [How it works](/docs/instructlab?topic=instructlab-about#about)
 
 * [Why {{site.data.keyword.instructlab_short}}?](/docs/instructlab?topic=instructlab-about#benefits)
-
-* [How does billing work?](/docs/instructlab?topic=instructlab-about#costs)
 
 
 ## Release notes
