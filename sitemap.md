@@ -401,7 +401,7 @@ subcollection: instructlab
 {: #sitemap_api_reference}
 
 
-[IBM Cloud API docs](https://cloud.ibm.com/apidocs/instructlab){: external}
+[IBM Cloud API docs](/apidocs/instructlab)
 
 [Swagger](https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/){: external}
 

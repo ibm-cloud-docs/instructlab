@@ -78,7 +78,7 @@ toc:
           links:
           - link:
               label: IBM Cloud API docs
-              href: https://cloud.ibm.com/apidocs/instructlab
+              href: /apidocs/instructlab
           - link:
               label: Swagger
               href: https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/
