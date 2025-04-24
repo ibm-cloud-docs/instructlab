@@ -29,11 +29,10 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: #apr25}
 
 
-
 ### 24 April 2025
 {: #24apr25}
 {: release-note}
 
 
-Introducing {{site.data.keyword.instructlab_full_notm}}
+Introducing {{site.data.keyword.instructlab_full_notm}}!
 :   Get ready to dive into AI! InstructLab is an open source project created by IBM and Red Hat to be a cost-effective entry point into the world of machine learning.
