@@ -53,25 +53,11 @@ subcollection: instructlab
 
 [Release notes](/docs/instructlab?topic=instructlab-release-notes#release-notes)
 
-* [March 2025](/docs/instructlab?topic=instructlab-release-notes#mar25)
+* [April 2025](/docs/instructlab?topic=instructlab-release-notes#apr25)
 
-    * [10 March 2025](/docs/instructlab?topic=instructlab-release-notes#10mar25)
+    * [24 April 2025](/docs/instructlab?topic=instructlab-release-notes#24apr25)
 
-        * New! You can now group your {{site.data.keyword.short_name}} work into projects.
-
-        * Version 1.4 of {{site.data.keyword.product_name}} is available. For the best results, it is recommended to run training on newly generated synthetic data with the RHEL AI 1.4 version.
-
-* [January 2025](/docs/instructlab?topic=instructlab-release-notes#jan25)
-
-    * [09 January 2025](/docs/instructlab?topic=instructlab-release-notes#09jan25)
-
-        * Version 1.3 of RHEL AI is available. For the best results, it is recommended to run training on newly generated synthetic data with the RHEL AI 1.3 version.
-
-* [December 2024](/docs/instructlab?topic=instructlab-release-notes#dec24)
-
-    * [02 December 2024](/docs/instructlab?topic=instructlab-release-notes#02dec24)
-
-        * Product preview release.
+        * Initial release.
 
 
 ## Installing the CLI
