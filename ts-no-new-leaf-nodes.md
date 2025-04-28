@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-24"
+lastupdated: "2025-04-28"
 
 keywords: leaf node, taxonomy, trouble shooting
 
@@ -12,10 +12,10 @@ subcollection: instructlab
 
 {{site.data.keyword.attribute-definition-list}}
 
-# I get an error stating `No new leaf nodes found in the taxonomy` when generating data for {{site.data.keyword.short_name}}
+# `No new leaf nodes found in the taxonomy` error when generating data in {{site.data.keyword.short_name}}
 {: #ts-no-new-leaf-nodes}
 
-When you try to generate data, you get an error similar to the following.
+When you try to generate data, you get the following error.
 {: tsSymptoms}
 
 ```txt
@@ -25,6 +25,8 @@ Generating dataset failed with the following error: Error: No new leaf nodes fou
 
 The error is likely related to an issue with the `tar.gz` file that contains your taxonomy, especially if you are using Windows or any non-UNIX based operating system. The `ibmcloud ilab taxonomy add` command is compatible with UNIX systems. For other operating systems, an additional step might be necessary to upload your taxonomy.
 {: tsCauses}
+
+Another reason could be that the taxonomy did not include QNA files within it.
 
 Use GitHub to generate a new [`tar.gz` file](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases){: external}. Then, use the IBM Cloud UI to upload the `tar.gz` file.
 {: tsResolve}

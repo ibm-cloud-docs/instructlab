@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-24"
+lastupdated: "2025-04-28"
 
 
 keywords: instructlab, sitemap
@@ -423,7 +423,15 @@ subcollection: instructlab
 
     * [Step 2: Verify the version](/docs/instructlab?topic=instructlab-ts-debug#version)
 
-[I get an error stating No new leaf nodes found in the taxonomy when generating data](/docs/instructlab?topic=instructlab-ts-no-new-leaf-nodes#ts-no-new-leaf-nodes)
+[Failed to retrieve taxonomy from COS error](/docs/instructlab?topic=instructlab-ts-taxonomy-retrieve#ts-taxonomy-retrieve)
+
+[No new leaf nodes found error](/docs/instructlab?topic=instructlab-ts-no-new-leaf-nodes#ts-no-new-leaf-nodes)
+
+[Failed to process invalid taxonomy files error](/docs/instructlab?topic=instructlab-ts-taxonomy-invalid#ts-taxonomy-invalid)
+
+[Failed to clone knowledge document repository error](/docs/instructlab?topic=instructlab-ts-knowledge-clone#ts-knowledge-clone)
+
+[Failed to find knowledge documents error](/docs/instructlab?topic=instructlab-ts-knowledge-find#ts-knowledge-find)
 
 
 ## FAQ
