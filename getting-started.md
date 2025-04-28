@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-24"
+lastupdated: "2025-04-28"
 
 keywords: instructlab, ai
 
@@ -95,11 +95,11 @@ To create your own taxonomy instead, see [Preparing taxonomies](/docs/instructla
     ```
     {: codeblock}
 
-    c. If your additions include reference documents in Github, such as [this example](https://github.com/instructlab/taxonomy/blob/main/knowledge/science/animals/birds/black_capped_chickadee/qna.yaml#L185), you can use public `github.com` repositories and IBM internal `github.ibm.com` repositories. 
+    c. If your additions include reference documents in Github, such as [this example](https://github.com/instructlab/taxonomy/blob/main/knowledge/science/animals/birds/black_capped_chickadee/qna.yaml#L185), you can use public `github.com` repositories. 
 
     ```txt
     document:
-    repo: https://github.ibm.com/<organization>/<repository>
+    repo: https://github.com/<organization>/<repository>
     commit: <commit_sha>
     patterns:
         - <filename>.md
