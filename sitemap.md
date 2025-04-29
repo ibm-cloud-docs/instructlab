@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-28"
+lastupdated: "2025-04-29"
 
 
 keywords: instructlab, sitemap
@@ -45,6 +45,8 @@ subcollection: instructlab
 [How it works](/docs/instructlab?topic=instructlab-about#about)
 
 * [Why {{site.data.keyword.instructlab_short}}?](/docs/instructlab?topic=instructlab-about#benefits)
+
+* [How does billing work?](/docs/instructlab?topic=instructlab-about#billing)
 
 
 ## Release notes
@@ -445,3 +447,17 @@ subcollection: instructlab
 * [Why should I use {{site.data.keyword.short_name}} for my generative AI solution?](/docs/instructlab?topic=instructlab-faq#faq-ilab-2)
 
 * [What are the benefits of {{site.data.keyword.short_name}} on IBM Cloud?](/docs/instructlab?topic=instructlab-faq#faq-ilab-3)
+
+* [How does billing work?](/docs/instructlab?topic=instructlab-faq#costs)
+
+* [How is cost calculated in {{site.data.keyword.product_name}}?](/docs/instructlab?topic=instructlab-faq#costs-ilab)
+
+* [How do I find and track cost information as I go?](/docs/instructlab?topic=instructlab-faq#costs-tracking)
+
+* [Are failed operations billed?](/docs/instructlab?topic=instructlab-faq#costs-operations)
+
+* [How long does it take to run?](/docs/instructlab?topic=instructlab-faq#faq-time)
+
+* [How long does data generation take?](/docs/instructlab?topic=instructlab-faq#faq-time-data)
+
+* [How long does model training take?](/docs/instructlab?topic=instructlab-faq#faq-model)

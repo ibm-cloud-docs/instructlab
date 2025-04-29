@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-24"
+lastupdated: "2025-04-29"
 
 keywords: instructlab, rhel ai, faq
 
@@ -70,4 +70,76 @@ Advanced Cloud Services
 :   IBM Cloud provides access to the latest GPUs and IBM watsonx services gen AI, inferencing, and machine learning to fast-track innovation into business processes.
 
 
-{{_include-segments/cost-faq.md}}
+## How does billing work?
+{: #costs}
+{: faq}
+
+Costs are incurred by the usage of both {{site.data.keyword.product_name}} and the [{{site.data.keyword.cos_full}}](https://cloud.ibm.com/objectstorage/create#pricing) service, which is used as a storage location.
+
+
+## How is cost calculated in {{site.data.keyword.product_name}}?
+{: #costs-ilab}
+{: faq}
+
+The cost from {{site.data.keyword.product_name}} usage is based on two metrics that are measured in tokens. Each token corresponds to a specific amount of computational power that is required for the processing tasks. The total number of tokens consumed directly influences the scale of data generation or model fine-tuning. This metric serves as a basis for our billing system, enabling users to monitor and control their costs according to the computational resources utilized. The tokens that are processed for Synthetic Data Generation (SDG) and Model Alignment are billed separately.
+
+Synthetic Data Generation (SDG)
+:   Output tokens (`SYN-DATA-TOKEN`) are calculated by the volume of generated data produced by the service from the entire input taxonomy. The text is tokenized by using [Huggingface's tokenizer library](https://huggingface.co/docs/transformers/en/main_classes/tokenizer) with the tokenization information for the [Mistral teacher model](https://huggingface.co/docs/transformers/main/en/model_doc/mistral#mistral). 
+
+Model alignment training
+:   Input tokens (`MODEL-TRAIN-TOKEN`) are calculated based on the amount of data fed that into the system for model alignment training, as well as the Granite base knowledge that is used to increase accuracy without knowledge loss. Because of the foundational knowledge that is used, there is a minimum cost.
+
+
+
+
+## How do I find and track cost information as I go?
+{: #costs-tracking}
+{: faq}
+
+1. Before you begin running anything in {{site.data.keyword.instructlab_short}}, you can use the [cost estimator](https://cloud.ibm.com/estimator) to get an estimate of what the cost might be.
+
+1. When you upload your taxonomy, look for the cost estimate based on synthetic data tokens. Then run the [data generation](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-data-generate) job.
+
+1. After the synthetic data generation completes, but before you begin the training, look for the estimated amount of tokens for the training costs. Then, [begin training](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-model-train).
+
+
+## Are failed operations billed?
+{: #costs-operations}
+{: faq}
+
+Failed operations are not billed. Successful operations and user canceled operations are billed, though user canceled operations are prorated based on the processing that completed.
+
+
+
+## How long does it take to run?
+{: #faq-time}
+{: faq}
+
+Data generation and model training both take significant time to complete. You can find general estimates in the console when you start the processes.
+
+Factors that impact completion time:
+- The contents of the knowledge documents
+- The number of other jobs in the queue
+
+## How long does data generation take?
+{: #faq-time-data}
+{: faq}
+
+For data generation, the general formula is to take the number of tokens, divided by about 5380.5 tokens per second, divided by 60 seconds per minute, and divided by 60 minutes in an hour.
+
+```txt
+Tokens / 5380.5 / 60 / 60 = Number of hours
+```
+{: codeblock}
+
+
+## How long does model training take?
+{: #faq-model}
+{: faq}
+
+For model training, the general formula is to take the number of tokens, divided by about 4115 tokens per second, divided by 60 seconds per minute, and divided by 60 minutes in an hour.
+
+```txt
+Tokens / 4115 / 60 / 60 = Number of hours
+```
+{: codeblock}
