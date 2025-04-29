@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-24"
+lastupdated: "2025-04-29"
 
 keywords: instructlab, ai, about
 
@@ -37,5 +37,7 @@ Secure, up-to-date, and available
 :   Because {{site.data.keyword.instructlab_short}} is available as a service on {{site.data.keyword.cloud}}, you can reduce unnecessary costs by paying just for what you need. Optimize IT expenditures by delivering simpler, faster, and more economical models.
 
 
+## How does billing work?
+{: #billing}
 
-{{_include-segments/cost-faq.md}}
+To learn more about billing, see the [FAQ](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-faq#costs).
