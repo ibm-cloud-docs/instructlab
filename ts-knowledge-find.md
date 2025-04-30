@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-28"
+lastupdated: "2025-04-30"
 
 keywords: knowledge documents, patterns, troubleshooting
 
@@ -29,7 +29,7 @@ Given the information in the QNA files, no knowledge documents existed that matc
 When a taxonomy is uploaded, the file structure is validated. During data generation, additional validation is done to verify the content of the taxonomy.
 
 
-Fix issues with the knowledge QNAs. Verify that the value in the `patterns` field matches some file names in the repository.
+Fix issues with the knowledge QNA files. Verify that the value in the `patterns` field matches some file names in the repository.
 {: tsResolve}
 
 ```yaml
@@ -40,5 +40,3 @@ patterns:
     - <folder>/<filename>.md
 ```
 {: codeblock}
-
-
