@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-28"
+lastupdated: "2025-04-30"
 
 keywords: taxonomy, troubleshooting
 
@@ -45,7 +45,7 @@ Fix issues with the taxonomy.
 
 1. Fix the errors locally.
 
-1. Run the `ilab` validatation command.
+1. Run the `ilab` validation command.
 
     ```sh
     ilab taxonomy diff
