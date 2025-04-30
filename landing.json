@@ -45,9 +45,27 @@
       "type": "training"
     },
     {
-      "title": "What is InstructLab?",
+      "title": "Red Hat: What is InstructLab?",
       "description": "Learn about InstructLab as an AI solution.",
       "href": "https://www.redhat.com/en/topics/ai/what-is-instructlab",
+      "type": "training"
+    },
+    {
+      "title": "IBM Think: What is InstructLab?",
+      "description": "InstructLab is a method for training AI models that is meant to significantly improve LLMs used in the development of gen AI applications.",
+      "href": "https://www.ibm.com/think/topics/instructlab",
+      "type": "training"
+    },
+    {
+      "title": "Red Hat Boosts Enterprise AI Across the Hybrid Cloud with Red Hat AI",
+      "description": "AI portfolio adds enhancements to Red Hat OpenShift AI and Red Hat Enterprise Linux AI to help operationalize AI strategies.",
+      "href": "https://www.redhat.com/en/about/press-releases/red-hat-boosts-enterprise-ai-across-hybrid-cloud-red-hat-ai",
+      "type": "training"
+    },
+    {
+      "title": "Language model customization with InstructLab",
+      "description": "Revolutionize model customization.",
+      "href": "https://www.ibm.com/products/watsonx-ai/model-customization-instructlab",
       "type": "training"
     }
   ],
