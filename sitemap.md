@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-29"
+lastupdated: "2025-04-30"
 
 
 keywords: instructlab, sitemap
@@ -144,7 +144,7 @@ subcollection: instructlab
 {: #sitemap_preparing_your_taxonomy}
 
 
-[How taxonomies are structured](/docs/instructlab?topic=instructlab-taxonomy-overview#taxonomy-overview)
+[Understanding the taxonomy structure](/docs/instructlab?topic=instructlab-taxonomy-overview#taxonomy-overview)
 
 * [Taxonomy data](/docs/instructlab?topic=instructlab-taxonomy-overview#taxonomy-data)
 
@@ -337,6 +337,8 @@ subcollection: instructlab
 
 * [Data ownership](/docs/instructlab?topic=instructlab-data-portability#data-portability-ownership)
 
+[Service availability by location](/docs/overview?topic=services_region)
+
 
 ## CLI reference
 {: #sitemap_cli_reference}
@@ -404,6 +406,8 @@ subcollection: instructlab
 
 
 [IBM Cloud API docs](/apidocs/instructlab)
+
+[Swagger](https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/){: external}
 
 
 ## Getting help and support
