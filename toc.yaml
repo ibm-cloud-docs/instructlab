@@ -71,6 +71,9 @@ toc:
         navtitle: High availability and disaster recovery
       - topic: data-portability.md
         navtitle: Data portability
+      - link:
+          label: Service availability by location
+          href: /overview/services_region
       - topic: ilab-cli.md
         navtitle: CLI reference
       - topicgroup:
@@ -102,7 +105,6 @@ toc:
             navtitle: Failed to clone knowledge document repository error
           - topic: ts-knowledge-find.md
             navtitle: Failed to find knowledge documents error
-          
       - topic: faq.md
         navtitle: FAQ
       - topic: sitemap.md

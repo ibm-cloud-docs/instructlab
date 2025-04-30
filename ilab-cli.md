@@ -141,7 +141,7 @@ ibmcloud ilab taxonomy add --name NAME --taxonomy-path-cos TAXONOMY-PATH-COS [--
     The maximum length is `32` characters. The minimum length is `1` character. The value must match regular expression `/^[a-zA-Z0-9]([_-]?[a-zA-Z0-9]+)*$/`.
 
 `--taxonomy-path-cos` (string)
-:   The path in your Cloud Object Storage bucket where you want to store your taxonomy. By default, taxonomies are stored at 'taxonomies/taxonomy-<current_time>.tar.gz'. Required.
+:   The path in your Cloud Object Storage bucket where you want to store your taxonomy. By default, taxonomies are stored at `taxonomies/taxonomy-<current_time>.tar.gz`. Required.
 
     The maximum length is `100` characters. The minimum length is `20` characters. The value must match regular expression `/^([-_.\/a-zA-Z0-9][a-zA-Z0-9]+)*[^\/]$/`.
 

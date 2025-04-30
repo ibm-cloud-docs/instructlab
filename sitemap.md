@@ -337,6 +337,8 @@ subcollection: instructlab
 
 * [Data ownership](/docs/instructlab?topic=instructlab-data-portability#data-portability-ownership)
 
+[Service availability by location](/docs/overview?topic=services_region)
+
 
 ## CLI reference
 {: #sitemap_cli_reference}
