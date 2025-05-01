@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-01"
 
 keywords: instructlab, rhel ai, faq
 
@@ -68,6 +68,19 @@ Flexibility
 
 Advanced Cloud Services
 :   IBM Cloud provides access to the latest GPUs and IBM watsonx services gen AI, inferencing, and machine learning to fast-track innovation into business processes.
+
+## What are Granite models?
+{: #granite}
+{: faq}
+
+Fit for purpose and open source, these enterprise-ready, multimodal models deliver exceptional performance against safety benchmarks and across a wide range of enterprise tasks from cybersecurity to RAG.
+
+## Which Granite model does {{site.data.keyword.short_name}} use?
+{: #granite-model}
+{: faq}
+
+{{site.data.keyword.short_name}} uses the `{{side.data.keyword.model}}` model.
+
 
 
 ## How does billing work?

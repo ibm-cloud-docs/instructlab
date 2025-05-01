@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-01"
 
 
 keywords: instructlab, sitemap
@@ -29,9 +29,9 @@ subcollection: instructlab
 
 * [Prerequisites](/docs/instructlab?topic=instructlab-getting-started#instructlab-pre)
 
-* [Optional: Modify the community taxonomy](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy)
+* [Optional: Modify the community taxonomy](/docs/instructlab?topic=instructlab-getting-started#taxonomy)
 
-* [Add the taxonomy to COS by using the console](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui)
+* [Upload your taxonomy to {{site.data.keyword.cos_short}} by using the console](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui)
 
 * [Add the taxonomy to {{site.data.keyword.cos_short}} by using the CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli)
 
@@ -337,7 +337,7 @@ subcollection: instructlab
 
 * [Data ownership](/docs/instructlab?topic=instructlab-data-portability#data-portability-ownership)
 
-[Service availability by location](/docs/overview?topic=services_region)
+[Service availability by location](/docs/overview?topic=overview-services_region)
 
 
 ## CLI reference
@@ -405,7 +405,7 @@ subcollection: instructlab
 {: #sitemap_api_reference}
 
 
-[IBM Cloud API docs](/apidocs/instructlab)
+[IBM Cloud API docs](https://cloud.ibm.com/apidocs/instructlab){: external}
 
 [Swagger](https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/){: external}
 
@@ -451,6 +451,10 @@ subcollection: instructlab
 * [Why should I use {{site.data.keyword.short_name}} for my generative AI solution?](/docs/instructlab?topic=instructlab-faq#faq-ilab-2)
 
 * [What are the benefits of {{site.data.keyword.short_name}} on IBM Cloud?](/docs/instructlab?topic=instructlab-faq#faq-ilab-3)
+
+* [What are Granite models?](/docs/instructlab?topic=instructlab-faq#granite)
+
+* [Which Granite model does {{site.data.keyword.short_name}} use?](/docs/instructlab?topic=instructlab-faq#granite-model)
 
 * [How does billing work?](/docs/instructlab?topic=instructlab-faq#costs)
 
