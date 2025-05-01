@@ -73,7 +73,7 @@ toc:
         navtitle: Data portability
       - link:
           label: Service availability by location
-          href: /overview/services_region
+          href: /overview/overview-services_region
       - topic: ilab-cli.md
         navtitle: CLI reference
       - topicgroup:
@@ -81,7 +81,7 @@ toc:
           links:
           - link:
               label: IBM Cloud API docs
-              href: /apidocs/instructlab
+              href: https://cloud.ibm.com/apidocs/instructlab
           - link:
               label: Swagger
               href: https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-28"
+lastupdated: "2025-05-01"
 
 keywords: instructlab, ai
 
@@ -43,8 +43,6 @@ With {{site.data.keyword.short_name}}, you can use an existing, pre-trained LLM 
 ![Task flow diagram for generating a model with the service.](images/task-flow.svg "Task flow diagram for generating a model with the service."){: caption="Task flow diagram." caption-side="bottom"}{: external download="task-flow.svg"}
 
 
-
-
 ## Prerequisites
 {: #instructlab-pre}
 
@@ -55,9 +53,7 @@ If this is the first time {{site.data.keyword.short_name}} is being used in the 
 
 * [An {{site.data.keyword.short_name}} project](/docs/instructlab?topic=instructlab-project).
 
-* [An {{site.data.keyword.cos_short}} instance](/docs/instructlab?topic=instructlab-storage).
-
-* [Access to the {{site.data.keyword.short_name}} service](/docs/instructlab?topic=instructlab-iam) and the [{{site.data.keyword.cos_short}} bucket](/docs/instructlab?topic=instructlab-iam).
+* [Access to {{site.data.keyword.short_name}} and {{site.data.keyword.cos_short}}](/docs/instructlab?topic=instructlab-iam).
 
 * [Install the CLI](/docs/instructlab?topic=instructlab-cli-install).{: cli}
 
@@ -66,7 +62,6 @@ If this is the first time {{site.data.keyword.short_name}} is being used in the 
 
 ## Optional: Modify the community taxonomy
 {: #taxonomy}
-{: ui}
 
 If you don't already have a taxonomy, you can use the {{site.data.keyword.short_name}} [community taxonomy](https://github.com/instructlab/taxonomy){: external} to start.
 
@@ -75,7 +70,7 @@ To create your own taxonomy instead, see [Preparing taxonomies](/docs/instructla
 
 1. Fork the [community taxonomy repo](https://github.com/instructlab/taxonomy) by clicking **Fork** and completing the steps.
 
-1. Clone your fork to your local machine. {: cli}
+1. Clone your fork to your local machine.{: cli}
     ```sh
     git clone https://github.com/<my-org>/taxonomy
     ```
@@ -115,104 +110,131 @@ To create your own taxonomy instead, see [Preparing taxonomies](/docs/instructla
 
     f. Optional: [Validate the updated taxonomy](/docs/instructlab?topic=instructlab-ts-debug#version).
 
+1. In a browser, open the **Releases** page for your Github repository. For example: `https://github.com/<my-org>/taxonomy/releases`.
 
-## Add the taxonomy to COS by using the console
+1. Click **Create a release**.
+
+1. Create a tag, select a target branch, and enter a name for the release.
+
+1. Click **Publish a release**.
+
+1. To download the packaged TAR file that was automatically generated, in the release that was created, click **Source code (tar.gz)**.
+
+
+## Upload your taxonomy to {{site.data.keyword.cos_short}} by using the console
 {: #taxonomy-add-ui}
 {: ui}
 
-After you receive access to {{site.data.keyword.short_name}}, store your taxonomy in COS.
+Complete the following steps to store your taxonomy in {{site.data.keyword.cos_short}}.
 
-You can add specify a Secrets Manager ID when you [add your taxonomy to {{site.data.keyword.cos_short}} with the CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli). 
+If you are using a private repository, you can specify a Secrets Manager ID when you [add your taxonomy to {{site.data.keyword.cos_short}} with the CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli). 
 {: tip}
 
-1. Create a packaged TAR file of the contents of the Github taxonomy repository by creating a release.
+1. From the **Projects** [page](https://cloud.ibm.com/instructlab/projects){: external}, select your project.
 
-    a. In a browser, open the **Releases** page for your Github repository. Example: `https://github.com/<my-org>/taxonomy/releases`
+1. Click **Taxonomies**.
     
-    b. Click **Create a release**.
+1. Click **Upload** and enter the following details.
 
-    c. Create a tag, select a target branch, and enter a name for the release.
-
-    d. Click **Publish a release**.
-
-    e. To download the packaged TAR file that was automatically generated, in the release that was created, click **Source code (tar.gz)**.
-
-1. Upload the taxonomy to your project.
-
-    a. Click **Taxonomies**.
+    Taxonomy file
+    :   Select your `.tar.gz` file.
     
-    b. Click **Upload**.
+    Taxonomy name
+    :   Give the taxonomy an alphanumeric name.
+    
+    Cloud storage
+    :   Select a {{site.data.keyword.cos_short}} instance and bucket to use or create an instance and bucket if you don't already have them.
 
-    c. Select the `.tar.gz` file, give the taxonomy an alphanumeric name, select the {{site.data.keyword.cos_short}} instance and bucket to use (or create a new one), then click **Upload**.
+    Service authorization
+    :   Check the box to allow InstructLab to write your taxonomy to {{site.data.keyword.cos_short}}
 
+    Optional: Storage settings
+    :   Specify the path where you want to store the taxonomy `tar.gz` in {{site.data.keyword.cos_short}}.
 
+1. Click **Upload**
 
 ## Add the taxonomy to {{site.data.keyword.cos_short}} by using the CLI
 {: #taxonomy-add-cli}
 {: cli}
 
-After you receive access to {{site.data.keyword.short_name}}, store your taxonomy in COS.
+Complete the following steps to store your taxonomy in {{site.data.keyword.cos_short}}.
 
-To log in:
+You can use the `set` command to save {{site.data.keyword.cos_short}} bucket details and credentials, and more. This can simplify your commands going forward. Note that when using the `set` command, you must set each value individually. For more information, see the [Config command reference](/docs/instructlab?topic=instructlab-ilab-cli&interface=cli#ilab-cli-config-command).
+{: tip}
+
 
 {{_include-segments/login.md}}
 
-To add the taxonomy:
-1. Optional: Run the `set` command to set and save {{site.data.keyword.cos_short}} bucket details and credentials, which can simplify your commands going forward. You must set each value individually.
-
-    ```txt
-    ibmcloud ilab config set \
-        cos-bucket \
-        cos-endpoint \
-        cos-id \
-        project-id \
-        secrets-manager-git-id \
-        secrets-manager-url \
-        taxonomy-path \ # The local directory path to the taxonomy file. 
-        taxonomy-path-cos \
-    ```
-    {: pre}
-
-    | Component | Description |
-    | --- | --- |
-    | `cos-bucket <bucket_name>` | If you are adding a taxonomy to an existing bucket, include the name. You can find this name on the **Buckets** tab of your {{site.data.keyword.cos_short}} instance. If you want the bucket to be created for you, you can enter a name for it. If no name is specified and a bucket does not exist yet, a bucket is created that is named `instructlab_TIME`, where `TIME` is the current epoch time. |
-    | `cos-endpoint <endpoint>` | Use the public, regional endpoint. For example `https://s3.us-east.cloud-object-storage.appdomain.cloud`. You can find these in the **Endpoints** tab of the {{site.data.keyword.cos_short}} console. |
-    | `cos-id <service_id>` | If you have an {{site.data.keyword.cos_short}} service instance to use, include the service ID. In the user interface for the {{site.data.keyword.cos_short}} service instance, click **Details**. Note the **CRN**, which can be used for the service instance ID. If you want one to be created for you, it is created with the name `{{site.data.keyword.short_name}}`.|
-    | `project-id` | Your {{site.data.keyword.short_name}} project ID. |
-    | `secrets-manager-git-id` | The git ID for your Secrets Manager instance. |
-    | `secrets-manager-url` | The URL to your Secrets Manager instance. |
-    | `taxonomy-path-cos <directory_path>` | The relative directory path within the {{site.data.keyword.cos_short}} bucket to the taxonomy file. |
-    {: caption="Understanding this command's components" caption-side="bottom"}
-
-1. Add the taxonomy to an {{site.data.keyword.cos_short}} bucket.
+1. Create the authorization policy for {{site.data.keyword.short_name}} and {{site.data.keyword.cos_short}}.
     ```sh
-    ibmcloud ilab taxonomy add --name <name>
+    ibmcloud iam authorization-policy-create Writer --source-service-name instructlab --target-service-name cloud-object-storage
     ```
     {: pre}
 
-    | Parameter | Description |
-    | -------------- | -------------- |
-    | `--name <taxonomy_name>` | Required. The name of the taxonomy as it is to be displayed in the {{site.data.keyword.cos_short}} bucket. Use alphanumeric characters in the taxonomy name.|
-    | `--taxonomy-path <local_directory_path>` | Required if not specified with the `init` command. The local directory path to the taxonomy. |
-    | `--taxonomy-path-cos <directory_path>` | Optional. The relative directory path within the {{site.data.keyword.cos_short}} bucket to the taxonomy file. |
-    | `--cos-bucket <bucket_name>` | Optional. If you are adding a taxonomy to an existing bucket, include the name. You can find this name on the **Buckets** tab of your {{site.data.keyword.cos_short}} instance. If you want the bucket to be created for you, you can enter a name for it. If no name is specified and a bucket does not exist yet, a bucket is created that is named `instructlab_TIME`. |
-    | `--cos-endpoint <endpoint>` | Optional. Use the public, regional endpoint. For example `https://s3.us-east.cloud-object-storage.appdomain.cloud`. You can find these in the **Endpoints** tab of the {{site.data.keyword.cos_short}} console. |
-    | `--cos-region <region>` | Optional. The default value is `us-east`. |
-    | `--cos-id <service_id>` | Optional. If you have an {{site.data.keyword.cos_short}} service instance to use, include the service ID. In the user interface for the {{site.data.keyword.cos_short}} service instance, click **Details**. Note the **CRN**, which can be used for the service instance ID. If you want one to be created for you, it is created with the name `{{site.data.keyword.short_name}}`.|
-    {: caption="Understanding this command's components" caption-side="bottom"}
 
-    Example command to use the details that were saved with the `init` command.
+1. Run the `taxonomy add --help` command and review the command options.
     ```sh
-    ibmcloud ilab taxonomy add --name test
+    ibmcloud ilab taxonomy add --help
     ```
     {: pre}
 
-    Example command to use an existing bucket.
+1. **Optional** If you have an existing {{site.data.keyword.cos_short}} instance that you want to use, get your service instance details.
+
+    List your instances.
+    ```sh
+    ibmcloud resource service-instances --service-name cloud-object-storage
+    ```
+    {: pre}
+
+    Get the details of an instance.
+    ```sh
+    ibmcloud resource service-instances INSTANCE
+    ```
+    {: pre}
+
+
+1. Add the taxonomy to an {{site.data.keyword.cos_short}} bucket. Review the following example commands.
+
+    **Quick start**: Example command to automatically create an {{site.data.keyword.cos_short}} instance and bucket in your account and upload a taxonomy from your `Downloads` folder to it.
+    ```sh
+    ibmcloud ilab taxonomy add \
+    --name example-taxonomy-1 \
+    --taxonomy-path-cos "taxonomies/taxonomy.tar.gz" \
+    --taxonomy-path "Downloads/taxonomy.tar.gz"
+    ```
+    {: pre}
+
+    Example command to upload a taxonomy from a `taxonomy` folder on your machine to an existing {{site.data.keyword.cos_short}} instance and bucket.
+    ```sh
+    ibmcloud ilab taxonomy add \
+	--name example-taxonomy-name-1 \
+	--taxonomy-path-cos "taxonomies/taxonomy.tar.gz" \
+	--taxonomy-path "./taxonomy" \
+	--cos-bucket example-cloud-object-storage-bucket-1 \
+	--cos-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud \
+	--cos-id 628e4348-2183-42fa-a03a-6f0f78453530
+    ```
+    {: pre}
+
+
+    Example command to use an existing {{site.data.keyword.cos_short}} instance and bucket as well as {{site.data.keyword.secrets-manager_short}} credentials.
+    ```sh
+    ibmcloud ilab taxonomy add \
+    --name example-taxonomy-1 \
+    --taxonomy-path-cos taxonomies/taxonomy.tar.gz \
+    --taxonomy-path "Downloads/taxonomy.tar.gz" \
+    --cos-bucket-information '{"service_instance_id": "628e4348-2183-42fa-a03a-6f0f78453530", "bucket": "example-bucket-1", "endpoint": "https://s3.us-east.cloud-object-storage.appdomain.cloud"}' \
+    --secrets-manager-config '{"url": "https://12345678-abcd-1234-5678-abcdefghijkl.us-east.secrets-manager.appdomain.cloud", "git_id": "d9428888-122b-11e1-b85c-61cd3cbb3210"}'
+    ```
+    {: pre}
+
+    Example command to upload a taxonomy from your `/Users/USER/instructlab-taxonomy` folder to an new, automatically created bucket.
     ```sh
     ibmcloud ilab taxonomy add \
     --name test \
-    --taxonomy-path /Users/USER/instructlab-taxonomy \
-    --cos-bucket existing-instruct-lab-bucket 
+    --taxonomy-path "/Users/USER/instructlab-taxonomy" \
+	--cos-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud \
+	--cos-id 628e4348-2183-42fa-a03a-6f0f78453530
     ```
     {: pre}
 

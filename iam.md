@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-18"
+lastupdated: "2025-05-01"
 
 keywords: iam, access, add users, instructlab
 
@@ -48,7 +48,7 @@ This is a high level view of what the platform roles allow users to do. Use a pl
 
 Give {{site.data.keyword.short_name}} the `Writer` access role for the {{site.data.keyword.cos_short}} service. The logged-in user must also have the same permission.
 
-1. Create the authorization policy for {{site.data.keyword.short_name}}.
+1. Create the authorization policy for {{site.data.keyword.short_name}} and {{site.data.keyword.cos_short}}.
     ```sh
     ibmcloud iam authorization-policy-create Writer --source-service-name instructlab --target-service-name cloud-object-storage
     ```
