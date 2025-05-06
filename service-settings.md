@@ -28,7 +28,7 @@ Training strategy
 
 Base Model
 : Specifies the base model to be trained
-: - Version 1.4: `--model-path={{side.data.keyword.model}}`
+: - Version 1.4: `--model-path=granite-3.1-8b-starter-v1`
 
 IBM Granite is provided under the Apache License 2.0. For more information, see the [Apache License documentation](https://www.apache.org/licenses/LICENSE-2.0){: external}
 {: important}
