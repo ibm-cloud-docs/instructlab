@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-05-01"
+lastupdated: "2025-05-06"
 
 keywords: instructlab, rhel ai, faq
 
@@ -79,7 +79,7 @@ Fit for purpose and open source, these enterprise-ready, multimodal models deliv
 {: #granite-model}
 {: faq}
 
-{{site.data.keyword.short_name}} uses the `{{side.data.keyword.model}}` model.
+{{site.data.keyword.short_name}} uses the `granite-3.1-8b-starter-v1` model.
 
 
 
