@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-17"
+lastupdated: "2025-05-08"
 
 keywords: instructlab, taxonomy, knowledge, skills, leaf node, branch, qna, files, documents
 
@@ -54,7 +54,7 @@ Any knowledge added to a taxonomy must be backed up by a knowledge document, whi
 ## Knowledge `qna.yaml` files
 {: #knowledge-qna}
 
-The knowledge `qna.yaml` file includes questions and answers based on the information found in the relevant knowledge document. Questions and answers are stored as key/value pairs, and a minimum of five pairs is required for each `qna.yaml` file. At the bottom of your `qna.yaml` file in the `document_outline` section, you must reference the knowledge document and the directory where it is stored. For the full `qna.yaml` file requirements and examples of knowledge contributions, see [The knowledge files](https://docs.instructlab.ai/taxonomy/knowledge/file_structure/#the-knowledge-files){: external} and [Example of a knowledge submission](https://docs.instructlab.ai/taxonomy/knowledge/file_structure/#example-of-a-knowledge-submission){: external} in the InstructLab documentation. 
+The knowledge `qna.yaml` file includes questions and answers based on the information found in the relevant knowledge document. Questions and answers are stored as key/value pairs, and a minimum of five pairs is required for each `qna.yaml` file. At the end of your `qna.yaml` file in the `document_outline` section, you must reference the knowledge document and the directory where it is stored. For the full `qna.yaml` file requirements and examples of knowledge contributions, see [The knowledge files](https://docs.instructlab.ai/taxonomy/knowledge/file_structure/#the-knowledge-files){: external} and [Example of a knowledge submission](https://docs.instructlab.ai/taxonomy/knowledge/file_structure/#example-of-a-knowledge-submission){: external} in the InstructLab documentation. 
 
 ## Skills `qna.yaml` files
 {: #skills-qna}
