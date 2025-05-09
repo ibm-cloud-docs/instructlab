@@ -29,9 +29,9 @@ subcollection: instructlab
 
 * [Prerequisites](/docs/instructlab?topic=instructlab-getting-started#instructlab-pre)
 
-* [Optional: Modify the community taxonomy](/docs/instructlab?topic=instructlab-getting-started#taxonomy)
+* [Optional: Prepare your taxonomy](/docs/instructlab?topic=instructlab-getting-started#taxonomy)
 
-* [Upload your taxonomy to {{site.data.keyword.cos_short}} by using the console](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui)
+* [Upload your taxonomy by using the console](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui)
 
 * [Add the taxonomy to {{site.data.keyword.cos_short}} by using the CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli)
 
@@ -54,6 +54,12 @@ subcollection: instructlab
 
 
 [Release notes](/docs/instructlab?topic=instructlab-release-notes#release-notes)
+
+* [May 2025](/docs/instructlab?topic=instructlab-release-notes#may25)
+
+    * [09 May 2025](/docs/instructlab?topic=instructlab-release-notes#09may25)
+
+        * New! Private repo support
 
 * [April 2025](/docs/instructlab?topic=instructlab-release-notes#apr25)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-05-01"
+lastupdated: "2025-05-09"
 
 keywords: iam, access, add users, instructlab
 
@@ -93,6 +93,12 @@ Give {{site.data.keyword.short_name}} the `Writer` access role for the {{site.da
     Roles:                     Writer
     ```
     {: screen}
+
+1. **Optional** If you are using a private repository, create another service authoriation for {{site.data.keyword.short_name}} and {{site.data.keyword.secrets-manager_short}}
+    ```sh
+    ibmcloud iam authorization-policy-create Writer --source-service-name instructlab --target-service-name secrets-manager
+    ```
+    {: pre}
 
 1. If necessary, give the `Writer` permission to the logged-in user. Include the {{site.data.keyword.cos_short}} service instance ID from the previous step.
 
