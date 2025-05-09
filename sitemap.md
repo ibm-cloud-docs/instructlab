@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-05-01"
+lastupdated: "2025-05-09"
 
 
 keywords: instructlab, sitemap
@@ -434,6 +434,10 @@ subcollection: instructlab
 [No new leaf nodes found error](/docs/instructlab?topic=instructlab-ts-no-new-leaf-nodes#ts-no-new-leaf-nodes)
 
 [Failed to process invalid taxonomy files error](/docs/instructlab?topic=instructlab-ts-taxonomy-invalid#ts-taxonomy-invalid)
+
+[Failed to read secret data](/docs/instructlab?topic=instructlab-ts-taxonomy-secret-auth#ts-taxonomy-secret-auth)
+
+[Failed to parse secret data](/docs/instructlab?topic=instructlab-ts-taxonomy-secret-data#ts-taxonomy-secret-data)
 
 [Failed to clone knowledge document repository error](/docs/instructlab?topic=instructlab-ts-knowledge-clone#ts-knowledge-clone)
 
