@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-05-01"
+lastupdated: "2025-05-09"
 
 
 keywords: instructlab, sitemap
@@ -29,9 +29,9 @@ subcollection: instructlab
 
 * [Prerequisites](/docs/instructlab?topic=instructlab-getting-started#instructlab-pre)
 
-* [Optional: Modify the community taxonomy](/docs/instructlab?topic=instructlab-getting-started#taxonomy)
+* [Optional: Prepare your taxonomy](/docs/instructlab?topic=instructlab-getting-started#taxonomy)
 
-* [Upload your taxonomy to {{site.data.keyword.cos_short}} by using the console](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui)
+* [Upload your taxonomy by using the console](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui)
 
 * [Add the taxonomy to {{site.data.keyword.cos_short}} by using the CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli)
 
@@ -54,6 +54,12 @@ subcollection: instructlab
 
 
 [Release notes](/docs/instructlab?topic=instructlab-release-notes#release-notes)
+
+* [May 2025](/docs/instructlab?topic=instructlab-release-notes#may25)
+
+    * [09 May 2025](/docs/instructlab?topic=instructlab-release-notes#09may25)
+
+        * New! Private repo support
 
 * [April 2025](/docs/instructlab?topic=instructlab-release-notes#apr25)
 
@@ -435,6 +441,10 @@ subcollection: instructlab
 
 [Failed to process invalid taxonomy files error](/docs/instructlab?topic=instructlab-ts-taxonomy-invalid#ts-taxonomy-invalid)
 
+[Failed to read secret data](/docs/instructlab?topic=instructlab-ts-taxonomy-secret-auth#ts-taxonomy-secret-auth)
+
+[Failed to parse secret data](/docs/instructlab?topic=instructlab-ts-taxonomy-secret-data#ts-taxonomy-secret-data)
+
 [Failed to clone knowledge document repository error](/docs/instructlab?topic=instructlab-ts-knowledge-clone#ts-knowledge-clone)
 
 [Failed to find knowledge documents error](/docs/instructlab?topic=instructlab-ts-knowledge-find#ts-knowledge-find)
@@ -463,6 +473,10 @@ subcollection: instructlab
 * [How do I find and track cost information as I go?](/docs/instructlab?topic=instructlab-faq#costs-tracking)
 
 * [Are failed operations billed?](/docs/instructlab?topic=instructlab-faq#costs-operations)
+
+* [What is data generation?](/docs/instructlab?topic=instructlab-faq#faq-data-gen)
+
+* [What is model training?](/docs/instructlab?topic=instructlab-faq#faq-model-train)
 
 * [How long does it take to run?](/docs/instructlab?topic=instructlab-faq#faq-time)
 

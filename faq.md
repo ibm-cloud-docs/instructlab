@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-05-06"
+lastupdated: "2025-05-09"
 
 keywords: instructlab, rhel ai, faq
 
@@ -89,6 +89,8 @@ Fit for purpose and open source, these enterprise-ready, multimodal models deliv
 
 Costs are incurred by the usage of both {{site.data.keyword.product_name}} and the [{{site.data.keyword.cos_full}}](https://cloud.ibm.com/objectstorage/create#pricing) service, which is used as a storage location.
 
+If you choose to deploy the model on another service, additional charges can come from that service as well.
+
 
 ## How is cost calculated in {{site.data.keyword.product_name}}?
 {: #costs-ilab}
@@ -121,6 +123,21 @@ Model alignment training
 {: faq}
 
 Failed operations are not billed. Successful operations and user canceled operations are billed, though user canceled operations are prorated based on the processing that completed.
+
+
+## What is data generation?
+{: #faq-data-gen}
+{: faq}
+
+Data generation is the process of generating questions and answers based on the questions and answers that you included in the QNA files.
+
+
+## What is model training?
+{: #faq-model-train}
+{: faq}
+
+Training is the process of learning the questions and answers. The training begins with knowledge and foundational skills, then moves on to compositional skills.
+
 
 
 

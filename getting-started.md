@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-05-01"
+lastupdated: "2025-05-09"
 
 keywords: instructlab, ai
 
@@ -55,12 +55,12 @@ If this is the first time {{site.data.keyword.short_name}} is being used in the 
 
 * [Access to {{site.data.keyword.short_name}} and {{site.data.keyword.cos_short}}](/docs/instructlab?topic=instructlab-iam).
 
+* **Optional**: If you are using a private repo to store your taxonomy knowledge documents, create [a {{site.data.keyword.secrets-manager_short}} instance](https://cloud.ibm.com/catalog/services/secrets-manager){: external}.
+
 * [Install the CLI](/docs/instructlab?topic=instructlab-cli-install).{: cli}
 
 
-
-
-## Optional: Modify the community taxonomy
+## Optional: Prepare your taxonomy
 {: #taxonomy}
 
 If you don't already have a taxonomy, you can use the {{site.data.keyword.short_name}} [community taxonomy](https://github.com/instructlab/taxonomy){: external} to start.
@@ -68,15 +68,9 @@ If you don't already have a taxonomy, you can use the {{site.data.keyword.short_
 To create your own taxonomy instead, see [Preparing taxonomies](/docs/instructlab?topic=instructlab-taxonomy-prep&interface=ui) for more information. 
 {: tip}
 
-1. Fork the [community taxonomy repo](https://github.com/instructlab/taxonomy) by clicking **Fork** and completing the steps.
+1. **Optional**: Fork the [community taxonomy repo](https://github.com/instructlab/taxonomy) and clone it to your local machine.
 
-1. Clone your fork to your local machine.{: cli}
-    ```sh
-    git clone https://github.com/<my-org>/taxonomy
-    ```
-    {: pre}
-
-1. Optional: Make updates to the taxonomy in your fork. This example adds rhyming questions to the [linguistics](https://github.com/instructlab/taxonomy/tree/main/compositional_skills/grounded/linguistics) directory.
+1. **Optional**: Make updates to the taxonomy in your fork. The following example adds rhyming questions to the [linguistics](https://github.com/instructlab/taxonomy/tree/main/compositional_skills/grounded/linguistics) directory.
 
     a. In your fork, create a `/instructlab-taxonomy/compositional_skills/grounded/linguistics/rhyming_words/qna.yaml` file.
 
@@ -101,10 +95,7 @@ To create your own taxonomy instead, see [Preparing taxonomies](/docs/instructla
     ```
     {: codeblock}
 
-    If you are using a private repository, you must give the `instructlab-ibm` user read access to the repository. Click **Settings** > **Collaborators** and in the **Manage Access** section, click **Add people**. Invite `instructlab-ibm`. The invitation is labeled as `pending` for 1-2 business days until the invitation is accepted. Until the invitation is accepted, you can continue to work with the taxonomy and generate data, but wait to complete the training steps.
-    {: important}
-
-    d. Save the changes and push the changes to the fork. {: cli}
+    d. Save the changes and push the changes to the fork.
 
     e. Optional: Learn more about how to modify the [taxonomy](https://github.com/instructlab/taxonomy) for the model.
 
@@ -118,17 +109,22 @@ To create your own taxonomy instead, see [Preparing taxonomies](/docs/instructla
 
 1. Click **Publish a release**.
 
-1. To download the packaged TAR file that was automatically generated, in the release that was created, click **Source code (tar.gz)**.
+1. Download the packaged TAR file that was automatically generated from the release by clicking **Source code (tar.gz)**.
+
+1. **Optional**: If you are using a private repository for your taxonomy knowledge documents, complete the following steps.
+
+    1. Follow the GitHub documentation to [create a classic personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) (PAT).
+
+    1. In the **Repository access** section, scope your PAT to your taxonomy repo.
+    
+    1. In the **Repository permissions** section, select **Contents** > `read-only` and **Metadata** > `read-only`.
 
 
-## Upload your taxonomy to {{site.data.keyword.cos_short}} by using the console
+## Upload your taxonomy by using the console
 {: #taxonomy-add-ui}
 {: ui}
 
 Complete the following steps to store your taxonomy in {{site.data.keyword.cos_short}}.
-
-If you are using a private repository, you can specify a Secrets Manager ID when you [add your taxonomy to {{site.data.keyword.cos_short}} with the CLI](/docs/instructlab?topic=instructlab-getting-started&interface=cli#taxonomy-add-cli). 
-{: tip}
 
 1. From the **Projects** [page](https://cloud.ibm.com/instructlab/projects){: external}, select your project.
 
@@ -141,14 +137,31 @@ If you are using a private repository, you can specify a Secrets Manager ID when
     
     Taxonomy name
     :   Give the taxonomy an alphanumeric name.
+
+    Private repository access
+    :   Enable this option if your taxonomy knowledge documents are in a private repo.
+    :   **{{site.data.keyword.secrets-manager_short}} service instance**: Select an existing instance or create one.
+    :   **{{site.data.keyword.secrets-manager_short}} secret**: Select an existing secret or create one. If you are creating a secret, select the **Key-value** secret type and add your personal access token in the following format. Note that the value for `github_url` must contain`https://`. The URL is the same URL that you used in the `repo` section of the your taxonomy document reference.
+    {: tip}
+
+    ```json
+    {
+    "github_url": "https://...",
+    "github_pat": "xxxxx"
+    }
+    ```
+    {: codeblock}
+
+    For more information, see [Creating Key-value secrets](/docs/secrets-manager?topic=secrets-manager-key-value&interface=ui).
+    {: tip}
     
     Cloud storage
-    :   Select a {{site.data.keyword.cos_short}} instance and bucket to use or create an instance and bucket if you don't already have them.
+    :  Either select a {{site.data.keyword.cos_short}} instance and bucket to use or create an instance and bucket.
 
     Service authorization
     :   Check the box to allow InstructLab to write your taxonomy to {{site.data.keyword.cos_short}}
 
-    Optional: Storage settings
+    Optional storage settings
     :   Specify the path where you want to store the taxonomy `tar.gz` in {{site.data.keyword.cos_short}}.
 
 1. Click **Upload**
@@ -165,11 +178,50 @@ You can use the `set` command to save {{site.data.keyword.cos_short}} bucket det
 
 {{_include-segments/login.md}}
 
+
 1. Create the authorization policy for {{site.data.keyword.short_name}} and {{site.data.keyword.cos_short}}.
     ```sh
     ibmcloud iam authorization-policy-create Writer --source-service-name instructlab --target-service-name cloud-object-storage
     ```
     {: pre}
+
+1. **Optional**: If you are using a private repo to store your taxonomy knowledge documents, complete the following steps.
+
+    1. Create a service authorization to allow {{site.data.keyword.short_name}} to access your {{site.data.keyword.secrets-manager_short}} instance and secrets.
+        ```sh
+        ibmcloud iam authorization-policy-create Writer --source-service-name instructlab --target-service-name secrets-manager
+        ```
+        {: pre}
+
+    1. Add your personal access token (PAT) to {{site.data.keyword.secrets-manager_short}} by creating a **Key-value** secret. Make sure your key-value details are stored in the following format.
+        ```json
+        {
+        "github_url": "https://...",
+        "github_pat": "xxxxx"
+        }
+        ```
+        {: codeblock}
+
+        Example command for creating a key-value secret.
+        ```sh
+        ibmcloud secrets-manager secret-create --secret-prototype='{"name": "my-secret","description": "Description of my key-value secret.","secret_type": "kv","secret_group_id": "67d025e1-0248-418f-83ba-deb0ebfb9b4a","labels": ["dev","us-south"],"data": {"github_url": "https://...","github_pat": "xxxxx"},"custom_metadata": {"metadata_custom_key": "metadata_custom_value"},"version_custom_metadata": {"custom_version_key": "custom_version_value"}}'
+        ```
+        {: pre}
+
+        For more information, see [Creating Key-value secrets](/docs/secrets-manager?topic=secrets-manager-key-value&interface=ui).
+        {: tip}
+
+    1. List your {{site.data.keyword.secrets-manager_short}} instances.
+        ```sh
+        ibmcloud resource service-instances --service-name secrets-manager
+        ```
+        {: pre}
+
+    1. Get your instance details.
+        ```sh
+        ibmcloud resource service-instances INSTANCE
+        ```
+        {: pre}
 
 
 1. Run the `taxonomy add --help` command and review the command options.
@@ -180,22 +232,21 @@ You can use the `set` command to save {{site.data.keyword.cos_short}} bucket det
 
 1. **Optional** If you have an existing {{site.data.keyword.cos_short}} instance that you want to use, get your service instance details.
 
-    List your instances.
-    ```sh
-    ibmcloud resource service-instances --service-name cloud-object-storage
-    ```
-    {: pre}
+    1. List your {{site.data.keyword.cos_short}} instances.
+        ```sh
+        ibmcloud resource service-instances --service-name cloud-object-storage
+        ```
+        {: pre}
 
-    Get the details of an instance.
-    ```sh
-    ibmcloud resource service-instances INSTANCE
-    ```
-    {: pre}
+    1. Get your instance details.
+        ```sh
+        ibmcloud resource service-instances INSTANCE
+        ```
+        {: pre}
 
+1. Add your taxonomy to your {{site.data.keyword.cos_short}} bucket. Review the following example commands.
 
-1. Add the taxonomy to an {{site.data.keyword.cos_short}} bucket. Review the following example commands.
-
-    **Quick start**: Example command to automatically create an {{site.data.keyword.cos_short}} instance and bucket in your account and upload a taxonomy from your `Downloads` folder to it.
+    [Quick start]{: tag-green} Example command to automatically create an {{site.data.keyword.cos_short}} instance and bucket in your account and upload a taxonomy from your `Downloads` folder to it.
     ```sh
     ibmcloud ilab taxonomy add \
     --name example-taxonomy-1 \
@@ -223,8 +274,10 @@ You can use the `set` command to save {{site.data.keyword.cos_short}} bucket det
     --name example-taxonomy-1 \
     --taxonomy-path-cos taxonomies/taxonomy.tar.gz \
     --taxonomy-path "Downloads/taxonomy.tar.gz" \
-    --cos-bucket-information '{"service_instance_id": "628e4348-2183-42fa-a03a-6f0f78453530", "bucket": "example-bucket-1", "endpoint": "https://s3.us-east.cloud-object-storage.appdomain.cloud"}' \
-    --secrets-manager-config '{"url": "https://12345678-abcd-1234-5678-abcdefghijkl.us-east.secrets-manager.appdomain.cloud", "git_id": "d9428888-122b-11e1-b85c-61cd3cbb3210"}'
+    --cos-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud \
+    --cos-id 628e4348-2183-42fa-a03a-6f0f78453530 \
+    --secrets-manager-git-id SEC-MGR-ID
+    --secrets-manager-git-url https://URL
     ```
     {: pre}
 
