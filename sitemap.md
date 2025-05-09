@@ -474,6 +474,10 @@ subcollection: instructlab
 
 * [Are failed operations billed?](/docs/instructlab?topic=instructlab-faq#costs-operations)
 
+* [What is data generation?](/docs/instructlab?topic=instructlab-faq#faq-data-gen)
+
+* [What is model training?](/docs/instructlab?topic=instructlab-faq#faq-model-train)
+
 * [How long does it take to run?](/docs/instructlab?topic=instructlab-faq#faq-time)
 
 * [How long does data generation take?](/docs/instructlab?topic=instructlab-faq#faq-time-data)

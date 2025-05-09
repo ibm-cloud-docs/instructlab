@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-24"
+lastupdated: "2025-05-09"
 
 keywords: instructlab, ai
 
@@ -17,10 +17,11 @@ subcollection: instructlab
 {: #model-train}
 
 
-Complete the following steps to train your model on generated data. Then test the model to verify the results.
+Train your model on generated data, then test the model to verify the results. [Learn more about what training is](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-faq#faq-model-train).
 
 Configuration information or files cannot be passed to the model for fine tuning.
 {: note}
+
 
 
 ## Prerequisites
