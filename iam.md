@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-05-09"
+lastupdated: "2025-05-29"
 
 keywords: iam, access, add users, instructlab
 
@@ -94,7 +94,7 @@ Give {{site.data.keyword.short_name}} the `Writer` access role for the {{site.da
     ```
     {: screen}
 
-1. **Optional** If you are using a private repository, create another service authoriation for {{site.data.keyword.short_name}} and {{site.data.keyword.secrets-manager_short}}
+1. **Optional** If you are using a private repository, create another service authorization for {{site.data.keyword.short_name}} and {{site.data.keyword.secrets-manager_short}}
     ```sh
     ibmcloud iam authorization-policy-create Writer --source-service-name instructlab --target-service-name secrets-manager
     ```
