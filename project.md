@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-17"
+lastupdated: "2025-06-03"
 
 keywords: instructlab, ai, project
 
@@ -51,7 +51,7 @@ After your project is created, the project details page is shown.
 To log in:
 {{_include-segments/login.md}}
 
-To create a project in the {{site.data.keyword.short_name}} instance, run the following command.
+To create a project, run the following command.
 
 ```sh
 ibmcloud resource service-instance-create <project_name> instructlab instructlab-pricing-plan us-east
