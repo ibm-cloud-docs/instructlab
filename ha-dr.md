@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-24"
+lastupdated: "2025-06-03"
 
 keywords: HA for {{site.data.keyword.short_name}}, DR for {{site.data.keyword.short_name}}, {{site.data.keyword.short_name}} recovery time objective, {{site.data.keyword.short_name}} recovery point objective
 
@@ -59,8 +59,8 @@ The DR steps must be practiced regularly. As you build your plan, consider the f
 | -------------- | -------------- |
 | Hardware failure (single point) | IBM provides an instance that's resilient from single point of hardware failure within a zone . No configuration required. |
 | Zone failure | IBM provides an instance that's resilient from a zone failure. No configuration required. |
-| Data corruption | Restore a point in time uncorrupted version of the client object storage bucket contents from backup. InstructLab instance restoration handled by service team. |
-| Regional failure | Model alignment and synthetic data generation are switch to an alive region. {{site.data.keyword.short_name}} instance restoration is handled by the service team. |
+| Data corruption | Restore a point in time uncorrupted version of the client object storage bucket contents from backup. {{site.data.keyword.short_name}} restoration handled by service team. |
+| Regional failure | Model alignment and synthetic data generation are switch to an alive region. {{site.data.keyword.short_name}} restoration is handled by the service team. |
 {: caption="DR scenarios" caption-side="bottom"}
 
 ## Your responsibilities for HA and DR
