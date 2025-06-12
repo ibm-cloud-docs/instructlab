@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-05-09"
+lastupdated: "2025-06-12"
 
 keywords: instructlab, ai
 
@@ -109,7 +109,7 @@ To create your own taxonomy instead, see [Preparing taxonomies](/docs/instructla
 
 1. Click **Publish a release**.
 
-1. Download the packaged TAR file that was automatically generated from the release by clicking **Source code (tar.gz)**.
+1. Download the packaged `tar.gz` file that was automatically generated from the release by clicking **Source code (tar.gz)**.
 
 1. **Optional**: If you are using a private repository for your taxonomy knowledge documents, complete the following steps.
 

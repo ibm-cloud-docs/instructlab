@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-28"
+lastupdated: "2025-06-12"
 
 keywords: taxonomy, troubleshooting
 
@@ -25,11 +25,9 @@ Failed to retrieve taxonomy from COS.
 {: screen}
 
 
-The taxonomy TAR file could not be downloaded from {{site.data.keyword.cos_short}}.
+The taxonomy `tar.gz` file could not be downloaded from {{site.data.keyword.cos_short}}.
 {: tsCauses}
 
 
-Verify that the taxonomy TAR exists in the specified {{site.data.keyword.cos_short}} bucket and that the {{site.data.keyword.cos_short}} authorization policy is still active.
+Verify that the taxonomy `tar.gz` exists in the specified {{site.data.keyword.cos_short}} bucket and that the {{site.data.keyword.cos_short}} authorization policy is still active.
 {: tsResolve}
-
-
