@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-05-09"
+lastupdated: "2025-07-23"
 
 keywords: instructlab, rhel ai, faq
 
@@ -81,10 +81,16 @@ Fit for purpose and open source, these enterprise-ready, multimodal models deliv
 
 {{site.data.keyword.short_name}} uses the `granite-3.1-8b-starter-v1` model.
 
+## What is a taxonomy?
+{: #taxonomy-faq}
+{: faq}
+
+A taxonomy is a file directory that consists of the data you feed to the model. It is organized in a cascading structure where each sub-directory, or "branch", of the taxonomy "tree" ends with a "leaf node", which is a set of files that contain the relevant data. You can contribute to a taxonomy by adding an entirely new "branch", or by adding new data to an existing `qna.yaml` file. For more information on the taxonomy structure, see [How taxonomies are structured for {{site.data.keyword.short_name}}](/docs/instructlab?topic=instructlab-taxonomy-overview&interface=ui){: external}. You can also view the [InstructLab taxonomy on GitHub](https://github.com/IBM-Cloud/redhat-ai-instructlab-taxonomy){: external}.
+
 
 
 ## How does billing work?
-{: #costs}
+{: #costs-faq}
 {: faq}
 
 Costs are incurred by the usage of both {{site.data.keyword.product_name}} and the [{{site.data.keyword.cos_full}}](https://cloud.ibm.com/objectstorage/create#pricing) service, which is used as a storage location.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-07-23"
 
 keywords: instructlab, taxonomy, knowledge, skills, leaf node, branch, qna, files, documents
 
@@ -15,7 +15,7 @@ subcollection: instructlab
 # How taxonomies are structured for {{site.data.keyword.short_name}}
 {: #taxonomy-overview}
 
-A taxonomy is a file directory that consists of the data you feed to the model. It is organized in a cascading structure where each sub-directory, or "branch", of the taxonomy "tree" ends with a "leaf node", which is a set of files that contain the relevant data. You can contribute to a taxonomy by adding an entirely new "branch", or by adding new data to an existing `qna.yaml` file. For more information on the taxonomy structure, see [About the InstructLab Taxonomy](https://docs.instructlab.ai/taxonomy/){: external} in the InstructLab docs. You can also view the [InstructLab taxonomy on GitHub](https://github.com/instructlab/taxonomy){: external}.
+A taxonomy is a file directory that consists of the data you feed to the model. It is organized in a cascading structure where each sub-directory, or "branch", of the taxonomy "tree" ends with a "leaf node", which is a set of files that contain the relevant data. You can contribute to a taxonomy by adding an entirely new "branch", or by adding new data to an existing `qna.yaml` file. For more information on the taxonomy structure, see [About the InstructLab Taxonomy](https://docs.instructlab.ai/taxonomy/){: external} in the InstructLab docs. You can also view the [InstructLab taxonomy on GitHub](https://github.com/IBM-Cloud/redhat-ai-instructlab-taxonomy/tree/main/knowledge){: external}.
 
 For steps on creating or adding to a taxonomy, see [Preparing taxonomies](/docs/instructlab?topic=instructlab-taxonomy-prep).
 
@@ -49,12 +49,12 @@ There are two types of data files required for each "leaf node".
 ## Knowledge documents
 {: #knowledge-docs}
 
-Any knowledge added to a taxonomy must be backed up by a knowledge document, which acts as a source of truth for the information fed to the model. The document must be a Markdown file that exists in a directory separate from the taxonomy. You reference the knowledge document and the directory where it is stored in the `document_outline` section of the `qna.yaml` file. For more information and samples of a knowledge document, see [Preparing your knowledge documents](https://docs.instructlab.ai/taxonomy/upstream/knowledge_contribution_details/#preparing-your-knowledge-documents){: external} and [Example of a knowledge document file](https://github.com/instructlab/taxonomy?tab=readme-ov-file#knowledge-markdown-file-example) in the InstructLab documentation.
+Any knowledge added to a taxonomy must be backed up by a knowledge document, which acts as a source of truth for the information fed to the model. The document must be a Markdown file that exists in a directory separate from the taxonomy. You reference the knowledge document and the directory where it is stored in the `document_outline` section of the `qna.yaml` file. For more information and samples of a knowledge document, see [Preparing your knowledge documents](https://docs.instructlab.ai/taxonomy/upstream/knowledge_contribution_details/#preparing-your-knowledge-documents){: external} and [Example of a knowledge document file reference](https://github.com/IBM-Cloud/redhat-ai-instructlab-taxonomy/blob/main/docs/template_qna.yaml#L45-L51).
 
 ## Knowledge `qna.yaml` files
 {: #knowledge-qna}
 
-The knowledge `qna.yaml` file includes questions and answers based on the information found in the relevant knowledge document. Questions and answers are stored as key/value pairs, and a minimum of five pairs is required for each `qna.yaml` file. At the end of your `qna.yaml` file in the `document_outline` section, you must reference the knowledge document and the directory where it is stored. For the full `qna.yaml` file requirements and examples of knowledge contributions, see [The knowledge files](https://docs.instructlab.ai/taxonomy/knowledge/file_structure/#the-knowledge-files){: external} and [Example of a knowledge submission](https://docs.instructlab.ai/taxonomy/knowledge/file_structure/#example-of-a-knowledge-submission){: external} in the InstructLab documentation. 
+The knowledge `qna.yaml` file includes questions and answers based on the information found in the relevant knowledge document. Questions and answers are stored as key/value pairs, and a minimum of five pairs is required for each `qna.yaml` file. At the end of your `qna.yaml` file in the `document_outline` section, you must reference the knowledge document and the directory where it is stored. For the full `qna.yaml` file requirements and examples of knowledge contributions, see [template `qna.yaml` file](https://github.com/IBM-Cloud/redhat-ai-instructlab-taxonomy/blob/main/docs/template_qna.yaml){: external} and [Example of a knowledge submission](https://docs.instructlab.ai/taxonomy/knowledge/file_structure/#example-of-a-knowledge-submission){: external}. 
 
 ## Skills `qna.yaml` files
 {: #skills-qna}
