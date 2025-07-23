@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-17"
+lastupdated: "2025-07-23"
 
 keywords: instructlab, taxonomy, prepare, create taxonomy, qna, knowledge document, documents
 
@@ -22,7 +22,7 @@ Follow these steps to create your own taxonomy. For more information on taxonomi
 {: #taxonomy-create}
 {: step}
 
-You can [fork and clone the existing InstructLab community taxonomy](https://github.com/instructlab/taxonomy){: external}, or you can create a new taxonomy from scratch in your own GitHub repo. For examples and diagrams showing how you can structure your own taxonomy, see [Upstream taxonomy tree layout](https://docs.instructlab.ai/taxonomy/#upstream-taxonomy-tree-layout){: external} in the InstructLab docs. 
+You can [fork and clone the IBM Cloud InstructLab taxonomy](https://github.com/IBM-Cloud/redhat-ai-instructlab-taxonomy){: external}, or you can create a new taxonomy from scratch in your own GitHub repo. For examples and diagrams showing how you can structure your own taxonomy, see [Upstream taxonomy tree layout](https://docs.instructlab.ai/taxonomy/#upstream-taxonomy-tree-layout){: external} in the InstructLab docs. 
 
 ## Gather your knowledge documents
 {: #taxonomy-gather}
@@ -31,6 +31,8 @@ You can [fork and clone the existing InstructLab community taxonomy](https://git
 Format your knowledge documents as a Markdown `.md` file and store them in a directory that is separate from the taxonomy. For an example of a knowledge document, see the [InstructLab documentation](https://docs.instructlab.ai/taxonomy/knowledge/file_structure/#example-of-a-knowledge-document-file){: external}. 
 
 Knowledge documents are only required when adding knowledge to your taxonomy, not skills. For more information on the difference between knowledge and skills see [Taxonomy data](/docs/instructlab?topic=instructlab-taxonomy-overview#taxonomy-data).
+
+The total size of your knowledge documents should not exceed 10MB cumulative.
 {: note}
 
 ## Create `qna.yaml` files for knowledge and skills

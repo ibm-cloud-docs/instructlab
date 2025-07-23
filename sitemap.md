@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-05-09"
+lastupdated: "2025-07-23"
 
 
 keywords: instructlab, sitemap
@@ -25,11 +25,11 @@ subcollection: instructlab
 
 [Getting started](/docs/instructlab?topic=instructlab-getting-started#getting-started)
 
-* [Get familiar with the capabilities](/docs/instructlab?topic=instructlab-getting-started#get-familiar)
+* [Get familiar with the concepts](/docs/instructlab?topic=instructlab-getting-started#get-familiar)
 
-* [Prerequisites](/docs/instructlab?topic=instructlab-getting-started#instructlab-pre)
+* [Set up your {{site.data.keyword.cloud}} account](/docs/instructlab?topic=instructlab-getting-started#instructlab-pre)
 
-* [Optional: Prepare your taxonomy](/docs/instructlab?topic=instructlab-getting-started#taxonomy)
+* [Optional: Prepare a taxonomy](/docs/instructlab?topic=instructlab-getting-started#taxonomy)
 
 * [Upload your taxonomy by using the console](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui)
 
@@ -219,9 +219,9 @@ subcollection: instructlab
 
 [Deploying models](/docs/instructlab?topic=instructlab-deploy#deploy)
 
-* [Deploying the model to Watsonx on {{site.data.keyword.cloud_notm}}](/docs/instructlab?topic=instructlab-deploy#deploy-watson)
-
 * [Deploying the model to RHEL-AI on {{site.data.keyword.cloud_notm}}](/docs/instructlab?topic=instructlab-deploy#deploy-rhel-ai)
+
+* [Deploying the model to Watsonx on {{site.data.keyword.cloud_notm}}](/docs/instructlab?topic=instructlab-deploy#deploy-watson)
 
 
 ## Enhancing security
@@ -466,7 +466,9 @@ subcollection: instructlab
 
 * [Which Granite model does {{site.data.keyword.short_name}} use?](/docs/instructlab?topic=instructlab-faq#granite-model)
 
-* [How does billing work?](/docs/instructlab?topic=instructlab-faq#costs)
+* [What is a taxonomy?](/docs/instructlab?topic=instructlab-faq#taxonomy-faq)
+
+* [How does billing work?](/docs/instructlab?topic=instructlab-faq#costs-faq)
 
 * [How is cost calculated in {{site.data.keyword.product_name}}?](/docs/instructlab?topic=instructlab-faq#costs-ilab)
 

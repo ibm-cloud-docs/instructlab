@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-04-17"
+lastupdated: "2025-07-23"
 
 keywords: instructlab, ai
 
@@ -17,27 +17,6 @@ subcollection: instructlab
 {: #deploy}
 
 You can choose to deploy the model.
-
-
-## Deploying the model to Watsonx on {{site.data.keyword.cloud_notm}}
-{: #deploy-watson}
-
-1. Sign up for [IBM watsonx as a Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/getting-started/signup-wx.html?context=wx&audience=wdp).
-
-1. [Log in and create an API key](https://dataplatform.cloud.ibm.com/docs/content/wsj/manage-data/task-credentials.html?context=wx&locale=en&audience=wdp#accessing-task-credentials).
-
-1. If you do not have one yet, [create a project](https://dataplatform.cloud.ibm.com/docs/content/wsj/getting-started/projects.html?context=wx&audience=wdp).
-
-1. [Add a connection](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/deploy-custom-fm-prepare-cloud.html?context=wx&audience=wdp#add-conn-project) to the {{site.data.keyword.cos_short}} data source in {{site.data.keyword.cloud_notm}}.
-
-1. [Import the model](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/deploy-custom-fm-prepare-cloud.html?context=wx&audience=wdp#creating-asset).
-
-1. [Deploy the model](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/deploy-custom-fm-create-cloud.html?context=wx&audience=wdp).
-
-1. [Test the deployment](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/deploy-custom-fm-create-cloud.html?context=wx&audience=wdp#testing-the-deployment).
-
-
-
 
 ## Deploying the model to RHEL-AI on {{site.data.keyword.cloud_notm}}
 {: #deploy-rhel-ai}
@@ -89,3 +68,21 @@ You can choose to deploy the model.
     ilab model chat --endpoint-url http://localhost:8080/v1 -m $MODEL_DIR
     ```
     {: pre}
+
+
+## Deploying the model to Watsonx on {{site.data.keyword.cloud_notm}}
+{: #deploy-watson}
+
+1. Sign up for [IBM watsonx as a Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/getting-started/signup-wx.html?context=wx&audience=wdp).
+
+1. [Log in and create an API key](https://dataplatform.cloud.ibm.com/docs/content/wsj/manage-data/task-credentials.html?context=wx&locale=en&audience=wdp#accessing-task-credentials).
+
+1. If you do not have one yet, [create a project](https://dataplatform.cloud.ibm.com/docs/content/wsj/getting-started/projects.html?context=wx&audience=wdp).
+
+1. [Add a connection](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/deploy-custom-fm-prepare-cloud.html?context=wx&audience=wdp#add-conn-project) to the {{site.data.keyword.cos_short}} data source in {{site.data.keyword.cloud_notm}}.
+
+1. [Import the model](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/deploy-custom-fm-prepare-cloud.html?context=wx&audience=wdp#creating-asset).
+
+1. [Deploy the model](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/deploy-custom-fm-create-cloud.html?context=wx&audience=wdp).
+
+1. [Test the deployment](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/deploy-custom-fm-create-cloud.html?context=wx&audience=wdp#testing-the-deployment).

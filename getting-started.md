@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-06-12"
+lastupdated: "2025-07-23"
 
 keywords: instructlab, ai
 
@@ -31,25 +31,27 @@ Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instruct
 {{site.data.keyword.short_name}} is an open source project created by IBM and Red Hat to be a cost-effective entry point into the world of [machine learning](#x8397498){: term}.
 
 
-## Get familiar with the capabilities
+## Get familiar with the concepts
 {: #get-familiar}
 
-To use {{site.data.keyword.short_name}}, you do not need to have any preexisting knowledge. You do not even need to have an idea for what to create yet. Let's start by just getting familiar with the concepts and what kinds of things you can do with the technology.
+To use {{site.data.keyword.short_name}}, you don't need to have any preexisting knowledge. You don't even need to have an idea for what to create yet. Let's start by just getting familiar with the concepts and what kinds of things you can do with the technology.
 
-[Generative AI](#x10298036){: term} starts with a [large language model (LLM)](#x10298052){: term}. With a prompt, these models can take sets of data and provide a statistically probable output for that prompt. You can automatically generate a data set that is similar to real data, and then use it to train the model to get the most probable output possible.
+With {{site.data.keyword.short_name}}, you can use an existing, pre-trained LLM compiled by a community of contributors, then contribute your own knowledge and skills, in what's known as a **taxonomy** to further train the model.
 
-With {{site.data.keyword.short_name}}, you can use an existing, pre-trained LLM compiled by a community of contributors, and then generate the data to further train the model. By incorporating {{site.data.keyword.cloud_notm}}, you have a place to store the taxonomy, which is the informational structure, for the model as you modify and train it on an ongoing basis.
+When you use {{site.data.keyword.short_name}} in {{site.data.keyword.cloud}}, you begin by uploading your taxonomy, which is the knowledge and skills you want to add to an LLM, to {{site.data.keyword.cos_short}}. You can then use {{site.data.keyword.short_name}} to further train the model by using your taxonomy data.
 
 ![Task flow diagram for generating a model with the service.](images/task-flow.svg "Task flow diagram for generating a model with the service."){: caption="Task flow diagram." caption-side="bottom"}{: external download="task-flow.svg"}
 
+For more information, see the following resources.
+- [What is InstructLab?](https://www.redhat.com/en/topics/ai/what-is-instructlab){: external}.
+- [InstructLab](https://www.ibm.com/think/topics/instructlab?mhsrc=ibmsearch_a&mhq=instructlab){: external}.
 
-## Prerequisites
+## Set up your {{site.data.keyword.cloud}} account
 {: #instructlab-pre}
 
-If this is the first time {{site.data.keyword.short_name}} is being used in the account, complete these tasks.
+Make sure you have the following before continuing.
 
 * A **Pay-As-You-Go** or **Subscription** {{site.data.keyword.cloud}} account. Trial accounts are not supported. For more information or to upgrade the account, see [Account types](/docs/account?topic=account-accounts#compare).
-
 
 * [An {{site.data.keyword.short_name}} project](/docs/instructlab?topic=instructlab-project).
 
@@ -60,19 +62,20 @@ If this is the first time {{site.data.keyword.short_name}} is being used in the 
 * [Install the CLI](/docs/instructlab?topic=instructlab-cli-install).{: cli}
 
 
-## Optional: Prepare your taxonomy
+## Optional: Prepare a taxonomy
 {: #taxonomy}
 
-If you don't already have a taxonomy, you can use the {{site.data.keyword.short_name}} [community taxonomy](https://github.com/instructlab/taxonomy){: external} to start.
+1. Fork the IBM Cloud taxonomy or create your own.
+    - If you don't already have a taxonomy, you can fork the [IBM Cloud taxonomy repo](https://github.com/IBM-Cloud/redhat-ai-instructlab-taxonomy){: external} and clone it to your local machine. This is an empty taxonomy with the correct file structure already created for you. You can add knowledge and skills in the corresponding directories.
 
-To create your own taxonomy instead, see [Preparing taxonomies](/docs/instructlab?topic=instructlab-taxonomy-prep&interface=ui) for more information. 
-{: tip}
+    - To create your own taxonomy instead, see [Preparing taxonomies](/docs/instructlab?topic=instructlab-taxonomy-prep&interface=ui) for more information.
 
-1. **Optional**: Fork the [community taxonomy repo](https://github.com/instructlab/taxonomy) and clone it to your local machine.
+    You can also use the IBM Cloud community Jupyter notebook to create your taxonomy. For more information, see [redhat-ai-instructlab-jupyter-notebooks GitHub repo](https://github.com/IBM-Cloud/redhat-ai-instructlab-jupyter-notebooks/tree/main){: external}
+    {: tip}
 
-1. **Optional**: Make updates to the taxonomy in your fork. The following example adds rhyming questions to the [linguistics](https://github.com/instructlab/taxonomy/tree/main/compositional_skills/grounded/linguistics) directory.
+1. Make updates to your taxonomy. The following example adds rhyming questions to the linguistics directory.
 
-    a. In your fork, create a `/instructlab-taxonomy/compositional_skills/grounded/linguistics/rhyming_words/qna.yaml` file.
+    a. In your fork, in the `compositional_skills/linguistics` directory, create a `qna.yaml` file.
 
     b. In the `qna.yml` file, add a question related to rhyming words.
     ```yaml
@@ -84,7 +87,7 @@ To create your own taxonomy instead, see [Preparing taxonomies](/docs/instructla
     ```
     {: codeblock}
 
-    c. If your additions include reference documents in Github, such as [this example](https://github.com/instructlab/taxonomy/blob/main/knowledge/science/animals/birds/black_capped_chickadee/qna.yaml#L185), you can use public `github.com` repositories. 
+    c. If your additions include reference documents, such as web articles or files in Github, you can reference the GitHub commit ID and SHA of the file like in [this example](https://docs.instructlab.ai/taxonomy/knowledge/file_structure/#example-of-a-knowledge-submission), you can use public `github.com` repositories. 
 
     ```txt
     document:
@@ -96,8 +99,6 @@ To create your own taxonomy instead, see [Preparing taxonomies](/docs/instructla
     {: codeblock}
 
     d. Save the changes and push the changes to the fork.
-
-    e. Optional: Learn more about how to modify the [taxonomy](https://github.com/instructlab/taxonomy) for the model.
 
     f. Optional: [Validate the updated taxonomy](/docs/instructlab?topic=instructlab-ts-debug#version).
 
