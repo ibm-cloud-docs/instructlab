@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-07-23"
+lastupdated: "2025-07-28"
 
 keywords: instructlab, ai
 
@@ -247,12 +247,11 @@ You can use the `set` command to save {{site.data.keyword.cos_short}} bucket det
 
 1. Add your taxonomy to your {{site.data.keyword.cos_short}} bucket. Review the following example commands.
 
-    [Quick start]{: tag-green} Example command to automatically create an {{site.data.keyword.cos_short}} instance and bucket in your account and upload a taxonomy from your `Downloads` folder to it.
+    [Quick start]{: tag-green} Example command to automatically create an {{site.data.keyword.cos_short}} instance and bucket in your account and upload a taxonomy from your `./taxonomy` folder to it.
     ```sh
     ibmcloud ilab taxonomy add \
     --name example-taxonomy-1 \
-    --taxonomy-path-cos "taxonomies/taxonomy.tar.gz" \
-    --taxonomy-path "Downloads/taxonomy.tar.gz"
+    --taxonomy-path "./taxonomy"
     ```
     {: pre}
 
@@ -263,8 +262,7 @@ You can use the `set` command to save {{site.data.keyword.cos_short}} bucket det
 	--taxonomy-path-cos "taxonomies/taxonomy.tar.gz" \
 	--taxonomy-path "./taxonomy" \
 	--cos-bucket example-cloud-object-storage-bucket-1 \
-	--cos-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud \
-	--cos-id 628e4348-2183-42fa-a03a-6f0f78453530
+	--cos-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud
     ```
     {: pre}
 
@@ -274,9 +272,8 @@ You can use the `set` command to save {{site.data.keyword.cos_short}} bucket det
     ibmcloud ilab taxonomy add \
     --name example-taxonomy-1 \
     --taxonomy-path-cos taxonomies/taxonomy.tar.gz \
-    --taxonomy-path "Downloads/taxonomy.tar.gz" \
+    --taxonomy-path "./taxonomy" \
     --cos-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud \
-    --cos-id 628e4348-2183-42fa-a03a-6f0f78453530 \
     --secrets-manager-git-id SEC-MGR-ID
     --secrets-manager-git-url https://URL
     ```
@@ -287,8 +284,8 @@ You can use the `set` command to save {{site.data.keyword.cos_short}} bucket det
     ibmcloud ilab taxonomy add \
     --name test \
     --taxonomy-path "/Users/USER/instructlab-taxonomy" \
-	--cos-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud \
-	--cos-id 628e4348-2183-42fa-a03a-6f0f78453530
+    --cos-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud \
+    --cos-id 628e4348-2183-42fa-a03a-6f0f78453530
     ```
     {: pre}
 
