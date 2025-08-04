@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-08-04"
 
 keywords: instructlab, ai
 
@@ -190,7 +190,7 @@ You can use the `set` command to save {{site.data.keyword.cos_short}} bucket det
 
     1. Create a service authorization to allow {{site.data.keyword.short_name}} to access your {{site.data.keyword.secrets-manager_short}} instance and secrets.
         ```sh
-        ibmcloud iam authorization-policy-create Writer --source-service-name instructlab --target-service-name secrets-manager
+        ibmcloud iam authorization-policy-create Reader --source-service-name instructlab --target-service-name secrets-manager
         ```
         {: pre}
 
