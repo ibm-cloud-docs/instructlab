@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-07-23"
+lastupdated: "2025-08-13"
 
 keywords: instructlab, ai
 
@@ -21,7 +21,7 @@ You can choose to deploy the model.
 ## Deploying the model to RHEL-AI on {{site.data.keyword.cloud_notm}}
 {: #deploy-rhel-ai}
 
-1. [Install RHEL-AI on {{site.data.keyword.cloud_notm}}](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_ai/1.4/html/installing/installing_ibm_cloud).
+1. [Install RHEL-AI on {{site.data.keyword.cloud_notm}}](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_ai/1.5/html/installing/installing_ibm_cloud).
 
 1. Using the {{site.data.keyword.cloud_notm}} CLI, get a bearer token.
     ```sh

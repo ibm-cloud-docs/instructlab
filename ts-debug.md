@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-24"
+lastupdated: "2025-08-13"
 
 keywords: instructlab, debugging
 
@@ -57,18 +57,18 @@ Try one of the following options to resolve the issue.
 3. Initialize the `ilab` CLI and complete the prompts.
 
     ```sh
-    ilab init
+    ilab config init
     ```
     {: pre}
 
 4. Run the `diff` command where the `--taxonomy-base` is the branch to compare the local files with. If you are using the {{site.data.keyword.short_name}} community taxonomy, this branch is `main`.
 
     ```sh
-    ilab taxonomy diff --taxonomy-path <local-path-to-taxonomy>  --taxonomy-base empty
+    ilab taxonomy diff --taxonomy-path <local-path-to-taxonomy>  --taxonomy-base=empty
     ```
     {: pre}
 
-    Output:
+    Output without any errors:
     ```txt
     Taxonomy in <local-path-to-taxonomy> is valid :)
     ```
