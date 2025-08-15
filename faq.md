@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-07-23"
+lastupdated: "2025-08-15"
 
 keywords: instructlab, rhel ai, faq
 
@@ -161,10 +161,10 @@ Factors that impact completion time:
 {: #faq-time-data}
 {: faq}
 
-For data generation, the general formula is to take the number of tokens, divided by about 5380.5 tokens per second, divided by 60 seconds per minute, and divided by 60 minutes in an hour.
+After queuing, data generation usually takes 2-6 hours to run. For an estimate, the general formula is to take the number of output tokens, divided by about 5000 tokens per second, divided by 60 seconds per minute, and divided by 60 minutes in an hour.
 
 ```txt
-Tokens / 5380.5 / 60 / 60 = Number of hours
+Tokens / 5000 / 60 / 60 = Number of hours
 ```
 {: codeblock}
 
@@ -173,9 +173,9 @@ Tokens / 5380.5 / 60 / 60 = Number of hours
 {: #faq-model}
 {: faq}
 
-For model training, the general formula is to take the number of tokens, divided by about 4115 tokens per second, divided by 60 seconds per minute, and divided by 60 minutes in an hour.
+For model training, the general formula is to take the number of output tokens, divided by about 4000 tokens per second, divided by 60 seconds per minute, and divided by 60 minutes in an hour.
 
 ```txt
-Tokens / 4115 / 60 / 60 = Number of hours
+Tokens / 4000 / 60 / 60 = Number of hours
 ```
 {: codeblock}
