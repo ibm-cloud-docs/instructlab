@@ -36,9 +36,9 @@ New! Import your own training data
 :   You can now import your own training data for training models. When you import your own training data, you can specify previously generated data IDs, or add knowledge and skills files to a data generation job by uploading files from {{site.data.keyword.cos_short}} or your local machine. For more information, see [Generating data](/docs/instructlab?topic=instructlab-data-generate).
 
 New! Taxonomy validation
-:   When you upload a taxonomy to {{short_name}}, it's now checked for formatting and syntax errors. Also, if you reference external knowledge documents in your `qna.yaml` files, {{short_name}} checks for access to those files. Additionally, {{short_name}} checks for the proper service authorizations for services like {{site.data.keyword.cos_short}} and {{site.data.keyword.secrets-manager_short}}.
+:   When you upload a taxonomy to {{site.data.keyword.short_name}}, it's now checked for formatting and syntax errors. Also, if you reference external knowledge documents in your `qna.yaml` files, {{site.data.keyword.short_name}} checks for access to those files. Additionally, {{site.data.keyword.short_name}} checks for the proper service authorizations for services like {{site.data.keyword.cos_short}} and {{site.data.keyword.secrets-manager_short}}.
 
-{{short_name}} CLI plug-in version `0.0.24`
+{{site.data.keyword.short_name}} CLI plug-in version `0.0.24`
 :   Version `0.0.24` of the plug-in adds support for importing your own training data to the `data generate` command. For more information, see [Generating data](/docs/instructlab?topic=instructlab-data-generate) or run `ibmcloud ilab data generate --help` to see the new options.
 
 ## May 2025
