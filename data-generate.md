@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-06-12"
+lastupdated: "2025-08-22"
 
 keywords: instructlab, ai, data, generate
 
@@ -19,14 +19,9 @@ subcollection: instructlab
 
 Complete the following steps to generate data from your taxonomy. [Learn more about what data generation is](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-faq#faq-data-gen).
 
-Data cannot be augmented, curated, or manually uploaded to train the model. Use this task to generate the data.
-{: restriction}
-
 
 ## Prerequisites
 {: #data-generate-pre}
-
-
 
 1. [Install the `ilab` CLI plug-in](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-cli-install).{: cli}
 1. [Prepare your taxonomy](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-getting-started#taxonomy).
@@ -41,9 +36,71 @@ Data cannot be augmented, curated, or manually uploaded to train the model. Use 
 
 1. Click **{{site.data.keyword.short_name}} Projects** > your project > **Training data** > **Generate**.
 
-1. Enter an alphanumeric name for the training data, select the taxonomy to use, and click **Generate**. The state is `queued`, then `running`. Wait for the state to be `completed`. When the data is generated, in the {{site.data.keyword.cos_short}} bucket, a `synthetic_data` directory is created with logs for troubleshooting.
+1. Enter an alphanumeric name for the training data, select the taxonomy to use, and click **Generate**. The state is `queued`, then `running`.
 
+1. Wait for the state to be `completed`. When the data generation is completed, a `synthetic_data` directory that contains log files is created {{site.data.keyword.cos_short}} bucket. You can review these logs for troubleshooting or verification.
 
+## Importing your own training data in the console
+{: #data-generate-byo-ui}
+{: ui}
+
+You can import your own previously generated data to supplement data generation in {{short_name}}. You might want to import your own data if you need to do one or more of the following.
+
+{{_include-segments/byo-sdg-use-cases.md}}
+
+To import your own data, you can reference previous data generation runs, import files from your {{site.data.keyword.cos_short}} bucket, or upload files from your local machine.
+
+Complete the following steps to import your own training data.
+
+1. In the console, open the [{{site.data.keyword.instructlab_short}} service](https://cloud.ibm.com/instructlab/overview).
+
+1. Click **{{site.data.keyword.short_name}} Projects** > your project > **Training data** > **Import**.
+
+1. Enter an alphanumeric name for your data.
+
+1. Select one of the following options.
+
+    - **Object Storage**: Select existing files in your Object Storage bucket.
+
+        1. Select the instance and bucket where your existing data is stored.
+        1. Click **Next**.
+        1. Select the files that you want to import.
+
+    - **Upload Files**:  Select files from your local machine. Note that there is a 40 Mb limit for uploading files.
+        
+        1. Select an {{site.data.keyword.cos_short}} instance and bucket or create a new instance and bucket to store your data.
+        1. Grant {{short_name}} Writer permissions for the bucket.
+        1. **Optional**: Storage settings. Specify the following additional details for how to store your data.
+            - Bucket file path.
+            - Directory within the bucket.
+            - Object Storage instance name.
+            - Resource group.
+            - Object Storage bucket name.
+            - Bucket resiliency.
+        1. Click **Next**.
+        1. Select the knowledge and skills files that you want to upload from your local machine.
+
+1. Click **Import**.
+
+## Merging training data in the console
+{: #data-generate-byo-ui}
+{: ui}
+
+You might generate data in smaller, manageable chunks, so that you can avoid timeouts or system limits. You can then merge these smaller data sets into a single data set for training.
+
+Complete the following steps to merge data in the console.
+
+1. In the console, open the [{{site.data.keyword.instructlab_short}} service](https://cloud.ibm.com/instructlab/overview).
+
+1. Click **{{site.data.keyword.short_name}} Projects** > your project > **Training data**.
+
+1. Select up to 20 of your training data entries from the list and click **Merge**.
+
+1. Enter an alphanumeric name for your data.
+
+1. Select the {{site.data.keyword.cos_short}} instance and bucket where you want to store the merged data.
+
+1. Click **Create**.
 
 ## Generating data by using the CLI
 {: #data-generate-cli}
@@ -136,6 +193,185 @@ Data cannot be augmented, curated, or manually uploaded to train the model. Use 
 
 
 When the state is `completed`, in the {{site.data.keyword.cos_short}} bucket, a [`synthetic_data` directory](#data-bucket) is created with logs for troubleshooting.
+
+## Importing your own training data by using the CLI
+{: #data-generate-byo-cli}
+{: cli}
+
+You might want to import your own data for one or more of the following reasons.
+
+{{_include-segments/byo-sdg-use-cases.md}}
+
+You can import your own training data to supplement data generation in {{short_name}}. To import your own previously generated data, specify one or more of the following:
+- The data generation IDs of previous runs.
+- An {{site.data.keyword.cos_short}} bucket that contains `.json` or `.jsonl` knowledge and skills files.
+
+Complete the following steps to import your data.
+
+1. List your taxonomies and make a note of the taxonomy you want to use.
+    ```sh
+    ibmcloud ilab taxonomy list
+    ```
+    {: pre}
+
+    Example output.
+    ```txt
+    id                         name       taxonomy_path
+    669a88c9488ee7b95ce8fe05   test-tax   taxonomy.tar.gz
+    ```
+    {: screen}
+
+1. If you have previously generated data that you want to use, list your data and make a note of the UUIDs you want to use. You can include up to 20 data sources.
+    ```sh
+    ibmcloud ilab data list
+    ```
+    {: pre}
+
+1. Review the `data generate` command options and descriptions.
+    ```sh
+    ibmcloud ilab data generate --help
+    ```
+    {: pre}
+
+    Example output.
+    ```sh     
+    NAME:
+      generate - Generates data against a specified taxonomy resource.
+
+    USAGE:
+      ibmcloud ilab data generate --name NAME --taxonomy-id TAXONOMY-ID --output-cos-bucket OUTPUT-COS-BUCKET --output-cos-endpoint OUTPUT-COS-ENDPOINT --internal-ids INTERNAL-IDS --skills-paths SKILLS-PATHS --knowledge-paths KNOWLEDGE-PATHS --skills-knowledge-cos-bucket SKILLS-KNOWLEDGE-COS-BUCKET --skills-knowledge-cos-endpoint SKILLS-KNOWLEDGE-COS-ENDPOINT
+
+    EXAMPLE:
+      ibmcloud ilab data generate \
+      --name example-data-job \
+      --taxonomy-id 202a03c4-dcf1-432a-82b7-abecb2e019f7 \
+      --output-cos-bucket my-output-bucket \
+      --output-cos-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud \
+      --internal-ids id1,id2 \
+      --skills-paths path/to/skills1.jsonl,path/to/skills2.jsonl \
+      --knowledge-paths path/to/knowledge1.jsonl,path/to/knowledge2.jsonl \
+      --skills-knowledge-cos-bucket my-input-bucket \
+      --skills-knowledge-cos-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud
+
+    OPTIONS:
+      -f, --force                                  Force the command to execute.
+          --internal-ids string                    List of internal UUIDs referencing data sources. The maximum length is 20 items. The minimum length is 0 items.
+          --knowledge-paths string                 A set of user provided knowledge json files containing curated data for fine-tuning. The maximum length is 20 items. The minimum length is 0 items.
+          --name string                            Required. The name to give a data resource. The maximum length is 32 characters. The minimum length is 1 character.
+          --output-cos-bucket string               The Cloud Object Storage that the output will be stored in. The maximum length is 63 characters. The minimum length is 3 characters.
+          --output-cos-endpoint string             The endpoint to the output Cloud Object Storage bucket. The maximum length is 300 characters. The minimum length is 13 characters.
+          --skills-knowledge-cos-bucket string     The Cloud Object Storage bucket where skills/knowledge jsonl is stored. The maximum length is 63 characters. The minimum length is 3 characters.
+          --skills-knowledge-cos-endpoint string   The endpoint to the Cloud Object Storage bucket. The maximum length is 300 characters. The minimum length is 13 characters.
+          --skills-paths string                    A set of user provided skills json files containing curated data for fine-tuning. The maximum length is 20 items. The minimum length is 0 items.
+          --taxonomy-id string                     The taxonomy ID that was used for synthetic data generation. In model training, this value is used for validating the data ID. This value is available only
+                                                  after the model training job is accepted by an agent. The maximum length is 36 characters. The minimum length is 36 characters.
+    GLOBAL OPTIONS:
+      -h, --help                Show help
+      -j, --jmes-query string   Provide a JMESPath query to customize output.
+          --output string       Choose an output format - can be 'json', 'yaml', 'tui', or 'table'. (default "table")
+          --project-id string   The InstructLab project ID (default "project_id")
+      -q, --quiet               Suppresses verbose messages.
+      
+    ```
+    {: screen}
+
+1. Generate data from your taxonomy. Note the ID for the data to use in the next step. Use alphanumeric characters in the name.
+    ```sh
+    ibmcloud ilab data generate [--name NAME] [--taxonomy-id TAXONOMY-ID] [--internal-ids INTERNAL-IDs]
+    ```
+    {: pre}
+
+    Example command to include multiple internal IDs (data sources) for data generation.
+    ```sh
+    ibmcloud ilab data generate --name testdata --taxonomy-id 65005b67-7de4-4216-b23c-ed4342f99c88 --internal-ids 8c6b9224-a4f1-4649-907c-0f11d14cfc59,299ee20c-0b04-4d8e-ad12-a3d98feece40 
+    ```
+    {: pre}
+
+For more examples, see the next section: [Example commands for importing your own training data](#data-generate-byo-cli-examples).
+
+### Example commands for importing your own training data
+{: #data-generate-byo-cli-examples}
+{: cli}
+
+Review the following example commands for importing your own training data or adding knowledge and skills files to a data generation job.
+
+Example command to include multiple internal IDs.
+```sh
+ibmcloud ilab data generate --name testdata --taxonomy-id 65005b67-7de4-4216-b23c-ed4342f99c88 --internal-ids 8c6b9224-a4f1-4649-907c-0f11d14cfc59,299ee20c-0b04-4d8e-ad12-a3d98feece40
+```
+{: pre}
+
+Example command to combine multiple previously generated data sources (internal IDs) as well as `.jsonl` or `.json` files from an {{site.data.keyword.cos_short}} bucket.
+
+```sh
+ibmcloud ilab data generate \
+  --name testdata \
+  --taxonomy-id 669a88c9488ee7b95ce8fe05 \
+  --internal-ids 8c6b9224-a4f1-4649-907c-0f11d14cfc59,299ee20c-0b04-4d8e-ad12-a3d98feece40 \
+  --knowledge-paths PATH \
+  --skills-paths PATH \
+  --skills-knowledge-cos-bucket STRING \
+  --skills-knowledge-cos-bucket-endpoint ENDPOINT
+```
+{: pre}
+
+Example command to combine previously generated data with `.json` or `.jsonl` knowledge and skills files stored in an {{site.data.keyword.cos_short}} bucket. You can also optionally specify an output {{site.data.keyword.cos_short}} bucket to store the generated data (SDG) output.
+
+```sh
+ibmcloud ilab data generate \
+  --name testdata \
+  --taxonomy-id 669a88c9488ee7b95ce8fe05 \
+  --internal-ids 8c6b9224-a4f1-4649-907c-0f11d14cfc59 \
+  --knowledge-paths PATH \
+  --skills-paths PATH \
+  --skills-knowledge-cos-bucket STRING \ 
+  --skills-knowledge-cos-bucket-endpoint ENDPOINT
+  --output-cos-bucket-string STRING \
+  --output-cos-bucket-endpoint ENDPOINT
+  
+```
+{: pre}
+
+
+Example command to merge data by specifying their internal IDs.
+```sh
+ibmcloud ilab data generate \
+  --name testdata \
+  --internal-ids 8c6b9224-a4f1-4649-907c-0f11d14cfc59,299ee20c-0b04-4d8e-ad12-a3d98feece40 \
+  --output-cos-bucket-string STRING \
+  --output-cos-bucket-endpoint ENDPOINT
+```
+{: pre}
+
+Example command to merge previously generated data by specifying their internal IDs as well as include skills and knowledge from an {{site.data.keyword.cos_short}} bucket.
+
+```sh
+ibmcloud ilab data generate \
+  --name testdata \
+  --internal-ids 8c6b9224-a4f1-4649-907c-0f11d14cfc59 \
+  --knowledge-paths PATH \
+  --skills-paths PATH \
+  --skills-knowledge-cos-bucket STRING \ 
+  --skills-knowledge-cos-bucket-endpoint ENDPOINT
+  --output-cos-bucket-string STRING \
+  --output-cos-bucket-endpoint ENDPOINT
+```
+{: pre}
+
+Example command to merge skills and knowledge from an {{site.data.keyword.cos_short}} bucket.
+
+```sh
+ibmcloud ilab data generate \
+  --name testdata \
+  --knowledge-paths PATH \
+  --skills-paths PATH \
+  --skills-knowledge-cos-bucket STRING \ 
+  --skills-knowledge-cos-bucket-endpoint ENDPOINT
+  --output-cos-bucket-string STRING \
+  --output-cos-bucket-endpoint ENDPOINT
+```
+{: pre}
+
 
 ## Generating data by using the API
 {: #data-generate-api}

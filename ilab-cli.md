@@ -314,7 +314,7 @@ ibmcloud ilab data --help
 Generates data against a specified taxonomy resource.
 
 ```sh
-ibmcloud ilab data generate --name NAME --taxonomy-id TAXONOMY-ID
+ibmcloud ilab data generate --name NAME --taxonomy-id TAXONOMY-ID --output-cos-bucket OUTPUT-COS-BUCKET --output-cos-endpoint OUTPUT-COS-ENDPOINT --internal-ids INTERNAL-IDS --skills-paths SKILLS-PATHS --knowledge-paths KNOWLEDGE-PATHS --skills-knowledge-cos-bucket SKILLS-KNOWLEDGE-COS-BUCKET --skills-knowledge-cos-endpoint SKILLS-KNOWLEDGE-COS-ENDPOINT
 ```
 
 
