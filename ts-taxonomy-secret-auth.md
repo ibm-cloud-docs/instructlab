@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-05-09"
+lastupdated: "2025-08-22"
 
 keywords: secrets, authorization, troubleshooting
 
@@ -28,5 +28,5 @@ Either the secret ID that was specified with the `--secrets-manager-git-id` opti
 {: tsCauses}
 
 
-Verify that you are including a valid ID for the secret and that the ID has valid authorization policies set for it. To set up an authorization policy, see [Authorizing an IBM Cloud service to access {{site.data.keyword.secrets-manager_short}}](https://cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-integrations#create-authorization).
+Verify that you are including a valid ID for the secret and that the ID has valid authorization policies set for it. To set up an authorization policy, see [Authorizing an IBM Cloud service to access {{site.data.keyword.secrets-manager_short}}](/docs/secrets-manager?topic=secrets-manager-integrations#create-authorization).
 {: tsResolve}
