@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-06-03"
+lastupdated: "2025-08-22"
 
 keywords: HA for {{site.data.keyword.short_name}}, DR for {{site.data.keyword.short_name}}, {{site.data.keyword.short_name}} recovery time objective, {{site.data.keyword.short_name}} recovery point objective
 
@@ -91,8 +91,8 @@ Example checklist for Object storage replication
 - [ ] Enable object replication from primary object bucket to secondary object bucket
 - [ ] Upload taxonomy to primary object storage bucket and create taxonomy object in primary InstructLab instance
 - [ ] Ensure taxonomy object storage bucket object replicates to secondary region
-- [ ] Generate synthetic data from taxonomy in primary Instructlab Instance
-- [ ] Ensure synthetic data file replicates from primary object storage bucket to secondary object storage bucket
+- [ ] Generate training data from taxonomy in primary Instructlab Instance
+- [ ] Ensure training data file replicates from primary object storage bucket to secondary object storage bucket
 - [ ] Fine tune a model in the InstructLab primary instance
 - [ ] Ensure model alignment file replicates from primary object storage bucket to secondary object storage bucket
 ```

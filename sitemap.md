@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-07-23"
+lastupdated: "2025-08-22"
 
 
 keywords: instructlab, sitemap
@@ -54,6 +54,16 @@ subcollection: instructlab
 
 
 [Release notes](/docs/instructlab?topic=instructlab-release-notes#release-notes)
+
+* [August 2025](/docs/instructlab?topic=instructlab-release-notes#aug25)
+
+    * [22 August 2025](/docs/instructlab?topic=instructlab-release-notes#2aug25)
+
+        * New! Import your own training data
+
+        * New! Taxonomy validation
+
+        * {{short_name}} CLI plug-in version `0.0.24`
 
 * [May 2025](/docs/instructlab?topic=instructlab-release-notes#may25)
 
@@ -185,7 +195,15 @@ subcollection: instructlab
 
 * [Generating data by using the console](/docs/instructlab?topic=instructlab-data-generate&interface=ui#data-generate-ui)
 
+* [Importing your own training data in the console](/docs/instructlab?topic=instructlab-data-generate&interface=ui#data-generate-byo-ui)
+
+* [Merging training data in the console](/docs/instructlab?topic=instructlab-data-generate&interface=ui#data-generate-byo-ui)
+
 * [Generating data by using the CLI](/docs/instructlab?topic=instructlab-data-generate&interface=cli#data-generate-cli)
+
+* [Importing your own training data by using the CLI](/docs/instructlab?topic=instructlab-data-generate&interface=cli#data-generate-byo-cli)
+
+    * [Example commands for importing your own training data](/docs/instructlab?topic=instructlab-data-generate&interface=cli#data-generate-byo-cli-examples)
 
 * [Generating data by using the API](/docs/instructlab?topic=instructlab-data-generate&interface=api#data-generate-api)
 
@@ -468,6 +486,8 @@ subcollection: instructlab
 
 * [What is a taxonomy?](/docs/instructlab?topic=instructlab-faq#taxonomy-faq)
 
+* [How does taxonomy validation work?](/docs/instructlab?topic=instructlab-faq#faq-tax-validation)
+
 * [How does billing work?](/docs/instructlab?topic=instructlab-faq#costs-faq)
 
 * [How is cost calculated in {{site.data.keyword.product_name}}?](/docs/instructlab?topic=instructlab-faq#costs-ilab)
@@ -485,3 +505,5 @@ subcollection: instructlab
 * [How long does data generation take?](/docs/instructlab?topic=instructlab-faq#faq-time-data)
 
 * [How long does model training take?](/docs/instructlab?topic=instructlab-faq#faq-model)
+
+* [Can I import my own training data?](/docs/instructlab?topic=instructlab-faq#faq-byo-sdg)

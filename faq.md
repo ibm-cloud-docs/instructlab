@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-08-15"
+lastupdated: "2025-08-22"
 
 keywords: instructlab, rhel ai, faq
 
@@ -88,6 +88,15 @@ Fit for purpose and open source, these enterprise-ready, multimodal models deliv
 A taxonomy is a file directory that consists of the data you feed to the model. It is organized in a cascading structure where each sub-directory, or "branch", of the taxonomy "tree" ends with a "leaf node", which is a set of files that contain the relevant data. You can contribute to a taxonomy by adding an entirely new "branch", or by adding new data to an existing `qna.yaml` file. For more information on the taxonomy structure, see [How taxonomies are structured for {{site.data.keyword.short_name}}](/docs/instructlab?topic=instructlab-taxonomy-overview&interface=ui){: external}. You can also view the [InstructLab taxonomy on GitHub](https://github.com/IBM-Cloud/redhat-ai-instructlab-taxonomy){: external}.
 
 
+## How does taxonomy validation work?
+{: #faq-tax-validation}
+{: faq}
+
+When you upload a taxonomy to {{short_name}}, the checks are performed: 
+- Validating the formatting and syntax of your `qna.yaml` files by using the `ilab diff` command.
+- Attempting to clone the knowledge and skills documents that are referenced in your `qna.yaml` files.
+- Checking that you have the correct service authorizations in place, such as for {{site.data.keyword.cos_short}} and {{site.data.keyword.secrets-manager_short}}.
+
 
 ## How does billing work?
 {: #costs-faq}
@@ -119,9 +128,9 @@ Model alignment training
 
 1. Before you begin running anything in {{site.data.keyword.instructlab_short}}, you can use the [cost estimator](https://cloud.ibm.com/estimator) to get an estimate of what the cost might be.
 
-1. When you upload your taxonomy, look for the cost estimate based on synthetic data tokens. Then run the [data generation](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-data-generate) job.
+1. When you upload your taxonomy, look for the cost estimate based on data tokens. Then run the [data generation](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-data-generate) job.
 
-1. After the synthetic data generation completes, but before you begin the training, look for the estimated amount of tokens for the training costs. Then, [begin training](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-model-train).
+1. After the data generation completes, but before you begin the training, look for the estimated amount of tokens for the training costs. Then, [begin training](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-model-train).
 
 
 ## Are failed operations billed?
@@ -179,3 +188,17 @@ For model training, the general formula is to take the number of output tokens, 
 Tokens / 4000 / 60 / 60 = Number of hours
 ```
 {: codeblock}
+
+
+## Can I import my own training data?
+{: #faq-byo-sdg}
+
+Yes, you can import your own training data. Importing your own training data is beneficial for a variety of use cases and can help you optimize performance and efficiency across hybrid environments.
+
+- Training models to your specific needs and maintain control over your data sources, whether that's on-premises or in {{site.data.keyword.cloud_notm}}.
+- Generating data in smaller, manageable chunks, so that you can avoid timeouts or system limits. You can later combine these smaller data sets into a single data set for training.
+- Combining previously generated training data with new data, so that you can iteratively retrain models with both existing and newly acquired knowledge.
+
+Other use cases:
+
+{{_include-segments/byo-sdg-use-cases.md}}

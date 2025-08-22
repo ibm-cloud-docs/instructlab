@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-08-04"
+lastupdated: "2025-08-22"
 
 keywords: instructlab, ai
 
@@ -293,4 +293,4 @@ You can use the `set` command to save {{site.data.keyword.cos_short}} bucket det
 ## What's next?
 {: #next}
 
-[Generate data from the taxonomy.](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-data-generate)
+Now that you've uploaded a taxonomy, the next step is to [Generate data from your taxonomy.](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-data-generate)
