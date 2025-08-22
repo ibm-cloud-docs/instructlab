@@ -63,7 +63,7 @@ subcollection: instructlab
 
         * New! Taxonomy validation
 
-        * {{short_name}} CLI plug-in version `0.0.24`
+        * {{site.data.keyword.short_name}} CLI plug-in version `0.0.24`
 
 * [May 2025](/docs/instructlab?topic=instructlab-release-notes#may25)
 

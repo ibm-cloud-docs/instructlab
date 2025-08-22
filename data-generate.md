@@ -44,7 +44,7 @@ Complete the following steps to generate data from your taxonomy. [Learn more ab
 {: #data-generate-byo-ui}
 {: ui}
 
-You can import your own previously generated data to supplement data generation in {{short_name}}. You might want to import your own data if you need to do one or more of the following.
+You can import your own previously generated data to supplement data generation in {{site.data.keyword.short_name}}. You might want to import your own data if you need to do one or more of the following.
 
 {{_include-segments/byo-sdg-use-cases.md}}
 
@@ -69,7 +69,7 @@ Complete the following steps to import your own training data.
     - **Upload Files**:  Select files from your local machine. Note that there is a 40 Mb limit for uploading files.
         
         1. Select an {{site.data.keyword.cos_short}} instance and bucket or create a new instance and bucket to store your data.
-        1. Grant {{short_name}} Writer permissions for the bucket.
+        1. Grant {{site.data.keyword.short_name}} Writer permissions for the bucket.
         1. **Optional**: Storage settings. Specify the following additional details for how to store your data.
             - Bucket file path.
             - Directory within the bucket.
@@ -202,7 +202,7 @@ You might want to import your own data for one or more of the following reasons.
 
 {{_include-segments/byo-sdg-use-cases.md}}
 
-You can import your own training data to supplement data generation in {{short_name}}. To import your own previously generated data, specify one or more of the following:
+You can import your own training data to supplement data generation in {{site.data.keyword.short_name}}. To import your own previously generated data, specify one or more of the following:
 - The data generation IDs of previous runs.
 - An {{site.data.keyword.cos_short}} bucket that contains `.json` or `.jsonl` knowledge and skills files.
 

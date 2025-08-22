@@ -92,7 +92,7 @@ A taxonomy is a file directory that consists of the data you feed to the model. 
 {: #faq-tax-validation}
 {: faq}
 
-When you upload a taxonomy to {{short_name}}, the checks are performed: 
+When you upload a taxonomy to {{site.data.keyword.short_name}}, the checks are performed: 
 - Validating the formatting and syntax of your `qna.yaml` files by using the `ilab diff` command.
 - Attempting to clone the knowledge and skills documents that are referenced in your `qna.yaml` files.
 - Checking that you have the correct service authorizations in place, such as for {{site.data.keyword.cos_short}} and {{site.data.keyword.secrets-manager_short}}.
