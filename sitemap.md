@@ -422,7 +422,13 @@ subcollection: instructlab
 
     * [CosBucketInformationPrototype](/docs/instructlab?topic=instructlab-ilab-cli#cli-cos-bucket-information-prototype-example-schema)
 
+    * [DataDestinationPrototype](/docs/instructlab?topic=instructlab-ilab-cli#cli-data-destination-prototype-example-schema)
+
+    * [DataSourcesPrototype](/docs/instructlab?topic=instructlab-ilab-cli#cli-data-sources-prototype-example-schema)
+
     * [SecretsManagerConfigPrototype](/docs/instructlab?topic=instructlab-ilab-cli#cli-secrets-manager-config-prototype-example-schema)
+
+    * [UserProvidedPathsPrototype](/docs/instructlab?topic=instructlab-ilab-cli#cli-user-provided-paths-prototype-example-schema)
 
 
 ## API reference

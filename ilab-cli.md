@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-04-11"
+lastupdated: "2025-08-18"
 
 keywords: instructlab, cli, plugin
 
@@ -128,7 +128,7 @@ ibmcloud ilab taxonomy --help
 Add a taxonomy to your Cloud Object Storage bucket.
 
 ```sh
-ibmcloud ilab taxonomy add --name NAME --taxonomy-path-cos TAXONOMY-PATH-COS [--taxonomy-path TAXONOMY-PATH] [--cos-bucket-information COS-BUCKET-INFORMATION | --cos-id COS-ID --cos-bucket COS-BUCKET --cos-endpoint COS-ENDPOINT] [--secrets-manager-config SECRETS-MANAGER-CONFIG | --secrets-manager-git-url SECRETS-MANAGER-GIT-URL --secrets-manager-git-id SECRETS-MANAGER-GIT-ID]
+ibmcloud ilab taxonomy add --name NAME [--taxonomy-path TAXONOMY-PATH] [--taxonomy-path-cos TAXONOMY-PATH-COS] [--cos-bucket-information COS-BUCKET-INFORMATION | --cos-id COS-ID --cos-bucket COS-BUCKET --cos-endpoint COS-ENDPOINT] [--secrets-manager-config SECRETS-MANAGER-CONFIG | --secrets-manager-git-url SECRETS-MANAGER-GIT-URL --secrets-manager-git-id SECRETS-MANAGER-GIT-ID]
 ```
 
 
@@ -140,18 +140,18 @@ ibmcloud ilab taxonomy add --name NAME --taxonomy-path-cos TAXONOMY-PATH-COS [--
 
     The maximum length is `32` characters. The minimum length is `1` character. The value must match regular expression `/^[a-zA-Z0-9]([_-]?[a-zA-Z0-9]+)*$/`.
 
-`--taxonomy-path-cos` (string)
-:   The path in your Cloud Object Storage bucket where you want to store your taxonomy. By default, taxonomies are stored at `taxonomies/taxonomy-<current_time>.tar.gz`. Required.
-
-    The maximum length is `100` characters. The minimum length is `20` characters. The value must match regular expression `/^([-_.\/a-zA-Z0-9][a-zA-Z0-9]+)*[^\/]$/`.
-
 `--taxonomy-path` (string)
 :   The absolute or relative path to the taxonomy.tar.gz file on your local machine. For example 'Downloads/taxonomy.tar.gz'.
 
     The maximum length is `100` characters. The minimum length is `10` characters. The value must match regular expression `/^(?:[a-zA-Z]:\\\\|\\.{0,2}[\\\/]|\/)?(?:[^\\\/:*?"<>|\\r\\n]+[\\\/])*[^\\\/:*?"<>|\\r\\n]*$/`.
 
+`--taxonomy-path-cos` (string)
+:   The path in your Cloud Object Storage bucket where you want to store your taxonomy. By default, taxonomies are stored at 'taxonomies/taxonomy-<current_time>.tar.gz'.
+
+    The maximum length is `100` characters. The minimum length is `20` characters. The value must match regular expression `/^([-_.\/a-zA-Z0-9][a-zA-Z0-9]+)*[^\/]$/`.
+
 `--cos-bucket-information` ([`CosBucketInformationPrototype`](#cli-cos-bucket-information-prototype-example-schema))
-:   COS bucket information. This JSON option can instead be provided by setting individual fields with other options. It is mutually exclusive with those options.
+:   Cloud Object Storage bucket information. This JSON option can instead be provided by setting individual fields with other options. It is mutually exclusive with those options.
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--cos-bucket-information=@path/to/file.json`.
 
@@ -176,12 +176,12 @@ ibmcloud ilab taxonomy add --name NAME --taxonomy-path-cos TAXONOMY-PATH-COS [--
     The maximum length is `300` characters. The minimum length is `13` characters. The value must match regular expression `/^https:\/\/([a-zA-Z0-9-]+\\.)*cloud-object-storage(?:\\.test)?\\.appdomain\\.cloud$/`.
 
 `--secrets-manager-git-url` (string)
-:   The URL to a Secrets Manager instance to retrieve your user-defined secrets. This option provides a value for a sub-field of the JSON option 'secrets-manager-config'. It is mutually exclusive with that option.
+:   The URL to a Secrets Manager instance to retrieve your user-defined secrets. The credentials in your Secrets Manager instance are used to retrieve the knowledge documents that are referenced in your taxonomy from the repository where they're stored. This option provides a value for a sub-field of the JSON option 'secrets-manager-config'. It is mutually exclusive with that option.
 
     The maximum length is `300` characters. The minimum length is `13` characters. The value must match regular expression `/^https:\/\/([a-zA-Z0-9-]+\\.)*secrets-manager(?:\\.test)?\\.appdomain\\.cloud$/`.
 
 `--secrets-manager-git-id` (string)
-:   The Secrets Manager ID that points to your personal authorization token and URL in JSON format. This option provides a value for a sub-field of the JSON option 'secrets-manager-config'. It is mutually exclusive with that option.
+:   The Secrets Manager ID that points to your personal authorization token and URL in JSON format. The credentials in your Secrets Manager instance are used to retrieve the knowledge documents that are referenced in your taxonomy from the repository where they're stored. This option provides a value for a sub-field of the JSON option 'secrets-manager-config'. It is mutually exclusive with that option.
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[a-z0-9-]+$/`.
 
@@ -191,8 +191,8 @@ ibmcloud ilab taxonomy add --name NAME --taxonomy-path-cos TAXONOMY-PATH-COS [--
 ```sh
 ibmcloud ilab taxonomy add \
     --name example-taxonomy-1 \
-    --taxonomy-path-cos taxonomies/taxonomy.tar.gz \
     --taxonomy-path exampleString \
+    --taxonomy-path-cos taxonomies/taxonomy.tar.gz \
     --cos-bucket-information '{"service_instance_id": "628e4348-2183-42fa-a03a-6f0f78453530", "bucket": "example-bucket-1", "endpoint": "https://s3.us-east.cloud-object-storage.appdomain.cloud"}' \
     --secrets-manager-config '{"url": "https://12345678-abcd-1234-5678-abcdefghijkl.us-east.secrets-manager.appdomain.cloud", "git_id": "d9428888-122b-11e1-b85c-61cd3cbb3210"}'
 ```
@@ -202,8 +202,8 @@ Alternatively, granular options are available for the sub-fields of JSON string 
 ```sh
 ibmcloud ilab taxonomy add \
     --name example-taxonomy-1 \
-    --taxonomy-path-cos taxonomies/taxonomy.tar.gz \
     --taxonomy-path exampleString \
+    --taxonomy-path-cos taxonomies/taxonomy.tar.gz \
     --cos-id 628e4348-2183-42fa-a03a-6f0f78453530 \
     --cos-bucket example-bucket-1 \
     --cos-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud \
@@ -239,7 +239,7 @@ You can see the condition for each default JMESPath query in the following table
 | Response | Output | Query |
 | -------- | ------ | ----- |
 | Success | Default | - |
-|  | Table | `taxonomies[*]` |
+|  | Table | `taxonomies[].{id:id,name:name,taxonomy_path_cos:taxonomy_path_cos,created_at:created_at,state:state,status:status}` |
 {: caption="Default JMESPath" caption-side="bottom"}
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
@@ -270,6 +270,20 @@ ibmcloud ilab taxonomy get \
     --id 817bc95a-fef0-4039-b936-e0b6fb17b723
 ```
 {: pre}
+
+#### Default JMESPath
+{: #ilab-taxonomy-get-default-jmespath}
+
+A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
+You can see the condition for each default JMESPath query in the following table:
+
+| Response | Output | Query |
+| -------- | ------ | ----- |
+| Success | Default | - |
+|  | Table | `{id:id,name:name,project_id:project_id,taxonomy_path_cos:taxonomy_path_cos,created_at:created_at,state:state,status:status}` |
+{: caption="Default JMESPath" caption-side="bottom"}
+
+If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
 ### `ibmcloud ilab taxonomy delete`
 {: #ilab-cli-taxonomy-delete-command}
@@ -314,7 +328,7 @@ ibmcloud ilab data --help
 Generates data against a specified taxonomy resource.
 
 ```sh
-ibmcloud ilab data generate --name NAME --taxonomy-id TAXONOMY-ID --output-cos-bucket OUTPUT-COS-BUCKET --output-cos-endpoint OUTPUT-COS-ENDPOINT --internal-ids INTERNAL-IDS --skills-paths SKILLS-PATHS --knowledge-paths KNOWLEDGE-PATHS --skills-knowledge-cos-bucket SKILLS-KNOWLEDGE-COS-BUCKET --skills-knowledge-cos-endpoint SKILLS-KNOWLEDGE-COS-ENDPOINT
+ibmcloud ilab data generate --name NAME [--taxonomy-id TAXONOMY-ID] [--data-destination DATA-DESTINATION | --output-cos-bucket OUTPUT-COS-BUCKET --output-cos-endpoint OUTPUT-COS-ENDPOINT] [--data-sources DATA-SOURCES | --internal-ids INTERNAL-IDS --skills-paths SKILLS-PATHS --knowledge-paths KNOWLEDGE-PATHS --skills-knowledge-cos-bucket SKILLS-KNOWLEDGE-COS-BUCKET --skills-knowledge-cos-endpoint SKILLS-KNOWLEDGE-COS-ENDPOINT --data-sources-user-provided-paths DATA-SOURCES-USER-PROVIDED-PATHS]
 ```
 
 
@@ -327,17 +341,85 @@ ibmcloud ilab data generate --name NAME --taxonomy-id TAXONOMY-ID --output-cos-b
     The maximum length is `32` characters. The minimum length is `1` character. The value must match regular expression `/^[a-zA-Z0-9]([_-]?[a-zA-Z0-9]+)*$/`.
 
 `--taxonomy-id` (string)
-:   The taxonomy ID that was used for synthetic data generation. In model training, this value is used for validating the data ID. This value is available only after the model training job is accepted by an agent. Required.
+:   The taxonomy ID that was used for synthetic data generation. In model training, this value is used for validating the data ID. This value is available only after the model training job is accepted by an agent.
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[a-z0-9-]+$/`.
 
-#### Example
+`--data-destination` ([`DataDestinationPrototype`](#cli-data-destination-prototype-example-schema))
+:   Output Cloud Object Storage bucket information. This JSON option can instead be provided by setting individual fields with other options. It is mutually exclusive with those options.
+
+    Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--data-destination=@path/to/file.json`.
+
+`--data-sources` ([`DataSourcesPrototype`](#cli-data-sources-prototype-example-schema))
+:   Data sources associated with the taxonomy. This JSON option can instead be provided by setting individual fields with other options. It is mutually exclusive with those options.
+
+    Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--data-sources=@path/to/file.json`.
+
+`--output-cos-bucket` (string)
+:   The Cloud Object Storage that the output will be stored in. This option provides a value for a sub-field of the JSON option 'data-destination'. It is mutually exclusive with that option.
+
+    The maximum length is `63` characters. The minimum length is `3` characters. The value must match regular expression `/^[a-zA-Z0-9]([.-]?[a-zA-Z0-9]+)*$/`.
+
+`--output-cos-endpoint` (string)
+:   The endpoint to the output Cloud Object Storage bucket. This option provides a value for a sub-field of the JSON option 'data-destination'. It is mutually exclusive with that option.
+
+    The maximum length is `300` characters. The minimum length is `13` characters. The value must match regular expression `/^https:\/\/([a-zA-Z0-9-]+\\.)*cloud-object-storage(?:\\.test)?\\.appdomain\\.cloud$/`.
+
+`--internal-ids` ([]strfmt.UUID)
+:   List of internal UUIDs referencing data sources. This option provides a value for a sub-field of the JSON option 'data-sources'. It is mutually exclusive with that option.
+
+    The list items must match regular expression `/^[a-z0-9-]+$/`. The maximum length is `20` items. The minimum length is `0` items.
+
+`--skills-paths` ([]string)
+:   A set of user provided skills json files containing curated data for fine-tuning. This option provides a value for a sub-field of the JSON option 'data-sources'. It is mutually exclusive with that option.
+
+    The list items must match regular expression `/^([-_.\/a-zA-Z0-9][a-zA-Z0-9]+)*[^\/]$/`. The maximum length is `20` items. The minimum length is `0` items.
+
+`--knowledge-paths` ([]string)
+:   A set of user provided knowledge json files containing curated data for fine-tuning. This option provides a value for a sub-field of the JSON option 'data-sources'. It is mutually exclusive with that option.
+
+    The list items must match regular expression `/^([-_.\/a-zA-Z0-9][a-zA-Z0-9]+)*[^\/]$/`. The maximum length is `20` items. The minimum length is `0` items.
+
+`--skills-knowledge-cos-bucket` (string)
+:   The Cloud Object Storage bucket where skills/knowledge jsonl is stored. This option provides a value for a sub-field of the JSON option 'data-sources'. It is mutually exclusive with that option.
+
+    The maximum length is `63` characters. The minimum length is `3` characters. The value must match regular expression `/^[a-zA-Z0-9]([.-]?[a-zA-Z0-9]+)*$/`.
+
+`--skills-knowledge-cos-endpoint` (string)
+:   The endpoint to the Cloud Object Storage bucket. This option provides a value for a sub-field of the JSON option 'data-sources'. It is mutually exclusive with that option.
+
+    The maximum length is `300` characters. The minimum length is `13` characters. The value must match regular expression `/^https:\/\/([a-zA-Z0-9-]+\\.)*cloud-object-storage(?:\\.test)?\\.appdomain\\.cloud$/`.
+
+`--data-sources-user-provided-paths` ([`UserProvidedPathsPrototype`](#cli-user-provided-paths-prototype-example-schema))
+:   User-provided file paths for skills and knowledge training data. This option provides a value for a sub-field of the JSON option 'data-sources'. It is mutually exclusive with that option.
+
+    Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--data-sources-user-provided-paths=@path/to/file.json`.
+
+#### Examples
 {: #ilab-data-generate-examples}
 
 ```sh
 ibmcloud ilab data generate \
     --name example-data-1 \
-    --taxonomy-id 202a03c4-dcf1-432a-82b7-abecb2e019f7
+    --taxonomy-id 202a03c4-dcf1-432a-82b7-abecb2e019f7 \
+    --data-destination '{"bucket": "example-bucket-1", "endpoint": "https://s3.us-east.cloud-object-storage.appdomain.cloud"}' \
+    --data-sources '{"internal_ids": ["9e0a5988-0c7d-44de-ba48-465aef67baee","9e0a5988-0c7d-44de-ba48-465aef67baee"], "skills": ["user_provided_path/skills/skills_1.jsonl","user_provided_path/skills/skills_1.jsonl"], "knowledge": ["user_provided_path/knowledge/knowledge1.jsonl","user_provided_path/knowledge/knowledge1.jsonl"], "bucket": "example-bucket-1", "endpoint": "https://s3.us-east.cloud-object-storage.appdomain.cloud", "user_provided_paths": {"skills": ["user_provided_path/skills/skills_1.jsonl","user_provided_path/skills/skills_1.jsonl"], "knowledge": ["user_provided_path/knowledge/knowledge1.jsonl","user_provided_path/knowledge/knowledge1.jsonl"], "cos_bucket_information": {"bucket": "example-bucket-1", "endpoint": "https://s3.us-east.cloud-object-storage.appdomain.cloud"}}}'
+```
+{: pre}
+
+Alternatively, granular options are available for the sub-fields of JSON string options:
+```sh
+ibmcloud ilab data generate \
+    --name example-data-1 \
+    --taxonomy-id 202a03c4-dcf1-432a-82b7-abecb2e019f7 \
+    --output-cos-bucket example-bucket-1 \
+    --output-cos-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud \
+    --internal-ids 9e0a5988-0c7d-44de-ba48-465aef67baee,9e0a5988-0c7d-44de-ba48-465aef67baee \
+    --skills-paths user_provided_path/skills/skills_1.jsonl,user_provided_path/skills/skills_1.jsonl \
+    --knowledge-paths user_provided_path/knowledge/knowledge1.jsonl,user_provided_path/knowledge/knowledge1.jsonl \
+    --skills-knowledge-cos-bucket example-bucket-1 \
+    --skills-knowledge-cos-endpoint https://s3.us-east.cloud-object-storage.appdomain.cloud \
+    --data-sources-user-provided-paths userProvidedPathsPrototype
 ```
 {: pre}
 
@@ -368,7 +450,7 @@ You can see the condition for each default JMESPath query in the following table
 | Response | Output | Query |
 | -------- | ------ | ----- |
 | Success | Default | - |
-|  | Table | `data[*]` |
+|  | Table | `data[].{id:id,name:name,state:state,status:status,created_at:created_at,completed_at:completed_at}` |
 {: caption="Default JMESPath" caption-side="bottom"}
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
@@ -409,7 +491,7 @@ You can see the condition for each default JMESPath query in the following table
 | Response | Output | Query |
 | -------- | ------ | ----- |
 | Success | Default | - |
-|  | Table | `{id:id,name:name,state:state,status:status,created_at:created_at,completed_at:completed_at,taxonomy_id:taxonomy_id}` |
+|  | Table | `{id:id,name:name,project_id:project_id,state:state,status:status,created_at:created_at,completed_at:completed_at}` |
 {: caption="Default JMESPath" caption-side="bottom"}
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
@@ -538,7 +620,7 @@ You can see the condition for each default JMESPath query in the following table
 | Response | Output | Query |
 | -------- | ------ | ----- |
 | Success | Default | - |
-|  | Table | `models[*]` |
+|  | Table | `models[].{created_at:created_at,completed_at:completed_at,id:id,name:name,state:state,status:status}` |
 {: caption="Default JMESPath" caption-side="bottom"}
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
@@ -579,7 +661,7 @@ You can see the condition for each default JMESPath query in the following table
 | Response | Output | Query |
 | -------- | ------ | ----- |
 | Success | Default | - |
-|  | Table | `{base_model:base_model,created_at:created_at,completed_at:completed_at,data_id:data_id,id:id,name:name,state:state,status:status,taxonomy_id:taxonomy_id}` |
+|  | Table | `{base_model:base_model,created_at:created_at,completed_at:completed_at,data_id:data_id,id:id,name:name,project_id:project_id,state:state,status:status}` |
 {: caption="Default JMESPath" caption-side="bottom"}
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
@@ -658,6 +740,45 @@ The following example shows the format of the CosBucketInformationPrototype obje
 ```
 {: codeblock}
 
+### DataDestinationPrototype
+{: #cli-data-destination-prototype-example-schema}
+
+The following example shows the format of the DataDestinationPrototype object.
+
+```json
+
+{
+  "bucket" : "example-bucket-1",
+  "endpoint" : "https://s3.us-east.cloud-object-storage.appdomain.cloud"
+}
+```
+{: codeblock}
+
+### DataSourcesPrototype
+{: #cli-data-sources-prototype-example-schema}
+
+The following example shows the format of the DataSourcesPrototype object.
+
+```json
+
+{
+  "internal_ids" : [ "9e0a5988-0c7d-44de-ba48-465aef67baee", "9e0a5988-0c7d-44de-ba48-465aef67baee" ],
+  "skills" : [ "user_provided_path/skills/skills_1.jsonl", "user_provided_path/skills/skills_1.jsonl" ],
+  "knowledge" : [ "user_provided_path/knowledge/knowledge1.jsonl", "user_provided_path/knowledge/knowledge1.jsonl" ],
+  "bucket" : "example-bucket-1",
+  "endpoint" : "https://s3.us-east.cloud-object-storage.appdomain.cloud",
+  "user_provided_paths" : {
+    "skills" : [ "user_provided_path/skills/skills_1.jsonl", "user_provided_path/skills/skills_1.jsonl" ],
+    "knowledge" : [ "user_provided_path/knowledge/knowledge1.jsonl", "user_provided_path/knowledge/knowledge1.jsonl" ],
+    "cos_bucket_information" : {
+      "bucket" : "example-bucket-1",
+      "endpoint" : "https://s3.us-east.cloud-object-storage.appdomain.cloud"
+    }
+  }
+}
+```
+{: codeblock}
+
 ### SecretsManagerConfigPrototype
 {: #cli-secrets-manager-config-prototype-example-schema}
 
@@ -668,6 +789,20 @@ The following example shows the format of the SecretsManagerConfigPrototype obje
 {
   "url" : "https://12345678-abcd-1234-5678-abcdefghijkl.us-east.secrets-manager.appdomain.cloud",
   "git_id" : "d9428888-122b-11e1-b85c-61cd3cbb3210"
+}
+```
+{: codeblock}
+
+### UserProvidedPathsPrototype
+{: #cli-user-provided-paths-prototype-example-schema}
+
+The following example shows the format of the UserProvidedPathsPrototype object.
+
+```json
+
+{
+  "bucket" : "example-bucket-1",
+  "endpoint" : "https://s3.us-east.cloud-object-storage.appdomain.cloud"
 }
 ```
 {: codeblock}
