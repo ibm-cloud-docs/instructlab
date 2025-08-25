@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-08-22"
+lastupdated: "2025-08-25"
 
 keywords: instructlab, ai, data, generate
 
@@ -17,7 +17,9 @@ subcollection: instructlab
 {: #data-generate}
 
 
-Complete the following steps to generate data from your taxonomy. [Learn more about what data generation is](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-faq#faq-data-gen).
+Data generation is the process of automatically generating synthetic questions and answers based on the questions and answers that you included in the QNA files. The process {{site.data.keyword.instructlab_short}} uses to generate data focuses on content quality and relevance. 
+
+[Learn more about the data generation process from Red Hat.](https://www.redhat.com/en/blog/how-instructlabs-synthetic-data-generation-enhances-llms)
 
 
 ## Prerequisites
