@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-08-22"
+lastupdated: "2025-08-25"
 
 keywords: instructlab, ai
 
@@ -36,13 +36,13 @@ Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instruct
 
 To use {{site.data.keyword.short_name}}, you don't need to have any preexisting knowledge. You don't even need to have an idea for what to create yet. Let's start by just getting familiar with the concepts and what kinds of things you can do with the technology.
 
-With {{site.data.keyword.short_name}}, you can use an existing, pre-trained LLM compiled by a community of contributors, then contribute your own knowledge and skills, in what's known as a **taxonomy** to further train the model.
+With {{site.data.keyword.short_name}}, you can use an existing, pre-trained large language model (LLM) compiled by a community of contributors, then contribute your own knowledge and skills, in what's known as a **taxonomy** to further train the model.
 
-When you use {{site.data.keyword.short_name}} in {{site.data.keyword.cloud}}, you begin by uploading your taxonomy, which is the knowledge and skills you want to add to an LLM, to {{site.data.keyword.cos_short}}. You can then use {{site.data.keyword.short_name}} to further train the model by using your taxonomy data.
+With the {{site.data.keyword.short_name}} service, you can use the Instructlab functionality, but run it with the resources available in {{site.data.keyword.cloud}}. You begin by uploading your taxonomy, which is the knowledge and skills you want to add to an LLM, to {{site.data.keyword.cos_short}}. You can then use {{site.data.keyword.short_name}} to further train the model by using your taxonomy data.
 
 ![Task flow diagram for generating a model with the service.](images/task-flow.svg "Task flow diagram for generating a model with the service."){: caption="Task flow diagram." caption-side="bottom"}{: external download="task-flow.svg"}
 
-For more information, see the following resources.
+For more information about the InstructLab tooling, see the following resources.
 - [What is InstructLab?](https://www.redhat.com/en/topics/ai/what-is-instructlab){: external}.
 - [InstructLab](https://www.ibm.com/think/topics/instructlab?mhsrc=ibmsearch_a&mhq=instructlab){: external}.
 
@@ -66,7 +66,7 @@ Make sure you have the following before continuing.
 {: #taxonomy}
 
 1. Fork the IBM Cloud taxonomy or create your own.
-    - If you don't already have a taxonomy, you can fork the [IBM Cloud taxonomy repo](https://github.com/IBM-Cloud/redhat-ai-instructlab-taxonomy){: external} and clone it to your local machine. This is an empty taxonomy with the correct file structure already created for you. You can add knowledge and skills in the corresponding directories.
+    - If you don't already have a taxonomy, you can fork the [IBM Cloud taxonomy repo](https://github.com/IBM-Cloud/redhat-ai-instructlab-taxonomy){: external} and clone it to your local machine. This taxonomy has the correct file structure already created for you. You can add knowledge and skills in the corresponding directories.
 
     - To create your own taxonomy instead, see [Preparing taxonomies](/docs/instructlab?topic=instructlab-taxonomy-prep&interface=ui) for more information.
 
@@ -87,7 +87,7 @@ Make sure you have the following before continuing.
     ```
     {: codeblock}
 
-    c. If your additions include reference documents, such as web articles or files in Github, you can reference the GitHub commit ID and SHA of the file like in [this example](https://docs.instructlab.ai/taxonomy/knowledge/file_structure/#example-of-a-knowledge-submission), you can use public `github.com` repositories. 
+    c. If your additions include reference documents, such as web articles or files in Github, you can reference the public GitHub repository and SHA of a file like in [this example](https://docs.instructlab.ai/taxonomy/knowledge/file_structure/#example-of-a-knowledge-submission).
 
     ```txt
     document:
