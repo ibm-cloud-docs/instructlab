@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-08-25"
+lastupdated: "2025-08-29"
 
 keywords: instructlab, ai, data, generate
 
@@ -289,7 +289,7 @@ Complete the following steps to import your data.
     ```
     {: pre}
 
-For more examples, see the next section: [Example commands for importing your own training data](#data-generate-byo-cli-examples).
+For more examples, see the next section: [Example commands for importing your own training data](/docs/instructlab?topic=instructlab-data-generate&interface=cli#data-generate-byo-cli-examples).
 
 ### Example commands for importing your own training data
 {: #data-generate-byo-cli-examples}
