@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-08-18"
+lastupdated: "2025-08-25"
 
 keywords: instructlab, cli, plugin
 
@@ -371,12 +371,12 @@ ibmcloud ilab data generate --name NAME [--taxonomy-id TAXONOMY-ID] [--data-dest
     The list items must match regular expression `/^[a-z0-9-]+$/`. The maximum length is `20` items. The minimum length is `0` items.
 
 `--skills-paths` ([]string)
-:   A set of user provided skills json files containing curated data for fine-tuning. This option provides a value for a sub-field of the JSON option 'data-sources'. It is mutually exclusive with that option.
+:   A set of user provided skills json files present in an authorized Cloud Object Storage bucket containing curated data for fine-tuning. This option provides a value for a sub-field of the JSON option 'data-sources'. It is mutually exclusive with that option.
 
     The list items must match regular expression `/^([-_.\/a-zA-Z0-9][a-zA-Z0-9]+)*[^\/]$/`. The maximum length is `20` items. The minimum length is `0` items.
 
 `--knowledge-paths` ([]string)
-:   A set of user provided knowledge json files containing curated data for fine-tuning. This option provides a value for a sub-field of the JSON option 'data-sources'. It is mutually exclusive with that option.
+:   A set of user provided knowledge json files present in an authorized Cloud Object Storage bucket containing curated data for fine-tuning. This option provides a value for a sub-field of the JSON option 'data-sources'. It is mutually exclusive with that option.
 
     The list items must match regular expression `/^([-_.\/a-zA-Z0-9][a-zA-Z0-9]+)*[^\/]$/`. The maximum length is `20` items. The minimum length is `0` items.
 
