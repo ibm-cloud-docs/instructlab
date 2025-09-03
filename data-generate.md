@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-09-02"
+lastupdated: "2025-09-03"
 
 keywords: instructlab, ai, data, generate
 
@@ -257,23 +257,74 @@ Complete the following steps to import your data.
 
     OPTIONS:
       -f, --force                                  Force the command to execute.
-          --internal-ids string                    List of internal UUIDs referencing data sources. The maximum length is 20 items. The minimum length is 0 items.
-          --knowledge-paths string                 A set of user provided knowledge json files present in an authorized Cloud Object Storage bucket containing curated data for fine-tuning. The maximum length is 20 items. The minimum length is 0 items.
-          --name string                            Required. The name to give a data resource. The maximum length is 32 characters. The minimum length is 1 character.
-          --output-cos-bucket string               The Cloud Object Storage that the output will be stored in. The maximum length is 63 characters. The minimum length is 3 characters.
-          --output-cos-endpoint string             The endpoint to the output Cloud Object Storage bucket. The maximum length is 300 characters. The minimum length is 13 characters.
-          --skills-knowledge-cos-bucket string     The Cloud Object Storage bucket where skills/knowledge jsonl is stored. The maximum length is 63 characters. The minimum length is 3 characters.
-          --skills-knowledge-cos-endpoint string   The endpoint to the Cloud Object Storage bucket. The maximum length is 300 characters. The minimum length is 13 characters.
-          --skills-paths string                    A set of user provided skills json files present in an authorized Cloud Object Storage bucket containing curated data for fine-tuning. The maximum length is 20 items. The minimum length is 0 items.
-          --taxonomy-id string                     The taxonomy ID that was used for synthetic data generation. In model training, this value is used for validating the data ID. This value is available only
-                                                  after the model training job is accepted by an agent. The maximum length is 36 characters. The minimum length is 36 characters.
+          --internal-ids string                    List of internal UUIDs
+                                                  referencing data sources.
+                                                  The maximum length is 20
+                                                  items. The minimum length
+                                                  is 0 items.
+          --knowledge-paths string                 A set of user provided
+                                                  knowledge json files
+                                                  present in an authorized
+                                                  Cloud Object Storage bucket
+                                                  containing curated data for
+                                                  fine-tuning. The maximum
+                                                  length is 20 items. The
+                                                  minimum length is 0 items.
+          --name string                            Required. The name to give
+                                                  a data resource. The
+                                                  maximum length is 32
+                                                  characters. The minimum
+                                                  length is 1 character.
+          --output-cos-bucket string               The Cloud Object Storage
+                                                  that the output will be
+                                                  stored in. The maximum
+                                                  length is 63 characters.
+                                                  The minimum length is 3
+                                                  characters.
+          --output-cos-endpoint string             The endpoint to the output
+                                                  Cloud Object Storage
+                                                  bucket. The maximum length
+                                                  is 300 characters. The
+                                                  minimum length is 13 characters.
+          --skills-knowledge-cos-bucket string     The Cloud Object Storage
+                                                  bucket where
+                                                  skills/knowledge jsonl is
+                                                  stored. The maximum length
+                                                  is 63 characters. The
+                                                  minimum length is 3 characters.
+          --skills-knowledge-cos-endpoint string   The endpoint to the Cloud
+                                                  Object Storage bucket. The
+                                                  maximum length is 300
+                                                  characters. The minimum
+                                                  length is 13 characters.
+          --skills-paths string                    A set of user provided
+                                                  skills json files present
+                                                  in an authorized Cloud
+                                                  Object Storage bucket
+                                                  containing curated data for
+                                                  fine-tuning. The maximum
+                                                  length is 20 items. The
+                                                  minimum length is 0 items.
+          --taxonomy-id string                     The taxonomy ID that was
+                                                  used for synthetic data
+                                                  generation. In model
+                                                  training, this value is
+                                                  used for validating the
+                                                  data ID. This value is
+                                                  available only after the
+                                                  model training job is
+                                                  accepted by an agent. The
+                                                  maximum length is 36
+                                                  characters. The minimum
+                                                  length is 36 characters.
+
     GLOBAL OPTIONS:
       -h, --help                Show help
       -j, --jmes-query string   Provide a JMESPath query to customize output.
-          --output string       Choose an output format - can be 'json', 'yaml', 'tui', or 'table'. (default "table")
+          --output string       Choose an output format - can be 'json',
+                                'yaml', 'tui', or 'table'. (default "table")
           --project-id string   The InstructLab project ID (default "project_id")
-      -q, --quiet               Suppresses verbose messages.
-      
+      -q, --quiet               Suppresses verbose messages.  
     ```
     {: screen}
 
