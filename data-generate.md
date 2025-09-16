@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-09-03"
+lastupdated: "2025-09-16"
 
 keywords: instructlab, ai, data, generate
 
@@ -85,7 +85,7 @@ Complete the following steps to import your own training data.
 1. Click **Import**.
 
 ## Merging training data in the console
-{: #data-generate-byo-ui}
+{: #data-generate-byo-train-ui}
 {: ui}
 
 You might generate data in smaller, manageable chunks, so that you can avoid timeouts or system limits. You can then merge these smaller data sets into a single data set for training.

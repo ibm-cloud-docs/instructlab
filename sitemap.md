@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-08-22"
+lastupdated: "2025-09-16"
 
 
 keywords: instructlab, sitemap
@@ -197,7 +197,7 @@ subcollection: instructlab
 
 * [Importing your own training data in the console](/docs/instructlab?topic=instructlab-data-generate&interface=ui#data-generate-byo-ui)
 
-* [Merging training data in the console](/docs/instructlab?topic=instructlab-data-generate&interface=ui#data-generate-byo-ui)
+* [Merging training data in the console](/docs/instructlab?topic=instructlab-data-generate&interface=ui#data-generate-byo-train-ui)
 
 * [Generating data by using the CLI](/docs/instructlab?topic=instructlab-data-generate&interface=cli#data-generate-cli)
 
