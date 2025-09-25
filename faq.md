@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-08-22"
+lastupdated: "2025-09-25"
 
 keywords: instructlab, rhel ai, faq
 
@@ -79,7 +79,7 @@ Fit for purpose and open source, these enterprise-ready, multimodal models deliv
 {: #granite-model}
 {: faq}
 
-{{site.data.keyword.short_name}} uses the `granite-3.1-8b-starter-v1` model.
+{{site.data.keyword.short_name}} uses the `granite-3.1-8b-starter-v2.1` model.
 
 ## What is a taxonomy?
 {: #taxonomy-faq}
