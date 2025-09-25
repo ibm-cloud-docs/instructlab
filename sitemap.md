@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-09-16"
+lastupdated: "2025-09-25"
 
 
 keywords: instructlab, sitemap
@@ -54,6 +54,14 @@ subcollection: instructlab
 
 
 [Release notes](/docs/instructlab?topic=instructlab-release-notes#release-notes)
+
+* [September 2025](/docs/instructlab?topic=instructlab-release-notes#sept25)
+
+    * [23 September 2025](/docs/instructlab?topic=instructlab-release-notes#23aug25)
+
+        * Version 1.5 of {{site.data.keyword.product_name}} is available
+
+        * New base model
 
 * [August 2025](/docs/instructlab?topic=instructlab-release-notes#aug25)
 
