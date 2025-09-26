@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-09-25"
+lastupdated: "2025-09-26"
 
 keywords: instructlab, ai, data, generate, default, settings
 
@@ -33,12 +33,11 @@ IBM Granite is provided under the Apache License 2.0. For more information, see 
 | Epochs per phase | Specifies the number of epochs to run for each phase of end-to-end training. | - Knowledge: Phase 1: `--phased-phase1-num-epochs=7`; config: `train.phased_phase1_num_epochs`  \n - Skills: Phase 2: `--phased-phase2-num-epochs=7`; config: `train.phased_phase2_num_epochs` |
 | Padding-free transformer | Specifies whether training is performed on a padding-free transformer. | `--is-padding-free=false`; config: `train.is_padding_free` |
 | Use dolomite | Specifies whether to use dolomite. | `--use-dolomite=false` |
-| Learning rate | Specifies the learning rate for each phase. | - `--phased_phase_1_learning_rate=6e-6`  \n - `--phased_phase_2_learning_rate=2e-5` |
+| Learning rate | Specifies the learning rate for each phase. | - `--phased_phase_1_learning_rate=2e-5`  \n - `--phased_phase_2_learning_rate=2e-5` |
 | Max batch length | Specifies the max batch length. | 45k |
 | Max sequence length | Specifies the max sequence length. | 42k |
 | Replay buffer filter | The replay buffer is filtered for samples larger than 10k to keep training within the expected alignment times. | 10k |
 | Replay buffer | Specifies the size of the replay buffer. | 6.9 GB |
-| Replay buffer filter | The replay buffer is filtered for samples larger than 10k to keep training within the expected alignment times. | 10k |
 {: caption="Training settings for {{site.data.keyword.instructlab_short}}" caption-side="bottom"}
 
 ## Synthetic data generation (SDG) settings
@@ -61,5 +60,5 @@ IBM Granite is provided under the Apache License 2.0. For more information, see 
 | --- | --- | --- |
 | Context window | Specifies the maximum amount of bytes that be can sent in a prompt. To find this setting, open `config.json` under `trained_models/$TRAINING_JOB_ID/model/` and locate the `max_position_embeddings` field, for example, `"max_position_embeddings": 4096`. | The content window size supported is 4096 bytes. |
 | Model size | Specifies the size of the model | 32 GB |
-| Safesensors files | Specifies the number of Safesensors files. | 7 |
+| Safetensors files | Specifies the number of Safetensors files. | 7 |
 {: caption="Model settings for {{site.data.keyword.instructlab_short}}" caption-side="bottom"}
