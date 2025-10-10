@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-08-25"
+lastupdated: "2025-10-09"
 
 keywords: instructlab, cli, plugin
 
@@ -371,12 +371,12 @@ ibmcloud ilab data generate --name NAME [--taxonomy-id TAXONOMY-ID] [--data-dest
     The list items must match regular expression `/^[a-z0-9-]+$/`. The maximum length is `20` items. The minimum length is `0` items.
 
 `--skills-paths` ([]string)
-:   A set of user provided skills json files present in an authorized Cloud Object Storage bucket containing curated data for fine-tuning. This option provides a value for a sub-field of the JSON option 'data-sources'. It is mutually exclusive with that option.
+:   A set of user provided skills json files present in an authorized Cloud Object Storage bucket containing curated data for fine-tuning. Each file must not exceed 100 GB in size. The accumulative size of all the skills and knowledge json files (including the files from internal ids, if provided) must not exceed 400 GB. This option provides a value for a sub-field of the JSON option 'data-sources'. It is mutually exclusive with that option.
 
     The list items must match regular expression `/^([-_.\/a-zA-Z0-9][a-zA-Z0-9]+)*[^\/]$/`. The maximum length is `20` items. The minimum length is `0` items.
 
 `--knowledge-paths` ([]string)
-:   A set of user provided knowledge json files present in an authorized Cloud Object Storage bucket containing curated data for fine-tuning. This option provides a value for a sub-field of the JSON option 'data-sources'. It is mutually exclusive with that option.
+:   A set of user provided knowledge json files present in an authorized Cloud Object Storage bucket containing curated data for fine-tuning. Each file must not exceed 100 GB in size. The accumulative size of all the skills and knowledge json files (including the files from internal ids, if provided) must not exceed 400 GB. This option provides a value for a sub-field of the JSON option 'data-sources'. It is mutually exclusive with that option.
 
     The list items must match regular expression `/^([-_.\/a-zA-Z0-9][a-zA-Z0-9]+)*[^\/]$/`. The maximum length is `20` items. The minimum length is `0` items.
 
@@ -391,7 +391,7 @@ ibmcloud ilab data generate --name NAME [--taxonomy-id TAXONOMY-ID] [--data-dest
     The maximum length is `300` characters. The minimum length is `13` characters. The value must match regular expression `/^https:\/\/([a-zA-Z0-9-]+\\.)*cloud-object-storage(?:\\.test)?\\.appdomain\\.cloud$/`.
 
 `--data-sources-user-provided-paths` ([`UserProvidedPathsPrototype`](#cli-user-provided-paths-prototype-example-schema))
-:   User-provided file paths for skills and knowledge training data. This option provides a value for a sub-field of the JSON option 'data-sources'. It is mutually exclusive with that option.
+:   User-provided file paths for skills and knowledge training data. Each file must not exceed 100 GB in size. The accumulative size of all the skills and knowledge json files (including the files from internal ids, if provided) must not exceed 400 GB. This option provides a value for a sub-field of the JSON option 'data-sources'. It is mutually exclusive with that option.
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--data-sources-user-provided-paths=@path/to/file.json`.
 
