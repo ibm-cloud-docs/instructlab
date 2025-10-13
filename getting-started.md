@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-08-25"
+lastupdated: "2025-10-13"
 
 keywords: instructlab, ai
 
@@ -220,7 +220,7 @@ You can use the `set` command to save {{site.data.keyword.cos_short}} bucket det
 
     1. Get your instance details.
         ```sh
-        ibmcloud resource service-instances INSTANCE
+        ibmcloud resource service-instance INSTANCE
         ```
         {: pre}
 
