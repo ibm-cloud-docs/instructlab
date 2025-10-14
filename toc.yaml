@@ -96,19 +96,19 @@ toc:
           - topic: ts-debug.md
             navtitle: Debugging
           - topic: ts-taxonomy-retrieve.md
-            navtitle: Failed to retrieve taxonomy from COS error
+            navtitle: "Failed to retrieve taxonomy from COS error"
           - topic: ts-no-new-leaf-nodes.md
-            navtitle: No new leaf nodes found error
+            navtitle: "No new leaf nodes found error"
           - topic: ts-taxonomy-invalid.md
-            navtitle: Failed to process invalid taxonomy files error
+            navtitle: "Failed to process invalid taxonomy files error"
           - topic: ts-taxonomy-secret-auth.md
-            navtitle: Failed to read secret data
+            navtitle: "Failed to read secret data"
           - topic: ts-taxonomy-secret-data.md
-            navtitle: Failed to parse secret data
+            navtitle: "Failed to parse secret data"
           - topic: ts-knowledge-clone.md
-            navtitle: Failed to clone knowledge document repository error
+            navtitle: "Failed to clone knowledge document repository error"
           - topic: ts-knowledge-find.md
-            navtitle: Failed to find knowledge documents error
+            navtitle: "Failed to find knowledge documents error"
       - topic: faq.md
         navtitle: FAQ
       - topic: sitemap.md
