@@ -10,8 +10,8 @@ toc:
     version: 2
     console-page: /instructlab/overview
     product-page: https://www.ibm.com/cloud/
-  entries: 
-  - navgroup: 
+  entries:
+  - navgroup:
       id: learn
       topics:
       - topic: getting-started.md
@@ -20,7 +20,7 @@ toc:
         navtitle: How it works
       - topic: release-notes.md
         navtitle: Release notes
-  - navgroup: 
+  - navgroup:
       id: howto
       topics:
       - topic: cli-install.md
