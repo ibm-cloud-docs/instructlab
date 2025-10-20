@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-09-25"
+lastupdated: "2025-10-20"
 
 keywords: instructlab, rhel ai, faq
 
@@ -128,9 +128,15 @@ Model alignment training
 
 1. Before you begin running anything in {{site.data.keyword.instructlab_short}}, you can use the [cost estimator](https://cloud.ibm.com/estimator) to get an estimate of what the cost might be.
 
-1. When you upload your taxonomy, look for the cost estimate based on data tokens. Then run the [data generation](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-data-generate) job.
+1. [Upload your taxonomy](/docs/instructlab?topic=instructlab-getting-started&interface=ui#taxonomy-add-ui)
 
-1. After the data generation completes, but before you begin the training, look for the estimated amount of tokens for the training costs. Then, [begin training](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-model-train).
+1. When you set the details for [data generation](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-data-generate), review the estimated cost before starting the job.
+
+1. After the data is generated, you can also view the estimated **Output tokens** in the details for that data generation. 
+
+1. When you set the details for the [training](/docs/{{site.data.keyword.subcollection}}?topic={{site.data.keyword.subcollection}}-model-train) job, review the estimated cost before starting the job.
+
+1. When the jobs are complete, you can review the actual costs in [Billing and usage](https://cloud.ibm.com/billing). You can view the costs for both {{site.data.keyword.product_name}} and the [{{site.data.keyword.cos_full}}](https://cloud.ibm.com/objectstorage/create#pricing) service, which is used as a storage location.
 
 
 ## Are failed operations billed?

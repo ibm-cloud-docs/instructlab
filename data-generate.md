@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-10-14"
+lastupdated: "2025-10-20"
 
 keywords: instructlab, ai, data, generate
 
@@ -38,7 +38,11 @@ Data generation is the process of automatically generating synthetic questions a
 
 1. Click **{{site.data.keyword.short_name}} Projects** > your project > **Training data** > **Generate**.
 
-1. Enter an alphanumeric name for the training data, select the taxonomy to use, and click **Generate**. The state is `queued`, then `running`.
+1. Enter an alphanumeric name for the training data and select the taxonomy to use.
+
+1. Optional: Review the estimated cost that is provided before you start the data generation process.
+
+1. Click **Generate**. The state is `queued`, then `running`.
 
 1. Wait for the state to be `completed`. When the data generation is completed, a `synthetic_data` directory that contains log files is created {{site.data.keyword.cos_short}} bucket. You can review these logs for troubleshooting or verification.
 
@@ -144,7 +148,7 @@ Complete the following steps to merge data in the console.
     ```
     {: screen}
 
-1. Check the details of your data generation. Include the ID for the data. The state is `queued`, then `running`. Wait for the state to be `completed`.
+1. Check the details of your data generation. Include the ID for the data. The state is `queued`, then `running`. Wait for the state to be `completed`. When the state is `completed`, in the {{site.data.keyword.cos_short}} bucket, a [`synthetic_data` directory](#data-bucket) is created with logs for troubleshooting.
     ```sh
     ibmcloud ilab data get --id DATA_ID
     ```
@@ -167,7 +171,9 @@ Complete the following steps to merge data in the console.
     ```
     {: screen}
 
-    Example `data get` command with the `--output json` option which includes metrics.
+1. Optional: When the state is `completed`, you can review metrics, such as [token estimates to calculate the estimated cost](/docs/instructlab?topic=instructlab-faq#costs-ilab).
+
+    Example `data get` command with the `--output json` option
     ```sh
     ibmcloud ilab data get --id 66a268c170dcb21150050e8e --output json
     ```
@@ -175,26 +181,36 @@ Complete the following steps to merge data in the console.
 
     Example JSON output
     ```json
-        {                                                                                                                 
-      "created_at": "2024-07-19T15:40:29.000Z",                                                                       
-      "data_metrics": {                                                                                               
-        "samples": {                                                                                                  
-          "knowledge": 30,                                                                                            
-          "skills": 70,                                                                                               
-          "total": 100                                                                                                
-        }                                                                                                             
-      },                                                                                                              
+    {
+      "created_at": "2025-10-20T15:40:29.000Z",
+      "data_metrics": {
+        "samples": {
+          "knowledge": 30, 
+          "skills": 70,
+          "total": 100
+        },
+        "tokens": {
+          "data_leaf_nodes": {
+            "compositional_<taxonomy_path>": 26196,
+            "knowledge_<taxonomy_path>": 1228930,
+            },
+          "data_tokens_total": 5993486,
+          "training_estimated": 411435913,
+          "training_phases": {
+            "phase_1_knowledge": 1389992,
+            "phase_2_skills": 410045921
+            }
+        }
+      },
       "id": "66a268c170dcb21150050e8e",                                                                   
-      "name": "test-data",                                                                                                 
-      "state": "completed",                                                                                           
-      "status": "completed",                                                                                          
+      "name": "test-data",
+      "state": "completed",
+      "status": "completed",
       "taxonomy_id": "669a88c9488ee7b95ce8fe05"                                                           
     }
     ```
     {: screen}
 
-
-When the state is `completed`, in the {{site.data.keyword.cos_short}} bucket, a [`synthetic_data` directory](#data-bucket) is created with logs for troubleshooting.
 
 ## Importing your own training data by using the CLI
 {: #data-generate-byo-cli}
