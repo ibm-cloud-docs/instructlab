@@ -171,7 +171,7 @@ Complete the following steps to merge data in the console.
     ```
     {: screen}
 
-1. Optional: When the state is `completed`, you can review metrics, such as [tokens estimates to calculate the estimated cost](/docs/instructlab?topic=instructlab-faq#costs-ilab).
+1. Optional: When the state is `completed`, you can review metrics, such as [token estimates to calculate the estimated cost](/docs/instructlab?topic=instructlab-faq#costs-ilab).
 
     Example `data get` command with the `--output json` option
     ```sh
