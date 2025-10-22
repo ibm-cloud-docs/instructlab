@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2024, 2025
-lastupdated: "2025-09-25"
+lastupdated: "2025-10-22"
 
 keywords: release notes
 
@@ -26,6 +26,13 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 
 ## September 2025
 {: #sept25}
+
+### 10 October 2025
+{: #10oct25}
+{: release-note}
+
+{{site.data.keyword.short_name}} CLI plug-in version 0.0.26 
+:   Version 0.0.26 of the plug-in adds file size limits. Each of the skills and knowledge documents must be less than 100 GB in size. The cumulative size of all the skills and knowledge JSON files must be less than 400 GB.
 
 
 ### 23 September 2025
