@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-10-13"
+lastupdated: "2025-10-20"
 
 keywords: instructlab, ai
 
@@ -28,23 +28,45 @@ completion-time: 30m
 Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instructlab_full}}!
 {: shortdesc}
 
-{{site.data.keyword.short_name}} is an open source project created by IBM and Red Hat to be a cost-effective entry point into the world of [machine learning](#x8397498){: term}.
+{{site.data.keyword.short_name}} is an open source project created by IBM and Red Hat to be a cost-effective entry point into the world of [machine learning](#x8397498){: term}. You can use {{site.data.keyword.short_name}} to make contributions to a large language model without having to own and operate hardware infrastructure. 
+
+[Learn more about InstructLab](https://www.redhat.com/en/topics/ai/what-is-instructlab#red-hat-enterprise-linux-ai){: external}.
 
 
-## Get familiar with the concepts
+## What is {{site.data.keyword.instructlab_short}}?
 {: #get-familiar}
 
-To use {{site.data.keyword.short_name}}, you don't need to have any preexisting knowledge. You don't even need to have an idea for what to create yet. Let's start by just getting familiar with the concepts and what kinds of things you can do with the technology.
+To use {{site.data.keyword.short_name}}, you don't need to have any preexisting knowledge. You don't even need to have an idea for what to create yet. Let's start by just getting familiar with the concepts.
 
-With {{site.data.keyword.short_name}}, you can use an existing, pre-trained large language model (LLM) compiled by a community of contributors, then contribute your own knowledge and skills, in what's known as a **taxonomy** to further train the model.
+InstructLab is a project for enhancing **large language models (LLMs)**, which are AI models that utilize machine learning techniques to generate human language. You start by providing knowledge and skills that matter most to your business in what's known as a **taxonomy**, or a directory of data. The taxonomy is used to generate **synthetic data**, which is then used to train the model through multiple phases of fine-tuning. This process aligns your LLM with your goals by providing not just general knowledge, but the specific skills and contexts that are most important for your unique business needs.
 
-With the {{site.data.keyword.short_name}} service, you can use the Instructlab functionality, but run it with the resources available in {{site.data.keyword.cloud}}. You begin by uploading your taxonomy, which is the knowledge and skills you want to add to an LLM, to {{site.data.keyword.cos_short}}. You can then use {{site.data.keyword.short_name}} to further train the model by using your taxonomy data.
+For more information, see [How it works](/docs/instructlab?topic=instructlab-about). Or, jump in and get started by [preparing and uploading your first taxonomy](#instructlab-pre). 
 
-![Task flow diagram for generating a model with the service.](images/task-flow.svg "Task flow diagram for generating a model with the service."){: caption="Task flow diagram." caption-side="bottom"}{: external download="task-flow.svg"}
 
-For more information about the InstructLab tooling, see the following resources.
+### Why {{site.data.keyword.instructlab_short}}?
+{: #benefits}
+
+Retain ownership of both the data and the model
+:   You control your data and your model. You can choose to use them in the cloud, on-premises, or anywhere else your business requires. Leverage unique business data to unlock efficiencies and drive innovation by creating AI-powered solutions. 
+
+Minimize the risk of catastrophic forgetting
+:   For higher accuracy and less risk, built-in Granite models are used as a foundation for learning new skills and knowledge. Previously learned information is not lost when the models learn new information.
+
+Secure, up-to-date, and available
+:   Because {{site.data.keyword.instructlab_short}} is available as a service on {{site.data.keyword.cloud}}, you can reduce unnecessary costs by paying just for what you need. Optimize IT expenditures by delivering simpler, faster, and more economical models.
+
+
+### Resources for learning more
+{: #resources}
+
+See what others have to say about InstructLab. 
+
 - [What is InstructLab?](https://www.redhat.com/en/topics/ai/what-is-instructlab){: external}.
 - [InstructLab](https://www.ibm.com/think/topics/instructlab?mhsrc=ibmsearch_a&mhq=instructlab){: external}.
+- [What is InstructLab and why do developers need it?](https://developer.ibm.com/articles/awb-instructlab-why-developers-need-it/){: external}
+- [What is a large language model?](https://www.redhat.com/en/topics/ai/what-are-large-language-models){: external}
+
+
 
 ## Set up your {{site.data.keyword.cloud}} account
 {: #instructlab-pre}

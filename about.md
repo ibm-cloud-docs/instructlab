@@ -2,9 +2,9 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-29"
+lastupdated: "2025-10-20"
 
-keywords: instructlab, ai, about
+keywords: instructlab, ai, about, how it works, billing
 
 subcollection: instructlab
 
@@ -24,17 +24,23 @@ For more information, review the following links.
 - [What is {{site.data.keyword.short_name}}?](https://www.redhat.com/en/topics/ai/what-is-instructlab){: external}
 
 
-## Why {{site.data.keyword.instructlab_short}}?
-{: #benefits}
+## How it works
+{: #howitworks}
 
-Retain ownership of both the data and the model
-:   You control your data and your model. You can choose to use them in the cloud, on-premises, or anywhere else your business requires. Leverage unique business data to unlock efficiencies and drive innovation by creating AI-powered solutions.
+Learn about using InstructLab.
 
-Minimize the risk of catastrophic forgetting
-:   For higher accuracy and less risk, built-in Granite models are used as a foundation for learning new skills and knowledge. Previously learned information is not lost when the models learn new information.
 
-Secure, up-to-date, and available
-:   Because {{site.data.keyword.instructlab_short}} is available as a service on {{site.data.keyword.cloud}}, you can reduce unnecessary costs by paying just for what you need. Optimize IT expenditures by delivering simpler, faster, and more economical models.
+
+Step 1. Provide a taxonomy
+:   A taxonomy is a directory of diverse, human-curated data used to train an LLM. The data contains examples of new knowledge and skills for the model to learn from. You can use and contribute to an existing taxonomy, or you can create your own. For more information, see [How taxonomies are structured for {{site.data.keyword.short_name}}](/docs/instructlab?topic=instructlab-taxonomy-overview).
+
+Step 2. Generate synthetic data
+:    The information in the taxonomy is used to generate synthetic data that augments the human-provided knowledge and is used to tune the model. [Learn more about the data generation process from Red Hat](https://www.redhat.com/en/blog/how-instructlabs-synthetic-data-generation-enhances-llms){: external}.
+
+Step 3. Train the model
+:    The synthetic data is used to train the model in two phases: knowledge tuning and skills tuning. Knowledge tuning is training that focuses on improving the LLM's based knowledge of essential skills. Skill tuning trains the model on more specific skills required for it's intended purpose, such as responding to customer inquiries or analyzing weather trends.
+
+
 
 
 ## How does billing work?

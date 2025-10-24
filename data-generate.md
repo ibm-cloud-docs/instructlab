@@ -19,7 +19,7 @@ subcollection: instructlab
 
 Data generation is the process of automatically generating synthetic questions and answers based on the questions and answers that you included in the QNA files. The process {{site.data.keyword.instructlab_short}} uses to generate data focuses on content quality and relevance. 
 
-[Learn more about the data generation process from Red Hat.](https://www.redhat.com/en/blog/how-instructlabs-synthetic-data-generation-enhances-llms)
+[Learn more about the data generation process from Red Hat](https://www.redhat.com/en/blog/how-instructlabs-synthetic-data-generation-enhances-llms){: external}.
 
 
 ## Prerequisites
