@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-10-22"
+lastupdated: "2025-10-28"
 
 
 keywords: instructlab, sitemap
@@ -27,10 +27,6 @@ subcollection: instructlab
 
 * [What is {{site.data.keyword.instructlab_short}}?](/docs/instructlab?topic=instructlab-getting-started#get-familiar)
 
-    * [Why {{site.data.keyword.instructlab_short}}?](/docs/instructlab?topic=instructlab-getting-started#benefits)
-
-    * [Resources for learning more](/docs/instructlab?topic=instructlab-getting-started#resources)
-
 * [Set up your {{site.data.keyword.cloud}} account](/docs/instructlab?topic=instructlab-getting-started#instructlab-pre)
 
 * [Optional: Prepare a taxonomy](/docs/instructlab?topic=instructlab-getting-started#taxonomy)
@@ -48,7 +44,13 @@ subcollection: instructlab
 
 [How it works](/docs/instructlab?topic=instructlab-about#about)
 
+    * [What are large language models?](/docs/instructlab?topic=instructlab-about#llm)
+
 * [How it works](/docs/instructlab?topic=instructlab-about#howitworks)
+
+    * [Why {{site.data.keyword.instructlab_short}}?](/docs/instructlab?topic=instructlab-about#benefits)
+
+    * [Resources for learning more](/docs/instructlab?topic=instructlab-about#resources)
 
 * [How does billing work?](/docs/instructlab?topic=instructlab-about#billing)
 
