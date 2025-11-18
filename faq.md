@@ -2,7 +2,8 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-10-20"
+
+lastupdated: "2025-11-18"
 
 keywords: instructlab, rhel ai, faq
 
@@ -40,7 +41,7 @@ Review the following FAQ for {{site.data.keyword.short_name}}. To find all FAQ f
 {{site.data.keyword.short_name}} offers several benefits for your generative AI solution. First, it allows you to retain ownership of both the data and the model, giving you control over how your data is used and how your model performs. Second, it enables you to leverage unique business data to unlock efficiencies and drive innovation by creating AI-powered solutions. Third, it minimizes the risk of catastrophic forgetting by using built-in Granite models as a foundation for learning new skills and knowledge. Fourth, it is available as a service on IBM Cloud, allowing you to reduce unnecessary costs by paying just for what you need and optimize IT expenditures by delivering simpler, faster, and more economical models.
 
 ## What are the benefits of {{site.data.keyword.short_name}} on IBM Cloud?
-{: #faq-ilab-3}
+{: #faq-benefits}
 {: faq}
 
 {{site.data.keyword.short_name}} on IBM Cloud offers several benefits, including:
@@ -161,7 +162,7 @@ Training is the process of learning the questions and answers. The training begi
 
 
 
-
+<!--<qna:time>-->
 ## How long does it take to run?
 {: #faq-time}
 {: faq}
@@ -195,6 +196,7 @@ Tokens / 4000 / 60 / 60 = Number of hours
 ```
 {: codeblock}
 
+<!--</qna:time>-->
 
 ## Can I import my own training data?
 {: #faq-byo-sdg}
