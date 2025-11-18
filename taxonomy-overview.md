@@ -2,7 +2,8 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-07-23"
+
+lastupdated: "2025-11-18"
 
 keywords: instructlab, taxonomy, knowledge, skills, leaf node, branch, qna, files, documents
 
@@ -11,6 +12,7 @@ subcollection: instructlab
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+<!--<qna:tax-ov>-->
 
 # How taxonomies are structured for {{site.data.keyword.short_name}}
 {: #taxonomy-overview}
@@ -35,6 +37,8 @@ Compositional skills
 
 For more information on the categories, see [What is a "skill"?](https://docs.instructlab.ai/taxonomy/skills/){: external} and [What is "knowledge"?](https://docs.instructlab.ai/taxonomy/knowledge/){: external} in the InstructLab docs. 
 
+<!--</qna:tax-ov>-->
+
 ## Taxonomy files
 {: #taxonomy-files}
 
@@ -45,6 +49,8 @@ There are two types of data files required for each "leaf node".
 
 `attribution.txt`
 :   Includes sources for the information added to the `qna.yaml` file. This is optional, but is required for contributions to the open-source InstructLab taxonomy repository.
+
+<!--<qna:knowledge>-->
 
 ## Knowledge documents
 {: #knowledge-docs}
@@ -64,3 +70,4 @@ The skills `qna.yaml` contains questions and answers that teach a simple task. T
 The skills you add can be grounded, meaning they require additional inputs to add context, or ungrounded, meaning they do not require any additional context. For grounded skills, you add context in the `qna.yaml` file with the `context` field. When you add a grounded skill to a taxonomy, it must be on a branch that begins with the word `grounded`, such as `grounded/games/sudoku`.
 
 For the full `qna.yaml` requirements and examples of skills contributions, see [The skills files](https://docs.instructlab.ai/taxonomy/skills/file_structure/#the-skills-files){: external} in the InstructLab documentation. Note that you do not need to add a separate document when adding skills. 
+<!--</qna:knowledge>-->
