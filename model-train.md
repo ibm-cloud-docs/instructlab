@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024, 2025
-lastupdated: "2025-12-08"
+  years: 2024, 2026
+lastupdated: "2026-01-30"
 
 keywords: instructlab, ai
 
@@ -84,10 +84,10 @@ Configuration information or files cannot be passed to the model for fine tuning
     ```json
     {
       "base_model": "granite-3.1-8b-starter-v2.1",
-      "created_at": "2025-12-08T16:06:05.000Z",
+      "created_at": "2026-01-30T16:06:05.000Z",
       "data_id": "8b1433c0-e375-4b00-b36d-2ad00697014e",
       "id": "daef9836-631f-4686-ad18-e0e6a0910f5d",
-      "last_signal_at": "2025-12-08T17:20:32.000Z",
+      "last_signal_at": "2026-01-30T17:20:32.000Z",
       "model_metrics": {
         "mmlu": {
           "overall_average": 0.51,
@@ -158,7 +158,7 @@ Configuration information or files cannot be passed to the model for fine tuning
           "status": "queued",
           "created_at": "2024-10-23T02:58:50.000Z",
           "taxonomy_id": "202a03c4-dcf1-432a-82b7-abecb2e019f7",
-          "last_signal_at": "2025-12-08T17:20:32.000Z"
+          "last_signal_at": "2026-01-30T17:20:32.000Z"
         }
       ]
     }
@@ -188,7 +188,7 @@ Configuration information or files cannot be passed to the model for fine tuning
       "state": "",
       "status": "queued",
       "created_at": "2024-10-23T02:58:50.000Z",
-      "last_signal_at": "2025-12-08T17:20:32.000Z",
+      "last_signal_at": "2026-01-30T17:20:32.000Z",
       "data_id": "add785e6-a8c3-4f5f-ab89-c506a3f115da",
       "base_model": "granite-7b",
       "taxonomy_id": "202a03c4-dcf1-432a-82b7-abecb2e019f7",
@@ -269,7 +269,7 @@ Configuration information or files cannot be passed to the model for fine tuning
       "state": "",
       "status": "queued",
       "created_at": "2024-10-23T02:58:50.000Z",
-      "last_signal_at": "2025-12-08T17:20:32.000Z",
+      "last_signal_at": "2026-01-30T17:20:32.000Z",
       "data_id": "add785e6-a8c3-4f5f-ab89-c506a3f115da",
       "base_model": "granite-7b",
       "taxonomy_id": "202a03c4-dcf1-432a-82b7-abecb2e019f7",
