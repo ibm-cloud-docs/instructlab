@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024, 2025
-lastupdated: "2025-10-28"
+  years: 2024, 2026
+lastupdated: "2026-01-30"
 
 keywords: instructlab, ai
 
@@ -50,7 +50,7 @@ For more information, see [How it works](/docs/instructlab?topic=instructlab-abo
 
 Make sure you have the following before continuing.
 
-* A **Pay-As-You-Go** or **Subscription** {{site.data.keyword.cloud}} account. Trial accounts are not supported. For more information or to upgrade the account, see [Account types](/docs/account?topic=account-accounts#compare).
+* A **Pay-As-You-Go** or **Subscription** {{site.data.keyword.cloud}} account. Trial accounts are not supported. For more information or to upgrade your account, see [Account types](/docs/account?topic=account-accounts#compare).
 
 * [An {{site.data.keyword.short_name}} project](/docs/instructlab?topic=instructlab-project).
 
