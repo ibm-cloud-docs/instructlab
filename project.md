@@ -23,9 +23,7 @@ Complete the following steps to create an {{site.data.keyword.short_name}} proje
 {: #project-create-ui}
 {: ui}
 
-1. Navigate to [{{site.data.keyword.short_name}} in the console]
-(https://cloud.ibm.com/instructlab/overview)
-
+1. Navigate to [{{site.data.keyword.short_name}} in the console](https://cloud.ibm.com/instructlab/overview)
 
 1. Review the pricing plan.
 
