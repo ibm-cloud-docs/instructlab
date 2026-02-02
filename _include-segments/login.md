@@ -1,4 +1,5 @@
 1. Log in to your {{site.data.keyword.cloud_notm}} account from the CLI.
+
     ```sh
     ibmcloud login -a https://cloud.ibm.com --sso -r us-east
     ```
