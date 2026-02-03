@@ -98,7 +98,7 @@ ibmcloud ilab config unset <option>
 ### `ibmcloud ilab config list`
 {: #ilab-cli-config-list-command}
 
-List out all of the currently set config values.
+List out all the currently set config values.
 
 ```sh
 ibmcloud ilab config list

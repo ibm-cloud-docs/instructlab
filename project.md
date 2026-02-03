@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025, 2025
-lastupdated: "2025-07-07"
+  years: 2025, 2026
+lastupdated: "2026-02-02"
 
 keywords: instructlab, ai, project
 
@@ -23,7 +23,7 @@ Complete the following steps to create an {{site.data.keyword.short_name}} proje
 {: #project-create-ui}
 {: ui}
 
-1. Navigate to [{{site.data.keyword.short_name}} in the console](https://cloud.ibm.com/instructlab/overview).
+1. Navigate to [{{site.data.keyword.short_name}} in the console](https://cloud.ibm.com/instructlab/overview)
 
 1. Review the pricing plan.
 

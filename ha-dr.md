@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025, 2025
-lastupdated: "2025-08-22"
+  years: 2025, 2026
+lastupdated: "2026-02-03"
 
 keywords: HA for {{site.data.keyword.short_name}}, DR for {{site.data.keyword.short_name}}, {{site.data.keyword.short_name}} recovery time objective, {{site.data.keyword.short_name}} recovery point objective
 
@@ -45,7 +45,7 @@ For more information about the available region and data center locations, see [
 
 | Feature | Description | Consideration |
 | --- | --- | --- |
-| {{site.data.keyword.short_name}} follows a regional deployment model. | In the case of a regional failure APIs could become unavailable until the region is restored. | Other active regions where {{site.data.keyword.short_name}} is deployed to can be utilized to generate synthetic data and execute model alignments until the region is restored. |
+| {{site.data.keyword.short_name}} follows a regional deployment model. | In the case of a regional failure APIs could become unavailable until the region is restored. | Other active regions where {{site.data.keyword.short_name}} is deployed to can be used to generate synthetic data and execute model alignments until the region is restored. |
 | {{site.data.keyword.cos_short}} replication | {{site.data.keyword.short_name}} persists all SDG and aligned models into the client provided object storage bucket. Reference the {{site.data.keyword.cos_short}} service documentation for disaster recovery strategies. | You can use bucket replication to replicate taxonomy content, generated synthetic data, and aligned models to a different region. For more information, see [Understanding high availability and disaster recovery for {{site.data.keyword.cos_full}}](/docs/cloud-object-storage?topic=cloud-object-storage-cos-ha-dr). |
 {: caption="DR features for {{site.data.keyword.instructlab_short}}" caption-side="bottom"}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024, 2025
-lastupdated: "2025-10-28"
+  years: 2024, 2026
+lastupdated: "2026-02-03"
 
 keywords: instructlab, ai, about, how it works, billing
 
@@ -27,9 +27,9 @@ You start by providing knowledge and skills that matter most to your business in
 ### What are large language models?
 {: #llm}
 
-Large language models, or LLMs, are AI models that utilize machine learning techniques to generate human language. They are initially trained on large amounts of general data that allow them to understand and generate natural language, then later fine-tuned to align with more specific contexts. For example, a model trained on a large set of general knowledge can later be fine-tuned using data related to a retail business in order to create a customer service chat bot. You can fine-tune LLMs for a wide variety of uses, such as drafting emails, summarizing long bodies of text into a desired format, or finding errors in code. InstructLab provides a platform for training, fine-tuning and then later evaluating LLMs. 
+Large language models, or LLMs, are AI models that use machine learning techniques to generate human language. They are initially trained on large amounts of general data that allow them to understand and generate natural language, then later fine-tuned to align with more specific contexts. For example, a model trained on a large set of general knowledge can later be fine-tuned using data related to a retail business to create a customer service chat bot. You can fine-tune LLMs for a wide variety of uses, such as drafting emails, summarizing long bodies of text, or finding errors in code. InstructLab provides a platform for training, fine-tuning and then later evaluating LLMs. 
 
-While LLMs can streamline processes in a variety of ways, keep in mind that there are some limitations to what they are capable of. LLMs work with the data they are supplied with. You wouldn't be able to ask an LLM for your birthday, for instance, because your personal information is not part of the training data. Likewise, an LLM on it's own wouldn't be the best option for predicting the future of a stock, in which case it would be more appropriate to use a forecasting model. Additionally, LLMs on their own are static and incapable of interacting with the environment. Tasks such as telling the time or date, for example, would require additional agenetic flows or frameworks. 
+While LLMs can streamline processes in a variety of ways, keep in mind that there are some limitations to what they are capable of. LLMs work with the data they are supplied with. You wouldn't be able to ask an LLM for your birthday, for example, because your personal information is not part of the training data. Likewise, an LLM on it's own wouldn't be the best option for predicting the future of a stock, in which case it would be more appropriate to use a forecasting model. Additionally, LLMs on their own are static and incapable of interacting with the environment. Tasks such as telling the time or date, for example, would require additional agentic flows or frameworks. 
 
 For a more detailed explanation of LLMs and how they work, see [What are LLMs?](https://www.ibm.com/think/topics/large-language-models){: external}.
 
@@ -55,7 +55,7 @@ Step 3. Train the model
 ### Why {{site.data.keyword.instructlab_short}}?
 {: #benefits}
 
-Learn about some of the benefits of using {{site.data.keyword.instructlab_short}}.
+Learn about some benefits of using {{site.data.keyword.instructlab_short}}.
 
 Retain ownership of both the data and the model
 :   You control your data and your model. You can choose to use them in the cloud, on-premises, or anywhere else your business requires. Leverage unique business data to unlock efficiencies and drive innovation by creating AI-powered solutions. 
