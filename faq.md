@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2025, 2025
+  years: 2025, 2026
 
-lastupdated: "2025-11-18"
+lastupdated: "2026-02-03"
 
 keywords: instructlab, rhel ai, faq
 
@@ -112,7 +112,7 @@ If you choose to deploy the model on another service, additional charges can com
 {: #costs-ilab}
 {: faq}
 
-The cost from {{site.data.keyword.product_name}} usage is based on two metrics that are measured in tokens. Each token corresponds to a specific amount of computational power that is required for the processing tasks. The total number of tokens consumed directly influences the scale of data generation or model fine-tuning. This metric serves as a basis for our billing system, enabling users to monitor and control their costs according to the computational resources utilized. The tokens that are processed for Synthetic Data Generation (SDG) and Model Alignment are billed separately.
+The cost from {{site.data.keyword.product_name}} usage is based on two metrics that are measured in tokens. Each token corresponds to a specific amount of computational power that is required for the processing tasks. The total number of tokens consumed directly influences the scale of data generation or model fine-tuning. This metric serves as a basis for our billing system, enabling users to monitor and control their costs according to the computational resources used. The tokens that are processed for Synthetic Data Generation (SDG) and Model Alignment are billed separately.
 
 Synthetic Data Generation (SDG)
 :   Output tokens (`SYN-DATA-TOKEN`) are calculated by the volume of generated data produced by the service from the entire input taxonomy. The text is tokenized by using [Hugging Face's tokenizer library](https://huggingface.co/docs/transformers/en/main_classes/tokenizer) with the tokenization information for the [Mistral teacher model](https://huggingface.co/docs/transformers/main/en/model_doc/mistral#mistral). 

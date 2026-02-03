@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-01-30"
+lastupdated: "2026-02-03"
 
 keywords: instructlab, ai
 
@@ -40,7 +40,7 @@ Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instruct
 
 To use {{site.data.keyword.short_name}}, you don't need to have any preexisting knowledge. You don't even need to have an idea for what to create yet. Let's start by just getting familiar with the concepts.
 
-InstructLab is a project for enhancing **large language models (LLMs)**, which are AI models that utilize machine learning techniques to generate human language. You start by providing knowledge and skills that matter most to your business in what's known as a **taxonomy**, or a directory of data. The taxonomy is used to generate **synthetic data**, which is then used to train the model through multiple phases of fine-tuning. This process aligns your LLM with your goals by providing not just general knowledge, but the specific skills and contexts that are most important for your unique business needs.
+InstructLab is a project for enhancing **large language models (LLMs)**, which are AI models that use machine learning techniques to generate human language. You start by providing knowledge and skills that matter most to your business in what's known as a **taxonomy**, or a directory of data. The taxonomy is used to generate **synthetic data**, which is then used to train the model through multiple phases of fine-tuning. This process aligns your LLM with your goals by providing not just general knowledge, but the specific skills and contexts that are most important for your unique business needs.
 
 For more information, see [How it works](/docs/instructlab?topic=instructlab-about). Or, jump in and get started by [preparing and uploading your first taxonomy](#instructlab-pre). 
 
