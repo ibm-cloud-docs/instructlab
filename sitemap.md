@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025, 2025
-lastupdated: "2025-11-18"
+  years: 2025, 2026
+lastupdated: "2026-02-04"
 
 
 keywords: instructlab, sitemap
@@ -226,6 +226,8 @@ subcollection: instructlab
 * [Generating data by using the API](/docs/instructlab?topic=instructlab-data-generate&interface=api#data-generate-api)
 
 * [What's in my {{site.data.keyword.cos_short}} bucket after generating data?](/docs/instructlab?topic=instructlab-data-generate&interface=api#data-bucket)
+
+* [Example `.jsonl` format](/docs/instructlab?topic=instructlab-data-generate&interface=api#example-jsonl)
 
 * [Next steps](/docs/instructlab?topic=instructlab-data-generate&interface=api#next-data)
 
