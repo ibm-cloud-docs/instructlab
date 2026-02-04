@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-01-30"
+lastupdated: "2026-02-04"
 
 keywords: instructlab, ai, data, generate
 
@@ -182,7 +182,7 @@ Complete the following steps to merge data in the console.
     Example JSON output
     ```json
     {
-      "created_at": "2026-01-30T15:40:29.000Z",
+      "created_at": "2026-02-04T15:40:29.000Z",
       "data_metrics": {
         "samples": {
           "knowledge": 30, 
@@ -203,7 +203,7 @@ Complete the following steps to merge data in the console.
         }
       },
       "id": "66a268c170dcb21150050e8e",
-      "last_signal_at": "2026-01-30T17:20:32.000Z",
+      "last_signal_at": "2026-02-04T17:20:32.000Z",
       "name": "test-data",
       "state": "completed",
       "status": "completed",
@@ -223,7 +223,7 @@ You might want to import your own data for one or more of the following reasons.
 
 You can import your own training data to supplement data generation in {{site.data.keyword.short_name}}. To import your own previously generated data, specify one or more of the following:
 - The data generation IDs of previous runs.
-- An {{site.data.keyword.cos_short}} bucket that contains `.json` or `.jsonl` knowledge and skills files.
+- An {{site.data.keyword.cos_short}} bucket that contains `.jsonl` knowledge and skills files.
 
 Complete the following steps to import your data.
 
@@ -272,7 +272,7 @@ ibmcloud ilab data generate --name testdata --taxonomy-id 65005b67-7de4-4216-b23
 ```
 {: pre}
 
-Example command to combine multiple previously generated data sources (internal IDs) as well as `.jsonl` or `.json` files from an {{site.data.keyword.cos_short}} bucket.
+Example command to combine multiple previously generated data sources (internal IDs) as well as `.jsonl` files from an {{site.data.keyword.cos_short}} bucket.
 
 ```sh
 ibmcloud ilab data generate \
@@ -286,7 +286,7 @@ ibmcloud ilab data generate \
 ```
 {: pre}
 
-Example command to combine previously generated data with `.json` or `.jsonl` knowledge and skills files stored in an {{site.data.keyword.cos_short}} bucket. You can also optionally specify an output {{site.data.keyword.cos_short}} bucket to store the generated data (SDG) output.
+Example command to combine previously generated data with `.jsonl` knowledge and skills files stored in an {{site.data.keyword.cos_short}} bucket. You can also optionally specify an output {{site.data.keyword.cos_short}} bucket to store the generated data (SDG) output.
 
 ```sh
 ibmcloud ilab data generate \
@@ -396,7 +396,7 @@ ibmcloud ilab data generate \
       "state": "",
       "status": "queued",
       "created_at": "2024-10-23T02:58:50.000Z",
-      "last_signal_at": "2026-01-30T17:20:32.000Z",
+      "last_signal_at": "2026-02-04T17:20:32.000Z",
       "taxonomy_id": "202a03c4-dcf1-432a-82b7-abecb2e019f7",
       "data_metrics": {
         "samples": {
@@ -427,7 +427,7 @@ ibmcloud ilab data generate \
       "state": "",
       "status": "queued",
       "created_at": "2024-10-23T02:58:50.000Z",
-      "last_signal_at": "2026-01-30T17:20:32.000Z",
+      "last_signal_at": "2026-02-04T17:20:32.000Z",
       "taxonomy_id": "202a03c4-dcf1-432a-82b7-abecb2e019f7",
       "data_metrics": {
         "samples": {
@@ -458,6 +458,26 @@ After you generate data, your {{site.data.keyword.cos_short}} bucket contains a 
 :   These are the Phase 1 and Phase 2 training files and contain samples used for training the model. 
 
 To understand why and how your data gets generated, see the [SDG FAQs](https://github.com/instructlab/sdg/blob/main/docs/FAQ.md){: external} community doc.
+
+
+## Example `.jsonl` format
+{: #example-jsonl}
+
+Review the following example `.jsonl` structure for skills and knowledge. 
+
+```json
+{
+  "messages": [
+    {
+      "content": "string",   // The text of the message
+      "role": "string"       // The role of the sender (e.g., "system", "user", "assistant")
+    }
+  ],
+  "metadata": "string",      // A JSON-encoded string containing additional info (e.g., num_turns, group, dataset)
+  "id": "string"             // A unique identifier for the conversation
+}
+```
+{: screen}
 
 
 ## Next steps
