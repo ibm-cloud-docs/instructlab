@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025, 2025
-lastupdated: "2025-04-17"
+  years: 2025, 2026
+lastupdated: "2026-02-18"
 
 keywords: get help, instructlab, support
 
@@ -15,7 +15,7 @@ subcollection: instructlab
 # Getting help and support for {{site.data.keyword.short_name}}
 {: #get-help}
 
-If you experience an issue or have questions when you're working in {{site.data.keyword.product_name}}, you can use the following resources before you open a support case.
+If you experience an issue or have questions when you're working in {{site.data.keyword.product_name}}, complete the following steps to debug the issue before opening an support case.
 
 1. Check the [Status](https://cloud.ibm.com/status){: external} for service interruptions or outages.
 1. Review the [Debugging guide](/docs/instructlab?topic=instructlab-ts-debug).

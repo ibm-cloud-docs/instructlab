@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024, 2025
-lastupdated: "2025-09-26"
+  years: 2024, 2026
+lastupdated: "2026-02-18"
 
 keywords: instructlab, ai, data, generate, default, settings
 
@@ -58,7 +58,7 @@ IBM Granite is provided under the Apache License 2.0. For more information, see 
 
 | Setting | Description | Value |
 | --- | --- | --- |
-| Context window | Specifies the maximum amount of bytes that be can sent in a prompt. To find this setting, open `config.json` under `trained_models/$TRAINING_JOB_ID/model/` and locate the `max_position_embeddings` field, for example, `"max_position_embeddings": 4096`. | The content window size supported is 4096 bytes. |
+| Context window | Specifies the maximum number of bytes that can be sent in a prompt. To find this setting, open `config.json` under `trained_models/$TRAINING_JOB_ID/model/` and locate the `max_position_embeddings` field, for example, `"max_position_embeddings": 4096`. | The content window size supported is 4096 bytes. |
 | Model size | Specifies the size of the model | 32 GB |
 | Safetensors files | Specifies the number of Safetensors files. | 7 |
 {: caption="Model settings for {{site.data.keyword.instructlab_short}}" caption-side="bottom"}
