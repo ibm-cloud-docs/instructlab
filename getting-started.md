@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-02-03"
+lastupdated: "2026-02-18"
 
 keywords: instructlab, ai
 
@@ -30,7 +30,7 @@ completion-time: 30m
 Get ready to dive into [AI](#x3448902){: term} with {{site.data.keyword.instructlab_full}}!
 {: shortdesc}
 
-{{site.data.keyword.short_name}} is an open source project created by IBM and Red Hat to be a cost-effective entry point into the world of [machine learning](#x8397498){: term}. You can use {{site.data.keyword.short_name}} to make contributions to a large language model without having to own and operate hardware infrastructure. 
+{{site.data.keyword.short_name}} is an open source project from IBM and Red Hat to be a cost-effective entry point into the world of [machine learning](#x8397498){: term}. You can use {{site.data.keyword.short_name}} to make contributions to a large language model without having to own and operate hardware infrastructure. 
 
 [Learn more about InstructLab](https://www.redhat.com/en/topics/ai/what-is-instructlab#red-hat-enterprise-linux-ai){: external}.
 

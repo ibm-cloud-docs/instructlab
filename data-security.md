@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025, 2025
-lastupdated: "2025-04-17"
+  years: 2025, 2026
+lastupdated: "2026-02-18"
 
 keywords: data, secure, encrypt, cos, bucket, storage
 
@@ -28,7 +28,7 @@ The knowledge documents that you reference in your `qna.yaml` files are not stor
 ### Enabling Cloud {{site.data.keyword.cos_short}} for {{site.data.keyword.instructlab_short}}
 {: #using-byok}
 
-You must enable {{site.data.keyword.instructlab_short}} to use {{site.data.keyword.cos_short}} by [creating a service authorization](). If you delete this authorization, your {{site.data.keyword.instructlab_short}} instance loses access to your {{site.data.keyword.cos_short}} bucket. However, any existing data remains in your bucket.
+You must enable {{site.data.keyword.instructlab_short}} to use {{site.data.keyword.cos_short}} by creating a service authorization. If you delete this authorization, your {{site.data.keyword.instructlab_short}} instance loses access to your {{site.data.keyword.cos_short}} bucket. However, any existing data remains in your bucket.
 
 ## Deleting your data in {{site.data.keyword.instructlab_short}}
 {: #data-delete}

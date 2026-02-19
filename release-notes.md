@@ -1,8 +1,8 @@
 ---
 
 copyright: 
-  years: 2024, 2025
-lastupdated: "2025-10-22"
+  years: 2024, 2026
+lastupdated: "2026-02-18"
 
 keywords: release notes
 
@@ -88,4 +88,4 @@ New! Private repo support
 
 
 Introducing {{site.data.keyword.instructlab_full_notm}}!
-:   Get ready to dive into AI! InstructLab is an open source project created by IBM and Red Hat to be a cost-effective entry point into the world of machine learning.
+:   Get ready to dive into AI! InstructLab is an open source project from IBM and Red Hat to be a cost-effective entry point into the world of machine learning.

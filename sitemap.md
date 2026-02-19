@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-02-04"
+lastupdated: "2026-02-18"
 
 
 keywords: instructlab, sitemap
@@ -44,13 +44,13 @@ subcollection: instructlab
 
 [How it works](/docs/instructlab?topic=instructlab-about#about)
 
-    * [What are large language models?](/docs/instructlab?topic=instructlab-about#llm)
+* [What are large language models?](/docs/instructlab?topic=instructlab-about#llm)
 
 * [How it works](/docs/instructlab?topic=instructlab-about#howitworks)
 
-    * [Why {{site.data.keyword.instructlab_short}}?](/docs/instructlab?topic=instructlab-about#benefits)
+* [Why {{site.data.keyword.instructlab_short}}?](/docs/instructlab?topic=instructlab-about#benefits)
 
-    * [Resources for learning more](/docs/instructlab?topic=instructlab-about#resources)
+* [Resources for learning more](/docs/instructlab?topic=instructlab-about#resources)
 
 * [How does billing work?](/docs/instructlab?topic=instructlab-about#billing)
 
@@ -276,7 +276,7 @@ subcollection: instructlab
 
     * [Security and access control](/docs/instructlab?topic=instructlab-compute-isolation#arch-access)
 
-    * [Data Flow](/docs/instructlab?topic=instructlab-compute-isolation#arch-dataflow)
+    * [Data flow](/docs/instructlab?topic=instructlab-compute-isolation#arch-dataflow)
 
 * [{{site.data.keyword.instructlab_short}} workload isolation](/docs/instructlab?topic=instructlab-compute-isolation#workload-isolation)
 
