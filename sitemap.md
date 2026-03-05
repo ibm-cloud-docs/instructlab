@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-02-18"
+lastupdated: "2026-02-27"
 
 
 keywords: instructlab, sitemap
@@ -260,6 +260,8 @@ subcollection: instructlab
 * [Deploying the model to RHEL-AI on {{site.data.keyword.cloud_notm}}](/docs/instructlab?topic=instructlab-deploy#deploy-rhel-ai)
 
 * [Deploying the model to Watsonx on {{site.data.keyword.cloud_notm}}](/docs/instructlab?topic=instructlab-deploy#deploy-watson)
+
+* [Deploying the model to Red Hat OpenShift AI](/docs/instructlab?topic=instructlab-deploy#deploy-rhoai)
 
 
 ## Enhancing security

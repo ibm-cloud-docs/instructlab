@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025, 2025
-lastupdated: "2025-08-13"
+  years: 2025, 2026
+lastupdated: "2026-02-27"
 
 keywords: instructlab, ai
 
@@ -16,7 +16,7 @@ subcollection: instructlab
 # Deploying models for {{site.data.keyword.short_name}}
 {: #deploy}
 
-You can choose to deploy the model.
+Choose how to deploy your model.
 
 ## Deploying the model to RHEL-AI on {{site.data.keyword.cloud_notm}}
 {: #deploy-rhel-ai}
@@ -86,3 +86,18 @@ You can choose to deploy the model.
 1. [Deploy the model](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/deploy-custom-fm-create-cloud.html?context=wx&audience=wdp).
 
 1. [Test the deployment](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/deploy-custom-fm-create-cloud.html?context=wx&audience=wdp#testing-the-deployment).
+
+## Deploying the model to Red Hat OpenShift AI
+{: #deploy-rhoai}
+
+
+1. If you have not already, [install the Red Hat OpenShift AI add-on](/docs/openshift?topic=openshift-ai-addon-install&interface=ui) on your cluster. It may take up to 15 minutes for the add-on to install. 
+1. After the add-on is installed, [navigate to the OpenShift AI dashboard](/docs/openshift?topic=openshift-ai-addon-install&interface=ui#ai-dashboard).
+1. Click **Data Science Projects**, then click **Create a Project**.
+1. Follow the prompts to give your project a name and description, then click **Create**.
+1. Find the **Serve models** section and choose the **Single-model serving platform** option.
+1. Click **Deploy model**.
+1. Fill out the required configuration properties. To specify the model you trained with {{site.data.keyword.short_name}}, find the **Source model location** section and choose the **S3 compatible object storage -v1** connection type. 
+1. Under **Connection details**, specify the access key, secret key, endpoint, and bucket name for the COS bucket that your trained model data is stored in. Specify a path to your model or the folder containing your model within your bucket. 
+1. When the remaining configuration properties are filled out, click **Deploy**. 
+1. To verify and view the health of the model deployment, click **Model** > **Model deployment** and select the Data Science Project that you created the model in. 
