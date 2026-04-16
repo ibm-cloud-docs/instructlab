@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-02-18"
+lastupdated: "2026-04-16"
 
 keywords: instructlab, ai, data, generate
 
@@ -182,7 +182,7 @@ Complete the following steps to merge data in the console.
     Example JSON output
     ```json
     {
-      "created_at": "2026-02-18T15:40:29.000Z",
+      "created_at": "2026-04-16T15:40:29.000Z",
       "data_metrics": {
         "samples": {
           "knowledge": 30, 
@@ -203,7 +203,7 @@ Complete the following steps to merge data in the console.
         }
       },
       "id": "66a268c170dcb21150050e8e",
-      "last_signal_at": "2026-02-18T17:20:32.000Z",
+      "last_signal_at": "2026-04-16T17:20:32.000Z",
       "name": "test-data",
       "state": "completed",
       "status": "completed",
@@ -396,7 +396,7 @@ ibmcloud ilab data generate \
       "state": "",
       "status": "queued",
       "created_at": "2024-10-23T02:58:50.000Z",
-      "last_signal_at": "2026-02-18T17:20:32.000Z",
+      "last_signal_at": "2026-04-16T17:20:32.000Z",
       "taxonomy_id": "202a03c4-dcf1-432a-82b7-abecb2e019f7",
       "data_metrics": {
         "samples": {
@@ -427,7 +427,7 @@ ibmcloud ilab data generate \
       "state": "",
       "status": "queued",
       "created_at": "2024-10-23T02:58:50.000Z",
-      "last_signal_at": "2026-02-18T17:20:32.000Z",
+      "last_signal_at": "2026-04-16T17:20:32.000Z",
       "taxonomy_id": "202a03c4-dcf1-432a-82b7-abecb2e019f7",
       "data_metrics": {
         "samples": {

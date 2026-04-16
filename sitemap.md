@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-02-27"
+lastupdated: "2026-04-16"
 
 
 keywords: instructlab, sitemap
@@ -457,7 +457,7 @@ subcollection: instructlab
 {: #sitemap_api_reference}
 
 
-[IBM Cloud API docs](https://cloud.ibm.com/apidocs/instructlab){: external}
+[IBM Cloud API docs](https://{DomainName}/apidocs/instructlab){: external}
 
 [Swagger](https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/){: external}
 
