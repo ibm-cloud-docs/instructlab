@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-04-16"
+lastupdated: "2026-04-23"
 
 
 keywords: instructlab, sitemap
@@ -61,11 +61,13 @@ subcollection: instructlab
 
 [Release notes](/docs/instructlab?topic=instructlab-release-notes#release-notes)
 
-* [September 2025](/docs/instructlab?topic=instructlab-release-notes#sept25)
+* [October 2025](/docs/instructlab?topic=instructlab-release-notes#oct25)
 
     * [10 October 2025](/docs/instructlab?topic=instructlab-release-notes#10oct25)
 
         * {{site.data.keyword.short_name}} CLI plug-in version 0.0.26 
+
+* [September 2025](/docs/instructlab?topic=instructlab-release-notes#sept25)
 
     * [23 September 2025](/docs/instructlab?topic=instructlab-release-notes#23aug25)
 

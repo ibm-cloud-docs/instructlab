@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2024, 2026
-lastupdated: "2026-02-18"
+lastupdated: "2026-04-23"
 
 keywords: release notes
 
@@ -24,8 +24,11 @@ Use the release notes to learn about the latest changes to the documentation tha
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: tip}
 
-## September 2025
-{: #sept25}
+
+
+## October 2025
+{: #oct25}
+
 
 ### 10 October 2025
 {: #10oct25}
@@ -34,6 +37,8 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {{site.data.keyword.short_name}} CLI plug-in version 0.0.26 
 :   Version 0.0.26 of the plug-in adds file size limits. Each of the skills and knowledge documents must be less than 100 GB in size. The cumulative size of all the skills and knowledge JSON files must be less than 400 GB.
 
+## September 2025
+{: #sept25}
 
 ### 23 September 2025
 {: #23aug25}
