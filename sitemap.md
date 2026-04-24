@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-04-23"
+lastupdated: "2026-04-24"
 
 
 keywords: instructlab, sitemap
@@ -60,6 +60,12 @@ subcollection: instructlab
 
 
 [Release notes](/docs/instructlab?topic=instructlab-release-notes#release-notes)
+
+* [April 2026](/docs/instructlab?topic=instructlab-release-notes#apr26)
+
+    * [23 April 2026](/docs/instructlab?topic=instructlab-release-notes#23apr26)
+
+        * Inferencing with Red Hat AI on {{site.data.keyword.cloud_notm}} (Beta)
 
 * [October 2025](/docs/instructlab?topic=instructlab-release-notes#oct25)
 
@@ -264,6 +270,33 @@ subcollection: instructlab
 * [Deploying the model to Watsonx on {{site.data.keyword.cloud_notm}}](/docs/instructlab?topic=instructlab-deploy#deploy-watson)
 
 * [Deploying the model to Red Hat OpenShift AI](/docs/instructlab?topic=instructlab-deploy#deploy-rhoai)
+
+
+## Inferencing
+{: #sitemap_inferencing}
+
+
+[Inferencing](/docs/instructlab?topic=instructlab-inference#inference)
+
+* [Before you begin](/docs/instructlab?topic=instructlab-inference#inf-prereqs)
+
+* [Inferencing by using the API](/docs/instructlab?topic=instructlab-inference#inf-chat-api)
+
+    * [API endpoint](/docs/instructlab?topic=instructlab-inference#inf-api-endpoint)
+
+    * [Authenticating to the API](/docs/instructlab?topic=instructlab-inference#inf-chat-auth)
+
+    * [Generating a chat completion](/docs/instructlab?topic=instructlab-inference#inf-chat-generate)
+
+    * [Getting a chat completion by ID](/docs/instructlab?topic=instructlab-inference#inf-chat-get-completion)
+
+    * [Listing chat completions](/docs/instructlab?topic=instructlab-inference#inf-chat-list)
+
+    * [Deleting a chat completion](/docs/instructlab?topic=instructlab-inference#inf-chat-delete)
+
+    * [Listing models](/docs/instructlab?topic=instructlab-inference#inf-chat-list-models)
+
+    * [Getting a model by ID](/docs/instructlab?topic=instructlab-inference#inf-chat-get-model)
 
 
 ## Enhancing security

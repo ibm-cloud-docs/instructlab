@@ -51,6 +51,8 @@ toc:
         navtitle: Training models
       - topic: deploy.md
         navtitle: Deploying models
+      - topic: inference.md
+        navtitle: Inferencing
       - topicgroup:
           label: Enhancing security
           topics:
