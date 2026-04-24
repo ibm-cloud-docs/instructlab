@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025, 2025
-lastupdated: "2025-08-04"
+  years: 2025, 2026
+lastupdated: "2026-04-16"
 
 keywords: iam, access, add users, instructlab
 
@@ -124,11 +124,11 @@ Access policies per user.
 Access groups.
 :   Access groups are used to streamline access management by assigning access to a group once, then you can add or remove users as needed from the group to control their access. You manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/account?topic=account-groups&interface=ui#access_ag).
 
-{{../account/iam-mng-access.md#access-resources-console}}
+{{../iam/iam-mng-access.md#access-resources-console}}
 
-{{../account/iam-mng-access.md#access-to-resources-console}}
+{{../iam/iam-mng-access.md#access-to-resources-console}}
 
-{{../account/iam-mng-access.md#access-to-resource-group}}
+{{../iam/iam-mng-access.md#access-to-resource-group}}
 
 
 ### Assigning access to {{site.data.keyword.short_name}} by using the CLI
@@ -254,6 +254,6 @@ curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $
 
 
 
-{{../account/iam-mng-access.md#access-resources-api}}
+{{../iam/iam-mng-access.md#access-resources-api}}
 
-{{../account/iam-mng-access.md#access-resourcegroups-api}}
+{{../iam/iam-mng-access.md#access-resourcegroups-api}}

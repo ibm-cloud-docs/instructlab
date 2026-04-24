@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-02-27"
+lastupdated: "2026-04-24"
 
 
 keywords: instructlab, sitemap
@@ -61,11 +61,19 @@ subcollection: instructlab
 
 [Release notes](/docs/instructlab?topic=instructlab-release-notes#release-notes)
 
-* [September 2025](/docs/instructlab?topic=instructlab-release-notes#sept25)
+* [April 2026](/docs/instructlab?topic=instructlab-release-notes#apr26)
+
+    * [23 April 2026](/docs/instructlab?topic=instructlab-release-notes#23apr26)
+
+        * Inferencing with Red Hat AI on {{site.data.keyword.cloud_notm}} (Beta)
+
+* [October 2025](/docs/instructlab?topic=instructlab-release-notes#oct25)
 
     * [10 October 2025](/docs/instructlab?topic=instructlab-release-notes#10oct25)
 
         * {{site.data.keyword.short_name}} CLI plug-in version 0.0.26 
+
+* [September 2025](/docs/instructlab?topic=instructlab-release-notes#sept25)
 
     * [23 September 2025](/docs/instructlab?topic=instructlab-release-notes#23aug25)
 
@@ -264,6 +272,33 @@ subcollection: instructlab
 * [Deploying the model to Red Hat OpenShift AI](/docs/instructlab?topic=instructlab-deploy#deploy-rhoai)
 
 
+## Inferencing
+{: #sitemap_inferencing}
+
+
+[Inferencing](/docs/instructlab?topic=instructlab-inference#inference)
+
+* [Before you begin](/docs/instructlab?topic=instructlab-inference#inf-prereqs)
+
+* [Inferencing by using the API](/docs/instructlab?topic=instructlab-inference#inf-chat-api)
+
+    * [API endpoint](/docs/instructlab?topic=instructlab-inference#inf-api-endpoint)
+
+    * [Authenticating to the API](/docs/instructlab?topic=instructlab-inference#inf-chat-auth)
+
+    * [Generating a chat completion](/docs/instructlab?topic=instructlab-inference#inf-chat-generate)
+
+    * [Getting a chat completion by ID](/docs/instructlab?topic=instructlab-inference#inf-chat-get-completion)
+
+    * [Listing chat completions](/docs/instructlab?topic=instructlab-inference#inf-chat-list)
+
+    * [Deleting a chat completion](/docs/instructlab?topic=instructlab-inference#inf-chat-delete)
+
+    * [Listing models](/docs/instructlab?topic=instructlab-inference#inf-chat-list-models)
+
+    * [Getting a model by ID](/docs/instructlab?topic=instructlab-inference#inf-chat-get-model)
+
+
 ## Enhancing security
 {: #sitemap_enhancing_security}
 
@@ -457,7 +492,7 @@ subcollection: instructlab
 {: #sitemap_api_reference}
 
 
-[IBM Cloud API docs](https://cloud.ibm.com/apidocs/instructlab){: external}
+[IBM Cloud API docs](https://{DomainName}/apidocs/instructlab){: external}
 
 [Swagger](https://us-east.instructlab.ibm.com/swagger-instructlab-api/#/){: external}
 

@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2024, 2026
-lastupdated: "2026-02-18"
+lastupdated: "2026-04-24"
 
 keywords: release notes
 
@@ -24,8 +24,20 @@ Use the release notes to learn about the latest changes to the documentation tha
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: tip}
 
-## September 2025
-{: #sept25}
+
+## April 2026
+{: #apr26}
+
+### 23 April 2026
+{: #23apr26}
+{: release-note}
+
+Inferencing with Red Hat AI on {{site.data.keyword.cloud_notm}} (Beta)
+:   You can now use inferencing to interact with foundation models and evaluate AI-powered responses for your applications. The inferencing feature provides industry-standard OpenAI and Llama Stack compatible APIs for chat completions and model management. This beta feature is available for evaluation and testing purposes. To get access to the beta, send an email to `instructlab@ibm.com`. For more information, see [Inferencing with Red Hat AI on {{site.data.keyword.cloud_notm}}](/docs/instructlab?topic=instructlab-inference).
+
+## October 2025
+{: #oct25}
+
 
 ### 10 October 2025
 {: #10oct25}
@@ -34,6 +46,8 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {{site.data.keyword.short_name}} CLI plug-in version 0.0.26 
 :   Version 0.0.26 of the plug-in adds file size limits. Each of the skills and knowledge documents must be less than 100 GB in size. The cumulative size of all the skills and knowledge JSON files must be less than 400 GB.
 
+## September 2025
+{: #sept25}
 
 ### 23 September 2025
 {: #23aug25}
