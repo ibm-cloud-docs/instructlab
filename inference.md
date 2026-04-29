@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-04-24"
+lastupdated: "2026-04-29"
 
 keywords: instructlab, ai, inferencing, chatting
 
@@ -60,10 +60,13 @@ Review the following sections for examples of how to complete common inferencing
 
 All API requests use the following base URL format:
 
+
 ```text
-https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference
+https://us-east.rhai.ibm.com/v1/projects/{project_id}/inference
 ```
 {: codeblock}
+
+
 
 Replace `{project_id}` with your project ID. To find it, go to [{{site.data.keyword.instructlab_short}} projects](/instructlab/projects), open your project, and click **Details**.
 
@@ -104,8 +107,10 @@ Chat completions are the core of inferencing. They allow you to send messages to
 
 The following example shows how to generate a chat completion. For a complete list of the available parameters, see [OpenAI Chat Completion](https://llamastack.github.io/docs/api/openai-chat-completion-v-1-chat-completions-post){: external}.
 
+
+
 ```bash
-curl https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference/v1/chat/completions -H "Content-Type: application/json" -H "Authorization: Bearer {bearer_token}" -d '{
+curl https://us-east.rhai.ibm.com/v1/projects/{project_id}/inference/v1/chat/completions -H "Content-Type: application/json" -H "Authorization: Bearer {bearer_token}" -d '{
  "model": "granite-4-0-h-small",
  "messages": [
    {
@@ -126,7 +131,7 @@ curl https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference/v1/c
 from llama_stack_client import LlamaStackClient
 client = LlamaStackClient(
   api_key="{bearer_token}",
-  base_url="https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference",
+  base_url="https://us-east.rhai.ibm.com/v1/projects/{project_id}/inference",
 )
 
 completion = client.chat.completions.create(
@@ -142,6 +147,9 @@ print(completion.choices[0].message)
 {: codeblock}
 {: python}
 
+
+
+
 ### Getting a chat completion by ID
 {: #inf-chat-get-completion}
 
@@ -149,8 +157,10 @@ Retrieving a specific chat completion by ID is useful for auditing, debugging, o
 
 The following example shows how to get a chat completion by its ID. For a complete list of the available parameters, see [Get Chat Completion](https://llamastack.github.io/docs/api/get-chat-completion-v-1-chat-completions-completion-id-get){: external}.
 
+
+
 ```bash
-curl -L 'https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference/v1/chat/completions/{completion_id}' \
+curl -L 'https://us-east.rhai.ibm.com/v1/projects/{project_id}/inference/v1/chat/completions/{completion_id}' \
 -H 'Accept: application/json' -H "Authorization: Bearer {bearer_token}"
 ```
 {: codeblock}
@@ -160,7 +170,7 @@ curl -L 'https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference/
 from llama_stack_client import LlamaStackClient
 client = LlamaStackClient(
   api_key="{bearer_token}",
-  base_url="https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference",
+  base_url="https://us-east.rhai.ibm.com/v1/projects/{project_id}/inference",
 )
 
 completion = client.chat.completions.retrieve(completion_id="{completion_id}")
@@ -169,6 +179,8 @@ print(completion)
 {: codeblock}
 {: python}
 
+
+
 ### Listing chat completions
 {: #inf-chat-list}
 
@@ -176,8 +188,10 @@ Listing chat completions provides an overview of all your inferencing activity, 
 
 The following example shows how to list chat completions. For a complete list of the available parameters, see [List Chat Completions](https://llamastack.github.io/docs/api/list-chat-completions-v-1-chat-completions-get){: external}.
 
+
+
 ```sh
-curl -L 'https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference/v1/chat/completions' \
+curl -L 'https://us-east.rhai.ibm.com/v1/projects/{project_id}/inference/v1/chat/completions' \
 -H 'Accept: application/json' -H "Authorization: Bearer {bearer_token}"
 ```
 {: codeblock}
@@ -187,7 +201,7 @@ curl -L 'https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference/
 from llama_stack_client import LlamaStackClient
 client = LlamaStackClient(
   api_key="{bearer_token}",
-  base_url="https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference",
+  base_url="https://us-east.rhai.ibm.com/v1/projects/{project_id}/inference",
 )
 
 completions = client.chat.completions.list()
@@ -196,6 +210,8 @@ print(completions)
 {: codeblock}
 {: python}
 
+
+
 ### Deleting a chat completion
 {: #inf-chat-delete}
 
@@ -203,12 +219,16 @@ Deleting chat completions helps you clean up test data and comply with privacy r
 
 The following example shows how to delete a chat completion. For a complete list of the available parameters, see [Delete chat completion](https://platform.openai.com/docs/api-reference/chat/delete){: external}.
 
+
+
 ```bash
-curl -X DELETE https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference/v1/chat/completions/{completion_id} \
+curl -X DELETE https://us-east.rhai.ibm.com/v1/projects/{project_id}/inference/v1/chat/completions/{completion_id} \
 -H "Content-Type: application/json" -H "Authorization: Bearer {bearer_token}"
 ```
 {: codeblock}
 {: curl}
+
+
 
 ### Listing models
 {: #inf-chat-list-models}
@@ -217,8 +237,10 @@ Discover which foundation models are accessible in your project and understand t
 
 The following example shows how to list models. For a complete list of the available parameters, see [OpenAI List Models](https://llamastack.github.io/docs/api/openai-list-models-v-1-models-get){: external}.
 
+
+
 ```bash
-curl -L 'https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference/models' \
+curl -L 'https://us-east.rhai.ibm.com/v1/projects/{project_id}/inference/models' \
 -H 'Accept: application/json' -H "Authorization: Bearer {bearer_token}"
 ```
 {: codeblock}
@@ -228,7 +250,7 @@ curl -L 'https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference/
 from llama_stack_client import LlamaStackClient
 client = LlamaStackClient(
   api_key="{bearer_token}",
-  base_url="https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference",
+  base_url="https://us-east.rhai.ibm.com/v1/projects/{project_id}/inference",
 )
 
 models = client.models.list()
@@ -237,6 +259,8 @@ print(models)
 {: codeblock}
 {: python}
 
+
+
 ### Getting a model by ID
 {: #inf-chat-get-model}
 
@@ -244,8 +268,10 @@ Retrieving detailed information about a specific model helps you understand its 
 
 The following example shows how to get a model by ID. For a complete list of the available parameters, see [Get Model](https://llamastack.github.io/docs/api/get-model-v-1-models-model-id-get){: external}.
 
+
+
 ```bash
-curl -L 'https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference/models/{model}' \
+curl -L 'https://us-east.rhai.ibm.com/v1/projects/{project_id}/inference/models/{model}' \
 -H 'Accept: application/json' -H "Authorization: Bearer {bearer_token}"
 ```
 {: codeblock}
@@ -255,7 +281,7 @@ curl -L 'https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference/
 from llama_stack_client import LlamaStackClient
 client = LlamaStackClient(
   api_key="{bearer_token}",
-  base_url="https://us-east.instructlab.ibm.com/v1/projects/{project_id}/inference",
+  base_url="https://us-east.rhai.ibm.com/v1/projects/{project_id}/inference",
 )
 
 model = client.models.retrieve("{model}")  # for example, "granite-4-0-h-small"
